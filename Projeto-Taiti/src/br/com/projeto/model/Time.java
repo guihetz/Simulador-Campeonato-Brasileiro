@@ -13,11 +13,12 @@ import javax.swing.ImageIcon;
  *
  * @author Daylton
  */
-public class Time {
+public class Time implements Comparable<Time>{
     private String nome; 
     private int golsPro;
     private int golsContra;    
     private List<Jogo> listaJogos;
+    private List<Time> timesComQuemJogou;
     private ImageIcon escudo;
 
     public Time(String nome, int golsPro, int golsContra, ImageIcon escudo) {
@@ -25,6 +26,7 @@ public class Time {
         this.golsPro = golsPro;
         this.golsContra = golsContra;
         this.listaJogos = new ArrayList<>();
+        this.timesComQuemJogou = new ArrayList<>();
         this.escudo = escudo;
     }
 
@@ -66,6 +68,24 @@ public class Time {
     @Override
     public String toString(){
         return this.nome;
+    }
+
+    public List<Time> getTimesComQuemJogou(){
+        //Obtém a lista de times com quem esse time jogou.
+        return this.timesComQuemJogou;
+    }
+    
+    public void addTimeJogado(Time t){
+        //Adiciona um time a lista de times com quem esse time jogou.
+        this.timesComQuemJogou.add(t);
+    }
+    
+    @Override
+    public int compareTo(Time o) {
+        if(getNome().equals(o.getNome())){
+            return 0;
+        }
+        return 1;
     }
         
 }
