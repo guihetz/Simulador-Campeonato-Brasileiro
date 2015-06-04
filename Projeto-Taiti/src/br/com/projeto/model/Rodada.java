@@ -47,7 +47,7 @@ public class Rodada {
                         for(Time t : timesDisponiveisParaJogo){
                             if(!timesQue1Jogou.contains(t)){
                                 time2 = t;
-                                break;
+                                
                             }
                         }
                         timesDisponiveisParaJogo.remove(time2);
