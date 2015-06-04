@@ -37,29 +37,30 @@ public class Rodada {
         Jogo j = null;
            if(listaTime.size() > 0){
                 Collections.shuffle(timesDisponiveisParaJogo);
-                
-                Time time1 = timesDisponiveisParaJogo.pop();
-                List<Time> timesComQuemTime1Jogou = time1.getTimesComQuemJogou();
-                Time time2 = null; //Ainda não é determinado o time2.
-                int index=0; //receberá o índice do time que será removido da pilha.
-                for(Time t1: timesDisponiveisParaJogo){
-                    if(!timesComQuemTime1Jogou.contains(t1)){ //Se t1 não estiver na lista de times com quem time1 jogou.
-                        time2 = t1;
-                        index = timesDisponiveisParaJogo.indexOf(t1);
-                        time1.addTimeJogado(t1); //add o time escolhido a lista de times com quem time1 jogou.
-                        break;
+                Time time1, time2;
+                time1 = timesDisponiveisParaJogo.pop();
+                time2 = timesDisponiveisParaJogo.pop();
+                List<Time> timesQue1Jogou = time1.getTimesComQuemJogou();
+                if(timesQue1Jogou.size()>0){
+                    if(timesQue1Jogou.contains(time2)){
+                        timesDisponiveisParaJogo.push(time2);
+                        for(Time t : timesDisponiveisParaJogo){
+                            if(!timesQue1Jogou.contains(t)){
+                                time2 = t;
+                                break;
+                            }
+                        }
+                        timesDisponiveisParaJogo.remove(time2);
                     }
                 }
-                if(time2==null){
-                    time2 = timesDisponiveisParaJogo.pop();
-                    time1.addTimeJogado(time2);
-                }
+                time1.addTimeJogado(time2);
+                time2.addTimeJogado(time1);
                 
-                if(timesDisponiveisParaJogo.size() > 0){
-                    timesDisponiveisParaJogo.remove(index); //remove o time escolhido da pilha.
-                }
+                
                 j = new Jogo(time1, time2);
                 System.out.println(j.getTime1() + " x " + j.getTime2());
+                    
+                
                 
             }else{
                 System.out.println("Acabou!");
