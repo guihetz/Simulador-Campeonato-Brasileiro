@@ -5,6 +5,7 @@
  */
 package br.com.projeto.model;
 
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Stack;
@@ -28,7 +29,7 @@ public class Rodada {
         System.out.println(timesDisponiveisParaJogo);
     }    
     
-    public Jogo getJogo(){
+    private Jogo getJogo(){
         Jogo j = null;
            if(timesDisponiveisParaJogo.size() > 0){
                
@@ -41,5 +42,13 @@ public class Rodada {
             }
            
        return j; 
+    }
+    
+    public List<Jogo> getJogosRodada(){
+        List<Jogo> jogos = new ArrayList<>();
+        for(int i = 0; i < 10; i++){
+           jogos.add(getJogo());
+        }
+        return jogos;
     }
 }

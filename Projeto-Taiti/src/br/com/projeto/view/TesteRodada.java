@@ -90,15 +90,8 @@ public class TesteRodada extends javax.swing.JFrame {
        listaTime.add(t20);
        
         Rodada r = new Rodada(listaTime);
-        
-        List<Jogo> jogos = new ArrayList<>();        
-        
-        for(int i = 0; i < 10; i++){
-           jogos.add(r.getJogo());
-        }
+        List<Jogo>  jogos = r.getJogosRodada();
 
-        System.out.println("Mano");
-        
         lbTime1.setIcon(jogos.get(0).getTime1().getEscudo());
         lbTime1.setHorizontalAlignment(SwingConstants.CENTER);
         lbTime1.setVerticalAlignment(SwingConstants.CENTER);
