@@ -5,6 +5,7 @@
  */
 package br.com.projeto.model;
 
+import java.util.ArrayList;
 import java.util.List;
 import javax.swing.ImageIcon;
 
@@ -19,35 +20,46 @@ public class Time {
     private List<Jogo> listaJogos;
     private ImageIcon escudo;
 
-    public Time(String nome, int golsPro, int golsContra, List<Jogo> listaJogos, ImageIcon escudo) {
+    public Time(String nome, int golsPro, int golsContra, ImageIcon escudo) {
         this.nome = nome;
         this.golsPro = golsPro;
         this.golsContra = golsContra;
-        this.listaJogos = listaJogos;
+        this.listaJogos = new ArrayList<>();
         this.escudo = escudo;
     }
 
     public String getNome() {
+        //Obtém o nome do time.
         return nome;
     }
 
     public int getGolsPro() {
+        //Obtém os gols que esse time marcou no campeonato.
         return golsPro;
     }
 
     public int getGolsContra() {
+        //Obtém os gols que esse time já levou no campeonato.
         return golsContra;
     }
 
     public List<Jogo> getListaJogos() {
+        //Obtém a lista de jogos que esse time jogou.
         return listaJogos;
+    }
+    
+    public void addJogo(Jogo j){ 
+        //Adiciona um jogo que foi jogado por esse time no campeonato.
+        this.listaJogos.add(j);
     }
 
     public ImageIcon getEscudo() {
+        //Obtém a imagem do escudo do time.
         return escudo;
     }
     
     public int getSaldoGol(){
+        //Obtém o saldo de gols desse time no campeonato.
         return this.golsPro - this.golsContra;
     }    
     
