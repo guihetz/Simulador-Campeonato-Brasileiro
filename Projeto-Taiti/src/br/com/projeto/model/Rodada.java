@@ -50,8 +50,14 @@ public class Rodada {
                         break;
                     }
                 }
-                        timesDisponiveisParaJogo.remove(index); //remove o time escolhido da pilha.
+                if(time2==null){
+                    time2 = timesDisponiveisParaJogo.pop();
+                    time1.addTimeJogado(time2);
+                }
                 
+                if(timesDisponiveisParaJogo.size() > 0){
+                    timesDisponiveisParaJogo.remove(index); //remove o time escolhido da pilha.
+                }
                 j = new Jogo(time1, time2);
                 System.out.println(j.getTime1() + " x " + j.getTime2());
                 
