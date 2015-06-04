@@ -53,6 +53,7 @@ public class Rodada {
                         timesDisponiveisParaJogo.remove(index); //remove o time escolhido da pilha.
                 
                 j = new Jogo(time1, time2);
+                System.out.println(j.getTime1() + " x " + j.getTime2());
                 
             }else{
                 System.out.println("Acabou!");
@@ -67,6 +68,7 @@ public class Rodada {
         for(int i = 0; i < 10; i++){
            jogos.add(getJogo());
         }
+        System.out.println("\n");
         return jogos;
     }
 }
