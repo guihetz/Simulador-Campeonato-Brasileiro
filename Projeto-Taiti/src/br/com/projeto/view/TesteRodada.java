@@ -25,7 +25,7 @@ public class TesteRodada extends javax.swing.JFrame {
      */
     List<Rodada> rodadas;
     List<Time> times;
-
+    int cont = 0;
     public TesteRodada() {
         initComponents();
         this.setLocationRelativeTo(null);
@@ -472,7 +472,7 @@ public class TesteRodada extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnProximaRodadaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnProximaRodadaActionPerformed
-        if(rodadas.size()<19){
+        if(rodadas.size()<38){
             proximaRodada();
         }
     }//GEN-LAST:event_btnProximaRodadaActionPerformed
