@@ -34,9 +34,6 @@ public class Rodada {
                
                 Collections.shuffle(timesDisponiveisParaJogo);
                 
-//                Time time1 = (Time) timesDisponiveisParaJogo.pop();
-//                Time time2 = (Time) timesDisponiveisParaJogo.pop();
-
                 j = new Jogo((Time) timesDisponiveisParaJogo.pop(), (Time) timesDisponiveisParaJogo.pop());
                 
             }else{

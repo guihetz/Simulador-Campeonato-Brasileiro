@@ -11,6 +11,7 @@ import br.com.projeto.model.Time;
 import java.util.ArrayList;
 import java.util.List;
 import javax.swing.ImageIcon;
+import javax.swing.SwingConstants;
 
 /**
  *
@@ -99,34 +100,75 @@ public class TesteRodada extends javax.swing.JFrame {
         System.out.println("Mano");
         
         lbTime1.setIcon(jogos.get(0).getTime1().getEscudo());
+        lbTime1.setHorizontalAlignment(SwingConstants.CENTER);
+        lbTime1.setVerticalAlignment(SwingConstants.CENTER);
         lbTime2.setIcon(jogos.get(0).getTime2().getEscudo());
+        lbTime2.setHorizontalAlignment(SwingConstants.CENTER);
+        lbTime2.setVerticalAlignment(SwingConstants.CENTER);
 
         lbTime3.setIcon(jogos.get(1).getTime1().getEscudo());
+        lbTime3.setHorizontalAlignment(SwingConstants.CENTER);
+        lbTime3.setVerticalAlignment(SwingConstants.CENTER);
         lbTime4.setIcon(jogos.get(1).getTime2().getEscudo());
+        lbTime4.setHorizontalAlignment(SwingConstants.CENTER);
+        lbTime4.setHorizontalAlignment(SwingConstants.CENTER);
         
         lbTime5.setIcon(jogos.get(2).getTime1().getEscudo());
+        lbTime5.setHorizontalAlignment(SwingConstants.CENTER);
+        lbTime5.setVerticalAlignment(SwingConstants.CENTER);
         lbTime6.setIcon(jogos.get(2).getTime2().getEscudo());
+        lbTime6.setHorizontalAlignment(SwingConstants.CENTER);
+        lbTime6.setVerticalAlignment(SwingConstants.CENTER);
         
         lbTime7.setIcon(jogos.get(3).getTime1().getEscudo());
+        lbTime7.setHorizontalAlignment(SwingConstants.CENTER);
+        lbTime7.setVerticalAlignment(SwingConstants.CENTER);
         lbTime8.setIcon(jogos.get(3).getTime2().getEscudo());
+        lbTime8.setHorizontalAlignment(SwingConstants.CENTER);
+        lbTime8.setVerticalAlignment(SwingConstants.CENTER);
         
         lbTime9.setIcon(jogos.get(4).getTime1().getEscudo());
+        lbTime9.setHorizontalAlignment(SwingConstants.CENTER);
+        lbTime9.setVerticalAlignment(SwingConstants.CENTER);
         lbTime10.setIcon(jogos.get(4).getTime2().getEscudo());
+        lbTime10.setHorizontalAlignment(SwingConstants.CENTER);
+        lbTime10.setVerticalAlignment(SwingConstants.CENTER);
         
         lbTime11.setIcon(jogos.get(5).getTime1().getEscudo());
+        lbTime11.setHorizontalAlignment(SwingConstants.CENTER);
+        lbTime11.setVerticalAlignment(SwingConstants.CENTER);
         lbTime12.setIcon(jogos.get(5).getTime2().getEscudo());
+        lbTime12.setHorizontalAlignment(SwingConstants.CENTER);
+        lbTime12.setVerticalAlignment(SwingConstants.CENTER);
         
         lbTime13.setIcon(jogos.get(6).getTime1().getEscudo());
+        lbTime13.setHorizontalAlignment(SwingConstants.CENTER);
+        lbTime13.setVerticalAlignment(SwingConstants.CENTER);
         lbTime14.setIcon(jogos.get(6).getTime2().getEscudo());
+        lbTime14.setHorizontalAlignment(SwingConstants.CENTER);
+        lbTime14.setVerticalAlignment(SwingConstants.CENTER);
         
         lbTime15.setIcon(jogos.get(7).getTime1().getEscudo());
+        lbTime15.setHorizontalAlignment(SwingConstants.CENTER);
+        lbTime15.setVerticalAlignment(SwingConstants.CENTER);
         lbTime16.setIcon(jogos.get(7).getTime2().getEscudo());
+        lbTime16.setHorizontalAlignment(SwingConstants.CENTER);
+        lbTime16.setVerticalAlignment(SwingConstants.CENTER);
         
         lbTime17.setIcon(jogos.get(8).getTime1().getEscudo());
+        lbTime17.setHorizontalAlignment(SwingConstants.CENTER);
+        lbTime17.setVerticalAlignment(SwingConstants.CENTER);
         lbTime18.setIcon(jogos.get(8).getTime2().getEscudo());
+        lbTime18.setHorizontalAlignment(SwingConstants.CENTER);
+        lbTime18.setVerticalAlignment(SwingConstants.CENTER);
         
         lbTime19.setIcon(jogos.get(9).getTime1().getEscudo());
+        lbTime19.setHorizontalAlignment(SwingConstants.CENTER);
+        lbTime19.setVerticalAlignment(SwingConstants.CENTER);
         lbTime20.setIcon(jogos.get(9).getTime2().getEscudo());
+        lbTime20.setHorizontalAlignment(SwingConstants.CENTER);
+        lbTime20.setHorizontalAlignment(SwingConstants.CENTER);
+        lbTime20.setVerticalAlignment(SwingConstants.CENTER);
     }
 
     /**
