@@ -20,14 +20,18 @@ public class Time implements Comparable<Time>{
     private List<Jogo> listaJogos;
     private List<Time> timesComQuemJogou;
     private ImageIcon escudo;
+    private int vitorias, empates, derrotas;
 
-    public Time(String nome, int golsPro, int golsContra, ImageIcon escudo) {
+    public Time(String nome, ImageIcon escudo, int vitorias, int empates, int derrotas) {
         this.nome = nome;
-        this.golsPro = golsPro;
-        this.golsContra = golsContra;
+        this.golsPro = 0;
+        this.golsContra = 0;
         this.listaJogos = new ArrayList<>();
         this.timesComQuemJogou = new ArrayList<>();
         this.escudo = escudo;
+        this.vitorias = vitorias;
+        this.empates = empates;
+        this.derrotas = derrotas;
     }
 
     public String getNome() {
@@ -86,6 +90,35 @@ public class Time implements Comparable<Time>{
             return 0;
         }
         return 1;
+    }
+    
+    public int getCoeficienteTime(){ 
+        int pesoVitorias = 15 * this.vitorias;
+        int pesoEmpates = 10 * this.empates;
+        int pesoDerrotas = 5 * this.derrotas;
+        
+        int coeficiente  = pesoVitorias + pesoEmpates + pesoDerrotas;
+        
+        if(coeficiente > 300){
+            return 3;
+        }else if(coeficiente > 200){
+            return 2;
+        }else if(coeficiente > 100){
+            return 1;
+        }
+        return 1;
+    }
+    
+    public void addVitoria(){
+        this.vitorias++;
+    }
+    
+    public void addEmpate(){
+        this.empates++;
+    }
+    
+    public void addDerrota(){
+        this.derrotas++;
     }
         
 }

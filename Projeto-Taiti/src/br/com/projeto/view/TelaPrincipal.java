@@ -35,45 +35,45 @@ public class TelaPrincipal extends javax.swing.JFrame {
         times = new ArrayList<>();
         
 
-        Time t1 = new Time("Atletico Mineiro", WIDTH, WIDTH, new ImageIcon("src/br/com/projeto/image/atletico_mg_60x60.png"));
+        Time t1 = new Time("Atletico Mineiro", new ImageIcon("src/br/com/projeto/image/atletico_mg_60x60.png"),17,11,10);
 
-        Time t2 = new Time("Atletico Paranaense", WIDTH, WIDTH, new ImageIcon("src/br/com/projeto/image/atletico_pr_60x60.png"));
+        Time t2 = new Time("Atletico Paranaense", new ImageIcon("src/br/com/projeto/image/atletico_pr_60x60.png"),15,9,14);
 
-        Time t3 = new Time("Avai", WIDTH, WIDTH, new ImageIcon("src/br/com/projeto/image/avai_60x60.png"));
+        Time t3 = new Time("Avai", new ImageIcon("src/br/com/projeto/image/avai_60x60.png"),18,8,12);
 
-        Time t4 = new Time("Chapecoense", WIDTH, WIDTH, new ImageIcon("src/br/com/projeto/image/chapecoense_60x60.png"));
+        Time t4 = new Time("Chapecoense", new ImageIcon("src/br/com/projeto/image/chapecoense_60x60.png"),11,10,17);
 
-        Time t5 = new Time("Corinthians", WIDTH, WIDTH, new ImageIcon("src/br/com/projeto/image/corinthians_60x60.png"));
+        Time t5 = new Time("Corinthians", new ImageIcon("src/br/com/projeto/image/corinthians_60x60.png"),19,12,7);
 
-        Time t6 = new Time("Coritiba", WIDTH, WIDTH, new ImageIcon("src/br/com/projeto/image/coritiba_60x60.png"));
+        Time t6 = new Time("Coritiba", new ImageIcon("src/br/com/projeto/image/coritiba_60x60.png"),12,11,15);
 
-        Time t7 = new Time("Cruzeiro", WIDTH, WIDTH, new ImageIcon("src/br/com/projeto/image/cruzeiro_60x60.png"));
+        Time t7 = new Time("Cruzeiro", new ImageIcon("src/br/com/projeto/image/cruzeiro_60x60.png"),24,8,6);
 
-        Time t8 = new Time("Figueirense", WIDTH, WIDTH, new ImageIcon("src/br/com/projeto/image/figueirense_60x60.png"));
+        Time t8 = new Time("Figueirense", new ImageIcon("src/br/com/projeto/image/figueirense_60x60.png"),13,8,17);
 
-        Time t9 = new Time("Flamengo", WIDTH, WIDTH, new ImageIcon("src/br/com/projeto/image/flamengo_60x60.png"));
+        Time t9 = new Time("Flamengo", new ImageIcon("src/br/com/projeto/image/flamengo_60x60.png"),14,10,14);
 
-        Time t10 = new Time("Fluminense", WIDTH, WIDTH, new ImageIcon("src/br/com/projeto/image/fluminense_60x60.png"));
+        Time t10 = new Time("Fluminense", new ImageIcon("src/br/com/projeto/image/fluminense_60x60.png"),17,10,11);
 
-        Time t11 = new Time("Goias", WIDTH, WIDTH, new ImageIcon("src/br/com/projeto/image/goias_60x60.png"));
+        Time t11 = new Time("Goias", new ImageIcon("src/br/com/projeto/image/goias_60x60.png"),13,8,17);
 
-        Time t12 = new Time("Gremio", WIDTH, WIDTH, new ImageIcon("src/br/com/projeto/image/gremio_60x60.png"));
+        Time t12 = new Time("Gremio", new ImageIcon("src/br/com/projeto/image/gremio_60x60.png"),17,10,11);
 
-        Time t13 = new Time("Internacional", WIDTH, WIDTH, new ImageIcon("src/br/com/projeto/image/internacional_60x60.png"));
+        Time t13 = new Time("Internacional", new ImageIcon("src/br/com/projeto/image/internacional_60x60.png"),21,6,11);
 
-        Time t14 = new Time("Joinville", WIDTH, WIDTH, new ImageIcon("src/br/com/projeto/image/joinville_60x60.png"));
+        Time t14 = new Time("Joinville", new ImageIcon("src/br/com/projeto/image/joinville_60x60.png"),21,7,10);
 
-        Time t15 = new Time("Palmeiras", WIDTH, WIDTH, new ImageIcon("src/br/com/projeto/image/palmeiras_60x60.png"));
+        Time t15 = new Time("Palmeiras", new ImageIcon("src/br/com/projeto/image/palmeiras_60x60.png"),11,7,20);
 
-        Time t16 = new Time("Ponte Preta", WIDTH, WIDTH, new ImageIcon("src/br/com/projeto/image/ponte_preta_60x60.png"));
+        Time t16 = new Time("Ponte Preta", new ImageIcon("src/br/com/projeto/image/ponte_preta_60x60.png"),19,12,7);
 
-        Time t17 = new Time("Santos", WIDTH, WIDTH, new ImageIcon("src/br/com/projeto/image/santos_60x60.png"));
+        Time t17 = new Time("Santos", new ImageIcon("src/br/com/projeto/image/santos_60x60.png"),15,8,15);
 
-        Time t18 = new Time("São Paulo", WIDTH, WIDTH, new ImageIcon("src/br/com/projeto/image/sao_paulo_60x60.png"));
+        Time t18 = new Time("São Paulo", new ImageIcon("src/br/com/projeto/image/sao_paulo_60x60.png"),20,10,8);
 
-        Time t19 = new Time("Sport", WIDTH, WIDTH, new ImageIcon("src/br/com/projeto/image/sport_60x60.png"));
+        Time t19 = new Time("Sport", new ImageIcon("src/br/com/projeto/image/sport_60x60.png"),14,10,14);
 
-        Time t20 = new Time("Vasco", WIDTH, WIDTH, new ImageIcon("src/br/com/projeto/image/vasco_60x60.png"));
+        Time t20 = new Time("Vasco", new ImageIcon("src/br/com/projeto/image/vasco_60x60.png"),16,15,7);
 
         times.add(t1);
         times.add(t2);
