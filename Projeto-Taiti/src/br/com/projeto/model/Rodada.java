@@ -73,7 +73,12 @@ public class Rodada {
         //Método que obtém os jogos da rodada atual.
         List<Jogo> jogos = new ArrayList<>();
         for(int i = 0; i < 10; i++){
-           jogos.add(getJogo());
+            Jogo j = getJogo();                   //Cria instância de um novo jogo.
+           jogos.add(j);                          //Adiciona jogo na lista de jogos da rodada.
+           Time t1 = j.getTime1();                //Referencia instância do time 1.
+           Time t2 = j.getTime2();                //Referencia instância do time 2.
+           t1.addJogo(j);                         //Times desse jogo guardam referência ao jogo que realizaram.
+           t2.addJogo(j);
         }
         System.out.println("\n");
         return jogos;
