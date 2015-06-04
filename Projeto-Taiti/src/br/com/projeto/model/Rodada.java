@@ -35,19 +35,22 @@ public class Rodada {
         //deve considerar que na próxima rodada não poderá ter um jogo que já aconteceu
         //sendo que o campeonato só terá um turno.
         Jogo j = null;
-           if(timesDisponiveisParaJogo.size() > 0){
+           if(listaTime.size() > 0){
                 Collections.shuffle(timesDisponiveisParaJogo);
                 
                 Time time1 = timesDisponiveisParaJogo.pop();
                 List<Time> timesComQuemTime1Jogou = time1.getTimesComQuemJogou();
                 Time time2 = null; //Ainda não é determinado o time2.
+                int index=0; //receberá o índice do time que será removido da pilha.
                 for(Time t1: timesDisponiveisParaJogo){
                     if(!timesComQuemTime1Jogou.contains(t1)){ //Se t1 não estiver na lista de times com quem time1 jogou.
                         time2 = t1;
-                        int indexT1 = timesDisponiveisParaJogo.indexOf(t1);
-                        timesDisponiveisParaJogo.remove(indexT1);
+                        index = timesDisponiveisParaJogo.indexOf(t1);
+                        time1.addTimeJogado(t1); //add o time escolhido a lista de times com quem time1 jogou.
+                        break;
                     }
                 }
+                        timesDisponiveisParaJogo.remove(index); //remove o time escolhido da pilha.
                 
                 j = new Jogo(time1, time2);
                 
