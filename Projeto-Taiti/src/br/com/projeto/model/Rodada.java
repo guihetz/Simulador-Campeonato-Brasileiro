@@ -16,17 +16,21 @@ import java.util.Stack;
  */
 public class Rodada {
     private List<Time> listaTime;
-    private List<Jogos> listaJogos;
+    private List<Jogo> listaJogos;
     private Stack<Time> timesDisponiveisParaJogo;
+    public static int numero;
+    private int numeroDaRodada;
     
     public Rodada(List<Time> listaTime){
         this.listaTime = listaTime;       
         timesDisponiveisParaJogo = new Stack();
-        
+        numero++;
+        this.numeroDaRodada = numero;
         for(Time t: this.listaTime){
             //Adiciona na pilha os times que participarão da rodada.
             timesDisponiveisParaJogo.push(t);            
         }
+        this.listaJogos = this.getJogos();
     }    
     
     private Jogo getJogo(){
@@ -69,7 +73,7 @@ public class Rodada {
        return j; 
     }
     
-    public List<Jogo> getJogosRodada(){
+    private List<Jogo> getJogos(){
         //Método que obtém os jogos da rodada atual.
         List<Jogo> jogos = new ArrayList<>();
         for(int i = 0; i < 10; i++){
@@ -82,5 +86,14 @@ public class Rodada {
         }
         System.out.println("\n");
         return jogos;
+    }
+    
+    public List<Jogo> getJogosRodada(){
+        return this.listaJogos;
+    }
+    
+    @Override
+    public String toString(){
+        return "Rodada " + this.numeroDaRodada;
     }
 }
