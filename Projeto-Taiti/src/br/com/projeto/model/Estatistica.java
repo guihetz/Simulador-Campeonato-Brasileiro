@@ -29,7 +29,7 @@ public abstract class Estatistica {
             double posseT1, posseT2;
             
             Random posse = new Random();
-            posseT1 = posse.nextInt(70) + 30;
+            posseT1 = posse.nextInt(40) + 30;
             posseT2 = 100 - posseT1;
             
             posses[0] = posseT1;

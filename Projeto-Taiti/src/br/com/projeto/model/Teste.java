@@ -14,8 +14,8 @@ import javax.swing.ImageIcon;
 public class Teste {
     public static void main(String[] args) {
         
-         Time t1 = new Time("Palmeiras", new ImageIcon("src/br/com/projeto/image/palmeiras_60x60.png"),11,10,2);
-         Time t2 = new Time("Chapecoense", new ImageIcon("src/br/com/projeto/image/chapecoense_60x60.png"),11,10,11);
+         Time t1 = new Time("Palmeiras", new ImageIcon("src/br/com/projeto/image/palmeiras_60x60.png"),20,30,65);
+         Time t2 = new Time("Chapecoense", new ImageIcon("src/br/com/projeto/image/chapecoense_60x60.png"),20,30,65);
          
          Jogo jogo1 = new Jogo(t1, t2);
          
