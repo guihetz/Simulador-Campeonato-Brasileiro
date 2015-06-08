@@ -93,17 +93,17 @@ public class Time implements Comparable<Time>{
     }
     
     public int getCoeficienteTime(){ 
-        int pesoVitorias = 15 * this.vitorias;
-        int pesoEmpates = 10 * this.empates;
-        int pesoDerrotas = 5 * this.derrotas;
+        int pesoVitorias = 3 * this.vitorias;
+        int pesoEmpates = 2 * this.empates;
+        int pesoDerrotas = 1 * this.derrotas;
         
-        int coeficiente  = pesoVitorias + pesoEmpates + pesoDerrotas;
+        int coeficiente  = (int) (pesoVitorias + pesoEmpates + pesoDerrotas)/ 3;
         
-        if(coeficiente > 300){
+        if(coeficiente > 120){
             return 3;
-        }else if(coeficiente > 200){
+        }else if(coeficiente > 60){
             return 2;
-        }else if(coeficiente > 100){
+        }else if(coeficiente > 20){
             return 1;
         }
         return 1;

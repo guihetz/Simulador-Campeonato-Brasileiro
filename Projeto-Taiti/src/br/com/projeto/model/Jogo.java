@@ -9,16 +9,18 @@ package br.com.projeto.model;
  *
  * @author Daylton
  */
-public class Jogo {
+public class Jogo {   
     private final Time time1;
     private final Time time2;
     private int golTime1, golTime2;
     private int finalizacaoTime1, finalizacaoTime2;
-    private double posseDeBolaTime1, posseDeBolaTime2;
+    private double[] posseDeBola;
 
     public Jogo(Time time1, Time time2) {
         this.time1 = time1;
         this.time2 = time2;
+        this.posseDeBola = new double[2];
+        this.posseDeBola = Estatistica.getPosseDeBola(time1, time2);
     }
 
     public Time getTime1() {
@@ -72,23 +74,23 @@ public class Jogo {
     }
 
     public double getPosseDeBolaTime1() {
-        //Obtém a porcentagem de posse de bola do time1.
-        return posseDeBolaTime1;
+        //Obtém a porcentagem de posse de bola do time1.             
+        return posseDeBola[0];
     }
 
     public void setPosseDeBolaTime1(double posseDeBolaTime1) {
         //Configura a porcentagem de posse de bola do time1.
-        this.posseDeBolaTime1 = posseDeBolaTime1;
+        this.posseDeBola = posseDeBola;
     }
 
     public double getPosseDeBolaTime2() {
-        //Obtém a porcentagem de posse de bola do time2.
-        return posseDeBolaTime2;
+        //Obtém a porcentagem de posse de bola do time2.     
+         return posseDeBola[1];
     }
 
     public void setPosseDeBolaTime2(double posseDeBolaTime2) {
         //Configura a porcentagem de bola do time2.
-        this.posseDeBolaTime2 = posseDeBolaTime2;
+        this.posseDeBola = posseDeBola;
     }
     
     
