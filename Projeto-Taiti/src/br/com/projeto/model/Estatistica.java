@@ -12,7 +12,7 @@ package br.com.projeto.model;
 public class Estatistica {
     public static double[] getPosseDeBola(Time t1, Time t2){
         double[] posses = new double[2];
-        //mano na boa.
+        //Extraia 
         return posses;
     }
 }
