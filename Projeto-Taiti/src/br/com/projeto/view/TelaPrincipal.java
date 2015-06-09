@@ -8,6 +8,8 @@ package br.com.projeto.view;
 import br.com.projeto.model.Jogo;
 import br.com.projeto.model.Rodada;
 import br.com.projeto.model.Time;
+import java.awt.Image;
+import java.awt.Toolkit;
 import java.util.ArrayList;
 import java.util.List;
 import javax.swing.ImageIcon;
@@ -26,6 +28,10 @@ public class TelaPrincipal extends javax.swing.JFrame {
     List<Time> times;
     public TelaPrincipal() {
         initComponents();
+        
+        //Image icon = Toolkit.getDefaultToolkit().getImage(getClass().getResource("../image/santos_60x60.png") );
+        //this.setIconImage(icon);
+        
         rodadas = new ArrayList<>();
         times = new ArrayList<>();
 

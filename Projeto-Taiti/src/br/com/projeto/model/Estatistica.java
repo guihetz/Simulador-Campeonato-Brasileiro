@@ -25,27 +25,38 @@ public abstract class Estatistica {
             posses[0] = posseT1;
             posses[1] = posseT2;
             
-        }else if(t1.getCoeficienteTime() == 2 && t2.getCoeficienteTime() == 2){
+        }else if(t1.getCoeficienteTime() == 1 && t2.getCoeficienteTime() == 2){
             double posseT1, posseT2;
-            
+
             Random posse = new Random();
-            posseT1 = posse.nextInt(40) + 30;
-            posseT2 = 100 - posseT1;
-            
-            posses[0] = posseT1;
-            posses[1] = posseT2;
-            
-        }else if(t1.getCoeficienteTime() == 3 && t2.getCoeficienteTime() == 3){
-            double posseT1, posseT2;
-            
-            Random posse = new Random();
-            posseT1 = posse.nextInt(20) + 40;
-            posseT2 = 100 - posseT1;
-            
+            posseT2 = posse.nextInt(30) + 40;
+            posseT1 = 100 - posseT2;
+
             posses[0] = posseT1;
             posses[1] = posseT2;
         }
+        else if(t1.getCoeficienteTime() == 2 && t2.getCoeficienteTime() == 2){
+            double posseT1, posseT2;
+
+            Random posse = new Random();
+            posseT1 = posse.nextInt(40) + 30;
+            posseT2 = 100 - posseT1;
+
+            posses[0] = posseT1;
+            posses[1] = posseT2;
+
+        }else if(t1.getCoeficienteTime() == 3 && t2.getCoeficienteTime() == 3){
+            double posseT1, posseT2;
+
+            Random posse = new Random();
+            posseT1 = posse.nextInt(20) + 40;
+            posseT2 = 100 - posseT1;
+
+            posses[0] = posseT1;
+            posses[1] = posseT2;
         
+        }
+          
         return posses;
     }
 }
