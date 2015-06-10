@@ -95,46 +95,16 @@ public abstract class Estatistica {
     public static int[] getGols(Jogo jogo){
         //Método que estima os gols de uma partida
         int[] gols = new int[2];
-        Stack numeroPossivelDeGols = new Stack();
-        numeroPossivelDeGols.push(0);
-        numeroPossivelDeGols.push(1);
-        numeroPossivelDeGols.push(2);
-        numeroPossivelDeGols.push(3);
-        numeroPossivelDeGols.push(4);
-        numeroPossivelDeGols.push(5);
-        numeroPossivelDeGols.push(6);
-        numeroPossivelDeGols.push(7);
-        Collections.shuffle(numeroPossivelDeGols);
+        int maxGolsTime1 = (int)(jogo.getPosseDeBolaTime1()/10);
+        int maxGolsTime2 = (int)(jogo.getPosseDeBolaTime2()/10);
+        Random r = new Random();
         if(new Date().getTime() % 4 == 0){
             //fator que pode determinar vitoria para um time com posse de bola menor
-            int gols1 = (int) numeroPossivelDeGols.pop();
-            int gols2 = (int) numeroPossivelDeGols.pop();
-            gols[0] = gols1;
-            gols[1] = gols2;
+            gols[0] = r.nextInt((int)((maxGolsTime1 + maxGolsTime2)/2));
+            gols[1] = r.nextInt((int)((maxGolsTime1 + maxGolsTime2)/2));
         }else{
-            if(jogo.getPosseDeBolaTime1()>jogo.getPosseDeBolaTime2()){
-               for(int i = 0; i<4;i++){
-                   numeroPossivelDeGols.pop();
-               }
-                Collections.sort(numeroPossivelDeGols);
-                int gols1 = (int) numeroPossivelDeGols.pop(); //time com maior posse recebe gol com maior valor
-                int gols2 = (int) numeroPossivelDeGols.pop(); //time com menor posse recebe gol com menor valor
-                gols[0] = gols1;
-                gols[1] = gols2;
-            }else if(jogo.getPosseDeBolaTime1()<jogo.getPosseDeBolaTime2()){
-                for(int i = 0; i<4;i++){
-                   numeroPossivelDeGols.pop();
-               }
-                Collections.sort(numeroPossivelDeGols);
-                int gols1 = (int) numeroPossivelDeGols.pop(); //time com maior posse recebe gol com maior valor
-                int gols2 = (int) numeroPossivelDeGols.pop(); //time com menor posse recebe gol com menor valor
-                gols[0] = gols2;
-                gols[1] = gols1;
-            }else{
-                Collections.shuffle(numeroPossivelDeGols);
-                gols[0] = (int) numeroPossivelDeGols.pop();
-                gols[1] = (int) numeroPossivelDeGols.pop();
-            }
+            gols[0] = r.nextInt(maxGolsTime1);
+            gols[1] = r.nextInt(maxGolsTime2);
         }
         return gols; 
     }
