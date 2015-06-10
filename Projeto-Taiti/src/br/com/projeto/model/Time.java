@@ -121,4 +121,13 @@ public class Time implements Comparable<Time>{
         this.derrotas++;
     }
         
+    public void addGolPro(int gols){
+        this.golsPro +=gols;
+    }
+    
+    public void addGolContra(int gols){
+        this.golsContra +=gols;
+    }
+    
+    
 }

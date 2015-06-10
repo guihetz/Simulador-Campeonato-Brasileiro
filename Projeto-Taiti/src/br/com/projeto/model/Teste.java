@@ -25,5 +25,11 @@ public class Teste {
          System.out.println("Posse de Bola T1: " + jogo1.getPosseDeBolaTime1() + "\n");
          System.out.println("Posse de Bola T2: " + jogo1.getPosseDeBolaTime2() + "\n");
          
+         System.out.println("Finalizações T1: " + jogo1.getFinalizacaoTime1() + "\n");
+         System.out.println("Finalizações T2: " + jogo1.getFinalizacaoTime2() + "\n");
+         
+         System.out.println("Gols T1: " + jogo1.getGolTime1() + "\n");
+         System.out.println("Gols T2: " + jogo1.getGolTime2() + "\n");
+         
     }
 }

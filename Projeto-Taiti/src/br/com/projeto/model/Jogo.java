@@ -12,15 +12,36 @@ package br.com.projeto.model;
 public class Jogo {   
     private final Time time1;
     private final Time time2;
-    private int golTime1, golTime2;
-    private int finalizacaoTime1, finalizacaoTime2;
-    private double[] posseDeBola;
+    private final int[] gols;
+    private final int[] finalizacoes;
+    private final double[] posseDeBola;
 
+    @SuppressWarnings("LeakingThisInConstructor")
     public Jogo(Time time1, Time time2) {
         this.time1 = time1;
         this.time2 = time2;
-        this.posseDeBola = new double[2];
         this.posseDeBola = Estatistica.getPosseDeBola(time1, time2);
+        this.gols = Estatistica.getGols(this);
+        this.finalizacoes = Estatistica.getFinalizacoes(this);
+        if(this.gols[0]>this.gols[1]){
+            this.time1.addVitoria();
+            this.time2.addDerrota();
+        }else if(this.gols[0]<this.gols[1]){
+            this.time1.addDerrota();
+            this.time2.addVitoria();
+        }else{
+            this.time1.addEmpate();
+            this.time2.addEmpate();
+        }
+        
+        
+        this.time1.addGolPro(gols[0]);
+        this.time1.addGolContra(gols[1]);
+        this.time2.addGolPro(gols[1]);
+        this.time2.addGolContra(gols[0]);
+        
+        this.time1.addJogo(this);
+        this.time2.addJogo(this);
     }
 
     public Time getTime1() {
@@ -35,42 +56,22 @@ public class Jogo {
 
     public int getGolTime1() {
         //Obtém os gols marcados pelo time1.
-        return golTime1;
+        return gols[0];
     }
-
-    public void setGolTime1(int golTime1) {
-        //Configura os gols marcados pelo time1.
-        this.golTime1 = golTime1;
-    }
-
+    
     public int getGolTime2() {
         //Obtém os gols marcados pelo time2.
-        return golTime2;
-    }
-
-    public void setGolTime2(int golTime2) {
-        //Configura os gols marcados pelo time2.
-        this.golTime2 = golTime2;
+        return gols[1];
     }
 
     public int getFinalizacaoTime1() {
         //Obtém o número de finalizações do time1.
-        return finalizacaoTime1;
-    }
-
-    public void setFinalizacaoTime1(int finalizacaoTime1) {
-        //Configura o número de finalizações do time1.
-        this.finalizacaoTime1 = finalizacaoTime1;
+        return finalizacoes[0];
     }
 
     public int getFinalizacaoTime2() {
         //Obtém o número de finalizações do time2.
-        return finalizacaoTime2;
-    }
-
-    public void setFinalizacaoTime2(int finalizacaoTime2) {
-        //Configura o número de finalizações do time2.
-        this.finalizacaoTime2 = finalizacaoTime2;
+        return finalizacoes[1];
     }
 
     public double getPosseDeBolaTime1() {
@@ -78,20 +79,9 @@ public class Jogo {
         return posseDeBola[0];
     }
 
-    public void setPosseDeBolaTime1(double posseDeBolaTime1) {
-        //Configura a porcentagem de posse de bola do time1.
-        this.posseDeBola = posseDeBola;
-    }
-
     public double getPosseDeBolaTime2() {
         //Obtém a porcentagem de posse de bola do time2.     
          return posseDeBola[1];
     }
-
-    public void setPosseDeBolaTime2(double posseDeBolaTime2) {
-        //Configura a porcentagem de bola do time2.
-        this.posseDeBola = posseDeBola;
-    }
-    
     
 }
