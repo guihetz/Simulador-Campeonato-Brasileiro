@@ -123,6 +123,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
         btnNovaRodada = new javax.swing.JButton();
         paine2 = new javax.swing.JPanel();
         btnVisualizarRodada = new javax.swing.JButton();
+        btnClassificacao = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Simulador de Campeonato");
@@ -167,13 +168,22 @@ public class TelaPrincipal extends javax.swing.JFrame {
             }
         });
 
+        btnClassificacao.setText("Visualizar Classificação");
+        btnClassificacao.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnClassificacaoActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout paine2Layout = new javax.swing.GroupLayout(paine2);
         paine2.setLayout(paine2Layout);
         paine2Layout.setHorizontalGroup(
             paine2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(paine2Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(btnVisualizarRodada, javax.swing.GroupLayout.DEFAULT_SIZE, 255, Short.MAX_VALUE)
+                .addGroup(paine2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnVisualizarRodada, javax.swing.GroupLayout.DEFAULT_SIZE, 255, Short.MAX_VALUE)
+                    .addComponent(btnClassificacao, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
         paine2Layout.setVerticalGroup(
@@ -181,7 +191,9 @@ public class TelaPrincipal extends javax.swing.JFrame {
             .addGroup(paine2Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(btnVisualizarRodada)
-                .addContainerGap(191, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addComponent(btnClassificacao)
+                .addContainerGap(150, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -217,6 +229,10 @@ public class TelaPrincipal extends javax.swing.JFrame {
         novaTelaRodada.setLocationRelativeTo(null);
         novaTelaRodada.setVisible(true);
     }//GEN-LAST:event_btnVisualizarRodadaActionPerformed
+
+    private void btnClassificacaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnClassificacaoActionPerformed
+        TelaClassificacao classificacao = new TelaClassificacao(times);
+    }//GEN-LAST:event_btnClassificacaoActionPerformed
 
     /**
      * @param args the command line arguments
@@ -254,6 +270,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnClassificacao;
     private javax.swing.JButton btnNovaRodada;
     private javax.swing.JButton btnVisualizarRodada;
     private javax.swing.JScrollPane jScrollPane1;

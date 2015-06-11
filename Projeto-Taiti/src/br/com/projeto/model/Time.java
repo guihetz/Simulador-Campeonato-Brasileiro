@@ -14,13 +14,15 @@ import javax.swing.ImageIcon;
  * @author Daylton
  */
 public class Time implements Comparable<Time>{
-    private String nome; 
+    private final String nome; 
     private int golsPro;
     private int golsContra;    
     private List<Jogo> listaJogos;
     private List<Time> timesComQuemJogou;
-    private ImageIcon escudo;
+    private final ImageIcon escudo;
     private int vitorias, empates, derrotas;
+    private int pontuacaoAtual;
+    private int ganhou, empatou, perdeu;
 
     public Time(String nome, ImageIcon escudo, int vitorias, int empates, int derrotas) {
         this.nome = nome;
@@ -32,6 +34,7 @@ public class Time implements Comparable<Time>{
         this.vitorias = vitorias;
         this.empates = empates;
         this.derrotas = derrotas;
+        this.ganhou = this.empatou = this.perdeu = 0;
     }
 
     public String getNome() {
@@ -111,14 +114,17 @@ public class Time implements Comparable<Time>{
     
     public void addVitoria(){
         this.vitorias++;
+        this.ganhou++;
     }
     
     public void addEmpate(){
         this.empates++;
+        this.empatou++;
     }
     
     public void addDerrota(){
         this.derrotas++;
+        this.perdeu++;
     }
         
     public void addGolPro(int gols){
@@ -129,5 +135,20 @@ public class Time implements Comparable<Time>{
         this.golsContra +=gols;
     }
     
+    public int getPontuacaoAtual(){
+        return (this.ganhou * 3) + (this.empatou * 1);
+    }
     
+    public int getVitorias(){
+        return this.ganhou;
+    }
+    
+    public int getEmpates(){
+        return this.empatou;
+    }
+    
+    public int getDerrotas(){
+        return this.perdeu;
+    }
+
 }

@@ -98,7 +98,7 @@ public abstract class Estatistica {
         int maxGolsTime1 = (int)(jogo.getPosseDeBolaTime1()/10);
         int maxGolsTime2 = (int)(jogo.getPosseDeBolaTime2()/10);
         Random r = new Random();
-        if(new Date().getTime() % 4 == 0){
+        if(new Date().getTime() % 7 == 0){
             //fator que pode determinar vitoria para um time com posse de bola menor
             gols[0] = r.nextInt((int)((maxGolsTime1 + maxGolsTime2)/2));
             gols[1] = r.nextInt((int)((maxGolsTime1 + maxGolsTime2)/2));
@@ -116,8 +116,13 @@ public abstract class Estatistica {
         int golsTime2 = jogo.getGolTime2();
         
         Random fin = new Random();
-        finalizacoes[0] = fin.nextInt(5) + golsTime1;
-        finalizacoes[1] = fin.nextInt(5) + golsTime2;
+        if(golsTime1>=golsTime2){
+            finalizacoes[0] = fin.nextInt(5) + golsTime1;
+            finalizacoes[1] = fin.nextInt(1) + golsTime2;
+        }else{
+            finalizacoes[0] = fin.nextInt(1) + golsTime1;
+            finalizacoes[1] = fin.nextInt(5) + golsTime2;
+        }
         return finalizacoes;
     }
 }
