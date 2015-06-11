@@ -93,7 +93,7 @@ public class Teste {
          textoPosse.setVerticalAlignment(SwingConstants.CENTER);
          
          painel.setLayout(meuLayout);
-         painel.setBackground(Color.orange);
+         painel.setBackground(Color.WHITE);
          painel.add(textoTime);
          painel.add(escudo1);
          painel.add(escudo2);
