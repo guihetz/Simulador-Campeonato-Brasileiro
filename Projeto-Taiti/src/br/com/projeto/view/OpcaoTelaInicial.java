@@ -88,7 +88,7 @@ public class OpcaoTelaInicial extends javax.swing.JFrame {
     public void fechar(){
         this.dispose();
         TelaPrincipal form1 = new TelaPrincipal();
-        form1.setAlwaysOnTop(true);
+        form1.setAlwaysOnTop(false);
         form1.setVisible(true);
         form1.setLocationRelativeTo(null);
     }

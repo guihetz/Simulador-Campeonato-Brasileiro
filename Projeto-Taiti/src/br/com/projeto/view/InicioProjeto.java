@@ -11,8 +11,8 @@ package br.com.projeto.view;
  */
 public class InicioProjeto {
     public static void main(String[] args) {
-        TelaPrincipal novaTelaPrincipal = new TelaPrincipal();
-        novaTelaPrincipal.setLocationRelativeTo(null);
-        novaTelaPrincipal.setVisible(true);
+        OpcaoTelaInicial novaTelaInicial = new OpcaoTelaInicial();
+        novaTelaInicial.setLocationRelativeTo(null);
+        novaTelaInicial.setVisible(true);
     }
 }
