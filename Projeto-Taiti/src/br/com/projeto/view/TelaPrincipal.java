@@ -71,7 +71,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
 
         Time t17 = new Time("Santos", new ImageIcon("src/br/com/projeto/image/santos_60x60.png"),15,8,15);
 
-        Time t18 = new Time("São Paulo", new ImageIcon("src/br/com/projeto/image/sao_paulo_60x60.png"),20,10,8);
+        Time t18 = new Time("Sao Paulo", new ImageIcon("src/br/com/projeto/image/sao_paulo_60x60.png"),20,10,8);
 
         Time t19 = new Time("Sport", new ImageIcon("src/br/com/projeto/image/sport_60x60.png"),14,10,14);
 
