@@ -51,7 +51,9 @@
       <Properties>
         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
           <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
-            <TitledBorder title="Rodadas"/>
+            <TitledBorder title="Rodadas">
+              <Font PropertyName="font" name="FIFA Welcome" size="24" style="0"/>
+            </TitledBorder>
           </Border>
         </Property>
       </Properties>
@@ -111,7 +113,9 @@
       <Properties>
         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
           <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
-            <TitledBorder title="Campeonato"/>
+            <TitledBorder title="Campeonato">
+              <Font PropertyName="font" name="FIFA Welcome" size="24" style="0"/>
+            </TitledBorder>
           </Border>
         </Property>
       </Properties>

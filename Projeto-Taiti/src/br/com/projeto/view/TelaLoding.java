@@ -30,26 +30,30 @@ e this license header, choose License Headers in Project Properties.
  */
 package br.com.projeto.view;
 
-import java.awt.Color;
+import java.awt.Image;
+import java.awt.Toolkit;
 import java.util.TimerTask;
-import javax.swing.UIManager;
 
 /**
  *
  * @author Daylton
  */
-public class OpcaoTelaInicial extends javax.swing.JFrame {
+public class TelaLoding extends javax.swing.JFrame {
 
     /**
-     * Creates new form OpcaoTelaInicial
+     * Creates new form TelaLoding
      */
     
     public static final long TEMPO = (1000* 1);
     int i = 0;
     TimerTask tarefa;
     
-    public OpcaoTelaInicial() {
+    public TelaLoding() {
         initComponents();
+        
+        Image icon = Toolkit.getDefaultToolkit().getImage(getClass().getResource("../image/cup.png") );
+        this.setIconImage(icon);
+        
         this.setLocationRelativeTo(null);
         this.setSize(565, 350);
        
@@ -62,8 +66,7 @@ public class OpcaoTelaInicial extends javax.swing.JFrame {
             tarefa = new TimerTask() {  
                 public void run() {  
                     try {                        
-                        if(i <= 100){                            
-                            System.out.println(soma());
+                        if(i <= 100){   
                             pgLoading.setValue(soma());    
                             pgLoading.isIndeterminate();                            
                         }else{
@@ -82,7 +85,7 @@ public class OpcaoTelaInicial extends javax.swing.JFrame {
     }
     
     public int soma(){
-        return this.i = i + 10;        
+        return this.i = i + 20;        
     }
     
     public void fechar(){
@@ -110,7 +113,7 @@ public class OpcaoTelaInicial extends javax.swing.JFrame {
         getContentPane().add(pgLoading);
         pgLoading.setBounds(10, 280, 530, 20);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/projeto/image/Tela_Beta1.jpg"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/projeto/image/loagin.jpg"))); // NOI18N
         getContentPane().add(jLabel1);
         jLabel1.setBounds(0, 0, 550, 310);
 
@@ -134,20 +137,21 @@ public class OpcaoTelaInicial extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(OpcaoTelaInicial.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaLoding.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(OpcaoTelaInicial.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaLoding.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(OpcaoTelaInicial.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaLoding.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(OpcaoTelaInicial.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaLoding.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new OpcaoTelaInicial().setVisible(true);
+                new TelaLoding().setVisible(true);
             }
         });
     }

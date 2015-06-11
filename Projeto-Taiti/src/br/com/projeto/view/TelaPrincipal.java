@@ -28,8 +28,8 @@ public class TelaPrincipal extends javax.swing.JFrame {
     public TelaPrincipal() {
         initComponents();
         
-        //Image icon = Toolkit.getDefaultToolkit().getImage(getClass().getResource("../image/santos_60x60.png") );
-        //this.setIconImage(icon);
+        Image icon = Toolkit.getDefaultToolkit().getImage(getClass().getResource("../image/cup.png") );
+        this.setIconImage(icon);
         
         rodadas = new ArrayList<>();
         times = new ArrayList<>();
@@ -125,7 +125,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Simulador de Campeonato");
 
-        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Rodadas"));
+        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Rodadas", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("FIFA Welcome", 0, 24))); // NOI18N
 
         jScrollPane1.setViewportView(jlListaDeRodadas);
 
@@ -156,7 +156,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder("Campeonato"));
+        jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Campeonato", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("FIFA Welcome", 0, 24))); // NOI18N
 
         btnVisualizarRodada.setText("Visualizar Informações da Rodada");
         btnVisualizarRodada.addActionListener(new java.awt.event.ActionListener() {
