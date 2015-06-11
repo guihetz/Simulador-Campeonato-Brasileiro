@@ -61,7 +61,7 @@
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="lbResultadoTime3" min="-2" pref="44" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jLabel33" min="-2" pref="44" max="-2" attributes="0"/>
+                          <Component id="lbInfo2" min="-2" pref="44" max="-2" attributes="0"/>
                           <EmptySpace max="32767" attributes="0"/>
                           <Component id="lbResultadoTime4" min="-2" pref="44" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="4" max="-2" attributes="0"/>
@@ -71,7 +71,7 @@
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="lbResultadoTime1" min="-2" pref="44" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jLabel31" min="-2" pref="44" max="-2" attributes="0"/>
+                          <Component id="lbInfo1" min="-2" pref="44" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="lbResultadoTime2" min="-2" pref="44" max="-2" attributes="0"/>
                           <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
@@ -81,7 +81,7 @@
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Component id="lbResultadoTime5" min="-2" pref="44" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jLabel35" min="-2" pref="44" max="-2" attributes="0"/>
+                          <Component id="lbInfo3" min="-2" pref="44" max="-2" attributes="0"/>
                           <EmptySpace max="32767" attributes="0"/>
                           <Component id="lbResultadoTime6" min="-2" pref="44" max="-2" attributes="0"/>
                       </Group>
@@ -90,7 +90,7 @@
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Component id="lbResultadoTime7" min="-2" pref="44" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jLabel40" min="-2" pref="44" max="-2" attributes="0"/>
+                          <Component id="lbInfo4" min="-2" pref="44" max="-2" attributes="0"/>
                           <EmptySpace max="32767" attributes="0"/>
                           <Component id="lbResultadoTime8" min="-2" pref="44" max="-2" attributes="0"/>
                       </Group>
@@ -99,7 +99,7 @@
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Component id="lbResultadoTime9" min="-2" pref="44" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jLabel43" min="-2" pref="44" max="-2" attributes="0"/>
+                          <Component id="lbInfo5" min="-2" pref="44" max="-2" attributes="0"/>
                           <EmptySpace max="32767" attributes="0"/>
                           <Component id="lbResultadoTime10" min="-2" pref="44" max="-2" attributes="0"/>
                       </Group>
@@ -125,35 +125,35 @@
                       <Group type="102" alignment="0" attributes="0">
                           <Component id="lbResultadoTime11" min="-2" pref="44" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jLabel46" min="-2" pref="44" max="-2" attributes="0"/>
+                          <Component id="lbInfo6" min="-2" pref="44" max="-2" attributes="0"/>
                           <EmptySpace max="32767" attributes="0"/>
                           <Component id="lbResultadoTime12" min="-2" pref="44" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
                           <Component id="lbResultadoTime13" min="-2" pref="44" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jLabel50" min="-2" pref="44" max="-2" attributes="0"/>
+                          <Component id="lbInfo7" min="-2" pref="44" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="lbResultadoTime14" min="-2" pref="44" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
                           <Component id="lbResultadoTime15" min="-2" pref="44" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jLabel53" min="-2" pref="44" max="-2" attributes="0"/>
+                          <Component id="lbInfo8" min="-2" pref="44" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="lbResultadoTime16" min="-2" pref="44" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
                           <Component id="lbResultadoTime17" min="-2" pref="44" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jLabel56" min="-2" pref="44" max="-2" attributes="0"/>
+                          <Component id="lbInfo9" min="-2" pref="44" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="lbResultadoTime18" min="-2" pref="44" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
                           <Component id="lbResultadoTime19" min="-2" pref="44" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jLabel59" min="-2" pref="44" max="-2" attributes="0"/>
+                          <Component id="lbInfo10" min="-2" pref="44" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="lbResultadoTime20" min="-2" pref="44" max="-2" attributes="0"/>
                       </Group>
@@ -191,31 +191,31 @@
                               <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="lbResultadoTime2" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
-                                  <Component id="jLabel31" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
+                                  <Component id="lbInfo1" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
                                   <Component id="lbResultadoTime1" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace min="-2" pref="55" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="lbResultadoTime4" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
-                                  <Component id="jLabel33" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
+                                  <Component id="lbInfo2" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
                                   <Component id="lbResultadoTime3" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace min="-2" pref="51" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="lbResultadoTime6" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
-                                  <Component id="jLabel35" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
+                                  <Component id="lbInfo3" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
                                   <Component id="lbResultadoTime5" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace min="-2" pref="54" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="lbResultadoTime8" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
-                                  <Component id="jLabel40" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
+                                  <Component id="lbInfo4" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
                                   <Component id="lbResultadoTime7" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace max="32767" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="lbResultadoTime10" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
-                                  <Component id="jLabel43" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
+                                  <Component id="lbInfo5" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
                                   <Component id="lbResultadoTime9" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
@@ -250,7 +250,7 @@
                                   <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
                                       <Component id="lbResultadoTime12" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
-                                      <Component id="jLabel46" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
+                                      <Component id="lbInfo6" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
                                       <Component id="lbResultadoTime11" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
@@ -264,7 +264,7 @@
                                   <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
                                       <Component id="lbResultadoTime14" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
-                                      <Component id="jLabel50" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
+                                      <Component id="lbInfo7" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
                                       <Component id="lbResultadoTime13" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
@@ -278,7 +278,7 @@
                                   <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
                                       <Component id="lbResultadoTime16" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
-                                      <Component id="jLabel53" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
+                                      <Component id="lbInfo8" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
                                       <Component id="lbResultadoTime15" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
@@ -292,7 +292,7 @@
                                   <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
                                       <Component id="lbResultadoTime18" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
-                                      <Component id="jLabel56" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
+                                      <Component id="lbInfo9" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
                                       <Component id="lbResultadoTime17" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
@@ -303,7 +303,7 @@
                               <Group type="102" alignment="1" attributes="0">
                                   <Group type="103" groupAlignment="3" attributes="0">
                                       <Component id="lbResultadoTime20" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
-                                      <Component id="jLabel59" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
+                                      <Component id="lbInfo10" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
                                       <Component id="lbResultadoTime19" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace min="-2" pref="17" max="-2" attributes="0"/>
@@ -366,7 +366,7 @@
         </Component>
         <Component class="javax.swing.JLabel" name="lbTime20">
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel31">
+        <Component class="javax.swing.JLabel" name="lbInfo1">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Tahoma" size="36" style="0"/>
@@ -374,6 +374,9 @@
             <Property name="horizontalAlignment" type="int" value="0"/>
             <Property name="text" type="java.lang.String" value="X"/>
           </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="lbInfo1MouseClicked"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="lbResultadoTime2">
           <Properties>
@@ -393,7 +396,7 @@
             <Property name="text" type="java.lang.String" value="_"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel33">
+        <Component class="javax.swing.JLabel" name="lbInfo2">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Tahoma" size="36" style="0"/>
@@ -401,6 +404,9 @@
             <Property name="horizontalAlignment" type="int" value="0"/>
             <Property name="text" type="java.lang.String" value="X"/>
           </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="lbInfo2MouseClicked"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="lbResultadoTime4">
           <Properties>
@@ -420,7 +426,7 @@
             <Property name="text" type="java.lang.String" value="_"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel35">
+        <Component class="javax.swing.JLabel" name="lbInfo3">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Tahoma" size="36" style="0"/>
@@ -428,6 +434,9 @@
             <Property name="horizontalAlignment" type="int" value="0"/>
             <Property name="text" type="java.lang.String" value="X"/>
           </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="lbInfo3MouseClicked"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="lbResultadoTime6">
           <Properties>
@@ -447,7 +456,7 @@
             <Property name="text" type="java.lang.String" value="_"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel40">
+        <Component class="javax.swing.JLabel" name="lbInfo4">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Tahoma" size="36" style="0"/>
@@ -455,6 +464,9 @@
             <Property name="horizontalAlignment" type="int" value="0"/>
             <Property name="text" type="java.lang.String" value="X"/>
           </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="lbInfo4MouseClicked"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="lbResultadoTime8">
           <Properties>
@@ -474,7 +486,7 @@
             <Property name="text" type="java.lang.String" value="_"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel43">
+        <Component class="javax.swing.JLabel" name="lbInfo5">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Tahoma" size="36" style="0"/>
@@ -482,6 +494,9 @@
             <Property name="horizontalAlignment" type="int" value="0"/>
             <Property name="text" type="java.lang.String" value="X"/>
           </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="lbInfo5MouseClicked"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="lbResultadoTime10">
           <Properties>
@@ -501,7 +516,7 @@
             <Property name="text" type="java.lang.String" value="_"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel46">
+        <Component class="javax.swing.JLabel" name="lbInfo6">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Tahoma" size="36" style="0"/>
@@ -509,6 +524,9 @@
             <Property name="horizontalAlignment" type="int" value="0"/>
             <Property name="text" type="java.lang.String" value="X"/>
           </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="lbInfo6MouseClicked"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="lbResultadoTime12">
           <Properties>
@@ -537,7 +555,7 @@
             <Property name="text" type="java.lang.String" value="_"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel50">
+        <Component class="javax.swing.JLabel" name="lbInfo7">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Tahoma" size="36" style="0"/>
@@ -545,6 +563,9 @@
             <Property name="horizontalAlignment" type="int" value="0"/>
             <Property name="text" type="java.lang.String" value="X"/>
           </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="lbInfo7MouseClicked"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="lbResultadoTime16">
           <Properties>
@@ -564,7 +585,7 @@
             <Property name="text" type="java.lang.String" value="_"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel53">
+        <Component class="javax.swing.JLabel" name="lbInfo8">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Tahoma" size="36" style="0"/>
@@ -572,6 +593,9 @@
             <Property name="horizontalAlignment" type="int" value="0"/>
             <Property name="text" type="java.lang.String" value="X"/>
           </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="lbInfo8MouseClicked"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="lbResultadoTime18">
           <Properties>
@@ -591,7 +615,7 @@
             <Property name="text" type="java.lang.String" value="_"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel56">
+        <Component class="javax.swing.JLabel" name="lbInfo9">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Tahoma" size="36" style="0"/>
@@ -599,6 +623,9 @@
             <Property name="horizontalAlignment" type="int" value="0"/>
             <Property name="text" type="java.lang.String" value="X"/>
           </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="lbInfo9MouseClicked"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="lbResultadoTime20">
           <Properties>
@@ -618,7 +645,7 @@
             <Property name="text" type="java.lang.String" value="_"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel59">
+        <Component class="javax.swing.JLabel" name="lbInfo10">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Tahoma" size="36" style="0"/>
@@ -626,6 +653,9 @@
             <Property name="horizontalAlignment" type="int" value="0"/>
             <Property name="text" type="java.lang.String" value="X"/>
           </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="lbInfo10MouseClicked"/>
+          </Events>
         </Component>
       </SubComponents>
     </Container>

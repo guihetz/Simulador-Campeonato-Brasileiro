@@ -25,6 +25,7 @@ public class TelaRodada extends javax.swing.JFrame {
     /**
      * Creates new form TelaRodada
      */
+    List<Jogo> jogos;
     
     public TelaRodada() {
         initComponents();
@@ -34,7 +35,7 @@ public class TelaRodada extends javax.swing.JFrame {
     
     public TelaRodada(Rodada r){
         this();
-        List<Jogo> jogos = r.getJogosRodada();
+        this.jogos = r.getJogosRodada();
         Font f = InicioProjeto.getFonte(36);
         lbTime1.setIcon(jogos.get(0).getTime1().getEscudo());
         //lbTime1.setText(jogos.get(0).getTime1().getNome());
@@ -201,35 +202,35 @@ public class TelaRodada extends javax.swing.JFrame {
         lbTime10 = new javax.swing.JLabel();
         lbTime19 = new javax.swing.JLabel();
         lbTime20 = new javax.swing.JLabel();
-        jLabel31 = new javax.swing.JLabel();
+        lbInfo1 = new javax.swing.JLabel();
         lbResultadoTime2 = new javax.swing.JLabel();
         lbResultadoTime3 = new javax.swing.JLabel();
-        jLabel33 = new javax.swing.JLabel();
+        lbInfo2 = new javax.swing.JLabel();
         lbResultadoTime4 = new javax.swing.JLabel();
         lbResultadoTime5 = new javax.swing.JLabel();
-        jLabel35 = new javax.swing.JLabel();
+        lbInfo3 = new javax.swing.JLabel();
         lbResultadoTime6 = new javax.swing.JLabel();
         lbResultadoTime7 = new javax.swing.JLabel();
-        jLabel40 = new javax.swing.JLabel();
+        lbInfo4 = new javax.swing.JLabel();
         lbResultadoTime8 = new javax.swing.JLabel();
         lbResultadoTime9 = new javax.swing.JLabel();
-        jLabel43 = new javax.swing.JLabel();
+        lbInfo5 = new javax.swing.JLabel();
         lbResultadoTime10 = new javax.swing.JLabel();
         lbResultadoTime11 = new javax.swing.JLabel();
-        jLabel46 = new javax.swing.JLabel();
+        lbInfo6 = new javax.swing.JLabel();
         lbResultadoTime12 = new javax.swing.JLabel();
         lbResultadoTime14 = new javax.swing.JLabel();
         lbResultadoTime13 = new javax.swing.JLabel();
-        jLabel50 = new javax.swing.JLabel();
+        lbInfo7 = new javax.swing.JLabel();
         lbResultadoTime16 = new javax.swing.JLabel();
         lbResultadoTime15 = new javax.swing.JLabel();
-        jLabel53 = new javax.swing.JLabel();
+        lbInfo8 = new javax.swing.JLabel();
         lbResultadoTime18 = new javax.swing.JLabel();
         lbResultadoTime17 = new javax.swing.JLabel();
-        jLabel56 = new javax.swing.JLabel();
+        lbInfo9 = new javax.swing.JLabel();
         lbResultadoTime20 = new javax.swing.JLabel();
         lbResultadoTime19 = new javax.swing.JLabel();
-        jLabel59 = new javax.swing.JLabel();
+        lbInfo10 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -239,9 +240,14 @@ public class TelaRodada extends javax.swing.JFrame {
         lbResultadoTime1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lbResultadoTime1.setText("_");
 
-        jLabel31.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
-        jLabel31.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel31.setText("X");
+        lbInfo1.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
+        lbInfo1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lbInfo1.setText("X");
+        lbInfo1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lbInfo1MouseClicked(evt);
+            }
+        });
 
         lbResultadoTime2.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
         lbResultadoTime2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -251,9 +257,14 @@ public class TelaRodada extends javax.swing.JFrame {
         lbResultadoTime3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lbResultadoTime3.setText("_");
 
-        jLabel33.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
-        jLabel33.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel33.setText("X");
+        lbInfo2.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
+        lbInfo2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lbInfo2.setText("X");
+        lbInfo2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lbInfo2MouseClicked(evt);
+            }
+        });
 
         lbResultadoTime4.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
         lbResultadoTime4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -263,9 +274,14 @@ public class TelaRodada extends javax.swing.JFrame {
         lbResultadoTime5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lbResultadoTime5.setText("_");
 
-        jLabel35.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
-        jLabel35.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel35.setText("X");
+        lbInfo3.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
+        lbInfo3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lbInfo3.setText("X");
+        lbInfo3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lbInfo3MouseClicked(evt);
+            }
+        });
 
         lbResultadoTime6.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
         lbResultadoTime6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -275,9 +291,14 @@ public class TelaRodada extends javax.swing.JFrame {
         lbResultadoTime7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lbResultadoTime7.setText("_");
 
-        jLabel40.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
-        jLabel40.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel40.setText("X");
+        lbInfo4.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
+        lbInfo4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lbInfo4.setText("X");
+        lbInfo4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lbInfo4MouseClicked(evt);
+            }
+        });
 
         lbResultadoTime8.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
         lbResultadoTime8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -287,9 +308,14 @@ public class TelaRodada extends javax.swing.JFrame {
         lbResultadoTime9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lbResultadoTime9.setText("_");
 
-        jLabel43.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
-        jLabel43.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel43.setText("X");
+        lbInfo5.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
+        lbInfo5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lbInfo5.setText("X");
+        lbInfo5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lbInfo5MouseClicked(evt);
+            }
+        });
 
         lbResultadoTime10.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
         lbResultadoTime10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -299,9 +325,14 @@ public class TelaRodada extends javax.swing.JFrame {
         lbResultadoTime11.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lbResultadoTime11.setText("_");
 
-        jLabel46.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
-        jLabel46.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel46.setText("X");
+        lbInfo6.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
+        lbInfo6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lbInfo6.setText("X");
+        lbInfo6.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lbInfo6MouseClicked(evt);
+            }
+        });
 
         lbResultadoTime12.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
         lbResultadoTime12.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -315,9 +346,14 @@ public class TelaRodada extends javax.swing.JFrame {
         lbResultadoTime13.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lbResultadoTime13.setText("_");
 
-        jLabel50.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
-        jLabel50.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel50.setText("X");
+        lbInfo7.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
+        lbInfo7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lbInfo7.setText("X");
+        lbInfo7.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lbInfo7MouseClicked(evt);
+            }
+        });
 
         lbResultadoTime16.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
         lbResultadoTime16.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -327,9 +363,14 @@ public class TelaRodada extends javax.swing.JFrame {
         lbResultadoTime15.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lbResultadoTime15.setText("_");
 
-        jLabel53.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
-        jLabel53.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel53.setText("X");
+        lbInfo8.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
+        lbInfo8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lbInfo8.setText("X");
+        lbInfo8.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lbInfo8MouseClicked(evt);
+            }
+        });
 
         lbResultadoTime18.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
         lbResultadoTime18.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -339,9 +380,14 @@ public class TelaRodada extends javax.swing.JFrame {
         lbResultadoTime17.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lbResultadoTime17.setText("_");
 
-        jLabel56.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
-        jLabel56.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel56.setText("X");
+        lbInfo9.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
+        lbInfo9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lbInfo9.setText("X");
+        lbInfo9.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lbInfo9MouseClicked(evt);
+            }
+        });
 
         lbResultadoTime20.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
         lbResultadoTime20.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -351,9 +397,14 @@ public class TelaRodada extends javax.swing.JFrame {
         lbResultadoTime19.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lbResultadoTime19.setText("_");
 
-        jLabel59.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
-        jLabel59.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel59.setText("X");
+        lbInfo10.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
+        lbInfo10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lbInfo10.setText("X");
+        lbInfo10.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lbInfo10MouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -367,7 +418,7 @@ public class TelaRodada extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(lbResultadoTime3, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel33, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(lbInfo2, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(lbResultadoTime4, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(4, 4, 4))
@@ -376,7 +427,7 @@ public class TelaRodada extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(lbResultadoTime1, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel31, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(lbInfo1, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(lbResultadoTime2, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, Short.MAX_VALUE))
@@ -385,7 +436,7 @@ public class TelaRodada extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(lbResultadoTime5, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel35, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(lbInfo3, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(lbResultadoTime6, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
@@ -393,7 +444,7 @@ public class TelaRodada extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(lbResultadoTime7, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel40, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(lbInfo4, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(lbResultadoTime8, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
@@ -401,7 +452,7 @@ public class TelaRodada extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(lbResultadoTime9, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel43, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(lbInfo5, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(lbResultadoTime10, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -423,31 +474,31 @@ public class TelaRodada extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(lbResultadoTime11, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel46, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(lbInfo6, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(lbResultadoTime12, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(lbResultadoTime13, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel50, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(lbInfo7, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(lbResultadoTime14, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(lbResultadoTime15, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel53, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(lbInfo8, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(lbResultadoTime16, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(lbResultadoTime17, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel56, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(lbInfo9, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(lbResultadoTime18, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(lbResultadoTime19, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel59, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(lbInfo10, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(lbResultadoTime20, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -479,27 +530,27 @@ public class TelaRodada extends javax.swing.JFrame {
                             .addGap(16, 16, 16)
                             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                 .addComponent(lbResultadoTime2, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jLabel31, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(lbInfo1, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addComponent(lbResultadoTime1, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGap(55, 55, 55)
                             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                 .addComponent(lbResultadoTime4, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jLabel33, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(lbInfo2, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addComponent(lbResultadoTime3, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGap(51, 51, 51)
                             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                 .addComponent(lbResultadoTime6, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jLabel35, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(lbInfo3, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addComponent(lbResultadoTime5, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGap(54, 54, 54)
                             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                 .addComponent(lbResultadoTime8, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jLabel40, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(lbInfo4, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addComponent(lbResultadoTime7, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                 .addComponent(lbResultadoTime10, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jLabel43, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(lbInfo5, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addComponent(lbResultadoTime9, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGap(19, 19, 19)))
                     .addGroup(jPanel1Layout.createSequentialGroup()
@@ -529,7 +580,7 @@ public class TelaRodada extends javax.swing.JFrame {
                                 .addGap(18, 18, 18)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                     .addComponent(lbResultadoTime12, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel46, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(lbInfo6, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(lbResultadoTime11, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))))
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
@@ -539,7 +590,7 @@ public class TelaRodada extends javax.swing.JFrame {
                                 .addGap(36, 36, 36)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                     .addComponent(lbResultadoTime14, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel50, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(lbInfo7, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(lbResultadoTime13, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))))
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
@@ -549,7 +600,7 @@ public class TelaRodada extends javax.swing.JFrame {
                                 .addGap(37, 37, 37)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                     .addComponent(lbResultadoTime16, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel53, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(lbInfo8, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(lbResultadoTime15, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))))
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
@@ -559,7 +610,7 @@ public class TelaRodada extends javax.swing.JFrame {
                                 .addGap(37, 37, 37)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                     .addComponent(lbResultadoTime18, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel56, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(lbInfo9, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(lbResultadoTime17, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))))
                         .addGap(18, 18, 18)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -567,7 +618,7 @@ public class TelaRodada extends javax.swing.JFrame {
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                     .addComponent(lbResultadoTime20, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel59, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(lbInfo10, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(lbResultadoTime19, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(17, 17, 17)))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -592,6 +643,46 @@ public class TelaRodada extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void lbInfo1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbInfo1MouseClicked
+        TelaInfoJogo novaInfo = new TelaInfoJogo(jogos.get(0));
+    }//GEN-LAST:event_lbInfo1MouseClicked
+
+    private void lbInfo2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbInfo2MouseClicked
+        TelaInfoJogo novaInfo = new TelaInfoJogo(jogos.get(1));
+    }//GEN-LAST:event_lbInfo2MouseClicked
+
+    private void lbInfo3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbInfo3MouseClicked
+        TelaInfoJogo novaInfo = new TelaInfoJogo(jogos.get(2));
+    }//GEN-LAST:event_lbInfo3MouseClicked
+
+    private void lbInfo4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbInfo4MouseClicked
+        TelaInfoJogo novaInfo = new TelaInfoJogo(jogos.get(3));
+    }//GEN-LAST:event_lbInfo4MouseClicked
+
+    private void lbInfo5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbInfo5MouseClicked
+        TelaInfoJogo novaInfo = new TelaInfoJogo(jogos.get(4));
+    }//GEN-LAST:event_lbInfo5MouseClicked
+
+    private void lbInfo6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbInfo6MouseClicked
+        TelaInfoJogo novaInfo = new TelaInfoJogo(jogos.get(5));
+    }//GEN-LAST:event_lbInfo6MouseClicked
+
+    private void lbInfo7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbInfo7MouseClicked
+        TelaInfoJogo novaInfo = new TelaInfoJogo(jogos.get(6));
+    }//GEN-LAST:event_lbInfo7MouseClicked
+
+    private void lbInfo8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbInfo8MouseClicked
+        TelaInfoJogo novaInfo = new TelaInfoJogo(jogos.get(7));
+    }//GEN-LAST:event_lbInfo8MouseClicked
+
+    private void lbInfo9MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbInfo9MouseClicked
+        TelaInfoJogo novaInfo = new TelaInfoJogo(jogos.get(8));
+    }//GEN-LAST:event_lbInfo9MouseClicked
+
+    private void lbInfo10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbInfo10MouseClicked
+        TelaInfoJogo novaInfo = new TelaInfoJogo(jogos.get(9));
+    }//GEN-LAST:event_lbInfo10MouseClicked
 
     /**
      * @param args the command line arguments
@@ -630,17 +721,17 @@ public class TelaRodada extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel31;
-    private javax.swing.JLabel jLabel33;
-    private javax.swing.JLabel jLabel35;
-    private javax.swing.JLabel jLabel40;
-    private javax.swing.JLabel jLabel43;
-    private javax.swing.JLabel jLabel46;
-    private javax.swing.JLabel jLabel50;
-    private javax.swing.JLabel jLabel53;
-    private javax.swing.JLabel jLabel56;
-    private javax.swing.JLabel jLabel59;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JLabel lbInfo1;
+    private javax.swing.JLabel lbInfo10;
+    private javax.swing.JLabel lbInfo2;
+    private javax.swing.JLabel lbInfo3;
+    private javax.swing.JLabel lbInfo4;
+    private javax.swing.JLabel lbInfo5;
+    private javax.swing.JLabel lbInfo6;
+    private javax.swing.JLabel lbInfo7;
+    private javax.swing.JLabel lbInfo8;
+    private javax.swing.JLabel lbInfo9;
     private javax.swing.JLabel lbResultadoTime1;
     private javax.swing.JLabel lbResultadoTime10;
     private javax.swing.JLabel lbResultadoTime11;
