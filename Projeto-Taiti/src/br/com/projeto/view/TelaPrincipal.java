@@ -5,7 +5,6 @@
  */
 package br.com.projeto.view;
 
-import br.com.projeto.model.Jogo;
 import br.com.projeto.model.Rodada;
 import br.com.projeto.model.Time;
 import java.awt.Image;
