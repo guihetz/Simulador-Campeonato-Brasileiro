@@ -203,132 +203,132 @@ public class TelaClassificacao extends JFrame{
         
         //decimo primeiro colocado
         texto11 = new JLabel(" 11º ");
-        decimoPrimeiroEscudo = new JLabel("Escudo");
-        decimoPrimeiroNome = new JLabel("Nome");
-        decimoPrimeiroPontos = new JLabel("Pontos");
-        decimoPrimeiroVitorias = new JLabel("Vitórias");
-        decimoPrimeiroEmpates = new JLabel("Empates");
-        decimoPrimeiroDerrotas = new JLabel("Derrotas");
-        decimoPrimeiroGolsPro = new JLabel("Gols Pró");
-        decimoPrimeiroGolsContra = new JLabel("Gols Contra");
-        decimoPrimeiroSaldoDeGols = new JLabel("Saldo de Gols");
+        decimoPrimeiroEscudo = new JLabel(times.get(10).getEscudo());
+        decimoPrimeiroNome = new JLabel(times.get(10).getNome());
+        decimoPrimeiroPontos = new JLabel(String.valueOf(times.get(10).getPontuacaoAtual()));
+        decimoPrimeiroVitorias = new JLabel(String.valueOf(times.get(10).getVitorias()));
+        decimoPrimeiroEmpates = new JLabel(String.valueOf(times.get(10).getEmpates()));
+        decimoPrimeiroDerrotas = new JLabel(String.valueOf(times.get(10).getDerrotas()));
+        decimoPrimeiroGolsPro = new JLabel(String.valueOf(times.get(10).getGolsPro()));
+        decimoPrimeiroGolsContra = new JLabel(String.valueOf(times.get(10).getGolsContra()));
+        decimoPrimeiroSaldoDeGols = new JLabel(String.valueOf(times.get(10).getSaldoGol()));
         decimoPrimeiroInfo = new JLabel("Info Time");
         
         //decimo segundo colocado
         texto12 = new JLabel(" 12º ");
-        decimoSegundoEscudo = new JLabel("Escudo");
-        decimoSegundoNome = new JLabel("Nome");
-        decimoSegundoPontos = new JLabel("Pontos");
-        decimoSegundoVitorias = new JLabel("Vitórias");
-        decimoSegundoEmpates = new JLabel("Empates");
-        decimoSegundoDerrotas = new JLabel("Derrotas");
-        decimoSegundoGolsPro = new JLabel("Gols Pró");
-        decimoSegundoGolsContra = new JLabel("Gols Contra");
-        decimoSegundoSaldoDeGols = new JLabel("Saldo de Gols");
+        decimoSegundoEscudo = new JLabel(times.get(11).getEscudo());
+        decimoSegundoNome = new JLabel(times.get(11).getNome());
+        decimoSegundoPontos = new JLabel(String.valueOf(times.get(11).getPontuacaoAtual()));
+        decimoSegundoVitorias = new JLabel(String.valueOf(times.get(11).getVitorias()));
+        decimoSegundoEmpates = new JLabel(String.valueOf(times.get(11).getEmpates()));
+        decimoSegundoDerrotas = new JLabel(String.valueOf(times.get(11).getDerrotas()));
+        decimoSegundoGolsPro = new JLabel(String.valueOf(times.get(11).getGolsPro()));
+        decimoSegundoGolsContra = new JLabel(String.valueOf(times.get(11).getGolsContra()));
+        decimoSegundoSaldoDeGols = new JLabel(String.valueOf(times.get(11).getSaldoGol()));
         decimoSegundoInfo = new JLabel("Info Time");
         
         //decimo terceiro colocado
         texto13 = new JLabel(" 13º ");
-        decimoTerceiroEscudo = new JLabel("Escudo");
-        decimoTerceiroNome = new JLabel("Nome");
-        decimoTerceiroPontos = new JLabel("Pontos");
-        decimoTerceiroVitorias = new JLabel("Vitórias");
-        decimoTerceiroEmpates = new JLabel("Empates");
-        decimoTerceiroDerrotas = new JLabel("Derrotas");
-        decimoTerceiroGolsPro = new JLabel("Gols Pró");
-        decimoTerceiroGolsContra = new JLabel("Gols Contra");
-        decimoTerceiroSaldoDeGols = new JLabel("Saldo de Gols");
+        decimoTerceiroEscudo = new JLabel(times.get(12).getEscudo());
+        decimoTerceiroNome = new JLabel(times.get(12).getNome());
+        decimoTerceiroPontos = new JLabel(String.valueOf(times.get(12).getPontuacaoAtual()));
+        decimoTerceiroVitorias = new JLabel(String.valueOf(times.get(12).getVitorias()));
+        decimoTerceiroEmpates = new JLabel(String.valueOf(times.get(12).getEmpates()));
+        decimoTerceiroDerrotas = new JLabel(String.valueOf(times.get(12).getDerrotas()));
+        decimoTerceiroGolsPro = new JLabel(String.valueOf(times.get(12).getGolsPro()));
+        decimoTerceiroGolsContra = new JLabel(String.valueOf(times.get(12).getGolsContra()));
+        decimoTerceiroSaldoDeGols = new JLabel(String.valueOf(times.get(12).getSaldoGol()));
         decimoTerceiroInfo = new JLabel("Info Time");
         
         //decimo quarto colocado
         texto14 = new JLabel(" 14º ");
-        decimoQuartoEscudo = new JLabel("Escudo");
-        decimoQuartoNome = new JLabel("Nome");
-        decimoQuartoPontos = new JLabel("Pontos");
-        decimoQuartoVitorias = new JLabel("Vitórias");
-        decimoQuartoEmpates = new JLabel("Empates");
-        decimoQuartoDerrotas = new JLabel("Derrotas");
-        decimoQuartoGolsPro = new JLabel("Gols Pró");
-        decimoQuartoGolsContra = new JLabel("Gols Contra");
-        decimoQuartoSaldoDeGols = new JLabel("Saldo de Gols");
+        decimoQuartoEscudo = new JLabel(times.get(13).getEscudo());
+        decimoQuartoNome = new JLabel(times.get(13).getNome());
+        decimoQuartoPontos = new JLabel(String.valueOf(times.get(13).getPontuacaoAtual()));
+        decimoQuartoVitorias = new JLabel(String.valueOf(times.get(13).getVitorias()));
+        decimoQuartoEmpates = new JLabel(String.valueOf(times.get(13).getEmpates()));
+        decimoQuartoDerrotas = new JLabel(String.valueOf(times.get(13).getDerrotas()));
+        decimoQuartoGolsPro = new JLabel(String.valueOf(times.get(13).getGolsPro()));
+        decimoQuartoGolsContra = new JLabel(String.valueOf(times.get(13).getGolsContra()));
+        decimoQuartoSaldoDeGols = new JLabel(String.valueOf(times.get(13).getSaldoGol()));
         decimoQuartoInfo = new JLabel("Info Time");
         
         //decimo quinto colocado
         texto15 = new JLabel(" 15º ");
-        decimoQuintoEscudo = new JLabel("Escudo");
-        decimoQuintoNome = new JLabel("Nome");
-        decimoQuintoPontos = new JLabel("Pontos");
-        decimoQuintoVitorias = new JLabel("Vitórias");
-        decimoQuintoEmpates = new JLabel("Empates");
-        decimoQuintoDerrotas = new JLabel("Derrotas");
-        decimoQuintoGolsPro = new JLabel("Gols Pró");
-        decimoQuintoGolsContra = new JLabel("Gols Contra");
-        decimoQuintoSaldoDeGols = new JLabel("Saldo de Gols");
+        decimoQuintoEscudo = new JLabel(times.get(14).getEscudo());
+        decimoQuintoNome = new JLabel(times.get(14).getNome());
+        decimoQuintoPontos = new JLabel(String.valueOf(times.get(14).getPontuacaoAtual()));
+        decimoQuintoVitorias = new JLabel(String.valueOf(times.get(14).getVitorias()));
+        decimoQuintoEmpates = new JLabel(String.valueOf(times.get(14).getEmpates()));
+        decimoQuintoDerrotas = new JLabel(String.valueOf(times.get(14).getDerrotas()));
+        decimoQuintoGolsPro = new JLabel(String.valueOf(times.get(14).getGolsPro()));
+        decimoQuintoGolsContra = new JLabel(String.valueOf(times.get(14).getGolsContra()));
+        decimoQuintoSaldoDeGols = new JLabel(String.valueOf(times.get(14).getSaldoGol()));
         decimoQuintoInfo = new JLabel("Info Time");
         
         //decimo sexto colocado
         texto16 = new JLabel(" 16º ");
-        decimoSextoEscudo = new JLabel("Escudo");
-        decimoSextoNome = new JLabel("Nome");
-        decimoSextoPontos = new JLabel("Pontos");
-        decimoSextoVitorias = new JLabel("Vitórias");
-        decimoSextoEmpates = new JLabel("Empates");
-        decimoSextoDerrotas = new JLabel("Derrotas");
-        decimoSextoGolsPro = new JLabel("Gols Pró");
-        decimoSextoGolsContra = new JLabel("Gols Contra");
-        decimoSextoSaldoDeGols = new JLabel("Saldo de Gols");
+        decimoSextoEscudo = new JLabel(times.get(15).getEscudo());
+        decimoSextoNome = new JLabel(times.get(15).getNome());
+        decimoSextoPontos = new JLabel(String.valueOf(times.get(15).getPontuacaoAtual()));
+        decimoSextoVitorias = new JLabel(String.valueOf(times.get(15).getVitorias()));
+        decimoSextoEmpates = new JLabel(String.valueOf(times.get(15).getEmpates()));
+        decimoSextoDerrotas = new JLabel(String.valueOf(times.get(15).getDerrotas()));
+        decimoSextoGolsPro = new JLabel(String.valueOf(times.get(15).getGolsPro()));
+        decimoSextoGolsContra = new JLabel(String.valueOf(times.get(15).getGolsContra()));
+        decimoSextoSaldoDeGols = new JLabel(String.valueOf(times.get(15).getSaldoGol()));
         decimoSextoInfo = new JLabel("Info Time");
         
         //decimo setimo colocado
         texto17 = new JLabel(" 17º ");
-        decimoSetimoEscudo = new JLabel("Escudo");
-        decimoSetimoNome = new JLabel("Nome");
-        decimoSetimoPontos = new JLabel("Pontos");
-        decimoSetimoVitorias = new JLabel("Vitórias");
-        decimoSetimoEmpates = new JLabel("Empates");
-        decimoSetimoDerrotas = new JLabel("Derrotas");
-        decimoSetimoGolsPro = new JLabel("Gols Pró");
-        decimoSetimoGolsContra = new JLabel("Gols Contra");
-        decimoSetimoSaldoDeGols = new JLabel("Saldo de Gols");
+        decimoSetimoEscudo = new JLabel(times.get(16).getEscudo());
+        decimoSetimoNome = new JLabel(times.get(16).getNome());
+        decimoSetimoPontos = new JLabel(String.valueOf(times.get(16).getPontuacaoAtual()));
+        decimoSetimoVitorias = new JLabel(String.valueOf(times.get(16).getVitorias()));
+        decimoSetimoEmpates = new JLabel(String.valueOf(times.get(16).getEmpates()));
+        decimoSetimoDerrotas = new JLabel(String.valueOf(times.get(16).getDerrotas()));
+        decimoSetimoGolsPro = new JLabel(String.valueOf(times.get(16).getGolsPro()));
+        decimoSetimoGolsContra = new JLabel(String.valueOf(times.get(16).getGolsContra()));
+        decimoSetimoSaldoDeGols = new JLabel(String.valueOf(times.get(16).getSaldoGol()));
         decimoSetimoInfo = new JLabel("Info Time");
         
         //decimo oitavo colocado
         texto18 = new JLabel(" 18º ");
-        decimoOitavoEscudo = new JLabel("Escudo");
-        decimoOitavoNome = new JLabel("Nome");
-        decimoOitavoPontos = new JLabel("Pontos");
-        decimoOitavoVitorias = new JLabel("Vitórias");
-        decimoOitavoEmpates = new JLabel("Empates");
-        decimoOitavoDerrotas = new JLabel("Derrotas");
-        decimoOitavoGolsPro = new JLabel("Gols Pró");
-        decimoOitavoGolsContra = new JLabel("Gols Contra");
-        decimoOitavoSaldoDeGols = new JLabel("Saldo de Gols");
+        decimoOitavoEscudo = new JLabel(times.get(17).getEscudo());
+        decimoOitavoNome = new JLabel(times.get(17).getNome());
+        decimoOitavoPontos = new JLabel(String.valueOf(times.get(17).getPontuacaoAtual()));
+        decimoOitavoVitorias = new JLabel(String.valueOf(times.get(17).getVitorias()));
+        decimoOitavoEmpates = new JLabel(String.valueOf(times.get(17).getEmpates()));
+        decimoOitavoDerrotas = new JLabel(String.valueOf(times.get(17).getDerrotas()));
+        decimoOitavoGolsPro = new JLabel(String.valueOf(times.get(17).getGolsPro()));
+        decimoOitavoGolsContra = new JLabel(String.valueOf(times.get(17).getGolsContra()));
+        decimoOitavoSaldoDeGols = new JLabel(String.valueOf(times.get(17).getSaldoGol()));
         decimoOitavoInfo = new JLabel("Info Time");
         
         //decimo  nono colocado
         texto19 = new JLabel(" 19º ");
-        decimoNonoEscudo = new JLabel("Escudo");
-        decimoNonoNome = new JLabel("Nome");
-        decimoNonoPontos = new JLabel("Pontos");
-        decimoNonoVitorias = new JLabel("Vitórias");
-        decimoNonoEmpates = new JLabel("Empates");
-        decimoNonoDerrotas = new JLabel("Derrotas");
-        decimoNonoGolsPro = new JLabel("Gols Pró");
-        decimoNonoGolsContra = new JLabel("Gols Contra");
-        decimoNonoSaldoDeGols = new JLabel("Saldo de Gols");
+        decimoNonoEscudo = new JLabel(times.get(18).getEscudo());
+        decimoNonoNome = new JLabel(times.get(18).getNome());
+        decimoNonoPontos = new JLabel(String.valueOf(times.get(18).getPontuacaoAtual()));
+        decimoNonoVitorias = new JLabel(String.valueOf(times.get(18).getVitorias()));
+        decimoNonoEmpates = new JLabel(String.valueOf(times.get(18).getEmpates()));
+        decimoNonoDerrotas = new JLabel(String.valueOf(times.get(18).getDerrotas()));
+        decimoNonoGolsPro = new JLabel(String.valueOf(times.get(18).getGolsPro()));
+        decimoNonoGolsContra = new JLabel(String.valueOf(times.get(18).getGolsContra()));
+        decimoNonoSaldoDeGols = new JLabel(String.valueOf(times.get(18).getSaldoGol()));
         decimoNonoInfo = new JLabel("Info Time");
         
         //vigésimo colocado
         texto20 = new JLabel(" 20º ");
-        vigesimoEscudo = new JLabel("Escudo");
-        vigesimoNome = new JLabel("Nome");
-        vigesimoPontos = new JLabel("Pontos");
-        vigesimoVitorias = new JLabel("Vitórias");
-        vigesimoEmpates = new JLabel("Empates");
-        vigesimoDerrotas = new JLabel("Derrotas");
-        vigesimoGolsPro = new JLabel("Gols Pró");
-        vigesimoGolsContra = new JLabel("Gols Contra");
-        vigesimoSaldoDeGols = new JLabel("Saldo de Gols");
+        vigesimoEscudo = new JLabel(times.get(19).getEscudo());
+        vigesimoNome = new JLabel(times.get(19).getNome());
+        vigesimoPontos = new JLabel(String.valueOf(times.get(19).getPontuacaoAtual()));
+        vigesimoVitorias = new JLabel(String.valueOf(times.get(19).getVitorias()));
+        vigesimoEmpates = new JLabel(String.valueOf(times.get(19).getEmpates()));
+        vigesimoDerrotas = new JLabel(String.valueOf(times.get(19).getDerrotas()));
+        vigesimoGolsPro = new JLabel(String.valueOf(times.get(19).getGolsPro()));
+        vigesimoGolsContra = new JLabel(String.valueOf(times.get(19).getGolsContra()));
+        vigesimoSaldoDeGols = new JLabel(String.valueOf(times.get(19).getSaldoGol()));
         vigesimoInfo = new JLabel("Info Time");
         
         //adicionando labels no layout
