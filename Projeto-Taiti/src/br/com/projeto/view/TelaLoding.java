@@ -55,7 +55,6 @@ public class TelaLoding extends javax.swing.JFrame {
         this.setIconImage(icon);
         
         this.setLocationRelativeTo(null);
-        this.setSize(565, 350);
        
         pgLoading.setMaximum(100);    
         pgLoading.setMinimum(0);
@@ -109,13 +108,25 @@ public class TelaLoding extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        getContentPane().setLayout(null);
-        getContentPane().add(pgLoading);
-        pgLoading.setBounds(10, 280, 530, 20);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/projeto/image/loagin.jpg"))); // NOI18N
-        getContentPane().add(jLabel1);
-        jLabel1.setBounds(0, 0, 550, 310);
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel1)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(10, 10, 10)
+                .addComponent(pgLoading, javax.swing.GroupLayout.PREFERRED_SIZE, 530, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel1)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(280, 280, 280)
+                .addComponent(pgLoading, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
