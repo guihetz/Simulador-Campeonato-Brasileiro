@@ -826,6 +826,8 @@ public class TelaClassificacao extends JFrame{
         this.getContentPane().add(vigesimoSaldoDeGols);
         this.getContentPane().add(vigesimoInfo);
         this.getContentPane().setBackground(Color.WHITE);
+        
+        this.setExtendedState(JFrame.MAXIMIZED_BOTH); //tela inicia maximizada
         this.setVisible(true);
     }
 }

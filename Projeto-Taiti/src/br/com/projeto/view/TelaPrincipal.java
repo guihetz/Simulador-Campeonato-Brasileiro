@@ -13,6 +13,7 @@ import java.awt.Toolkit;
 import java.util.ArrayList;
 import java.util.List;
 import javax.swing.ImageIcon;
+import javax.swing.JFrame;
 import javax.swing.ListSelectionModel;
 
 /**
@@ -31,6 +32,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
         this.getContentPane().setBackground(Color.WHITE);
         this.painel1.setBackground(Color.WHITE);
         this.painel2.setBackground(Color.WHITE);
+        //this.setExtendedState(JFrame.MAXIMIZED_BOTH); //Tela inicia maximizada
         //Image icon = Toolkit.getDefaultToolkit().getImage(getClass().getResource("../image/cup.png") );
         //this.setIconImage(icon);
         
