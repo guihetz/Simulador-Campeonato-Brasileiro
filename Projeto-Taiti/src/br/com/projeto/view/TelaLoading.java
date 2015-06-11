@@ -30,6 +30,7 @@ e this license header, choose License Headers in Project Properties.
  */
 package br.com.projeto.view;
 
+import java.awt.Color;
 import java.awt.Image;
 import java.awt.Toolkit;
 import java.util.TimerTask;
@@ -38,24 +39,26 @@ import java.util.TimerTask;
  *
  * @author Daylton
  */
-public class TelaLoding extends javax.swing.JFrame {
+public class TelaLoading extends javax.swing.JFrame {
 
     /**
-     * Creates new form TelaLoding
+     * Creates new form TelaLoading
      */
     
     public static final long TEMPO = (1000* 1);
     int i = 0;
     TimerTask tarefa;
     
-    public TelaLoding() {
+    public TelaLoading() {
         initComponents();
         
         //Image icon = Toolkit.getDefaultToolkit().getImage(getClass().getResource("../image/cup.png") );
         //this.setIconImage(icon);
         
         this.setLocationRelativeTo(null);
-       
+        this.setResizable(false);
+        pgLoading.setForeground(Color.GREEN); //Cor da barra de progresso
+        //pgLoading.setBackground(Color.orange); //Cor de fundo da barra de progresso
         pgLoading.setMaximum(100);    
         pgLoading.setMinimum(0);
         
@@ -108,6 +111,7 @@ public class TelaLoding extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setUndecorated(true);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/projeto/image/loagin.jpg"))); // NOI18N
 
@@ -148,21 +152,23 @@ public class TelaLoding extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(TelaLoding.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaLoading.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(TelaLoding.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaLoading.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(TelaLoding.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaLoading.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(TelaLoding.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaLoading.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new TelaLoding().setVisible(true);
+                new TelaLoading().setVisible(true);
             }
         });
     }

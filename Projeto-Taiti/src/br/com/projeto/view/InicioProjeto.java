@@ -31,7 +31,7 @@ public class InicioProjeto {
     }
     
     public static void main(String[] args) {
-        TelaLoding novaTelaInicial = new TelaLoding();
+        TelaLoading novaTelaInicial = new TelaLoading();
         novaTelaInicial.setLocationRelativeTo(null);
         novaTelaInicial.setVisible(true);
     }

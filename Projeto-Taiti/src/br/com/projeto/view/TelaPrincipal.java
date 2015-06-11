@@ -7,6 +7,7 @@ package br.com.projeto.view;
 
 import br.com.projeto.model.Rodada;
 import br.com.projeto.model.Time;
+import java.awt.Color;
 import java.awt.Image;
 import java.awt.Toolkit;
 import java.util.ArrayList;
@@ -27,7 +28,9 @@ public class TelaPrincipal extends javax.swing.JFrame {
     List<Time> times;
     public TelaPrincipal() {
         initComponents();
-        
+        this.getContentPane().setBackground(Color.WHITE);
+        this.painel1.setBackground(Color.WHITE);
+        this.painel2.setBackground(Color.WHITE);
         //Image icon = Toolkit.getDefaultToolkit().getImage(getClass().getResource("../image/cup.png") );
         //this.setIconImage(icon);
         
@@ -121,7 +124,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         jlListaDeRodadas = new javax.swing.JList();
         btnNovaRodada = new javax.swing.JButton();
-        paine2 = new javax.swing.JPanel();
+        painel2 = new javax.swing.JPanel();
         btnVisualizarRodada = new javax.swing.JButton();
         btnClassificacao = new javax.swing.JButton();
 
@@ -159,7 +162,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        paine2.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Campeonato", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("FIFA Welcome", 0, 24))); // NOI18N
+        painel2.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Campeonato", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("FIFA Welcome", 0, 24))); // NOI18N
 
         btnVisualizarRodada.setText("Visualizar Informações da Rodada");
         btnVisualizarRodada.addActionListener(new java.awt.event.ActionListener() {
@@ -175,20 +178,20 @@ public class TelaPrincipal extends javax.swing.JFrame {
             }
         });
 
-        javax.swing.GroupLayout paine2Layout = new javax.swing.GroupLayout(paine2);
-        paine2.setLayout(paine2Layout);
-        paine2Layout.setHorizontalGroup(
-            paine2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(paine2Layout.createSequentialGroup()
+        javax.swing.GroupLayout painel2Layout = new javax.swing.GroupLayout(painel2);
+        painel2.setLayout(painel2Layout);
+        painel2Layout.setHorizontalGroup(
+            painel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(painel2Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(paine2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(painel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(btnVisualizarRodada, javax.swing.GroupLayout.DEFAULT_SIZE, 255, Short.MAX_VALUE)
                     .addComponent(btnClassificacao, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
-        paine2Layout.setVerticalGroup(
-            paine2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(paine2Layout.createSequentialGroup()
+        painel2Layout.setVerticalGroup(
+            painel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(painel2Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(btnVisualizarRodada)
                 .addGap(18, 18, 18)
@@ -204,7 +207,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(painel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(paine2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(painel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -212,7 +215,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(49, 49, 49)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(paine2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(painel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(painel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -275,7 +278,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
     private javax.swing.JButton btnVisualizarRodada;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JList jlListaDeRodadas;
-    private javax.swing.JPanel paine2;
     private javax.swing.JPanel painel1;
+    private javax.swing.JPanel painel2;
     // End of variables declaration//GEN-END:variables
 }

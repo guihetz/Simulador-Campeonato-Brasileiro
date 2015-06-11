@@ -8,6 +8,8 @@ package br.com.projeto.view;
 import br.com.projeto.model.ComparadorDePontos;
 import br.com.projeto.model.Rodada;
 import br.com.projeto.model.Time;
+import java.awt.Color;
+import java.awt.Font;
 import java.awt.GridLayout;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -49,6 +51,7 @@ public class TelaClassificacao extends JFrame{
         this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         this.setLocationRelativeTo(null);
         this.times = new ArrayList<>();
+        Font f = InicioProjeto.getFonte(14);
         for(Time t: clubes){
             this.times.add(t);
         }
@@ -84,6 +87,18 @@ public class TelaClassificacao extends JFrame{
         primeiroSaldoDeGols = new JLabel(String.valueOf(times.get(0).getSaldoGol()));
         primeiroInfo = new JLabel("Info Time");
         
+        texto1.setFont(f);
+        primeiroEscudo.setFont(f); 
+        primeiroNome.setFont(f); 
+        primeiroPontos.setFont(f);
+        primeiroVitorias.setFont(f); 
+        primeiroEmpates.setFont(f); 
+        primeiroDerrotas.setFont(f);
+        primeiroGolsPro.setFont(f); 
+        primeiroGolsContra.setFont(f);
+        primeiroSaldoDeGols.setFont(f); 
+        primeiroInfo.setFont(f);
+        
         //segundo colocado
         texto2 = new JLabel(" 2º ");
         segundoEscudo = new JLabel(times.get(1).getEscudo());
@@ -96,6 +111,18 @@ public class TelaClassificacao extends JFrame{
         segundoGolsContra = new JLabel(String.valueOf(times.get(1).getGolsContra()));
         segundoSaldoDeGols = new JLabel(String.valueOf(times.get(1).getSaldoGol()));
         segundoInfo = new JLabel("Info Time");
+        
+        texto2.setFont(f);
+        segundoEscudo.setFont(f); 
+        segundoNome.setFont(f); 
+        segundoPontos.setFont(f); 
+        segundoVitorias.setFont(f); 
+        segundoEmpates.setFont(f);
+        segundoDerrotas.setFont(f);
+        segundoGolsPro.setFont(f);
+        segundoGolsContra.setFont(f);
+        segundoSaldoDeGols.setFont(f);
+        segundoInfo.setFont(f);
         
         //terceiro colocado
         texto3 = new JLabel(" 3º ");
@@ -110,6 +137,18 @@ public class TelaClassificacao extends JFrame{
         terceiroSaldoDeGols = new JLabel(String.valueOf(times.get(2).getSaldoGol()));
         terceiroInfo = new JLabel("Info Time");
         
+        texto3.setFont(f);
+        terceiroEscudo.setFont(f);
+        terceiroNome.setFont(f);
+        terceiroPontos.setFont(f);
+        terceiroVitorias.setFont(f);
+        terceiroEmpates.setFont(f);
+        terceiroDerrotas.setFont(f);
+        terceiroGolsPro.setFont(f);
+        terceiroGolsContra.setFont(f);
+        terceiroSaldoDeGols.setFont(f);
+        terceiroInfo.setFont(f);
+        
         //quarto colocado
         texto4 = new JLabel(" 4º ");
         quartoEscudo = new JLabel(times.get(3).getEscudo());
@@ -122,6 +161,18 @@ public class TelaClassificacao extends JFrame{
         quartoGolsContra = new JLabel(String.valueOf(times.get(3).getGolsContra()));
         quartoSaldoDeGols = new JLabel(String.valueOf(times.get(3).getSaldoGol()));
         quartoInfo = new JLabel("Info Time");
+        
+        texto4.setFont(f);
+        quartoEscudo.setFont(f);
+        quartoNome.setFont(f);
+        quartoPontos.setFont(f);
+        quartoVitorias.setFont(f);
+        quartoEmpates.setFont(f);
+        quartoDerrotas.setFont(f);
+        quartoGolsPro.setFont(f);
+        quartoGolsContra.setFont(f);
+        quartoSaldoDeGols.setFont(f);
+        quartoInfo.setFont(f);
         
         //quinto colocado
         texto5 = new JLabel(" 5º ");
@@ -136,6 +187,18 @@ public class TelaClassificacao extends JFrame{
         quintoSaldoDeGols = new JLabel(String.valueOf(times.get(4).getSaldoGol()));
         quintoInfo = new JLabel("Info Time");
         
+        texto5.setFont(f);
+        quintoEscudo.setFont(f);
+        quintoNome.setFont(f);
+        quintoPontos.setFont(f);
+        quintoVitorias.setFont(f);
+        quintoEmpates.setFont(f);
+        quintoDerrotas.setFont(f);
+        quintoGolsPro.setFont(f);
+        quintoGolsContra.setFont(f);
+        quintoSaldoDeGols.setFont(f);
+        quintoInfo.setFont(f);
+        
         //sexto colocado
         texto6 = new JLabel(" 6º ");
         sextoEscudo = new JLabel(times.get(5).getEscudo());
@@ -148,6 +211,18 @@ public class TelaClassificacao extends JFrame{
         sextoGolsContra = new JLabel(String.valueOf(times.get(5).getGolsContra()));
         sextoSaldoDeGols = new JLabel(String.valueOf(times.get(5).getSaldoGol()));
         sextoInfo = new JLabel("Info Time");
+        
+        texto6.setFont(f);
+        sextoEscudo.setFont(f);
+        sextoNome.setFont(f);
+        sextoPontos.setFont(f);
+        sextoVitorias.setFont(f);
+        sextoEmpates.setFont(f);
+        sextoDerrotas.setFont(f);
+        sextoGolsPro.setFont(f);
+        sextoGolsContra.setFont(f);
+        sextoSaldoDeGols.setFont(f);
+        sextoInfo.setFont(f);
         
         //setimo colocado
         texto7 = new JLabel(" 7º ");
@@ -162,6 +237,18 @@ public class TelaClassificacao extends JFrame{
         setimoSaldoDeGols = new JLabel(String.valueOf(times.get(6).getSaldoGol()));
         setimoInfo = new JLabel("Info Time");
         
+        texto7.setFont(f);
+        setimoEscudo.setFont(f);
+        setimoNome.setFont(f);
+        setimoPontos.setFont(f);
+        setimoVitorias.setFont(f);
+        setimoEmpates.setFont(f);
+        setimoDerrotas.setFont(f);
+        setimoGolsPro.setFont(f);
+        setimoGolsContra.setFont(f);
+        setimoSaldoDeGols.setFont(f);
+        setimoInfo.setFont(f);
+        
         //oitavo colocado
         texto8 = new JLabel(" 8º ");
         oitavoEscudo = new JLabel(times.get(7).getEscudo());
@@ -174,6 +261,18 @@ public class TelaClassificacao extends JFrame{
         oitavoGolsContra = new JLabel(String.valueOf(times.get(7).getGolsContra()));
         oitavoSaldoDeGols = new JLabel(String.valueOf(times.get(7).getSaldoGol()));
         oitavoInfo = new JLabel("Info Time");
+        
+        texto8.setFont(f);
+        oitavoEscudo.setFont(f);
+        oitavoNome.setFont(f);
+        oitavoPontos.setFont(f);
+        oitavoVitorias.setFont(f);
+        oitavoEmpates.setFont(f);
+        oitavoDerrotas.setFont(f);
+        oitavoGolsPro.setFont(f);
+        oitavoGolsContra.setFont(f);
+        oitavoSaldoDeGols.setFont(f);
+        oitavoInfo.setFont(f);
         
         //nono colocado
         texto9 = new JLabel(" 9º ");
@@ -188,6 +287,18 @@ public class TelaClassificacao extends JFrame{
         nonoSaldoDeGols = new JLabel(String.valueOf(times.get(8).getSaldoGol()));
         nonoInfo = new JLabel("Info Time");
         
+        texto9.setFont(f);
+        nonoEscudo.setFont(f);
+        nonoNome.setFont(f);
+        nonoPontos.setFont(f);
+        nonoVitorias.setFont(f);
+        nonoEmpates.setFont(f);
+        nonoDerrotas.setFont(f);
+        nonoGolsPro.setFont(f);
+        nonoGolsContra.setFont(f);
+        nonoSaldoDeGols.setFont(f);
+        nonoInfo.setFont(f);
+        
         //decimo colocado
         texto10 = new JLabel(" 10º ");
         decimoEscudo = new JLabel(times.get(9).getEscudo());
@@ -200,6 +311,18 @@ public class TelaClassificacao extends JFrame{
         decimoGolsContra = new JLabel(String.valueOf(times.get(9).getGolsContra()));
         decimoSaldoDeGols = new JLabel(String.valueOf(times.get(9).getSaldoGol()));
         decimoInfo = new JLabel("Info Time");
+        
+        texto10.setFont(f);
+        decimoEscudo.setFont(f);
+        decimoNome.setFont(f);
+        decimoPontos.setFont(f);
+        decimoVitorias.setFont(f);
+        decimoEmpates.setFont(f);
+        decimoDerrotas.setFont(f);
+        decimoGolsPro.setFont(f);
+        decimoGolsContra.setFont(f);
+        decimoSaldoDeGols.setFont(f);
+        decimoInfo.setFont(f);
         
         //decimo primeiro colocado
         texto11 = new JLabel(" 11º ");
@@ -214,6 +337,18 @@ public class TelaClassificacao extends JFrame{
         decimoPrimeiroSaldoDeGols = new JLabel(String.valueOf(times.get(10).getSaldoGol()));
         decimoPrimeiroInfo = new JLabel("Info Time");
         
+        texto11.setFont(f);
+        decimoPrimeiroEscudo.setFont(f);
+        decimoPrimeiroNome.setFont(f);
+        decimoPrimeiroPontos.setFont(f);
+        decimoPrimeiroVitorias.setFont(f);
+        decimoPrimeiroEmpates.setFont(f);
+        decimoPrimeiroDerrotas.setFont(f);
+        decimoPrimeiroGolsPro.setFont(f);
+        decimoPrimeiroGolsContra.setFont(f);
+        decimoPrimeiroSaldoDeGols.setFont(f);
+        decimoPrimeiroInfo.setFont(f);
+        
         //decimo segundo colocado
         texto12 = new JLabel(" 12º ");
         decimoSegundoEscudo = new JLabel(times.get(11).getEscudo());
@@ -226,6 +361,18 @@ public class TelaClassificacao extends JFrame{
         decimoSegundoGolsContra = new JLabel(String.valueOf(times.get(11).getGolsContra()));
         decimoSegundoSaldoDeGols = new JLabel(String.valueOf(times.get(11).getSaldoGol()));
         decimoSegundoInfo = new JLabel("Info Time");
+        
+        texto12.setFont(f);
+        decimoSegundoEscudo.setFont(f);
+        decimoSegundoNome.setFont(f);
+        decimoSegundoPontos.setFont(f);
+        decimoSegundoVitorias.setFont(f);
+        decimoSegundoEmpates.setFont(f);
+        decimoSegundoDerrotas.setFont(f);
+        decimoSegundoGolsPro.setFont(f);
+        decimoSegundoGolsContra.setFont(f);
+        decimoSegundoSaldoDeGols.setFont(f);
+        decimoSegundoInfo.setFont(f);
         
         //decimo terceiro colocado
         texto13 = new JLabel(" 13º ");
@@ -240,6 +387,18 @@ public class TelaClassificacao extends JFrame{
         decimoTerceiroSaldoDeGols = new JLabel(String.valueOf(times.get(12).getSaldoGol()));
         decimoTerceiroInfo = new JLabel("Info Time");
         
+        texto13.setFont(f);
+        decimoTerceiroEscudo.setFont(f);
+        decimoTerceiroNome.setFont(f);
+        decimoTerceiroPontos.setFont(f);
+        decimoTerceiroVitorias.setFont(f);
+        decimoTerceiroEmpates.setFont(f);
+        decimoTerceiroDerrotas.setFont(f);
+        decimoTerceiroGolsPro.setFont(f);
+        decimoTerceiroGolsContra.setFont(f);
+        decimoTerceiroSaldoDeGols.setFont(f);
+        decimoTerceiroInfo.setFont(f);
+        
         //decimo quarto colocado
         texto14 = new JLabel(" 14º ");
         decimoQuartoEscudo = new JLabel(times.get(13).getEscudo());
@@ -252,6 +411,18 @@ public class TelaClassificacao extends JFrame{
         decimoQuartoGolsContra = new JLabel(String.valueOf(times.get(13).getGolsContra()));
         decimoQuartoSaldoDeGols = new JLabel(String.valueOf(times.get(13).getSaldoGol()));
         decimoQuartoInfo = new JLabel("Info Time");
+        
+        texto14.setFont(f);
+        decimoQuartoEscudo.setFont(f);
+        decimoQuartoNome.setFont(f);
+        decimoQuartoPontos.setFont(f);
+        decimoQuartoVitorias.setFont(f);
+        decimoQuartoEmpates.setFont(f);
+        decimoQuartoDerrotas.setFont(f);
+        decimoQuartoGolsPro.setFont(f);
+        decimoQuartoGolsContra.setFont(f);
+        decimoQuartoSaldoDeGols.setFont(f);
+        decimoQuartoInfo.setFont(f);
         
         //decimo quinto colocado
         texto15 = new JLabel(" 15º ");
@@ -266,6 +437,18 @@ public class TelaClassificacao extends JFrame{
         decimoQuintoSaldoDeGols = new JLabel(String.valueOf(times.get(14).getSaldoGol()));
         decimoQuintoInfo = new JLabel("Info Time");
         
+        texto15.setFont(f);
+        decimoQuintoEscudo.setFont(f);
+        decimoQuintoNome.setFont(f);
+        decimoQuintoPontos.setFont(f);
+        decimoQuintoVitorias.setFont(f);
+        decimoQuintoEmpates.setFont(f);
+        decimoQuintoDerrotas.setFont(f);
+        decimoQuintoGolsPro.setFont(f);
+        decimoQuintoGolsContra.setFont(f);
+        decimoQuintoSaldoDeGols.setFont(f);
+        decimoQuintoInfo.setFont(f);
+        
         //decimo sexto colocado
         texto16 = new JLabel(" 16º ");
         decimoSextoEscudo = new JLabel(times.get(15).getEscudo());
@@ -278,6 +461,18 @@ public class TelaClassificacao extends JFrame{
         decimoSextoGolsContra = new JLabel(String.valueOf(times.get(15).getGolsContra()));
         decimoSextoSaldoDeGols = new JLabel(String.valueOf(times.get(15).getSaldoGol()));
         decimoSextoInfo = new JLabel("Info Time");
+        
+        texto16.setFont(f);
+        decimoSextoEscudo.setFont(f);
+        decimoSextoNome.setFont(f);
+        decimoSextoPontos.setFont(f);
+        decimoSextoVitorias.setFont(f);
+        decimoSextoEmpates.setFont(f);
+        decimoSextoDerrotas.setFont(f);
+        decimoSextoGolsPro.setFont(f);
+        decimoSextoGolsContra.setFont(f);
+        decimoSextoSaldoDeGols.setFont(f);
+        decimoSextoInfo.setFont(f);
         
         //decimo setimo colocado
         texto17 = new JLabel(" 17º ");
@@ -292,6 +487,17 @@ public class TelaClassificacao extends JFrame{
         decimoSetimoSaldoDeGols = new JLabel(String.valueOf(times.get(16).getSaldoGol()));
         decimoSetimoInfo = new JLabel("Info Time");
         
+        texto17.setFont(f);
+        decimoSetimoEscudo.setFont(f);
+        decimoSetimoNome.setFont(f);
+        decimoSetimoPontos.setFont(f);
+        decimoSetimoEmpates.setFont(f);
+        decimoSetimoDerrotas.setFont(f);
+        decimoSetimoGolsPro.setFont(f);
+        decimoSetimoGolsContra.setFont(f);
+        decimoSetimoSaldoDeGols.setFont(f);
+        decimoSetimoInfo.setFont(f);
+        
         //decimo oitavo colocado
         texto18 = new JLabel(" 18º ");
         decimoOitavoEscudo = new JLabel(times.get(17).getEscudo());
@@ -304,6 +510,18 @@ public class TelaClassificacao extends JFrame{
         decimoOitavoGolsContra = new JLabel(String.valueOf(times.get(17).getGolsContra()));
         decimoOitavoSaldoDeGols = new JLabel(String.valueOf(times.get(17).getSaldoGol()));
         decimoOitavoInfo = new JLabel("Info Time");
+        
+        texto18.setFont(f);
+        decimoOitavoEscudo.setFont(f);
+        decimoOitavoNome.setFont(f);
+        decimoOitavoPontos.setFont(f);
+        decimoOitavoVitorias.setFont(f);
+        decimoOitavoEmpates.setFont(f);
+        decimoOitavoDerrotas.setFont(f);
+        decimoOitavoGolsPro.setFont(f);
+        decimoOitavoGolsContra.setFont(f);
+        decimoOitavoSaldoDeGols.setFont(f);
+        decimoOitavoInfo.setFont(f);
         
         //decimo  nono colocado
         texto19 = new JLabel(" 19º ");
@@ -318,6 +536,18 @@ public class TelaClassificacao extends JFrame{
         decimoNonoSaldoDeGols = new JLabel(String.valueOf(times.get(18).getSaldoGol()));
         decimoNonoInfo = new JLabel("Info Time");
         
+        texto19.setFont(f);
+        decimoNonoEscudo.setFont(f);
+        decimoNonoNome.setFont(f);
+        decimoNonoPontos.setFont(f);
+        decimoNonoVitorias.setFont(f);
+        decimoNonoEmpates.setFont(f);
+        decimoNonoDerrotas.setFont(f);
+        decimoNonoGolsPro.setFont(f);
+        decimoNonoGolsContra.setFont(f);
+        decimoNonoSaldoDeGols.setFont(f);
+        decimoNonoInfo.setFont(f);
+        
         //vigésimo colocado
         texto20 = new JLabel(" 20º ");
         vigesimoEscudo = new JLabel(times.get(19).getEscudo());
@@ -330,6 +560,18 @@ public class TelaClassificacao extends JFrame{
         vigesimoGolsContra = new JLabel(String.valueOf(times.get(19).getGolsContra()));
         vigesimoSaldoDeGols = new JLabel(String.valueOf(times.get(19).getSaldoGol()));
         vigesimoInfo = new JLabel("Info Time");
+        
+        texto20.setFont(f);
+        vigesimoEscudo.setFont(f);
+        vigesimoNome.setFont(f);
+        vigesimoPontos.setFont(f);
+        vigesimoVitorias.setFont(f);
+        vigesimoEmpates.setFont(f);
+        vigesimoDerrotas.setFont(f);
+        vigesimoGolsPro.setFont(f);
+        vigesimoGolsContra.setFont(f);
+        vigesimoSaldoDeGols.setFont(f);
+        vigesimoInfo.setFont(f);
         
         //adicionando labels no layout
         this.getContentPane().add(texto0);
@@ -583,7 +825,7 @@ public class TelaClassificacao extends JFrame{
         this.getContentPane().add(vigesimoGolsContra);
         this.getContentPane().add(vigesimoSaldoDeGols);
         this.getContentPane().add(vigesimoInfo);
-        
+        this.getContentPane().setBackground(Color.WHITE);
         this.setVisible(true);
     }
 }
