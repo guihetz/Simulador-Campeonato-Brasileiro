@@ -51,8 +51,8 @@ public class TelaLoding extends javax.swing.JFrame {
     public TelaLoding() {
         initComponents();
         
-        Image icon = Toolkit.getDefaultToolkit().getImage(getClass().getResource("../image/cup.png") );
-        this.setIconImage(icon);
+        //Image icon = Toolkit.getDefaultToolkit().getImage(getClass().getResource("../image/cup.png") );
+        //this.setIconImage(icon);
         
         this.setLocationRelativeTo(null);
        

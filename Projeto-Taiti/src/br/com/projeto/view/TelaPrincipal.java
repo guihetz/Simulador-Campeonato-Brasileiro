@@ -28,8 +28,8 @@ public class TelaPrincipal extends javax.swing.JFrame {
     public TelaPrincipal() {
         initComponents();
         
-        Image icon = Toolkit.getDefaultToolkit().getImage(getClass().getResource("../image/cup.png") );
-        this.setIconImage(icon);
+        //Image icon = Toolkit.getDefaultToolkit().getImage(getClass().getResource("../image/cup.png") );
+        //this.setIconImage(icon);
         
         rodadas = new ArrayList<>();
         times = new ArrayList<>();
