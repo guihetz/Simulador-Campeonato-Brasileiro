@@ -17,7 +17,7 @@ import java.io.IOException;
  */
 public class InicioProjeto {
     
-    public Font getFonte( int tamanho ){  
+    public static Font getFonte( int tamanho ){  
         Font font = null;  
         try{  
             File file = new File("fifawelcome.ttf");  

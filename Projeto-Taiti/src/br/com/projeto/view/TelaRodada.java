@@ -8,6 +8,7 @@ package br.com.projeto.view;
 import br.com.projeto.model.Jogo;
 import br.com.projeto.model.Rodada;
 import br.com.projeto.model.Time;
+import java.awt.Font;
 import static java.awt.image.ImageObserver.WIDTH;
 import java.util.ArrayList;
 import java.util.List;
@@ -34,7 +35,7 @@ public class TelaRodada extends javax.swing.JFrame {
     public TelaRodada(Rodada r){
         this();
         List<Jogo> jogos = r.getJogosRodada();
-        
+        Font f = InicioProjeto.getFonte(36);
         lbTime1.setIcon(jogos.get(0).getTime1().getEscudo());
         //lbTime1.setText(jogos.get(0).getTime1().getNome());
         lbTime1.setHorizontalAlignment(SwingConstants.CENTER);
@@ -127,25 +128,45 @@ public class TelaRodada extends javax.swing.JFrame {
         lbTime20.setVerticalAlignment(SwingConstants.CENTER);
         
         lbResultadoTime1.setText(String.valueOf(jogos.get(0).getGolTime1()));
+        lbResultadoTime1.setFont(f);
         lbResultadoTime2.setText(String.valueOf(jogos.get(0).getGolTime2()));
+        lbResultadoTime2.setFont(f);
         lbResultadoTime3.setText(String.valueOf(jogos.get(1).getGolTime1()));
+        lbResultadoTime3.setFont(f);
         lbResultadoTime4.setText(String.valueOf(jogos.get(1).getGolTime2()));
+        lbResultadoTime4.setFont(f);
         lbResultadoTime5.setText(String.valueOf(jogos.get(2).getGolTime1()));
+        lbResultadoTime5.setFont(f);
         lbResultadoTime6.setText(String.valueOf(jogos.get(2).getGolTime2()));
+        lbResultadoTime6.setFont(f);
         lbResultadoTime7.setText(String.valueOf(jogos.get(3).getGolTime1()));
+        lbResultadoTime7.setFont(f);
         lbResultadoTime8.setText(String.valueOf(jogos.get(3).getGolTime2()));
+        lbResultadoTime8.setFont(f);
         lbResultadoTime9.setText(String.valueOf(jogos.get(4).getGolTime1()));
+        lbResultadoTime9.setFont(f);
         lbResultadoTime10.setText(String.valueOf(jogos.get(4).getGolTime2()));
+        lbResultadoTime10.setFont(f);
         lbResultadoTime11.setText(String.valueOf(jogos.get(5).getGolTime1()));
+        lbResultadoTime11.setFont(f);
         lbResultadoTime12.setText(String.valueOf(jogos.get(5).getGolTime2()));
+        lbResultadoTime12.setFont(f);
         lbResultadoTime13.setText(String.valueOf(jogos.get(6).getGolTime1()));
+        lbResultadoTime13.setFont(f);
         lbResultadoTime14.setText(String.valueOf(jogos.get(6).getGolTime2()));
+        lbResultadoTime14.setFont(f);
         lbResultadoTime15.setText(String.valueOf(jogos.get(7).getGolTime1()));
+        lbResultadoTime15.setFont(f);
         lbResultadoTime16.setText(String.valueOf(jogos.get(7).getGolTime2()));
+        lbResultadoTime16.setFont(f);
         lbResultadoTime17.setText(String.valueOf(jogos.get(8).getGolTime1()));
+        lbResultadoTime17.setFont(f);
         lbResultadoTime18.setText(String.valueOf(jogos.get(8).getGolTime2()));
+        lbResultadoTime18.setFont(f);
         lbResultadoTime19.setText(String.valueOf(jogos.get(9).getGolTime1()));
+        lbResultadoTime19.setFont(f);
         lbResultadoTime20.setText(String.valueOf(jogos.get(9).getGolTime2()));
+        lbResultadoTime20.setFont(f);
     }
     
 
