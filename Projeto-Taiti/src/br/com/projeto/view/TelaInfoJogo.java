@@ -19,6 +19,7 @@ public class TelaInfoJogo extends javax.swing.JFrame {
 
     /**
      * Creates new form TelaInfoJogo
+     * Commit
      */
     public TelaInfoJogo() {
         initComponents();
