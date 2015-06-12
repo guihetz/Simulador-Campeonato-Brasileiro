@@ -10,12 +10,16 @@ import br.com.projeto.model.Time;
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.GridLayout;
+import java.awt.Image;
+import java.awt.Toolkit;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.SwingConstants;
+import sun.swing.ImageIconUIResource;
 
 /**
  *
@@ -50,12 +54,14 @@ public class TelaClassificacao extends JFrame{
         this.setSize(1024, 800);
         this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         this.setLocationRelativeTo(null);
+        Image icon = Toolkit.getDefaultToolkit().getImage(getClass().getResource("../image/logo_campeonato1.png") );
+        this.setIconImage(icon);
         this.times = new ArrayList<>();
-        Font f = InicioProjeto.getFonte(14);
+        Font f = InicioProjeto.getFonte(15);
         for(Time t: clubes){
             this.times.add(t);
         }
-        GridLayout layout = new GridLayout(21, 11, 5, 5);
+        GridLayout layout = new GridLayout(21, 11, 0, 0);
         this.setLayout(layout);
         ComparadorDePontos comparador = new ComparadorDePontos();
         Collections.sort(times,comparador);
@@ -101,7 +107,9 @@ public class TelaClassificacao extends JFrame{
         
         //primeiro colocado
         texto1 = new JLabel(" 1º ");
-        primeiroEscudo = new JLabel(times.get(0).getEscudo());
+        ImageIcon img = new ImageIcon(times.get(0).getEscudo().getImage());
+        img.setImage(img.getImage().getScaledInstance(30, 30, 100));
+        primeiroEscudo = new JLabel(img);
         primeiroNome = new JLabel(times.get(0).getNome());
         primeiroPontos = new JLabel(String.valueOf(times.get(0).getPontuacaoAtual()));
         primeiroVitorias = new JLabel(String.valueOf(times.get(0).getVitorias()));
@@ -150,7 +158,9 @@ public class TelaClassificacao extends JFrame{
         
         //segundo colocado
         texto2 = new JLabel(" 2º ");
-        segundoEscudo = new JLabel(times.get(1).getEscudo());
+        img = new ImageIcon(times.get(1).getEscudo().getImage());
+        img.setImage(img.getImage().getScaledInstance(30, 30, 100));
+        segundoEscudo = new JLabel(img);
         segundoNome = new JLabel(times.get(1).getNome());
         segundoPontos = new JLabel(String.valueOf(times.get(1).getPontuacaoAtual()));
         segundoVitorias = new JLabel(String.valueOf(times.get(1).getVitorias()));
@@ -199,7 +209,9 @@ public class TelaClassificacao extends JFrame{
         
         //terceiro colocado
         texto3 = new JLabel(" 3º ");
-        terceiroEscudo = new JLabel(times.get(2).getEscudo());
+        img = new ImageIcon(times.get(2).getEscudo().getImage());
+        img.setImage(img.getImage().getScaledInstance(30, 30, 100));
+        terceiroEscudo = new JLabel(img);
         terceiroNome = new JLabel(times.get(2).getNome());
         terceiroPontos = new JLabel(String.valueOf(times.get(2).getPontuacaoAtual()));
         terceiroVitorias = new JLabel(String.valueOf(times.get(2).getVitorias()));
@@ -248,7 +260,9 @@ public class TelaClassificacao extends JFrame{
         
         //quarto colocado
         texto4 = new JLabel(" 4º ");
-        quartoEscudo = new JLabel(times.get(3).getEscudo());
+        img = new ImageIcon(times.get(3).getEscudo().getImage());
+        img.setImage(img.getImage().getScaledInstance(30, 30, 100));
+        quartoEscudo = new JLabel(img);
         quartoNome = new JLabel(times.get(3).getNome());
         quartoPontos = new JLabel(String.valueOf(times.get(3).getPontuacaoAtual()));
         quartoVitorias = new JLabel(String.valueOf(times.get(3).getVitorias()));
@@ -297,7 +311,9 @@ public class TelaClassificacao extends JFrame{
         
         //quinto colocado
         texto5 = new JLabel(" 5º ");
-        quintoEscudo = new JLabel(times.get(4).getEscudo());
+        img = new ImageIcon(times.get(4).getEscudo().getImage());
+        img.setImage(img.getImage().getScaledInstance(30, 30, 100));
+        quintoEscudo = new JLabel(img);
         quintoNome = new JLabel(times.get(4).getNome());
         quintoPontos = new JLabel(String.valueOf(times.get(4).getPontuacaoAtual()));
         quintoVitorias = new JLabel(String.valueOf(times.get(4).getVitorias()));
@@ -346,7 +362,9 @@ public class TelaClassificacao extends JFrame{
         
         //sexto colocado
         texto6 = new JLabel(" 6º ");
-        sextoEscudo = new JLabel(times.get(5).getEscudo());
+        img = new ImageIcon(times.get(5).getEscudo().getImage());
+        img.setImage(img.getImage().getScaledInstance(30, 30, 100));
+        sextoEscudo = new JLabel(img);
         sextoNome = new JLabel(times.get(5).getNome());
         sextoPontos = new JLabel(String.valueOf(times.get(5).getPontuacaoAtual()));
         sextoVitorias = new JLabel(String.valueOf(times.get(5).getVitorias()));
@@ -395,7 +413,9 @@ public class TelaClassificacao extends JFrame{
         
         //setimo colocado
         texto7 = new JLabel(" 7º ");
-        setimoEscudo = new JLabel(times.get(6).getEscudo());
+        img = new ImageIcon(times.get(6).getEscudo().getImage());
+        img.setImage(img.getImage().getScaledInstance(30, 30, 100));
+        setimoEscudo = new JLabel(img);
         setimoNome = new JLabel(times.get(6).getNome());
         setimoPontos = new JLabel(String.valueOf(times.get(6).getPontuacaoAtual()));
         setimoVitorias = new JLabel(String.valueOf(times.get(6).getVitorias()));
@@ -444,7 +464,9 @@ public class TelaClassificacao extends JFrame{
         
         //oitavo colocado
         texto8 = new JLabel(" 8º ");
-        oitavoEscudo = new JLabel(times.get(7).getEscudo());
+        img = new ImageIcon(times.get(7).getEscudo().getImage());
+        img.setImage(img.getImage().getScaledInstance(30, 30, 100));
+        oitavoEscudo = new JLabel(img);
         oitavoNome = new JLabel(times.get(7).getNome());
         oitavoPontos = new JLabel(String.valueOf(times.get(7).getPontuacaoAtual()));
         oitavoVitorias = new JLabel(String.valueOf(times.get(7).getVitorias()));
@@ -493,7 +515,9 @@ public class TelaClassificacao extends JFrame{
         
         //nono colocado
         texto9 = new JLabel(" 9º ");
-        nonoEscudo = new JLabel(times.get(8).getEscudo());
+        img = new ImageIcon(times.get(8).getEscudo().getImage());
+        img.setImage(img.getImage().getScaledInstance(30, 30, 100));
+        nonoEscudo = new JLabel(img);
         nonoNome = new JLabel(times.get(8).getNome());
         nonoPontos = new JLabel(String.valueOf(times.get(8).getPontuacaoAtual()));
         nonoVitorias = new JLabel(String.valueOf(times.get(8).getVitorias()));
@@ -542,7 +566,9 @@ public class TelaClassificacao extends JFrame{
         
         //decimo colocado
         texto10 = new JLabel(" 10º ");
-        decimoEscudo = new JLabel(times.get(9).getEscudo());
+        img = new ImageIcon(times.get(9).getEscudo().getImage());
+        img.setImage(img.getImage().getScaledInstance(30, 30, 100));
+        decimoEscudo = new JLabel(img);
         decimoNome = new JLabel(times.get(9).getNome());
         decimoPontos = new JLabel(String.valueOf(times.get(9).getPontuacaoAtual()));
         decimoVitorias = new JLabel(String.valueOf(times.get(9).getVitorias()));
@@ -591,7 +617,9 @@ public class TelaClassificacao extends JFrame{
         
         //decimo primeiro colocado
         texto11 = new JLabel(" 11º ");
-        decimoPrimeiroEscudo = new JLabel(times.get(10).getEscudo());
+        img = new ImageIcon(times.get(10).getEscudo().getImage());
+        img.setImage(img.getImage().getScaledInstance(30, 30, 100));
+        decimoPrimeiroEscudo = new JLabel(img);
         decimoPrimeiroNome = new JLabel(times.get(10).getNome());
         decimoPrimeiroPontos = new JLabel(String.valueOf(times.get(10).getPontuacaoAtual()));
         decimoPrimeiroVitorias = new JLabel(String.valueOf(times.get(10).getVitorias()));
@@ -640,7 +668,9 @@ public class TelaClassificacao extends JFrame{
         
         //decimo segundo colocado
         texto12 = new JLabel(" 12º ");
-        decimoSegundoEscudo = new JLabel(times.get(11).getEscudo());
+        img = new ImageIcon(times.get(11).getEscudo().getImage());
+        img.setImage(img.getImage().getScaledInstance(30, 30, 100));
+        decimoSegundoEscudo = new JLabel(img);
         decimoSegundoNome = new JLabel(times.get(11).getNome());
         decimoSegundoPontos = new JLabel(String.valueOf(times.get(11).getPontuacaoAtual()));
         decimoSegundoVitorias = new JLabel(String.valueOf(times.get(11).getVitorias()));
@@ -689,7 +719,9 @@ public class TelaClassificacao extends JFrame{
         
         //decimo terceiro colocado
         texto13 = new JLabel(" 13º ");
-        decimoTerceiroEscudo = new JLabel(times.get(12).getEscudo());
+        img = new ImageIcon(times.get(12).getEscudo().getImage());
+        img.setImage(img.getImage().getScaledInstance(30, 30, 100));
+        decimoTerceiroEscudo = new JLabel(img);
         decimoTerceiroNome = new JLabel(times.get(12).getNome());
         decimoTerceiroPontos = new JLabel(String.valueOf(times.get(12).getPontuacaoAtual()));
         decimoTerceiroVitorias = new JLabel(String.valueOf(times.get(12).getVitorias()));
@@ -738,7 +770,9 @@ public class TelaClassificacao extends JFrame{
         
         //decimo quarto colocado
         texto14 = new JLabel(" 14º ");
-        decimoQuartoEscudo = new JLabel(times.get(13).getEscudo());
+        img = new ImageIcon(times.get(13).getEscudo().getImage());
+        img.setImage(img.getImage().getScaledInstance(30, 30, 100));
+        decimoQuartoEscudo = new JLabel(img);
         decimoQuartoNome = new JLabel(times.get(13).getNome());
         decimoQuartoPontos = new JLabel(String.valueOf(times.get(13).getPontuacaoAtual()));
         decimoQuartoVitorias = new JLabel(String.valueOf(times.get(13).getVitorias()));
@@ -787,7 +821,9 @@ public class TelaClassificacao extends JFrame{
         
         //decimo quinto colocado
         texto15 = new JLabel(" 15º ");
-        decimoQuintoEscudo = new JLabel(times.get(14).getEscudo());
+        img = new ImageIcon(times.get(14).getEscudo().getImage());
+        img.setImage(img.getImage().getScaledInstance(30, 30, 100));
+        decimoQuintoEscudo = new JLabel(img);
         decimoQuintoNome = new JLabel(times.get(14).getNome());
         decimoQuintoPontos = new JLabel(String.valueOf(times.get(14).getPontuacaoAtual()));
         decimoQuintoVitorias = new JLabel(String.valueOf(times.get(14).getVitorias()));
@@ -836,7 +872,9 @@ public class TelaClassificacao extends JFrame{
         
         //decimo sexto colocado
         texto16 = new JLabel(" 16º ");
-        decimoSextoEscudo = new JLabel(times.get(15).getEscudo());
+        img = new ImageIcon(times.get(15).getEscudo().getImage());
+        img.setImage(img.getImage().getScaledInstance(30, 30, 100));
+        decimoSextoEscudo = new JLabel(img);
         decimoSextoNome = new JLabel(times.get(15).getNome());
         decimoSextoPontos = new JLabel(String.valueOf(times.get(15).getPontuacaoAtual()));
         decimoSextoVitorias = new JLabel(String.valueOf(times.get(15).getVitorias()));
@@ -885,7 +923,9 @@ public class TelaClassificacao extends JFrame{
         
         //decimo setimo colocado
         texto17 = new JLabel(" 17º ");
-        decimoSetimoEscudo = new JLabel(times.get(16).getEscudo());
+        img = new ImageIcon(times.get(16).getEscudo().getImage());
+        img.setImage(img.getImage().getScaledInstance(30, 30, 100));
+        decimoSetimoEscudo = new JLabel(img);
         decimoSetimoNome = new JLabel(times.get(16).getNome());
         decimoSetimoPontos = new JLabel(String.valueOf(times.get(16).getPontuacaoAtual()));
         decimoSetimoVitorias = new JLabel(String.valueOf(times.get(16).getVitorias()));
@@ -900,6 +940,7 @@ public class TelaClassificacao extends JFrame{
         decimoSetimoEscudo.setFont(f);
         decimoSetimoNome.setFont(f);
         decimoSetimoPontos.setFont(f);
+        decimoSetimoVitorias.setFont(f);
         decimoSetimoEmpates.setFont(f);
         decimoSetimoDerrotas.setFont(f);
         decimoSetimoGolsPro.setFont(f);
@@ -907,10 +948,23 @@ public class TelaClassificacao extends JFrame{
         decimoSetimoSaldoDeGols.setFont(f);
         decimoSetimoInfo.setFont(f);
         
+        texto17.setForeground(Color.red);
+        decimoSetimoEscudo.setForeground(Color.red);
+        decimoSetimoNome.setForeground(Color.red);
+        decimoSetimoPontos.setForeground(Color.red);
+        decimoSetimoVitorias.setForeground(Color.red);
+        decimoSetimoEmpates.setForeground(Color.red);
+        decimoSetimoDerrotas.setForeground(Color.red);
+        decimoSetimoGolsPro.setForeground(Color.red);
+        decimoSetimoGolsContra.setForeground(Color.red);
+        decimoSetimoSaldoDeGols.setForeground(Color.red);
+        decimoSetimoInfo.setForeground(Color.red);
+        
         texto17.setHorizontalAlignment(SwingConstants.CENTER);
         decimoSetimoEscudo.setHorizontalAlignment(SwingConstants.CENTER);
         decimoSetimoNome.setHorizontalAlignment(SwingConstants.CENTER);
         decimoSetimoPontos.setHorizontalAlignment(SwingConstants.CENTER);
+        decimoSetimoVitorias.setHorizontalAlignment(SwingConstants.CENTER);
         decimoSetimoEmpates.setHorizontalAlignment(SwingConstants.CENTER);
         decimoSetimoDerrotas.setHorizontalAlignment(SwingConstants.CENTER);
         decimoSetimoGolsPro.setHorizontalAlignment(SwingConstants.CENTER);
@@ -922,6 +976,7 @@ public class TelaClassificacao extends JFrame{
         decimoSetimoEscudo.setVerticalAlignment(SwingConstants.CENTER);
         decimoSetimoNome.setVerticalAlignment(SwingConstants.CENTER);
         decimoSetimoPontos.setVerticalAlignment(SwingConstants.CENTER);
+        decimoSetimoVitorias.setVerticalAlignment(SwingConstants.CENTER);
         decimoSetimoEmpates.setVerticalAlignment(SwingConstants.CENTER);
         decimoSetimoDerrotas.setVerticalAlignment(SwingConstants.CENTER);
         decimoSetimoGolsPro.setVerticalAlignment(SwingConstants.CENTER);
@@ -931,7 +986,9 @@ public class TelaClassificacao extends JFrame{
         
         //decimo oitavo colocado
         texto18 = new JLabel(" 18º ");
-        decimoOitavoEscudo = new JLabel(times.get(17).getEscudo());
+        img = new ImageIcon(times.get(17).getEscudo().getImage());
+        img.setImage(img.getImage().getScaledInstance(30, 30, 100));
+        decimoOitavoEscudo = new JLabel(img);
         decimoOitavoNome = new JLabel(times.get(17).getNome());
         decimoOitavoPontos = new JLabel(String.valueOf(times.get(17).getPontuacaoAtual()));
         decimoOitavoVitorias = new JLabel(String.valueOf(times.get(17).getVitorias()));
@@ -953,6 +1010,18 @@ public class TelaClassificacao extends JFrame{
         decimoOitavoGolsContra.setFont(f);
         decimoOitavoSaldoDeGols.setFont(f);
         decimoOitavoInfo.setFont(f);
+        
+        texto18.setForeground(Color.red);
+        decimoOitavoEscudo.setForeground(Color.red);
+        decimoOitavoNome.setForeground(Color.red);
+        decimoOitavoPontos.setForeground(Color.red);
+        decimoOitavoVitorias.setForeground(Color.red);
+        decimoOitavoEmpates.setForeground(Color.red);
+        decimoOitavoDerrotas.setForeground(Color.red);
+        decimoOitavoGolsPro.setForeground(Color.red);
+        decimoOitavoGolsContra.setForeground(Color.red);
+        decimoOitavoSaldoDeGols.setForeground(Color.red);
+        decimoOitavoInfo.setForeground(Color.red);
         
         texto18.setHorizontalAlignment(SwingConstants.CENTER);
         decimoOitavoEscudo.setHorizontalAlignment(SwingConstants.CENTER);
@@ -980,7 +1049,9 @@ public class TelaClassificacao extends JFrame{
         
         //decimo  nono colocado
         texto19 = new JLabel(" 19º ");
-        decimoNonoEscudo = new JLabel(times.get(18).getEscudo());
+        img = new ImageIcon(times.get(18).getEscudo().getImage());
+        img.setImage(img.getImage().getScaledInstance(30, 30, 100));
+        decimoNonoEscudo = new JLabel(img);
         decimoNonoNome = new JLabel(times.get(18).getNome());
         decimoNonoPontos = new JLabel(String.valueOf(times.get(18).getPontuacaoAtual()));
         decimoNonoVitorias = new JLabel(String.valueOf(times.get(18).getVitorias()));
@@ -1002,6 +1073,18 @@ public class TelaClassificacao extends JFrame{
         decimoNonoGolsContra.setFont(f);
         decimoNonoSaldoDeGols.setFont(f);
         decimoNonoInfo.setFont(f);
+        
+        texto19.setForeground(Color.red);
+        decimoNonoEscudo.setForeground(Color.red);
+        decimoNonoNome.setForeground(Color.red);
+        decimoNonoPontos.setForeground(Color.red);
+        decimoNonoVitorias.setForeground(Color.red);
+        decimoNonoEmpates.setForeground(Color.red);
+        decimoNonoDerrotas.setForeground(Color.red);
+        decimoNonoGolsPro.setForeground(Color.red);
+        decimoNonoGolsContra.setForeground(Color.red);
+        decimoNonoSaldoDeGols.setForeground(Color.red);
+        decimoNonoInfo.setForeground(Color.red);
         
         texto19.setHorizontalAlignment(SwingConstants.CENTER);
         decimoNonoEscudo.setHorizontalAlignment(SwingConstants.CENTER);
@@ -1029,7 +1112,9 @@ public class TelaClassificacao extends JFrame{
         
         //vigésimo colocado
         texto20 = new JLabel(" 20º ");
-        vigesimoEscudo = new JLabel(times.get(19).getEscudo());
+        img = new ImageIcon(times.get(19).getEscudo().getImage());
+        img.setImage(img.getImage().getScaledInstance(30, 30, 100));
+        vigesimoEscudo = new JLabel(img);
         vigesimoNome = new JLabel(times.get(19).getNome());
         vigesimoPontos = new JLabel(String.valueOf(times.get(19).getPontuacaoAtual()));
         vigesimoVitorias = new JLabel(String.valueOf(times.get(19).getVitorias()));
@@ -1051,6 +1136,18 @@ public class TelaClassificacao extends JFrame{
         vigesimoGolsContra.setFont(f);
         vigesimoSaldoDeGols.setFont(f);
         vigesimoInfo.setFont(f);
+        
+        texto20.setForeground(Color.red);
+        vigesimoEscudo.setForeground(Color.red);
+        vigesimoNome.setForeground(Color.red);
+        vigesimoPontos.setForeground(Color.red);
+        vigesimoVitorias.setForeground(Color.red);
+        vigesimoEmpates.setForeground(Color.red);
+        vigesimoDerrotas.setForeground(Color.red);
+        vigesimoGolsPro.setForeground(Color.red);
+        vigesimoGolsContra.setForeground(Color.red);
+        vigesimoSaldoDeGols.setForeground(Color.red);
+        vigesimoInfo.setForeground(Color.red);
         
         texto20.setHorizontalAlignment(SwingConstants.CENTER);
         vigesimoEscudo.setHorizontalAlignment(SwingConstants.CENTER);

@@ -34,6 +34,7 @@ import java.awt.Color;
 import java.awt.Image;
 import java.awt.Toolkit;
 import java.util.TimerTask;
+import javax.swing.ImageIcon;
 
 /**
  *
@@ -52,8 +53,9 @@ public class TelaLoading extends javax.swing.JFrame {
     public TelaLoading() {
         initComponents();
         
-        //Image icon = Toolkit.getDefaultToolkit().getImage(getClass().getResource("../image/cup.png") );
-        //this.setIconImage(icon);
+        ImageIcon img = new ImageIcon("src/br/com/projeto/image/logo_campeonato1.png");
+        img.setImage(img.getImage().getScaledInstance(40 , 40, Image.SCALE_SMOOTH)); //Assim dá para definir o tamanho da imagem
+        this.setIconImage(img.getImage());
         
         this.setLocationRelativeTo(null);
         this.setResizable(false);

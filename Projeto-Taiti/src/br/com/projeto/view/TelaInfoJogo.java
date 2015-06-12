@@ -8,6 +8,8 @@ package br.com.projeto.view;
 import br.com.projeto.model.Jogo;
 import java.awt.Color;
 import java.awt.Font;
+import java.awt.Image;
+import java.awt.Toolkit;
 import javax.swing.JFrame;
 import javax.swing.SwingConstants;
 
@@ -31,6 +33,8 @@ public class TelaInfoJogo extends javax.swing.JFrame {
         this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         this.getContentPane().setBackground(Color.WHITE);
         this.painel1.setBackground(Color.WHITE);
+        Image icon = Toolkit.getDefaultToolkit().getImage(getClass().getResource("../image/logo_campeonato1.png") );
+        this.setIconImage(icon);
         Font f = InicioProjeto.getFonte(36);
         painel1.setFont(f);
         lbTime1.setIcon(jogo.getTime1().getEscudo());

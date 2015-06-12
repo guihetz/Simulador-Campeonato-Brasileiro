@@ -41,8 +41,11 @@ public class TelaPrincipal extends javax.swing.JFrame {
         this.painel1.setBackground(Color.WHITE);
         this.painel2.setBackground(Color.WHITE);    
         
-        Image icon = Toolkit.getDefaultToolkit().getImage(getClass().getResource("../image/logo_campeonato1.png") );
-        this.setIconImage(icon);
+        ImageIcon img = new ImageIcon("src/br/com/projeto/image/logo_campeonato1.png");
+        img.setImage(img.getImage().getScaledInstance(40 , 40, Image.SCALE_SMOOTH)); //Assim dá para definir o tamanho da imagem
+        
+        //Image icon = Toolkit.getDefaultToolkit().getImage(getClass().getResource("../image/logo_campeonato1.png") );
+        this.setIconImage(img.getImage());
         
         Font f = InicioProjeto.getFonte(18);
         
@@ -50,13 +53,6 @@ public class TelaPrincipal extends javax.swing.JFrame {
         btnClassificacao.setFont(f);
         btnNovaRodada.setFont(f);
         btnVisualizarRodada.setFont(f);
-        
-        //Pode Tirar??
-        //this.setExtendedState(JFrame.MAXIMIZED_BOTH); //Tela inicia maximizada
-        //Image icon = Toolkit.getDefaultToolkit().getImage(getClass().getResource("../image/cup.png") );
-        //this.setIconImage(icon);
-        
-        //ta salvo o de antes blz
         
         times = new ArrayList<>();
         this.setTimes();
