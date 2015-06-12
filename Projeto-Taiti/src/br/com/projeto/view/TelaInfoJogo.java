@@ -98,7 +98,7 @@ public class TelaInfoJogo extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        painel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Informações"));
+        painel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Informacoes", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("FIFA Welcome", 0, 18))); // NOI18N
 
         lbTextoGols.setFont(new java.awt.Font("FIFA Welcome", 0, 36)); // NOI18N
         lbTextoGols.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);

@@ -109,6 +109,5 @@ public class Teste {
          
          JOptionPane.showMessageDialog(null, painel, "Info Jogo", JOptionPane.PLAIN_MESSAGE);
          
-         
     }
 }

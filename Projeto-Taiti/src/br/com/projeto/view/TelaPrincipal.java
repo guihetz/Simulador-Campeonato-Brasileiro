@@ -8,12 +8,20 @@ package br.com.projeto.view;
 import br.com.projeto.model.Rodada;
 import br.com.projeto.model.Time;
 import java.awt.Color;
+import java.awt.Font;
 import java.awt.Image;
 import java.awt.Toolkit;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.ImageIcon;
-import javax.swing.JFrame;
 import javax.swing.ListSelectionModel;
 
 /**
@@ -31,79 +39,57 @@ public class TelaPrincipal extends javax.swing.JFrame {
         initComponents();
         this.getContentPane().setBackground(Color.WHITE);
         this.painel1.setBackground(Color.WHITE);
-        this.painel2.setBackground(Color.WHITE);
+        this.painel2.setBackground(Color.WHITE);    
+        
+        Image icon = Toolkit.getDefaultToolkit().getImage(getClass().getResource("../image/logo_campeonato1.png") );
+        this.setIconImage(icon);
+        
+        Font f = InicioProjeto.getFonte(18);
+        
+        jlListaDeRodadas.setFont(f);
+        btnClassificacao.setFont(f);
+        btnNovaRodada.setFont(f);
+        btnVisualizarRodada.setFont(f);
+        
+        //Pode Tirar??
         //this.setExtendedState(JFrame.MAXIMIZED_BOTH); //Tela inicia maximizada
         //Image icon = Toolkit.getDefaultToolkit().getImage(getClass().getResource("../image/cup.png") );
         //this.setIconImage(icon);
         
-        rodadas = new ArrayList<>();
+        //ta salvo o de antes blz
+        
         times = new ArrayList<>();
-
-        Time t1 = new Time("Atletico Mineiro", new ImageIcon("src/br/com/projeto/image/atletico_mg_60x60.png"),17,11,10);
-
-        Time t2 = new Time("Atletico Paranaense", new ImageIcon("src/br/com/projeto/image/atletico_pr_60x60.png"),15,9,14);
-
-        Time t3 = new Time("Avai", new ImageIcon("src/br/com/projeto/image/avai_60x60.png"),18,8,12);
-
-        Time t4 = new Time("Chapecoense", new ImageIcon("src/br/com/projeto/image/chapecoense_60x60.png"),11,10,17);
-
-        Time t5 = new Time("Corinthians", new ImageIcon("src/br/com/projeto/image/corinthians_60x60.png"),19,12,7);
-
-        Time t6 = new Time("Coritiba", new ImageIcon("src/br/com/projeto/image/coritiba_60x60.png"),12,11,15);
-
-        Time t7 = new Time("Cruzeiro", new ImageIcon("src/br/com/projeto/image/cruzeiro_60x60.png"),24,8,6);
-
-        Time t8 = new Time("Figueirense", new ImageIcon("src/br/com/projeto/image/figueirense_60x60.png"),13,8,17);
-
-        Time t9 = new Time("Flamengo", new ImageIcon("src/br/com/projeto/image/flamengo_60x60.png"),14,10,14);
-
-        Time t10 = new Time("Fluminense", new ImageIcon("src/br/com/projeto/image/fluminense_60x60.png"),17,10,11);
-
-        Time t11 = new Time("Goias", new ImageIcon("src/br/com/projeto/image/goias_60x60.png"),13,8,17);
-
-        Time t12 = new Time("Gremio", new ImageIcon("src/br/com/projeto/image/gremio_60x60.png"),17,10,11);
-
-        Time t13 = new Time("Internacional", new ImageIcon("src/br/com/projeto/image/internacional_60x60.png"),21,6,11);
-
-        Time t14 = new Time("Joinville", new ImageIcon("src/br/com/projeto/image/joinville_60x60.png"),21,7,10);
-
-        Time t15 = new Time("Palmeiras", new ImageIcon("src/br/com/projeto/image/palmeiras_60x60.png"),11,7,20);
-
-        Time t16 = new Time("Ponte Preta", new ImageIcon("src/br/com/projeto/image/ponte_preta_60x60.png"),19,12,7);
-
-        Time t17 = new Time("Santos", new ImageIcon("src/br/com/projeto/image/santos_60x60.png"),15,8,15);
-
-        Time t18 = new Time("Sao Paulo", new ImageIcon("src/br/com/projeto/image/sao_paulo_60x60.png"),20,10,8);
-
-        Time t19 = new Time("Sport", new ImageIcon("src/br/com/projeto/image/sport_60x60.png"),14,10,14);
-
-        Time t20 = new Time("Vasco", new ImageIcon("src/br/com/projeto/image/vasco_60x60.png"),16,15,7);
-
-        times.add(t1);
-        times.add(t2);
-        times.add(t3);
-        times.add(t4);
-        times.add(t5);
-        times.add(t6);
-        times.add(t7);
-        times.add(t8);
-        times.add(t9);
-        times.add(t10);
-        times.add(t11);
-        times.add(t12);
-        times.add(t13);
-        times.add(t14);
-        times.add(t15);
-        times.add(t16);
-        times.add(t17);
-        times.add(t18);
-        times.add(t19);
-        times.add(t20);
+        this.setTimes();
         
+        rodadas = new ArrayList<>();
         this.novaRodada();
-        this.jlListaDeRodadas.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
-        
-        
+
+        this.jlListaDeRodadas.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);        
+    }
+    
+    private void setTimes(){
+        Time t;
+        try {
+            File arquivo = new File("src/br/com/projeto/file/Times.txt");
+            try (InputStream is = new FileInputStream(arquivo); Scanner entrada = new Scanner(is)) {
+                
+                while (entrada.hasNext()) {
+                    Scanner linha = new Scanner(entrada.nextLine());
+                    linha.useDelimiter(";");
+                    if (linha.hasNext()) {
+                        t = new Time(linha.next(), new ImageIcon(linha.next()), Integer.parseInt(linha.next()), Integer.parseInt(linha.next()), Integer.parseInt(linha.next()));
+                        times.add(t);
+                    }
+                }                
+                entrada.close();
+                is.close();                
+            }
+
+        } catch (FileNotFoundException ex) {
+            Logger.getLogger(TelaPrincipal.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (IOException ex) {
+            Logger.getLogger(TelaPrincipal.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
     
     private void novaRodada(){
@@ -112,7 +98,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
         jlListaDeRodadas.setListData(rodadas.toArray());
         jlListaDeRodadas.setSelectedIndex(rodadas.size()-1);
     }
-
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -166,14 +152,14 @@ public class TelaPrincipal extends javax.swing.JFrame {
 
         painel2.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Campeonato", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("FIFA Welcome", 0, 24))); // NOI18N
 
-        btnVisualizarRodada.setText("Visualizar Informações da Rodada");
+        btnVisualizarRodada.setText("Visualizar Informacoes da Rodada");
         btnVisualizarRodada.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnVisualizarRodadaActionPerformed(evt);
             }
         });
 
-        btnClassificacao.setText("Visualizar Classificação");
+        btnClassificacao.setText("Visualizar Classificacao");
         btnClassificacao.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnClassificacaoActionPerformed(evt);

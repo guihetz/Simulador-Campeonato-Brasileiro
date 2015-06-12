@@ -7,13 +7,9 @@ package br.com.projeto.view;
 
 import br.com.projeto.model.Jogo;
 import br.com.projeto.model.Rodada;
-import br.com.projeto.model.Time;
 import java.awt.Color;
 import java.awt.Font;
-import static java.awt.image.ImageObserver.WIDTH;
-import java.util.ArrayList;
 import java.util.List;
-import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.SwingConstants;
 
@@ -237,7 +233,7 @@ public class TelaRodada extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        painel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Jogos da Rodada"));
+        painel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Jogos da Rodada", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("FIFA Welcome", 0, 18))); // NOI18N
 
         lbResultadoTime1.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
         lbResultadoTime1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);

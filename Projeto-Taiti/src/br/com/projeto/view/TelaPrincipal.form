@@ -148,7 +148,7 @@
       <SubComponents>
         <Component class="javax.swing.JButton" name="btnVisualizarRodada">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Visualizar Informa&#xe7;&#xf5;es da Rodada"/>
+            <Property name="text" type="java.lang.String" value="Visualizar Informacoes da Rodada"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnVisualizarRodadaActionPerformed"/>
@@ -156,7 +156,7 @@
         </Component>
         <Component class="javax.swing.JButton" name="btnClassificacao">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Visualizar Classifica&#xe7;&#xe3;o"/>
+            <Property name="text" type="java.lang.String" value="Visualizar Classificacao"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnClassificacaoActionPerformed"/>

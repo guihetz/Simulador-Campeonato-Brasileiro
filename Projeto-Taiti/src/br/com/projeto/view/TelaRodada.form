@@ -45,7 +45,9 @@
       <Properties>
         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
           <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
-            <TitledBorder title="Jogos da Rodada"/>
+            <TitledBorder title="Jogos da Rodada">
+              <Font PropertyName="font" name="FIFA Welcome" size="18" style="0"/>
+            </TitledBorder>
           </Border>
         </Property>
       </Properties>
