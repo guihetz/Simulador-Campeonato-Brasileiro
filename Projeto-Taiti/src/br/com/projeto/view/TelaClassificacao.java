@@ -6,7 +6,6 @@
 package br.com.projeto.view;
 
 import br.com.projeto.model.ComparadorDePontos;
-import br.com.projeto.model.Rodada;
 import br.com.projeto.model.Time;
 import java.awt.Color;
 import java.awt.Font;
@@ -16,6 +15,7 @@ import java.util.Collections;
 import java.util.List;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.SwingConstants;
 
 /**
  *
@@ -74,6 +74,31 @@ public class TelaClassificacao extends JFrame{
         lbSaldoDeGols = new JLabel("Saldo de Gols");
         lbInfo = new JLabel("Info Time");
         
+        texto0.setHorizontalAlignment(SwingConstants.CENTER);
+        lbEscudo.setHorizontalAlignment(SwingConstants.CENTER);
+        lbNome.setHorizontalAlignment(SwingConstants.CENTER);
+        lbPontos.setHorizontalAlignment(SwingConstants.CENTER);
+        lbVitorias.setHorizontalAlignment(SwingConstants.CENTER);
+        lbEmpates.setHorizontalAlignment(SwingConstants.CENTER);
+        lbDerrotas.setHorizontalAlignment(SwingConstants.CENTER);
+        lbGolsPro.setHorizontalAlignment(SwingConstants.CENTER);
+        lbGolsContra.setHorizontalAlignment(SwingConstants.CENTER);
+        lbSaldoDeGols.setHorizontalAlignment(SwingConstants.CENTER);
+        lbInfo.setHorizontalAlignment(SwingConstants.CENTER);
+        
+        texto0.setVerticalAlignment(SwingConstants.CENTER);
+        lbEscudo.setVerticalAlignment(SwingConstants.CENTER);
+        lbNome.setVerticalAlignment(SwingConstants.CENTER);
+        lbPontos.setVerticalAlignment(SwingConstants.CENTER);
+        lbVitorias.setVerticalAlignment(SwingConstants.CENTER);
+        lbEmpates.setVerticalAlignment(SwingConstants.CENTER);
+        lbDerrotas.setVerticalAlignment(SwingConstants.CENTER);
+        lbGolsPro.setVerticalAlignment(SwingConstants.CENTER);
+        lbGolsContra.setVerticalAlignment(SwingConstants.CENTER);
+        lbSaldoDeGols.setVerticalAlignment(SwingConstants.CENTER);
+        lbInfo.setVerticalAlignment(SwingConstants.CENTER);
+        
+        
         //primeiro colocado
         texto1 = new JLabel(" 1º ");
         primeiroEscudo = new JLabel(times.get(0).getEscudo());
@@ -98,6 +123,30 @@ public class TelaClassificacao extends JFrame{
         primeiroGolsContra.setFont(f);
         primeiroSaldoDeGols.setFont(f); 
         primeiroInfo.setFont(f);
+        
+        texto1.setHorizontalAlignment(SwingConstants.CENTER);
+        primeiroEscudo.setHorizontalAlignment(SwingConstants.CENTER);
+        primeiroNome.setHorizontalAlignment(SwingConstants.CENTER);
+        primeiroPontos.setHorizontalAlignment(SwingConstants.CENTER);
+        primeiroVitorias.setHorizontalAlignment(SwingConstants.CENTER);
+        primeiroEmpates.setHorizontalAlignment(SwingConstants.CENTER);
+        primeiroDerrotas.setHorizontalAlignment(SwingConstants.CENTER);
+        primeiroGolsPro.setHorizontalAlignment(SwingConstants.CENTER);
+        primeiroGolsContra.setHorizontalAlignment(SwingConstants.CENTER);
+        primeiroSaldoDeGols.setHorizontalAlignment(SwingConstants.CENTER);
+        primeiroInfo.setHorizontalAlignment(SwingConstants.CENTER);
+        
+        texto1.setVerticalAlignment(SwingConstants.CENTER);
+        primeiroEscudo.setVerticalAlignment(SwingConstants.CENTER);
+        primeiroNome.setVerticalAlignment(SwingConstants.CENTER);
+        primeiroPontos.setVerticalAlignment(SwingConstants.CENTER);
+        primeiroVitorias.setVerticalAlignment(SwingConstants.CENTER);
+        primeiroEmpates.setVerticalAlignment(SwingConstants.CENTER);
+        primeiroDerrotas.setVerticalAlignment(SwingConstants.CENTER);
+        primeiroGolsPro.setVerticalAlignment(SwingConstants.CENTER);
+        primeiroGolsContra.setVerticalAlignment(SwingConstants.CENTER);
+        primeiroSaldoDeGols.setVerticalAlignment(SwingConstants.CENTER);
+        primeiroInfo.setVerticalAlignment(SwingConstants.CENTER);
         
         //segundo colocado
         texto2 = new JLabel(" 2º ");
@@ -124,6 +173,30 @@ public class TelaClassificacao extends JFrame{
         segundoSaldoDeGols.setFont(f);
         segundoInfo.setFont(f);
         
+        texto2.setHorizontalAlignment(SwingConstants.CENTER);
+        segundoEscudo.setHorizontalAlignment(SwingConstants.CENTER); 
+        segundoNome.setHorizontalAlignment(SwingConstants.CENTER); 
+        segundoPontos.setHorizontalAlignment(SwingConstants.CENTER);
+        segundoVitorias.setHorizontalAlignment(SwingConstants.CENTER);
+        segundoEmpates.setHorizontalAlignment(SwingConstants.CENTER);
+        segundoDerrotas.setHorizontalAlignment(SwingConstants.CENTER);
+        segundoGolsPro.setHorizontalAlignment(SwingConstants.CENTER);
+        segundoGolsContra.setHorizontalAlignment(SwingConstants.CENTER);
+        segundoSaldoDeGols.setHorizontalAlignment(SwingConstants.CENTER);
+        segundoInfo.setHorizontalAlignment(SwingConstants.CENTER);
+        
+        texto2.setVerticalAlignment(SwingConstants.CENTER);
+        segundoEscudo.setVerticalAlignment(SwingConstants.CENTER);
+        segundoNome.setVerticalAlignment(SwingConstants.CENTER);
+        segundoPontos.setVerticalAlignment(SwingConstants.CENTER);
+        segundoVitorias.setVerticalAlignment(SwingConstants.CENTER);
+        segundoEmpates.setVerticalAlignment(SwingConstants.CENTER);
+        segundoDerrotas.setVerticalAlignment(SwingConstants.CENTER);
+        segundoGolsPro.setVerticalAlignment(SwingConstants.CENTER);
+        segundoGolsContra.setVerticalAlignment(SwingConstants.CENTER);
+        segundoSaldoDeGols.setVerticalAlignment(SwingConstants.CENTER);
+        segundoInfo.setVerticalAlignment(SwingConstants.CENTER);
+        
         //terceiro colocado
         texto3 = new JLabel(" 3º ");
         terceiroEscudo = new JLabel(times.get(2).getEscudo());
@@ -148,6 +221,30 @@ public class TelaClassificacao extends JFrame{
         terceiroGolsContra.setFont(f);
         terceiroSaldoDeGols.setFont(f);
         terceiroInfo.setFont(f);
+        
+        texto3.setHorizontalAlignment(SwingConstants.CENTER);
+        terceiroEscudo.setHorizontalAlignment(SwingConstants.CENTER);
+        terceiroNome.setHorizontalAlignment(SwingConstants.CENTER);
+        terceiroPontos.setHorizontalAlignment(SwingConstants.CENTER);
+        terceiroVitorias.setHorizontalAlignment(SwingConstants.CENTER);
+        terceiroEmpates.setHorizontalAlignment(SwingConstants.CENTER);
+        terceiroDerrotas.setHorizontalAlignment(SwingConstants.CENTER);
+        terceiroGolsPro.setHorizontalAlignment(SwingConstants.CENTER);
+        terceiroGolsContra.setHorizontalAlignment(SwingConstants.CENTER);
+        terceiroSaldoDeGols.setHorizontalAlignment(SwingConstants.CENTER);
+        terceiroInfo.setHorizontalAlignment(SwingConstants.CENTER);
+        
+        texto3.setVerticalAlignment(SwingConstants.CENTER);
+        terceiroEscudo.setVerticalAlignment(SwingConstants.CENTER);
+        terceiroNome.setVerticalAlignment(SwingConstants.CENTER);
+        terceiroPontos.setVerticalAlignment(SwingConstants.CENTER);
+        terceiroVitorias.setVerticalAlignment(SwingConstants.CENTER);
+        terceiroEmpates.setVerticalAlignment(SwingConstants.CENTER);
+        terceiroDerrotas.setVerticalAlignment(SwingConstants.CENTER);
+        terceiroGolsPro.setVerticalAlignment(SwingConstants.CENTER);
+        terceiroGolsContra.setVerticalAlignment(SwingConstants.CENTER);
+        terceiroSaldoDeGols.setVerticalAlignment(SwingConstants.CENTER);
+        terceiroInfo.setVerticalAlignment(SwingConstants.CENTER);
         
         //quarto colocado
         texto4 = new JLabel(" 4º ");
@@ -174,6 +271,30 @@ public class TelaClassificacao extends JFrame{
         quartoSaldoDeGols.setFont(f);
         quartoInfo.setFont(f);
         
+        texto4.setHorizontalAlignment(SwingConstants.CENTER);
+        quartoEscudo.setHorizontalAlignment(SwingConstants.CENTER);
+        quartoNome.setHorizontalAlignment(SwingConstants.CENTER);
+        quartoPontos.setHorizontalAlignment(SwingConstants.CENTER);
+        quartoVitorias.setHorizontalAlignment(SwingConstants.CENTER);
+        quartoEmpates.setHorizontalAlignment(SwingConstants.CENTER);
+        quartoDerrotas.setHorizontalAlignment(SwingConstants.CENTER);
+        quartoGolsPro.setHorizontalAlignment(SwingConstants.CENTER);
+        quartoGolsContra.setHorizontalAlignment(SwingConstants.CENTER);
+        quartoSaldoDeGols.setHorizontalAlignment(SwingConstants.CENTER);
+        quartoInfo.setHorizontalAlignment(SwingConstants.CENTER);
+        
+        texto4.setVerticalAlignment(SwingConstants.CENTER);
+        quartoEscudo.setVerticalAlignment(SwingConstants.CENTER);
+        quartoNome.setVerticalAlignment(SwingConstants.CENTER);
+        quartoPontos.setVerticalAlignment(SwingConstants.CENTER);
+        quartoVitorias.setVerticalAlignment(SwingConstants.CENTER);
+        quartoEmpates.setVerticalAlignment(SwingConstants.CENTER);
+        quartoDerrotas.setVerticalAlignment(SwingConstants.CENTER);
+        quartoGolsPro.setVerticalAlignment(SwingConstants.CENTER);
+        quartoGolsContra.setVerticalAlignment(SwingConstants.CENTER);
+        quartoSaldoDeGols.setVerticalAlignment(SwingConstants.CENTER);
+        quartoInfo.setVerticalAlignment(SwingConstants.CENTER);
+        
         //quinto colocado
         texto5 = new JLabel(" 5º ");
         quintoEscudo = new JLabel(times.get(4).getEscudo());
@@ -198,6 +319,30 @@ public class TelaClassificacao extends JFrame{
         quintoGolsContra.setFont(f);
         quintoSaldoDeGols.setFont(f);
         quintoInfo.setFont(f);
+        
+        texto5.setHorizontalAlignment(SwingConstants.CENTER);
+        quintoEscudo.setHorizontalAlignment(SwingConstants.CENTER);
+        quintoNome.setHorizontalAlignment(SwingConstants.CENTER);
+        quintoPontos.setHorizontalAlignment(SwingConstants.CENTER);
+        quintoVitorias.setHorizontalAlignment(SwingConstants.CENTER);
+        quintoEmpates.setHorizontalAlignment(SwingConstants.CENTER);
+        quintoDerrotas.setHorizontalAlignment(SwingConstants.CENTER);
+        quintoGolsPro.setHorizontalAlignment(SwingConstants.CENTER);
+        quintoGolsContra.setHorizontalAlignment(SwingConstants.CENTER);
+        quintoSaldoDeGols.setHorizontalAlignment(SwingConstants.CENTER);
+        quintoInfo.setHorizontalAlignment(SwingConstants.CENTER);
+        
+        texto5.setVerticalAlignment(SwingConstants.CENTER);
+        quintoEscudo.setVerticalAlignment(SwingConstants.CENTER);
+        quintoNome.setVerticalAlignment(SwingConstants.CENTER);
+        quintoPontos.setVerticalAlignment(SwingConstants.CENTER);
+        quintoVitorias.setVerticalAlignment(SwingConstants.CENTER);
+        quintoEmpates.setVerticalAlignment(SwingConstants.CENTER);
+        quintoDerrotas.setVerticalAlignment(SwingConstants.CENTER);
+        quintoGolsPro.setVerticalAlignment(SwingConstants.CENTER);
+        quintoGolsContra.setVerticalAlignment(SwingConstants.CENTER);
+        quintoSaldoDeGols.setVerticalAlignment(SwingConstants.CENTER);
+        quintoInfo.setVerticalAlignment(SwingConstants.CENTER);
         
         //sexto colocado
         texto6 = new JLabel(" 6º ");
@@ -224,6 +369,30 @@ public class TelaClassificacao extends JFrame{
         sextoSaldoDeGols.setFont(f);
         sextoInfo.setFont(f);
         
+        texto6.setHorizontalAlignment(SwingConstants.CENTER);
+        sextoEscudo.setHorizontalAlignment(SwingConstants.CENTER);
+        sextoNome.setHorizontalAlignment(SwingConstants.CENTER);
+        sextoPontos.setHorizontalAlignment(SwingConstants.CENTER);
+        sextoVitorias.setHorizontalAlignment(SwingConstants.CENTER);
+        sextoEmpates.setHorizontalAlignment(SwingConstants.CENTER);
+        sextoDerrotas.setHorizontalAlignment(SwingConstants.CENTER);
+        sextoGolsPro.setHorizontalAlignment(SwingConstants.CENTER);
+        sextoGolsContra.setHorizontalAlignment(SwingConstants.CENTER);
+        sextoSaldoDeGols.setHorizontalAlignment(SwingConstants.CENTER);
+        sextoInfo.setHorizontalAlignment(SwingConstants.CENTER);
+        
+        texto6.setVerticalAlignment(SwingConstants.CENTER);
+        sextoEscudo.setVerticalAlignment(SwingConstants.CENTER);
+        sextoNome.setVerticalAlignment(SwingConstants.CENTER);
+        sextoPontos.setVerticalAlignment(SwingConstants.CENTER);
+        sextoVitorias.setVerticalAlignment(SwingConstants.CENTER);
+        sextoEmpates.setVerticalAlignment(SwingConstants.CENTER);
+        sextoDerrotas.setVerticalAlignment(SwingConstants.CENTER);
+        sextoGolsPro.setVerticalAlignment(SwingConstants.CENTER);
+        sextoGolsContra.setVerticalAlignment(SwingConstants.CENTER);
+        sextoSaldoDeGols.setVerticalAlignment(SwingConstants.CENTER);
+        sextoInfo.setVerticalAlignment(SwingConstants.CENTER);
+        
         //setimo colocado
         texto7 = new JLabel(" 7º ");
         setimoEscudo = new JLabel(times.get(6).getEscudo());
@@ -248,6 +417,30 @@ public class TelaClassificacao extends JFrame{
         setimoGolsContra.setFont(f);
         setimoSaldoDeGols.setFont(f);
         setimoInfo.setFont(f);
+        
+        texto7.setHorizontalAlignment(SwingConstants.CENTER);
+        setimoEscudo.setHorizontalAlignment(SwingConstants.CENTER);
+        setimoNome.setHorizontalAlignment(SwingConstants.CENTER);
+        setimoPontos.setHorizontalAlignment(SwingConstants.CENTER);
+        setimoVitorias.setHorizontalAlignment(SwingConstants.CENTER);
+        setimoEmpates.setHorizontalAlignment(SwingConstants.CENTER);
+        setimoDerrotas.setHorizontalAlignment(SwingConstants.CENTER);
+        setimoGolsPro.setHorizontalAlignment(SwingConstants.CENTER);
+        setimoGolsContra.setHorizontalAlignment(SwingConstants.CENTER);
+        setimoSaldoDeGols.setHorizontalAlignment(SwingConstants.CENTER);
+        setimoInfo.setHorizontalAlignment(SwingConstants.CENTER);
+        
+        texto7.setVerticalAlignment(SwingConstants.CENTER);
+        setimoEscudo.setVerticalAlignment(SwingConstants.CENTER);
+        setimoNome.setVerticalAlignment(SwingConstants.CENTER);
+        setimoPontos.setVerticalAlignment(SwingConstants.CENTER);
+        setimoVitorias.setVerticalAlignment(SwingConstants.CENTER);
+        setimoEmpates.setVerticalAlignment(SwingConstants.CENTER);
+        setimoDerrotas.setVerticalAlignment(SwingConstants.CENTER);
+        setimoGolsPro.setVerticalAlignment(SwingConstants.CENTER);
+        setimoGolsContra.setVerticalAlignment(SwingConstants.CENTER);
+        setimoSaldoDeGols.setVerticalAlignment(SwingConstants.CENTER);
+        setimoInfo.setVerticalAlignment(SwingConstants.CENTER);
         
         //oitavo colocado
         texto8 = new JLabel(" 8º ");
@@ -274,6 +467,30 @@ public class TelaClassificacao extends JFrame{
         oitavoSaldoDeGols.setFont(f);
         oitavoInfo.setFont(f);
         
+        texto8.setHorizontalAlignment(SwingConstants.CENTER);
+        oitavoEscudo.setHorizontalAlignment(SwingConstants.CENTER);
+        oitavoNome.setHorizontalAlignment(SwingConstants.CENTER);
+        oitavoPontos.setHorizontalAlignment(SwingConstants.CENTER);
+        oitavoVitorias.setHorizontalAlignment(SwingConstants.CENTER);
+        oitavoEmpates.setHorizontalAlignment(SwingConstants.CENTER);
+        oitavoDerrotas.setHorizontalAlignment(SwingConstants.CENTER);
+        oitavoGolsPro.setHorizontalAlignment(SwingConstants.CENTER);
+        oitavoGolsContra.setHorizontalAlignment(SwingConstants.CENTER);
+        oitavoSaldoDeGols.setHorizontalAlignment(SwingConstants.CENTER);
+        oitavoInfo.setHorizontalAlignment(SwingConstants.CENTER);
+        
+        texto8.setVerticalAlignment(SwingConstants.CENTER);
+        oitavoEscudo.setVerticalAlignment(SwingConstants.CENTER);
+        oitavoNome.setVerticalAlignment(SwingConstants.CENTER);
+        oitavoPontos.setVerticalAlignment(SwingConstants.CENTER);
+        oitavoVitorias.setVerticalAlignment(SwingConstants.CENTER);
+        oitavoEmpates.setVerticalAlignment(SwingConstants.CENTER);
+        oitavoDerrotas.setVerticalAlignment(SwingConstants.CENTER);
+        oitavoGolsPro.setVerticalAlignment(SwingConstants.CENTER);
+        oitavoGolsContra.setVerticalAlignment(SwingConstants.CENTER);
+        oitavoSaldoDeGols.setVerticalAlignment(SwingConstants.CENTER);
+        oitavoInfo.setVerticalAlignment(SwingConstants.CENTER);
+        
         //nono colocado
         texto9 = new JLabel(" 9º ");
         nonoEscudo = new JLabel(times.get(8).getEscudo());
@@ -298,6 +515,30 @@ public class TelaClassificacao extends JFrame{
         nonoGolsContra.setFont(f);
         nonoSaldoDeGols.setFont(f);
         nonoInfo.setFont(f);
+        
+        texto9.setHorizontalAlignment(SwingConstants.CENTER);
+        nonoEscudo.setHorizontalAlignment(SwingConstants.CENTER);
+        nonoNome.setHorizontalAlignment(SwingConstants.CENTER);
+        nonoPontos.setHorizontalAlignment(SwingConstants.CENTER);
+        nonoVitorias.setHorizontalAlignment(SwingConstants.CENTER);
+        nonoEmpates.setHorizontalAlignment(SwingConstants.CENTER);
+        nonoDerrotas.setHorizontalAlignment(SwingConstants.CENTER);
+        nonoGolsPro.setHorizontalAlignment(SwingConstants.CENTER);
+        nonoGolsContra.setHorizontalAlignment(SwingConstants.CENTER);
+        nonoSaldoDeGols.setHorizontalAlignment(SwingConstants.CENTER);
+        nonoInfo.setHorizontalAlignment(SwingConstants.CENTER);
+        
+        texto9.setVerticalAlignment(SwingConstants.CENTER);
+        nonoEscudo.setVerticalAlignment(SwingConstants.CENTER);
+        nonoNome.setVerticalAlignment(SwingConstants.CENTER);
+        nonoPontos.setVerticalAlignment(SwingConstants.CENTER);
+        nonoVitorias.setVerticalAlignment(SwingConstants.CENTER);
+        nonoEmpates.setVerticalAlignment(SwingConstants.CENTER);
+        nonoDerrotas.setVerticalAlignment(SwingConstants.CENTER);
+        nonoGolsPro.setVerticalAlignment(SwingConstants.CENTER);
+        nonoGolsContra.setVerticalAlignment(SwingConstants.CENTER);
+        nonoSaldoDeGols.setVerticalAlignment(SwingConstants.CENTER);
+        nonoInfo.setVerticalAlignment(SwingConstants.CENTER);
         
         //decimo colocado
         texto10 = new JLabel(" 10º ");
@@ -324,6 +565,30 @@ public class TelaClassificacao extends JFrame{
         decimoSaldoDeGols.setFont(f);
         decimoInfo.setFont(f);
         
+        texto10.setHorizontalAlignment(SwingConstants.CENTER);
+        decimoEscudo.setHorizontalAlignment(SwingConstants.CENTER);
+        decimoNome.setHorizontalAlignment(SwingConstants.CENTER);
+        decimoPontos.setHorizontalAlignment(SwingConstants.CENTER);
+        decimoVitorias.setHorizontalAlignment(SwingConstants.CENTER);
+        decimoEmpates.setHorizontalAlignment(SwingConstants.CENTER);
+        decimoDerrotas.setHorizontalAlignment(SwingConstants.CENTER);
+        decimoGolsPro.setHorizontalAlignment(SwingConstants.CENTER);
+        decimoGolsContra.setHorizontalAlignment(SwingConstants.CENTER);
+        decimoSaldoDeGols.setHorizontalAlignment(SwingConstants.CENTER);
+        decimoInfo.setHorizontalAlignment(SwingConstants.CENTER);
+        
+        texto10.setVerticalAlignment(SwingConstants.CENTER);
+        decimoEscudo.setVerticalAlignment(SwingConstants.CENTER);
+        decimoNome.setVerticalAlignment(SwingConstants.CENTER);
+        decimoPontos.setVerticalAlignment(SwingConstants.CENTER);
+        decimoVitorias.setVerticalAlignment(SwingConstants.CENTER);
+        decimoEmpates.setVerticalAlignment(SwingConstants.CENTER);
+        decimoDerrotas.setVerticalAlignment(SwingConstants.CENTER);
+        decimoGolsPro.setVerticalAlignment(SwingConstants.CENTER);
+        decimoGolsContra.setVerticalAlignment(SwingConstants.CENTER);
+        decimoSaldoDeGols.setVerticalAlignment(SwingConstants.CENTER);
+        decimoInfo.setVerticalAlignment(SwingConstants.CENTER);
+        
         //decimo primeiro colocado
         texto11 = new JLabel(" 11º ");
         decimoPrimeiroEscudo = new JLabel(times.get(10).getEscudo());
@@ -348,6 +613,30 @@ public class TelaClassificacao extends JFrame{
         decimoPrimeiroGolsContra.setFont(f);
         decimoPrimeiroSaldoDeGols.setFont(f);
         decimoPrimeiroInfo.setFont(f);
+        
+        texto11.setHorizontalAlignment(SwingConstants.CENTER);
+        decimoPrimeiroEscudo.setHorizontalAlignment(SwingConstants.CENTER);
+        decimoPrimeiroNome.setHorizontalAlignment(SwingConstants.CENTER);
+        decimoPrimeiroPontos.setHorizontalAlignment(SwingConstants.CENTER);
+        decimoPrimeiroVitorias.setHorizontalAlignment(SwingConstants.CENTER);
+        decimoPrimeiroEmpates.setHorizontalAlignment(SwingConstants.CENTER);
+        decimoPrimeiroDerrotas.setHorizontalAlignment(SwingConstants.CENTER);
+        decimoPrimeiroGolsPro.setHorizontalAlignment(SwingConstants.CENTER);
+        decimoPrimeiroGolsContra.setHorizontalAlignment(SwingConstants.CENTER);
+        decimoPrimeiroSaldoDeGols.setHorizontalAlignment(SwingConstants.CENTER);
+        decimoPrimeiroInfo.setHorizontalAlignment(SwingConstants.CENTER);
+        
+        texto11.setVerticalAlignment(SwingConstants.CENTER);
+        decimoPrimeiroEscudo.setVerticalAlignment(SwingConstants.CENTER);
+        decimoPrimeiroNome.setVerticalAlignment(SwingConstants.CENTER);
+        decimoPrimeiroPontos.setVerticalAlignment(SwingConstants.CENTER);
+        decimoPrimeiroVitorias.setVerticalAlignment(SwingConstants.CENTER);
+        decimoPrimeiroEmpates.setVerticalAlignment(SwingConstants.CENTER);
+        decimoPrimeiroDerrotas.setVerticalAlignment(SwingConstants.CENTER);
+        decimoPrimeiroGolsPro.setVerticalAlignment(SwingConstants.CENTER);
+        decimoPrimeiroGolsContra.setVerticalAlignment(SwingConstants.CENTER);
+        decimoPrimeiroSaldoDeGols.setVerticalAlignment(SwingConstants.CENTER);
+        decimoPrimeiroInfo.setVerticalAlignment(SwingConstants.CENTER);
         
         //decimo segundo colocado
         texto12 = new JLabel(" 12º ");
@@ -374,6 +663,30 @@ public class TelaClassificacao extends JFrame{
         decimoSegundoSaldoDeGols.setFont(f);
         decimoSegundoInfo.setFont(f);
         
+        texto12.setHorizontalAlignment(SwingConstants.CENTER);
+        decimoSegundoEscudo.setHorizontalAlignment(SwingConstants.CENTER);
+        decimoSegundoNome.setHorizontalAlignment(SwingConstants.CENTER);
+        decimoSegundoPontos.setHorizontalAlignment(SwingConstants.CENTER);
+        decimoSegundoVitorias.setHorizontalAlignment(SwingConstants.CENTER);
+        decimoSegundoEmpates.setHorizontalAlignment(SwingConstants.CENTER);
+        decimoSegundoDerrotas.setHorizontalAlignment(SwingConstants.CENTER);
+        decimoSegundoGolsPro.setHorizontalAlignment(SwingConstants.CENTER);
+        decimoSegundoGolsContra.setHorizontalAlignment(SwingConstants.CENTER);
+        decimoSegundoSaldoDeGols.setHorizontalAlignment(SwingConstants.CENTER);
+        decimoSegundoInfo.setHorizontalAlignment(SwingConstants.CENTER);
+        
+        texto12.setVerticalAlignment(SwingConstants.CENTER);
+        decimoSegundoEscudo.setVerticalAlignment(SwingConstants.CENTER);
+        decimoSegundoNome.setVerticalAlignment(SwingConstants.CENTER);
+        decimoSegundoPontos.setVerticalAlignment(SwingConstants.CENTER);
+        decimoSegundoVitorias.setVerticalAlignment(SwingConstants.CENTER);
+        decimoSegundoEmpates.setVerticalAlignment(SwingConstants.CENTER);
+        decimoSegundoDerrotas.setVerticalAlignment(SwingConstants.CENTER);
+        decimoSegundoGolsPro.setVerticalAlignment(SwingConstants.CENTER);
+        decimoSegundoGolsContra.setVerticalAlignment(SwingConstants.CENTER);
+        decimoSegundoSaldoDeGols.setVerticalAlignment(SwingConstants.CENTER);
+        decimoSegundoInfo.setVerticalAlignment(SwingConstants.CENTER);
+        
         //decimo terceiro colocado
         texto13 = new JLabel(" 13º ");
         decimoTerceiroEscudo = new JLabel(times.get(12).getEscudo());
@@ -398,6 +711,30 @@ public class TelaClassificacao extends JFrame{
         decimoTerceiroGolsContra.setFont(f);
         decimoTerceiroSaldoDeGols.setFont(f);
         decimoTerceiroInfo.setFont(f);
+        
+        texto13.setHorizontalAlignment(SwingConstants.CENTER);
+        decimoTerceiroEscudo.setHorizontalAlignment(SwingConstants.CENTER);
+        decimoTerceiroNome.setHorizontalAlignment(SwingConstants.CENTER);
+        decimoTerceiroPontos.setHorizontalAlignment(SwingConstants.CENTER);
+        decimoTerceiroVitorias.setHorizontalAlignment(SwingConstants.CENTER);
+        decimoTerceiroEmpates.setHorizontalAlignment(SwingConstants.CENTER);
+        decimoTerceiroDerrotas.setHorizontalAlignment(SwingConstants.CENTER);
+        decimoTerceiroGolsPro.setHorizontalAlignment(SwingConstants.CENTER);
+        decimoTerceiroGolsContra.setHorizontalAlignment(SwingConstants.CENTER);
+        decimoTerceiroSaldoDeGols.setHorizontalAlignment(SwingConstants.CENTER);
+        decimoTerceiroInfo.setHorizontalAlignment(SwingConstants.CENTER);
+        
+        texto13.setVerticalAlignment(SwingConstants.CENTER);
+        decimoTerceiroEscudo.setVerticalAlignment(SwingConstants.CENTER);
+        decimoTerceiroNome.setVerticalAlignment(SwingConstants.CENTER);
+        decimoTerceiroPontos.setVerticalAlignment(SwingConstants.CENTER);
+        decimoTerceiroVitorias.setVerticalAlignment(SwingConstants.CENTER);
+        decimoTerceiroEmpates.setVerticalAlignment(SwingConstants.CENTER);
+        decimoTerceiroDerrotas.setVerticalAlignment(SwingConstants.CENTER);
+        decimoTerceiroGolsPro.setVerticalAlignment(SwingConstants.CENTER);
+        decimoTerceiroGolsContra.setVerticalAlignment(SwingConstants.CENTER);
+        decimoTerceiroSaldoDeGols.setVerticalAlignment(SwingConstants.CENTER);
+        decimoTerceiroInfo.setVerticalAlignment(SwingConstants.CENTER);
         
         //decimo quarto colocado
         texto14 = new JLabel(" 14º ");
@@ -424,6 +761,30 @@ public class TelaClassificacao extends JFrame{
         decimoQuartoSaldoDeGols.setFont(f);
         decimoQuartoInfo.setFont(f);
         
+        texto14.setHorizontalAlignment(SwingConstants.CENTER);
+        decimoQuartoEscudo.setHorizontalAlignment(SwingConstants.CENTER);
+        decimoQuartoNome.setHorizontalAlignment(SwingConstants.CENTER);
+        decimoQuartoPontos.setHorizontalAlignment(SwingConstants.CENTER);
+        decimoQuartoVitorias.setHorizontalAlignment(SwingConstants.CENTER);
+        decimoQuartoEmpates.setHorizontalAlignment(SwingConstants.CENTER);
+        decimoQuartoDerrotas.setHorizontalAlignment(SwingConstants.CENTER);
+        decimoQuartoGolsPro.setHorizontalAlignment(SwingConstants.CENTER);
+        decimoQuartoGolsContra.setHorizontalAlignment(SwingConstants.CENTER);
+        decimoQuartoSaldoDeGols.setHorizontalAlignment(SwingConstants.CENTER);
+        decimoQuartoInfo.setHorizontalAlignment(SwingConstants.CENTER);
+        
+        texto14.setVerticalAlignment(SwingConstants.CENTER);
+        decimoQuartoEscudo.setVerticalAlignment(SwingConstants.CENTER);
+        decimoQuartoNome.setVerticalAlignment(SwingConstants.CENTER);
+        decimoQuartoPontos.setVerticalAlignment(SwingConstants.CENTER);
+        decimoQuartoVitorias.setVerticalAlignment(SwingConstants.CENTER);
+        decimoQuartoEmpates.setVerticalAlignment(SwingConstants.CENTER);
+        decimoQuartoDerrotas.setVerticalAlignment(SwingConstants.CENTER);
+        decimoQuartoGolsPro.setVerticalAlignment(SwingConstants.CENTER);
+        decimoQuartoGolsContra.setVerticalAlignment(SwingConstants.CENTER);
+        decimoQuartoSaldoDeGols.setVerticalAlignment(SwingConstants.CENTER);
+        decimoQuartoInfo.setVerticalAlignment(SwingConstants.CENTER);
+        
         //decimo quinto colocado
         texto15 = new JLabel(" 15º ");
         decimoQuintoEscudo = new JLabel(times.get(14).getEscudo());
@@ -448,6 +809,30 @@ public class TelaClassificacao extends JFrame{
         decimoQuintoGolsContra.setFont(f);
         decimoQuintoSaldoDeGols.setFont(f);
         decimoQuintoInfo.setFont(f);
+        
+        texto15.setHorizontalAlignment(SwingConstants.CENTER);
+        decimoQuintoEscudo.setHorizontalAlignment(SwingConstants.CENTER);
+        decimoQuintoNome.setHorizontalAlignment(SwingConstants.CENTER);
+        decimoQuintoPontos.setHorizontalAlignment(SwingConstants.CENTER);
+        decimoQuintoVitorias.setHorizontalAlignment(SwingConstants.CENTER);
+        decimoQuintoEmpates.setHorizontalAlignment(SwingConstants.CENTER);
+        decimoQuintoDerrotas.setHorizontalAlignment(SwingConstants.CENTER);
+        decimoQuintoGolsPro.setHorizontalAlignment(SwingConstants.CENTER);
+        decimoQuintoGolsContra.setHorizontalAlignment(SwingConstants.CENTER);
+        decimoQuintoSaldoDeGols.setHorizontalAlignment(SwingConstants.CENTER);
+        decimoQuintoInfo.setHorizontalAlignment(SwingConstants.CENTER);
+        
+        texto15.setVerticalAlignment(SwingConstants.CENTER);
+        decimoQuintoEscudo.setVerticalAlignment(SwingConstants.CENTER);
+        decimoQuintoNome.setVerticalAlignment(SwingConstants.CENTER);
+        decimoQuintoPontos.setVerticalAlignment(SwingConstants.CENTER);
+        decimoQuintoVitorias.setVerticalAlignment(SwingConstants.CENTER);
+        decimoQuintoEmpates.setVerticalAlignment(SwingConstants.CENTER);
+        decimoQuintoDerrotas.setVerticalAlignment(SwingConstants.CENTER);
+        decimoQuintoGolsPro.setVerticalAlignment(SwingConstants.CENTER);
+        decimoQuintoGolsContra.setVerticalAlignment(SwingConstants.CENTER);
+        decimoQuintoSaldoDeGols.setVerticalAlignment(SwingConstants.CENTER);
+        decimoQuintoInfo.setVerticalAlignment(SwingConstants.CENTER);
         
         //decimo sexto colocado
         texto16 = new JLabel(" 16º ");
@@ -474,6 +859,30 @@ public class TelaClassificacao extends JFrame{
         decimoSextoSaldoDeGols.setFont(f);
         decimoSextoInfo.setFont(f);
         
+        texto16.setHorizontalAlignment(SwingConstants.CENTER);
+        decimoSextoEscudo.setHorizontalAlignment(SwingConstants.CENTER);
+        decimoSextoNome.setHorizontalAlignment(SwingConstants.CENTER);
+        decimoSextoPontos.setHorizontalAlignment(SwingConstants.CENTER);
+        decimoSextoVitorias.setHorizontalAlignment(SwingConstants.CENTER);
+        decimoSextoEmpates.setHorizontalAlignment(SwingConstants.CENTER);
+        decimoSextoDerrotas.setHorizontalAlignment(SwingConstants.CENTER);
+        decimoSextoGolsPro.setHorizontalAlignment(SwingConstants.CENTER);
+        decimoSextoGolsContra.setHorizontalAlignment(SwingConstants.CENTER);
+        decimoSextoSaldoDeGols.setHorizontalAlignment(SwingConstants.CENTER);
+        decimoSextoInfo.setHorizontalAlignment(SwingConstants.CENTER);
+        
+        texto16.setVerticalAlignment(SwingConstants.CENTER);
+        decimoSextoEscudo.setVerticalAlignment(SwingConstants.CENTER);
+        decimoSextoNome.setVerticalAlignment(SwingConstants.CENTER);
+        decimoSextoPontos.setVerticalAlignment(SwingConstants.CENTER);
+        decimoSextoVitorias.setVerticalAlignment(SwingConstants.CENTER);
+        decimoSextoEmpates.setVerticalAlignment(SwingConstants.CENTER);
+        decimoSextoDerrotas.setVerticalAlignment(SwingConstants.CENTER);
+        decimoSextoGolsPro.setVerticalAlignment(SwingConstants.CENTER);
+        decimoSextoGolsContra.setVerticalAlignment(SwingConstants.CENTER);
+        decimoSextoSaldoDeGols.setVerticalAlignment(SwingConstants.CENTER);
+        decimoSextoInfo.setVerticalAlignment(SwingConstants.CENTER);
+        
         //decimo setimo colocado
         texto17 = new JLabel(" 17º ");
         decimoSetimoEscudo = new JLabel(times.get(16).getEscudo());
@@ -497,6 +906,28 @@ public class TelaClassificacao extends JFrame{
         decimoSetimoGolsContra.setFont(f);
         decimoSetimoSaldoDeGols.setFont(f);
         decimoSetimoInfo.setFont(f);
+        
+        texto17.setHorizontalAlignment(SwingConstants.CENTER);
+        decimoSetimoEscudo.setHorizontalAlignment(SwingConstants.CENTER);
+        decimoSetimoNome.setHorizontalAlignment(SwingConstants.CENTER);
+        decimoSetimoPontos.setHorizontalAlignment(SwingConstants.CENTER);
+        decimoSetimoEmpates.setHorizontalAlignment(SwingConstants.CENTER);
+        decimoSetimoDerrotas.setHorizontalAlignment(SwingConstants.CENTER);
+        decimoSetimoGolsPro.setHorizontalAlignment(SwingConstants.CENTER);
+        decimoSetimoGolsContra.setHorizontalAlignment(SwingConstants.CENTER);
+        decimoSetimoSaldoDeGols.setHorizontalAlignment(SwingConstants.CENTER);
+        decimoSetimoInfo.setHorizontalAlignment(SwingConstants.CENTER);
+        
+        texto17.setVerticalAlignment(SwingConstants.CENTER);
+        decimoSetimoEscudo.setVerticalAlignment(SwingConstants.CENTER);
+        decimoSetimoNome.setVerticalAlignment(SwingConstants.CENTER);
+        decimoSetimoPontos.setVerticalAlignment(SwingConstants.CENTER);
+        decimoSetimoEmpates.setVerticalAlignment(SwingConstants.CENTER);
+        decimoSetimoDerrotas.setVerticalAlignment(SwingConstants.CENTER);
+        decimoSetimoGolsPro.setVerticalAlignment(SwingConstants.CENTER);
+        decimoSetimoGolsContra.setVerticalAlignment(SwingConstants.CENTER);
+        decimoSetimoSaldoDeGols.setVerticalAlignment(SwingConstants.CENTER);
+        decimoSetimoInfo.setVerticalAlignment(SwingConstants.CENTER);
         
         //decimo oitavo colocado
         texto18 = new JLabel(" 18º ");
@@ -523,6 +954,30 @@ public class TelaClassificacao extends JFrame{
         decimoOitavoSaldoDeGols.setFont(f);
         decimoOitavoInfo.setFont(f);
         
+        texto18.setHorizontalAlignment(SwingConstants.CENTER);
+        decimoOitavoEscudo.setHorizontalAlignment(SwingConstants.CENTER);
+        decimoOitavoNome.setHorizontalAlignment(SwingConstants.CENTER);
+        decimoOitavoPontos.setHorizontalAlignment(SwingConstants.CENTER);
+        decimoOitavoVitorias.setHorizontalAlignment(SwingConstants.CENTER);
+        decimoOitavoEmpates.setHorizontalAlignment(SwingConstants.CENTER);
+        decimoOitavoDerrotas.setHorizontalAlignment(SwingConstants.CENTER);
+        decimoOitavoGolsPro.setHorizontalAlignment(SwingConstants.CENTER);
+        decimoOitavoGolsContra.setHorizontalAlignment(SwingConstants.CENTER);
+        decimoOitavoSaldoDeGols.setHorizontalAlignment(SwingConstants.CENTER);
+        decimoOitavoInfo.setHorizontalAlignment(SwingConstants.CENTER);
+        
+        texto18.setVerticalAlignment(SwingConstants.CENTER);
+        decimoOitavoEscudo.setVerticalAlignment(SwingConstants.CENTER);
+        decimoOitavoNome.setVerticalAlignment(SwingConstants.CENTER);
+        decimoOitavoPontos.setVerticalAlignment(SwingConstants.CENTER);
+        decimoOitavoVitorias.setVerticalAlignment(SwingConstants.CENTER);
+        decimoOitavoEmpates.setVerticalAlignment(SwingConstants.CENTER);
+        decimoOitavoDerrotas.setVerticalAlignment(SwingConstants.CENTER);
+        decimoOitavoGolsPro.setVerticalAlignment(SwingConstants.CENTER);
+        decimoOitavoGolsContra.setVerticalAlignment(SwingConstants.CENTER);
+        decimoOitavoSaldoDeGols.setVerticalAlignment(SwingConstants.CENTER);
+        decimoOitavoInfo.setVerticalAlignment(SwingConstants.CENTER);
+        
         //decimo  nono colocado
         texto19 = new JLabel(" 19º ");
         decimoNonoEscudo = new JLabel(times.get(18).getEscudo());
@@ -548,6 +1003,30 @@ public class TelaClassificacao extends JFrame{
         decimoNonoSaldoDeGols.setFont(f);
         decimoNonoInfo.setFont(f);
         
+        texto19.setHorizontalAlignment(SwingConstants.CENTER);
+        decimoNonoEscudo.setHorizontalAlignment(SwingConstants.CENTER);
+        decimoNonoNome.setHorizontalAlignment(SwingConstants.CENTER);
+        decimoNonoPontos.setHorizontalAlignment(SwingConstants.CENTER);
+        decimoNonoVitorias.setHorizontalAlignment(SwingConstants.CENTER);
+        decimoNonoEmpates.setHorizontalAlignment(SwingConstants.CENTER);
+        decimoNonoDerrotas.setHorizontalAlignment(SwingConstants.CENTER);
+        decimoNonoGolsPro.setHorizontalAlignment(SwingConstants.CENTER);
+        decimoNonoGolsContra.setHorizontalAlignment(SwingConstants.CENTER);
+        decimoNonoSaldoDeGols.setHorizontalAlignment(SwingConstants.CENTER);
+        decimoNonoInfo.setHorizontalAlignment(SwingConstants.CENTER);
+        
+        texto19.setVerticalAlignment(SwingConstants.CENTER);
+        decimoNonoEscudo.setVerticalAlignment(SwingConstants.CENTER);
+        decimoNonoNome.setVerticalAlignment(SwingConstants.CENTER);
+        decimoNonoPontos.setVerticalAlignment(SwingConstants.CENTER);
+        decimoNonoVitorias.setVerticalAlignment(SwingConstants.CENTER);
+        decimoNonoEmpates.setVerticalAlignment(SwingConstants.CENTER);
+        decimoNonoDerrotas.setVerticalAlignment(SwingConstants.CENTER);
+        decimoNonoGolsPro.setVerticalAlignment(SwingConstants.CENTER);
+        decimoNonoGolsContra.setVerticalAlignment(SwingConstants.CENTER);
+        decimoNonoSaldoDeGols.setVerticalAlignment(SwingConstants.CENTER);
+        decimoNonoInfo.setVerticalAlignment(SwingConstants.CENTER);
+        
         //vigésimo colocado
         texto20 = new JLabel(" 20º ");
         vigesimoEscudo = new JLabel(times.get(19).getEscudo());
@@ -572,6 +1051,30 @@ public class TelaClassificacao extends JFrame{
         vigesimoGolsContra.setFont(f);
         vigesimoSaldoDeGols.setFont(f);
         vigesimoInfo.setFont(f);
+        
+        texto20.setHorizontalAlignment(SwingConstants.CENTER);
+        vigesimoEscudo.setHorizontalAlignment(SwingConstants.CENTER);
+        vigesimoNome.setHorizontalAlignment(SwingConstants.CENTER);
+        vigesimoPontos.setHorizontalAlignment(SwingConstants.CENTER);
+        vigesimoVitorias.setHorizontalAlignment(SwingConstants.CENTER);
+        vigesimoEmpates.setHorizontalAlignment(SwingConstants.CENTER);
+        vigesimoDerrotas.setHorizontalAlignment(SwingConstants.CENTER);
+        vigesimoGolsPro.setHorizontalAlignment(SwingConstants.CENTER);
+        vigesimoGolsContra.setHorizontalAlignment(SwingConstants.CENTER);
+        vigesimoSaldoDeGols.setHorizontalAlignment(SwingConstants.CENTER);
+        vigesimoInfo.setHorizontalAlignment(SwingConstants.CENTER);
+        
+        texto20.setVerticalAlignment(SwingConstants.CENTER);
+        vigesimoEscudo.setVerticalAlignment(SwingConstants.CENTER);
+        vigesimoNome.setVerticalAlignment(SwingConstants.CENTER);
+        vigesimoPontos.setVerticalAlignment(SwingConstants.CENTER);
+        vigesimoVitorias.setVerticalAlignment(SwingConstants.CENTER);
+        vigesimoEmpates.setVerticalAlignment(SwingConstants.CENTER);
+        vigesimoDerrotas.setVerticalAlignment(SwingConstants.CENTER);
+        vigesimoGolsPro.setVerticalAlignment(SwingConstants.CENTER);
+        vigesimoGolsContra.setVerticalAlignment(SwingConstants.CENTER);
+        vigesimoSaldoDeGols.setVerticalAlignment(SwingConstants.CENTER);
+        vigesimoInfo.setVerticalAlignment(SwingConstants.CENTER);
         
         //adicionando labels no layout
         this.getContentPane().add(texto0);
