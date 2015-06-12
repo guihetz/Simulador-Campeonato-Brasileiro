@@ -79,6 +79,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
                     if (linha.hasNext()) {
                         t = new Time(linha.next(), new ImageIcon(linha.next()), Integer.parseInt(linha.next()), Integer.parseInt(linha.next()), Integer.parseInt(linha.next()));
                         times.add(t);
+                        
                     }
                 }                
                 entrada.close();

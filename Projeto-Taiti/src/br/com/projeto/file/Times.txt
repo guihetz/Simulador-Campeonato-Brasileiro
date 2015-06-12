@@ -1,6 +1,6 @@
 Atletico Mineiro;src/br/com/projeto/image/atletico_mg_60x60.png;17;11;10;
 Atletico Paranaense;src/br/com/projeto/image/atletico_pr_60x60.png;15;9;14;
-Avai;src/br/com/projeto/image/avai_60x60.png/18;8;12;
+Avai;src/br/com/projeto/image/avai_60x60.png;18;8;12;
 Chapecoense;src/br/com/projeto/image/chapecoense_60x60.png;11;10;17;
 Corinthians;src/br/com/projeto/image/corinthians_60x60.png;19;12;7;
 Coritiba;src/br/com/projeto/image/coritiba_60x60.png;12;11;15;
