@@ -19,7 +19,6 @@ import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.SwingConstants;
-import sun.swing.ImageIconUIResource;
 
 /**
  *
@@ -132,6 +131,18 @@ public class TelaClassificacao extends JFrame{
         primeiroSaldoDeGols.setFont(f); 
         primeiroInfo.setFont(f);
         
+        texto1.setForeground(Color.BLUE);
+        primeiroEscudo.setForeground(Color.BLUE);
+        primeiroNome.setForeground(Color.BLUE);
+        primeiroPontos.setForeground(Color.BLUE);
+        primeiroVitorias.setForeground(Color.BLUE);
+        primeiroEmpates.setForeground(Color.BLUE);
+        primeiroDerrotas.setForeground(Color.BLUE);
+        primeiroGolsPro.setForeground(Color.BLUE);
+        primeiroGolsContra.setForeground(Color.BLUE);
+        primeiroSaldoDeGols.setForeground(Color.BLUE);
+        primeiroInfo.setForeground(Color.BLUE);
+        
         texto1.setHorizontalAlignment(SwingConstants.CENTER);
         primeiroEscudo.setHorizontalAlignment(SwingConstants.CENTER);
         primeiroNome.setHorizontalAlignment(SwingConstants.CENTER);
@@ -182,6 +193,18 @@ public class TelaClassificacao extends JFrame{
         segundoGolsContra.setFont(f);
         segundoSaldoDeGols.setFont(f);
         segundoInfo.setFont(f);
+        
+        texto2.setForeground(Color.BLUE);
+        segundoEscudo.setForeground(Color.BLUE);
+        segundoNome.setForeground(Color.BLUE);
+        segundoPontos.setForeground(Color.BLUE);
+        segundoVitorias.setForeground(Color.BLUE);
+        segundoEmpates.setForeground(Color.BLUE);
+        segundoDerrotas.setForeground(Color.BLUE);
+        segundoGolsPro.setForeground(Color.BLUE);
+        segundoGolsContra.setForeground(Color.BLUE);
+        segundoSaldoDeGols.setForeground(Color.BLUE);
+        segundoInfo.setForeground(Color.BLUE);
         
         texto2.setHorizontalAlignment(SwingConstants.CENTER);
         segundoEscudo.setHorizontalAlignment(SwingConstants.CENTER); 
@@ -234,6 +257,18 @@ public class TelaClassificacao extends JFrame{
         terceiroSaldoDeGols.setFont(f);
         terceiroInfo.setFont(f);
         
+        texto3.setForeground(Color.BLUE);
+        terceiroEscudo.setForeground(Color.BLUE);
+        terceiroNome.setForeground(Color.BLUE);
+        terceiroPontos.setForeground(Color.BLUE);
+        terceiroVitorias.setForeground(Color.BLUE);
+        terceiroEmpates.setForeground(Color.BLUE);
+        terceiroDerrotas.setForeground(Color.BLUE);
+        terceiroGolsPro.setForeground(Color.BLUE);
+        terceiroGolsContra.setForeground(Color.BLUE);
+        terceiroSaldoDeGols.setForeground(Color.BLUE);
+        terceiroInfo.setForeground(Color.BLUE);
+        
         texto3.setHorizontalAlignment(SwingConstants.CENTER);
         terceiroEscudo.setHorizontalAlignment(SwingConstants.CENTER);
         terceiroNome.setHorizontalAlignment(SwingConstants.CENTER);
@@ -284,6 +319,18 @@ public class TelaClassificacao extends JFrame{
         quartoGolsContra.setFont(f);
         quartoSaldoDeGols.setFont(f);
         quartoInfo.setFont(f);
+        
+        texto4.setForeground(Color.BLUE);
+        quartoEscudo.setForeground(Color.BLUE);
+        quartoNome.setForeground(Color.BLUE);
+        quartoPontos.setForeground(Color.BLUE);
+        quartoVitorias.setForeground(Color.BLUE);
+        quartoEmpates.setForeground(Color.BLUE);
+        quartoDerrotas.setForeground(Color.BLUE);
+        quartoGolsPro.setForeground(Color.BLUE);
+        quartoGolsContra.setForeground(Color.BLUE);
+        quartoSaldoDeGols.setForeground(Color.BLUE);
+        quartoInfo.setForeground(Color.BLUE);
         
         texto4.setHorizontalAlignment(SwingConstants.CENTER);
         quartoEscudo.setHorizontalAlignment(SwingConstants.CENTER);
