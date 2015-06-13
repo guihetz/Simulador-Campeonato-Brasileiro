@@ -5,6 +5,7 @@
  */
 package br.com.projeto.view;
 
+import br.com.projeto.model.ComparadorDePontos;
 import br.com.projeto.model.Rodada;
 import br.com.projeto.model.Time;
 import java.awt.Color;
@@ -17,6 +18,7 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Scanner;
 import java.util.logging.Level;
@@ -91,6 +93,18 @@ public class TelaPrincipal extends javax.swing.JFrame {
     
     private void novaRodada(){
         Rodada r = new Rodada(times);
+        ArrayList<Time> clubes = new ArrayList<>();
+        for(Time t: times){
+            clubes.add(t);
+        }
+        Collections.sort(clubes,new ComparadorDePontos());
+        for(int i = 0;i < clubes.size() ;i++){
+            for(int j = 0; j < times.size(); j++){
+                if(clubes.get(j).getNome().equals(times.get(j).getNome())){
+                    times.get(j).addPosicao(i+1);
+                }
+            }
+        }
         rodadas.add(r);
         jlListaDeRodadas.setListData(rodadas.toArray());
         jlListaDeRodadas.setSelectedIndex(rodadas.size()-1);

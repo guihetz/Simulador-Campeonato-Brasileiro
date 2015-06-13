@@ -23,6 +23,7 @@ public class Time implements Comparable<Time>{
     private int vitorias, empates, derrotas;
     private int pontuacaoAtual;
     private int ganhou, empatou, perdeu;
+    private ArrayList<String> posicoes;
 
     public Time(String nome, ImageIcon escudo, int vitorias, int empates, int derrotas) {
         this.nome = nome;
@@ -35,6 +36,7 @@ public class Time implements Comparable<Time>{
         this.empates = empates;
         this.derrotas = derrotas;
         this.ganhou = this.empatou = this.perdeu = 0;
+        posicoes  = new ArrayList<>();
     }
 
     public String getNome() {
@@ -151,4 +153,11 @@ public class Time implements Comparable<Time>{
         return this.perdeu;
     }
 
+    public void addPosicao(int posicao){
+        this.posicoes.add(String.valueOf(posicao));
+    }
+    
+    public ArrayList<String> getPosicoes(){
+        return this.posicoes;
+    }
 }

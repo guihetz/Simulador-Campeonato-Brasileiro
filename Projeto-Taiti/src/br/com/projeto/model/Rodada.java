@@ -62,7 +62,7 @@ public class Rodada {
                 
                 
                 j = new Jogo(time1, time2);
-                System.out.println(j.getTime1() + " x " + j.getTime2());
+                //System.out.println(j.getTime1() + " x " + j.getTime2());
                     
                 
                 

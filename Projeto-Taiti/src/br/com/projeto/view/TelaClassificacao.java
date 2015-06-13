@@ -12,13 +12,24 @@ import java.awt.Font;
 import java.awt.GridLayout;
 import java.awt.Image;
 import java.awt.Toolkit;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import javax.swing.ImageIcon;
+import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JPanel;
 import javax.swing.SwingConstants;
+import org.jfree.chart.ChartFactory;
+import org.jfree.chart.ChartPanel;
+import org.jfree.chart.JFreeChart;
+import org.jfree.chart.axis.ValueAxis;
+import org.jfree.chart.plot.CategoryPlot;
+import org.jfree.data.category.CategoryDataset;
+import org.jfree.data.category.DefaultCategoryDataset;
 
 /**
  *
@@ -28,7 +39,7 @@ public class TelaClassificacao extends JFrame{
     List<Time> times;
     JLabel lbEscudo, lbNome, lbPontos, lbVitorias, lbEmpates, lbDerrotas, lbGolsPro, lbGolsContra, lbSaldoDeGols, lbInfo;
     JLabel texto0, texto1, texto2, texto3, texto4, texto5, texto6, texto7, texto8, texto9, texto10, texto11, texto12, texto13, texto14, texto15, texto16, texto17, texto18, texto19, texto20;
-    JLabel primeiroEscudo,primeiroNome, primeiroPontos, primeiroVitorias, primeiroEmpates, primeiroDerrotas, primeiroGolsPro, primeiroGolsContra, primeiroSaldoDeGols, primeiroInfo;
+    JLabel primeiroEscudo,primeiroNome, primeiroPontos, primeiroVitorias, primeiroEmpates, primeiroDerrotas, primeiroGolsPro, primeiroGolsContra, primeiroSaldoDeGols;JButton primeiroInfo;
     JLabel segundoEscudo, segundoNome, segundoPontos, segundoVitorias, segundoEmpates, segundoDerrotas, segundoGolsPro, segundoGolsContra, segundoSaldoDeGols, segundoInfo;
     JLabel terceiroEscudo, terceiroNome, terceiroPontos, terceiroVitorias, terceiroEmpates, terceiroDerrotas, terceiroGolsPro, terceiroGolsContra, terceiroSaldoDeGols, terceiroInfo;
     JLabel quartoEscudo, quartoNome, quartoPontos, quartoVitorias, quartoEmpates, quartoDerrotas, quartoGolsPro, quartoGolsContra, quartoSaldoDeGols, quartoInfo;
@@ -117,7 +128,8 @@ public class TelaClassificacao extends JFrame{
         primeiroGolsPro = new JLabel(String.valueOf(times.get(0).getGolsPro()));
         primeiroGolsContra = new JLabel(String.valueOf(times.get(0).getGolsContra()));
         primeiroSaldoDeGols = new JLabel(String.valueOf(times.get(0).getSaldoGol()));
-        primeiroInfo = new JLabel("Info Time");
+        primeiroInfo = new JButton("Info Time");
+        primeiroInfo.addActionListener(new acaoInfoListener(times.get(0)));
         
         texto1.setFont(f);
         primeiroEscudo.setFont(f); 
@@ -1476,5 +1488,77 @@ public class TelaClassificacao extends JFrame{
         
         this.setExtendedState(JFrame.MAXIMIZED_BOTH); //tela inicia maximizada
         this.setVisible(true);
+    }
+    
+    final class JanelaInfo extends JFrame{
+        Time t;
+        JPanel painel;
+        public JanelaInfo(Time t){
+            super("Posições durante a temporada");
+            this.t = t;
+            this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+            this.setSize(700, 500);
+            this.getContentPane().setLayout(new GridLayout(1, 1));
+            this.painel = new JPanel();
+            this.criaGrafico(t.getNome(), t.getPosicoes());
+            this.getContentPane().add(painel);
+            
+            
+        }
+      
+        private CategoryDataset createDataset(String teamName, ArrayList<String> positions){
+		DefaultCategoryDataset dataset = new DefaultCategoryDataset();
+		for(String s: positions){
+			dataset.addValue(Double.valueOf(s), teamName, "");
+                        System.out.println("tamanho: " + Double.valueOf(s));
+		}
+                
+		return dataset;
+	}
+        
+        public void criaGrafico(String nomeTime, ArrayList<String> posicoes){
+		CategoryDataset cds = createDataset(nomeTime, posicoes);
+		String titulo = "Evolução na temporada";
+		String eixoX = "Rodada";
+		String eixoY = "Posição";
+		String txt_legenda = "Legenda";
+		boolean legenda = true;
+		boolean tooltips = true;
+		boolean urls = true;
+		JFreeChart graf = ChartFactory.createLineChart3D(titulo, eixoX, eixoY, cds);
+                
+                CategoryPlot plot = graf.getCategoryPlot();
+                //plot.setBackgroundImage(t.getEscudo().getImage());
+                ValueAxis eixo = plot.getRangeAxis();
+                eixo.setInverted(true);
+                eixo.setLowerBound(1);
+                eixo.setUpperBound(20);
+                
+		ChartPanel myChartPanel = new ChartPanel(graf, true);
+		myChartPanel.setSize(this.getWidth(), this.getHeight());
+		myChartPanel.setVisible(true);
+		painel.removeAll();
+		painel.add(myChartPanel);
+		painel.revalidate();
+		painel.repaint();
+	}
+    }
+    
+    class acaoInfoListener implements ActionListener{
+
+        Time t;
+        public acaoInfoListener(Time t) {
+            this.t = t;
+        }
+
+        
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            JanelaInfo janela = new JanelaInfo(t);
+            janela.setLocationRelativeTo(null);
+            janela.setVisible(true);
+            
+        }
+        
     }
 }
