@@ -98,12 +98,8 @@ public class TelaPrincipal extends javax.swing.JFrame {
             clubes.add(t);
         }
         Collections.sort(clubes,new ComparadorDePontos());
-        for(int i = 0;i < clubes.size() ;i++){
-            for(int j = 0; j < times.size(); j++){
-                if(clubes.get(j).getNome().equals(times.get(j).getNome())){
-                    times.get(j).addPosicao(i+1);
-                }
-            }
+        for(int i = 0; i < clubes.size();i++){
+            clubes.get(i).addPosicao(i+1);
         }
         rodadas.add(r);
         jlListaDeRodadas.setListData(rodadas.toArray());

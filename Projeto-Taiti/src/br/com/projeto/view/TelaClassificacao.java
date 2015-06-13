@@ -22,12 +22,17 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.Renderer;
 import javax.swing.SwingConstants;
 import org.jfree.chart.ChartFactory;
 import org.jfree.chart.ChartPanel;
 import org.jfree.chart.JFreeChart;
 import org.jfree.chart.axis.ValueAxis;
 import org.jfree.chart.plot.CategoryPlot;
+import org.jfree.chart.plot.PlotOrientation;
+import org.jfree.chart.renderer.category.CategoryItemRenderer;
+import org.jfree.chart.renderer.xy.XYItemRenderer;
+import org.jfree.chart.renderer.xy.XYLine3DRenderer;
 import org.jfree.data.category.CategoryDataset;
 import org.jfree.data.category.DefaultCategoryDataset;
 
@@ -40,12 +45,12 @@ public class TelaClassificacao extends JFrame{
     JLabel lbEscudo, lbNome, lbPontos, lbVitorias, lbEmpates, lbDerrotas, lbGolsPro, lbGolsContra, lbSaldoDeGols, lbInfo;
     JLabel texto0, texto1, texto2, texto3, texto4, texto5, texto6, texto7, texto8, texto9, texto10, texto11, texto12, texto13, texto14, texto15, texto16, texto17, texto18, texto19, texto20;
     JLabel primeiroEscudo,primeiroNome, primeiroPontos, primeiroVitorias, primeiroEmpates, primeiroDerrotas, primeiroGolsPro, primeiroGolsContra, primeiroSaldoDeGols;JButton primeiroInfo;
-    JLabel segundoEscudo, segundoNome, segundoPontos, segundoVitorias, segundoEmpates, segundoDerrotas, segundoGolsPro, segundoGolsContra, segundoSaldoDeGols, segundoInfo;
-    JLabel terceiroEscudo, terceiroNome, terceiroPontos, terceiroVitorias, terceiroEmpates, terceiroDerrotas, terceiroGolsPro, terceiroGolsContra, terceiroSaldoDeGols, terceiroInfo;
-    JLabel quartoEscudo, quartoNome, quartoPontos, quartoVitorias, quartoEmpates, quartoDerrotas, quartoGolsPro, quartoGolsContra, quartoSaldoDeGols, quartoInfo;
-    JLabel quintoEscudo, quintoNome, quintoPontos, quintoVitorias, quintoEmpates, quintoDerrotas, quintoGolsPro, quintoGolsContra, quintoSaldoDeGols, quintoInfo;
-    JLabel sextoEscudo, sextoNome, sextoPontos, sextoVitorias, sextoEmpates, sextoDerrotas, sextoGolsPro, sextoGolsContra, sextoSaldoDeGols, sextoInfo;
-    JLabel setimoEscudo, setimoNome, setimoPontos, setimoVitorias, setimoEmpates, setimoDerrotas, setimoGolsPro, setimoGolsContra, setimoSaldoDeGols, setimoInfo;
+    JLabel segundoEscudo, segundoNome, segundoPontos, segundoVitorias, segundoEmpates, segundoDerrotas, segundoGolsPro, segundoGolsContra, segundoSaldoDeGols; JButton segundoInfo;
+    JLabel terceiroEscudo, terceiroNome, terceiroPontos, terceiroVitorias, terceiroEmpates, terceiroDerrotas, terceiroGolsPro, terceiroGolsContra, terceiroSaldoDeGols; JButton terceiroInfo;
+    JLabel quartoEscudo, quartoNome, quartoPontos, quartoVitorias, quartoEmpates, quartoDerrotas, quartoGolsPro, quartoGolsContra, quartoSaldoDeGols; JButton quartoInfo;
+    JLabel quintoEscudo, quintoNome, quintoPontos, quintoVitorias, quintoEmpates, quintoDerrotas, quintoGolsPro, quintoGolsContra, quintoSaldoDeGols; JButton quintoInfo;
+    JLabel sextoEscudo, sextoNome, sextoPontos, sextoVitorias, sextoEmpates, sextoDerrotas, sextoGolsPro, sextoGolsContra, sextoSaldoDeGols; JButton sextoInfo;
+    JLabel setimoEscudo, setimoNome, setimoPontos, setimoVitorias, setimoEmpates, setimoDerrotas, setimoGolsPro, setimoGolsContra, setimoSaldoDeGols; JButton setimoInfo;
     JLabel oitavoEscudo, oitavoNome, oitavoPontos, oitavoVitorias, oitavoEmpates, oitavoDerrotas, oitavoGolsPro, oitavoGolsContra, oitavoSaldoDeGols, oitavoInfo;
     JLabel nonoEscudo, nonoNome, nonoPontos, nonoVitorias, nonoEmpates, nonoDerrotas, nonoGolsPro, nonoGolsContra, nonoSaldoDeGols, nonoInfo;
     JLabel decimoEscudo, decimoNome, decimoPontos, decimoVitorias, decimoEmpates, decimoDerrotas, decimoGolsPro, decimoGolsContra, decimoSaldoDeGols, decimoInfo;
@@ -192,7 +197,8 @@ public class TelaClassificacao extends JFrame{
         segundoGolsPro = new JLabel(String.valueOf(times.get(1).getGolsPro()));
         segundoGolsContra = new JLabel(String.valueOf(times.get(1).getGolsContra()));
         segundoSaldoDeGols = new JLabel(String.valueOf(times.get(1).getSaldoGol()));
-        segundoInfo = new JLabel("Info Time");
+        segundoInfo = new JButton("Info Time");
+        segundoInfo.addActionListener(new acaoInfoListener(times.get(1)));
         
         texto2.setFont(f);
         segundoEscudo.setFont(f); 
@@ -255,7 +261,8 @@ public class TelaClassificacao extends JFrame{
         terceiroGolsPro = new JLabel(String.valueOf(times.get(2).getGolsPro()));
         terceiroGolsContra = new JLabel(String.valueOf(times.get(2).getGolsContra()));
         terceiroSaldoDeGols = new JLabel(String.valueOf(times.get(2).getSaldoGol()));
-        terceiroInfo = new JLabel("Info Time");
+        terceiroInfo = new JButton("Info Time");
+        terceiroInfo.addActionListener(new acaoInfoListener(times.get(2)));
         
         texto3.setFont(f);
         terceiroEscudo.setFont(f);
@@ -318,7 +325,8 @@ public class TelaClassificacao extends JFrame{
         quartoGolsPro = new JLabel(String.valueOf(times.get(3).getGolsPro()));
         quartoGolsContra = new JLabel(String.valueOf(times.get(3).getGolsContra()));
         quartoSaldoDeGols = new JLabel(String.valueOf(times.get(3).getSaldoGol()));
-        quartoInfo = new JLabel("Info Time");
+        quartoInfo = new JButton("Info Time");
+        quartoInfo.addActionListener(new acaoInfoListener(times.get(3)));
         
         texto4.setFont(f);
         quartoEscudo.setFont(f);
@@ -381,7 +389,8 @@ public class TelaClassificacao extends JFrame{
         quintoGolsPro = new JLabel(String.valueOf(times.get(4).getGolsPro()));
         quintoGolsContra = new JLabel(String.valueOf(times.get(4).getGolsContra()));
         quintoSaldoDeGols = new JLabel(String.valueOf(times.get(4).getSaldoGol()));
-        quintoInfo = new JLabel("Info Time");
+        quintoInfo = new JButton("Info Time");
+        quintoInfo.addActionListener(new acaoInfoListener(times.get(4)));
         
         texto5.setFont(f);
         quintoEscudo.setFont(f);
@@ -432,7 +441,8 @@ public class TelaClassificacao extends JFrame{
         sextoGolsPro = new JLabel(String.valueOf(times.get(5).getGolsPro()));
         sextoGolsContra = new JLabel(String.valueOf(times.get(5).getGolsContra()));
         sextoSaldoDeGols = new JLabel(String.valueOf(times.get(5).getSaldoGol()));
-        sextoInfo = new JLabel("Info Time");
+        sextoInfo = new JButton("Info Time");
+        sextoInfo.addActionListener(new acaoInfoListener(times.get(5)));
         
         texto6.setFont(f);
         sextoEscudo.setFont(f);
@@ -483,7 +493,8 @@ public class TelaClassificacao extends JFrame{
         setimoGolsPro = new JLabel(String.valueOf(times.get(6).getGolsPro()));
         setimoGolsContra = new JLabel(String.valueOf(times.get(6).getGolsContra()));
         setimoSaldoDeGols = new JLabel(String.valueOf(times.get(6).getSaldoGol()));
-        setimoInfo = new JLabel("Info Time");
+        setimoInfo = new JButton("Info Time");
+        setimoInfo.addActionListener(new acaoInfoListener(times.get(6)));
         
         texto7.setFont(f);
         setimoEscudo.setFont(f);
@@ -1492,25 +1503,26 @@ public class TelaClassificacao extends JFrame{
     
     final class JanelaInfo extends JFrame{
         Time t;
-        JPanel painel;
+        //JPanel painel;
         public JanelaInfo(Time t){
             super("Posições durante a temporada");
             this.t = t;
             this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
             this.setSize(700, 500);
             this.getContentPane().setLayout(new GridLayout(1, 1));
-            this.painel = new JPanel();
+            //this.painel = new JPanel();
             this.criaGrafico(t.getNome(), t.getPosicoes());
-            this.getContentPane().add(painel);
+            //this.getContentPane().add(painel);
             
             
         }
       
         private CategoryDataset createDataset(String teamName, ArrayList<String> positions){
 		DefaultCategoryDataset dataset = new DefaultCategoryDataset();
+                int rodada = 1;
 		for(String s: positions){
-			dataset.addValue(Double.valueOf(s), teamName, "");
-                        System.out.println("tamanho: " + Double.valueOf(s));
+			dataset.addValue(Double.valueOf(s), teamName, String.valueOf(rodada));
+                        rodada++;
 		}
                 
 		return dataset;
@@ -1525,22 +1537,25 @@ public class TelaClassificacao extends JFrame{
 		boolean legenda = true;
 		boolean tooltips = true;
 		boolean urls = true;
-		JFreeChart graf = ChartFactory.createLineChart3D(titulo, eixoX, eixoY, cds);
-                
+		JFreeChart graf = ChartFactory.createLineChart(titulo, eixoX, eixoY, cds);
                 CategoryPlot plot = graf.getCategoryPlot();
-                //plot.setBackgroundImage(t.getEscudo().getImage());
+                plot.getRenderer().setSeriesPaint(0, Color.BLACK);
+                plot.setBackgroundPaint(Color.WHITE);
+                //plot.setBackgroundImage(new ImageIcon("src/br/com/projeto/image/loagin.jpg").getImage());
                 ValueAxis eixo = plot.getRangeAxis();
+                //CategoryItemRenderer renderer = plot.getRenderer();
+                //renderer.setSeriesPaint(1, Color.BLACK);
                 eixo.setInverted(true);
-                eixo.setLowerBound(1);
+                eixo.setLowerBound(0);
                 eixo.setUpperBound(20);
                 
 		ChartPanel myChartPanel = new ChartPanel(graf, true);
 		myChartPanel.setSize(this.getWidth(), this.getHeight());
 		myChartPanel.setVisible(true);
-		painel.removeAll();
-		painel.add(myChartPanel);
-		painel.revalidate();
-		painel.repaint();
+		this.getContentPane().removeAll();
+		this.getContentPane().add(myChartPanel);
+		this.getContentPane().revalidate();
+		this.getContentPane().repaint();
 	}
     }
     
