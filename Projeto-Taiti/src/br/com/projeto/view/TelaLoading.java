@@ -53,14 +53,15 @@ public class TelaLoading extends javax.swing.JFrame {
     public TelaLoading() {
         initComponents();
         
-        ImageIcon img = new ImageIcon("src/br/com/projeto/image/logo_campeonato1.png");
-        img.setImage(img.getImage().getScaledInstance(40 , 40, Image.SCALE_SMOOTH)); //Assim dá para definir o tamanho da imagem
-        this.setIconImage(img.getImage());
+//        ImageIcon img = new ImageIcon("src/br/com/projeto/image/logo_campeonato1.png");
+//        img.setImage(img.getImage().getScaledInstance(40 , 40, Image.SCALE_SMOOTH)); //Assim dá para definir o tamanho da imagem
+//        this.setIconImage(img.getImage());
         
         this.setLocationRelativeTo(null);
         this.setResizable(false);
+        
+        pgLoading.setBorderPainted(false);
         pgLoading.setForeground(Color.GREEN); //Cor da barra de progresso
-        //pgLoading.setBackground(Color.orange); //Cor de fundo da barra de progresso
         pgLoading.setMaximum(100);    
         pgLoading.setMinimum(0);
         
@@ -94,7 +95,7 @@ public class TelaLoading extends javax.swing.JFrame {
     
     public void fechar(){
         this.dispose();
-        TelaPrincipal form1 = new TelaPrincipal();
+        TelaInicarCampeonato form1 = new TelaInicarCampeonato();
         form1.setAlwaysOnTop(false);
         form1.setVisible(true);
         form1.setLocationRelativeTo(null);
