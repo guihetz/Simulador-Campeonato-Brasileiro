@@ -21,8 +21,6 @@ import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
-import javax.swing.JPanel;
-import javax.swing.Renderer;
 import javax.swing.SwingConstants;
 import org.jfree.chart.ChartFactory;
 import org.jfree.chart.ChartPanel;
@@ -44,26 +42,46 @@ public class TelaClassificacao extends JFrame{
     List<Time> times;
     JLabel lbEscudo, lbNome, lbPontos, lbVitorias, lbEmpates, lbDerrotas, lbGolsPro, lbGolsContra, lbSaldoDeGols, lbInfo;
     JLabel texto0, texto1, texto2, texto3, texto4, texto5, texto6, texto7, texto8, texto9, texto10, texto11, texto12, texto13, texto14, texto15, texto16, texto17, texto18, texto19, texto20;
-    JLabel primeiroEscudo,primeiroNome, primeiroPontos, primeiroVitorias, primeiroEmpates, primeiroDerrotas, primeiroGolsPro, primeiroGolsContra, primeiroSaldoDeGols;JButton primeiroInfo;
-    JLabel segundoEscudo, segundoNome, segundoPontos, segundoVitorias, segundoEmpates, segundoDerrotas, segundoGolsPro, segundoGolsContra, segundoSaldoDeGols; JButton segundoInfo;
-    JLabel terceiroEscudo, terceiroNome, terceiroPontos, terceiroVitorias, terceiroEmpates, terceiroDerrotas, terceiroGolsPro, terceiroGolsContra, terceiroSaldoDeGols; JButton terceiroInfo;
-    JLabel quartoEscudo, quartoNome, quartoPontos, quartoVitorias, quartoEmpates, quartoDerrotas, quartoGolsPro, quartoGolsContra, quartoSaldoDeGols; JButton quartoInfo;
-    JLabel quintoEscudo, quintoNome, quintoPontos, quintoVitorias, quintoEmpates, quintoDerrotas, quintoGolsPro, quintoGolsContra, quintoSaldoDeGols; JButton quintoInfo;
-    JLabel sextoEscudo, sextoNome, sextoPontos, sextoVitorias, sextoEmpates, sextoDerrotas, sextoGolsPro, sextoGolsContra, sextoSaldoDeGols; JButton sextoInfo;
-    JLabel setimoEscudo, setimoNome, setimoPontos, setimoVitorias, setimoEmpates, setimoDerrotas, setimoGolsPro, setimoGolsContra, setimoSaldoDeGols; JButton setimoInfo;
-    JLabel oitavoEscudo, oitavoNome, oitavoPontos, oitavoVitorias, oitavoEmpates, oitavoDerrotas, oitavoGolsPro, oitavoGolsContra, oitavoSaldoDeGols, oitavoInfo;
-    JLabel nonoEscudo, nonoNome, nonoPontos, nonoVitorias, nonoEmpates, nonoDerrotas, nonoGolsPro, nonoGolsContra, nonoSaldoDeGols, nonoInfo;
-    JLabel decimoEscudo, decimoNome, decimoPontos, decimoVitorias, decimoEmpates, decimoDerrotas, decimoGolsPro, decimoGolsContra, decimoSaldoDeGols, decimoInfo;
-    JLabel decimoPrimeiroEscudo, decimoPrimeiroNome, decimoPrimeiroPontos, decimoPrimeiroVitorias, decimoPrimeiroEmpates, decimoPrimeiroDerrotas, decimoPrimeiroGolsPro, decimoPrimeiroGolsContra, decimoPrimeiroSaldoDeGols, decimoPrimeiroInfo;
-    JLabel decimoSegundoEscudo, decimoSegundoNome, decimoSegundoPontos, decimoSegundoVitorias, decimoSegundoEmpates, decimoSegundoDerrotas, decimoSegundoGolsPro, decimoSegundoGolsContra, decimoSegundoSaldoDeGols, decimoSegundoInfo;
-    JLabel decimoTerceiroEscudo, decimoTerceiroNome, decimoTerceiroPontos, decimoTerceiroVitorias, decimoTerceiroEmpates, decimoTerceiroDerrotas, decimoTerceiroGolsPro, decimoTerceiroGolsContra, decimoTerceiroSaldoDeGols, decimoTerceiroInfo;
-    JLabel decimoQuartoEscudo, decimoQuartoNome, decimoQuartoPontos, decimoQuartoVitorias, decimoQuartoEmpates, decimoQuartoDerrotas, decimoQuartoGolsPro, decimoQuartoGolsContra, decimoQuartoSaldoDeGols, decimoQuartoInfo;
-    JLabel decimoQuintoEscudo, decimoQuintoNome, decimoQuintoPontos, decimoQuintoVitorias, decimoQuintoEmpates, decimoQuintoDerrotas, decimoQuintoGolsPro, decimoQuintoGolsContra, decimoQuintoSaldoDeGols, decimoQuintoInfo;
-    JLabel decimoSextoEscudo, decimoSextoNome, decimoSextoPontos, decimoSextoVitorias, decimoSextoEmpates, decimoSextoDerrotas, decimoSextoGolsPro, decimoSextoGolsContra, decimoSextoSaldoDeGols, decimoSextoInfo;
-    JLabel decimoSetimoEscudo, decimoSetimoNome, decimoSetimoPontos, decimoSetimoVitorias, decimoSetimoEmpates, decimoSetimoDerrotas, decimoSetimoGolsPro, decimoSetimoGolsContra, decimoSetimoSaldoDeGols, decimoSetimoInfo;
-    JLabel decimoOitavoEscudo, decimoOitavoNome, decimoOitavoPontos, decimoOitavoVitorias, decimoOitavoEmpates, decimoOitavoDerrotas, decimoOitavoGolsPro, decimoOitavoGolsContra, decimoOitavoSaldoDeGols, decimoOitavoInfo;
-    JLabel decimoNonoEscudo, decimoNonoNome, decimoNonoPontos, decimoNonoVitorias, decimoNonoEmpates, decimoNonoDerrotas, decimoNonoGolsPro, decimoNonoGolsContra, decimoNonoSaldoDeGols, decimoNonoInfo;
-    JLabel vigesimoEscudo, vigesimoNome, vigesimoPontos, vigesimoVitorias, vigesimoEmpates, vigesimoDerrotas, vigesimoGolsPro, vigesimoGolsContra, vigesimoSaldoDeGols, vigesimoInfo;
+    JLabel primeiroEscudo,primeiroNome, primeiroPontos, primeiroVitorias, primeiroEmpates, primeiroDerrotas, primeiroGolsPro, primeiroGolsContra, primeiroSaldoDeGols;
+    JButton primeiroInfo;
+    JLabel segundoEscudo, segundoNome, segundoPontos, segundoVitorias, segundoEmpates, segundoDerrotas, segundoGolsPro, segundoGolsContra, segundoSaldoDeGols; 
+    JButton segundoInfo;
+    JLabel terceiroEscudo, terceiroNome, terceiroPontos, terceiroVitorias, terceiroEmpates, terceiroDerrotas, terceiroGolsPro, terceiroGolsContra, terceiroSaldoDeGols; 
+    JButton terceiroInfo;
+    JLabel quartoEscudo, quartoNome, quartoPontos, quartoVitorias, quartoEmpates, quartoDerrotas, quartoGolsPro, quartoGolsContra, quartoSaldoDeGols; 
+    JButton quartoInfo;
+    JLabel quintoEscudo, quintoNome, quintoPontos, quintoVitorias, quintoEmpates, quintoDerrotas, quintoGolsPro, quintoGolsContra, quintoSaldoDeGols; 
+    JButton quintoInfo;
+    JLabel sextoEscudo, sextoNome, sextoPontos, sextoVitorias, sextoEmpates, sextoDerrotas, sextoGolsPro, sextoGolsContra, sextoSaldoDeGols; 
+    JButton sextoInfo;
+    JLabel setimoEscudo, setimoNome, setimoPontos, setimoVitorias, setimoEmpates, setimoDerrotas, setimoGolsPro, setimoGolsContra, setimoSaldoDeGols; 
+    JButton setimoInfo;
+    JLabel oitavoEscudo, oitavoNome, oitavoPontos, oitavoVitorias, oitavoEmpates, oitavoDerrotas, oitavoGolsPro, oitavoGolsContra, oitavoSaldoDeGols; 
+    JButton oitavoInfo;
+    JLabel nonoEscudo, nonoNome, nonoPontos, nonoVitorias, nonoEmpates, nonoDerrotas, nonoGolsPro, nonoGolsContra, nonoSaldoDeGols; 
+    JButton nonoInfo;
+    JLabel decimoEscudo, decimoNome, decimoPontos, decimoVitorias, decimoEmpates, decimoDerrotas, decimoGolsPro, decimoGolsContra, decimoSaldoDeGols; 
+    JButton decimoInfo;
+    JLabel decimoPrimeiroEscudo, decimoPrimeiroNome, decimoPrimeiroPontos, decimoPrimeiroVitorias, decimoPrimeiroEmpates, decimoPrimeiroDerrotas, decimoPrimeiroGolsPro, decimoPrimeiroGolsContra, decimoPrimeiroSaldoDeGols; 
+    JButton decimoPrimeiroInfo;
+    JLabel decimoSegundoEscudo, decimoSegundoNome, decimoSegundoPontos, decimoSegundoVitorias, decimoSegundoEmpates, decimoSegundoDerrotas, decimoSegundoGolsPro, decimoSegundoGolsContra, decimoSegundoSaldoDeGols; 
+    JButton decimoSegundoInfo;
+    JLabel decimoTerceiroEscudo, decimoTerceiroNome, decimoTerceiroPontos, decimoTerceiroVitorias, decimoTerceiroEmpates, decimoTerceiroDerrotas, decimoTerceiroGolsPro, decimoTerceiroGolsContra, decimoTerceiroSaldoDeGols; 
+    JButton decimoTerceiroInfo;
+    JLabel decimoQuartoEscudo, decimoQuartoNome, decimoQuartoPontos, decimoQuartoVitorias, decimoQuartoEmpates, decimoQuartoDerrotas, decimoQuartoGolsPro, decimoQuartoGolsContra, decimoQuartoSaldoDeGols; 
+    JButton decimoQuartoInfo;
+    JLabel decimoQuintoEscudo, decimoQuintoNome, decimoQuintoPontos, decimoQuintoVitorias, decimoQuintoEmpates, decimoQuintoDerrotas, decimoQuintoGolsPro, decimoQuintoGolsContra, decimoQuintoSaldoDeGols; 
+    JButton decimoQuintoInfo;
+    JLabel decimoSextoEscudo, decimoSextoNome, decimoSextoPontos, decimoSextoVitorias, decimoSextoEmpates, decimoSextoDerrotas, decimoSextoGolsPro, decimoSextoGolsContra, decimoSextoSaldoDeGols; 
+    JButton decimoSextoInfo;
+    JLabel decimoSetimoEscudo, decimoSetimoNome, decimoSetimoPontos, decimoSetimoVitorias, decimoSetimoEmpates, decimoSetimoDerrotas, decimoSetimoGolsPro, decimoSetimoGolsContra, decimoSetimoSaldoDeGols; 
+    JButton decimoSetimoInfo;
+    JLabel decimoOitavoEscudo, decimoOitavoNome, decimoOitavoPontos, decimoOitavoVitorias, decimoOitavoEmpates, decimoOitavoDerrotas, decimoOitavoGolsPro, decimoOitavoGolsContra, decimoOitavoSaldoDeGols; 
+    JButton decimoOitavoInfo;
+    JLabel decimoNonoEscudo, decimoNonoNome, decimoNonoPontos, decimoNonoVitorias, decimoNonoEmpates, decimoNonoDerrotas, decimoNonoGolsPro, decimoNonoGolsContra, decimoNonoSaldoDeGols; 
+    JButton decimoNonoInfo;
+    JLabel vigesimoEscudo, vigesimoNome, vigesimoPontos, vigesimoVitorias, vigesimoEmpates, vigesimoDerrotas, vigesimoGolsPro, vigesimoGolsContra, vigesimoSaldoDeGols; 
+    JButton vigesimoInfo;
     public TelaClassificacao(List<Time> clubes){
         super("Classificação");
         this.setSize(1024, 800);
@@ -545,7 +563,8 @@ public class TelaClassificacao extends JFrame{
         oitavoGolsPro = new JLabel(String.valueOf(times.get(7).getGolsPro()));
         oitavoGolsContra = new JLabel(String.valueOf(times.get(7).getGolsContra()));
         oitavoSaldoDeGols = new JLabel(String.valueOf(times.get(7).getSaldoGol()));
-        oitavoInfo = new JLabel("Info Time");
+        oitavoInfo = new JButton("Info Time");
+        oitavoInfo.addActionListener(new acaoInfoListener(times.get(7)));
         
         texto8.setFont(f);
         oitavoEscudo.setFont(f);
@@ -596,7 +615,8 @@ public class TelaClassificacao extends JFrame{
         nonoGolsPro = new JLabel(String.valueOf(times.get(8).getGolsPro()));
         nonoGolsContra = new JLabel(String.valueOf(times.get(8).getGolsContra()));
         nonoSaldoDeGols = new JLabel(String.valueOf(times.get(8).getSaldoGol()));
-        nonoInfo = new JLabel("Info Time");
+        nonoInfo = new JButton("Info Time");
+        nonoInfo.addActionListener(new acaoInfoListener(times.get(8)));
         
         texto9.setFont(f);
         nonoEscudo.setFont(f);
@@ -647,7 +667,8 @@ public class TelaClassificacao extends JFrame{
         decimoGolsPro = new JLabel(String.valueOf(times.get(9).getGolsPro()));
         decimoGolsContra = new JLabel(String.valueOf(times.get(9).getGolsContra()));
         decimoSaldoDeGols = new JLabel(String.valueOf(times.get(9).getSaldoGol()));
-        decimoInfo = new JLabel("Info Time");
+        decimoInfo = new JButton("Info Time");
+        decimoInfo.addActionListener(new acaoInfoListener(times.get(9)));
         
         texto10.setFont(f);
         decimoEscudo.setFont(f);
@@ -698,7 +719,8 @@ public class TelaClassificacao extends JFrame{
         decimoPrimeiroGolsPro = new JLabel(String.valueOf(times.get(10).getGolsPro()));
         decimoPrimeiroGolsContra = new JLabel(String.valueOf(times.get(10).getGolsContra()));
         decimoPrimeiroSaldoDeGols = new JLabel(String.valueOf(times.get(10).getSaldoGol()));
-        decimoPrimeiroInfo = new JLabel("Info Time");
+        decimoPrimeiroInfo = new JButton("Info Time");
+        decimoPrimeiroInfo.addActionListener(new acaoInfoListener(times.get(10)));
         
         texto11.setFont(f);
         decimoPrimeiroEscudo.setFont(f);
@@ -749,7 +771,8 @@ public class TelaClassificacao extends JFrame{
         decimoSegundoGolsPro = new JLabel(String.valueOf(times.get(11).getGolsPro()));
         decimoSegundoGolsContra = new JLabel(String.valueOf(times.get(11).getGolsContra()));
         decimoSegundoSaldoDeGols = new JLabel(String.valueOf(times.get(11).getSaldoGol()));
-        decimoSegundoInfo = new JLabel("Info Time");
+        decimoSegundoInfo = new JButton("Info Time");
+        decimoSegundoInfo.addActionListener(new acaoInfoListener(times.get(11)));
         
         texto12.setFont(f);
         decimoSegundoEscudo.setFont(f);
@@ -800,7 +823,8 @@ public class TelaClassificacao extends JFrame{
         decimoTerceiroGolsPro = new JLabel(String.valueOf(times.get(12).getGolsPro()));
         decimoTerceiroGolsContra = new JLabel(String.valueOf(times.get(12).getGolsContra()));
         decimoTerceiroSaldoDeGols = new JLabel(String.valueOf(times.get(12).getSaldoGol()));
-        decimoTerceiroInfo = new JLabel("Info Time");
+        decimoTerceiroInfo = new JButton("Info Time");
+        decimoTerceiroInfo.addActionListener(new acaoInfoListener(times.get(12)));
         
         texto13.setFont(f);
         decimoTerceiroEscudo.setFont(f);
@@ -851,7 +875,8 @@ public class TelaClassificacao extends JFrame{
         decimoQuartoGolsPro = new JLabel(String.valueOf(times.get(13).getGolsPro()));
         decimoQuartoGolsContra = new JLabel(String.valueOf(times.get(13).getGolsContra()));
         decimoQuartoSaldoDeGols = new JLabel(String.valueOf(times.get(13).getSaldoGol()));
-        decimoQuartoInfo = new JLabel("Info Time");
+        decimoQuartoInfo = new JButton("Info Time");
+        decimoQuartoInfo.addActionListener(new acaoInfoListener(times.get(13)));
         
         texto14.setFont(f);
         decimoQuartoEscudo.setFont(f);
@@ -902,7 +927,8 @@ public class TelaClassificacao extends JFrame{
         decimoQuintoGolsPro = new JLabel(String.valueOf(times.get(14).getGolsPro()));
         decimoQuintoGolsContra = new JLabel(String.valueOf(times.get(14).getGolsContra()));
         decimoQuintoSaldoDeGols = new JLabel(String.valueOf(times.get(14).getSaldoGol()));
-        decimoQuintoInfo = new JLabel("Info Time");
+        decimoQuintoInfo = new JButton("Info Time");
+        decimoQuintoInfo.addActionListener(new acaoInfoListener(times.get(14)));
         
         texto15.setFont(f);
         decimoQuintoEscudo.setFont(f);
@@ -953,7 +979,8 @@ public class TelaClassificacao extends JFrame{
         decimoSextoGolsPro = new JLabel(String.valueOf(times.get(15).getGolsPro()));
         decimoSextoGolsContra = new JLabel(String.valueOf(times.get(15).getGolsContra()));
         decimoSextoSaldoDeGols = new JLabel(String.valueOf(times.get(15).getSaldoGol()));
-        decimoSextoInfo = new JLabel("Info Time");
+        decimoSextoInfo = new JButton("Info Time");
+        decimoSextoInfo.addActionListener(new acaoInfoListener(times.get(15)));
         
         texto16.setFont(f);
         decimoSextoEscudo.setFont(f);
@@ -1004,7 +1031,8 @@ public class TelaClassificacao extends JFrame{
         decimoSetimoGolsPro = new JLabel(String.valueOf(times.get(16).getGolsPro()));
         decimoSetimoGolsContra = new JLabel(String.valueOf(times.get(16).getGolsContra()));
         decimoSetimoSaldoDeGols = new JLabel(String.valueOf(times.get(16).getSaldoGol()));
-        decimoSetimoInfo = new JLabel("Info Time");
+        decimoSetimoInfo = new JButton("Info Time");
+        decimoSetimoInfo.addActionListener(new acaoInfoListener(times.get(16)));
         
         texto17.setFont(f);
         decimoSetimoEscudo.setFont(f);
@@ -1067,7 +1095,8 @@ public class TelaClassificacao extends JFrame{
         decimoOitavoGolsPro = new JLabel(String.valueOf(times.get(17).getGolsPro()));
         decimoOitavoGolsContra = new JLabel(String.valueOf(times.get(17).getGolsContra()));
         decimoOitavoSaldoDeGols = new JLabel(String.valueOf(times.get(17).getSaldoGol()));
-        decimoOitavoInfo = new JLabel("Info Time");
+        decimoOitavoInfo = new JButton("Info Time");
+        decimoOitavoInfo.addActionListener(new acaoInfoListener(times.get(17)));
         
         texto18.setFont(f);
         decimoOitavoEscudo.setFont(f);
@@ -1130,7 +1159,8 @@ public class TelaClassificacao extends JFrame{
         decimoNonoGolsPro = new JLabel(String.valueOf(times.get(18).getGolsPro()));
         decimoNonoGolsContra = new JLabel(String.valueOf(times.get(18).getGolsContra()));
         decimoNonoSaldoDeGols = new JLabel(String.valueOf(times.get(18).getSaldoGol()));
-        decimoNonoInfo = new JLabel("Info Time");
+        decimoNonoInfo = new JButton("Info Time");
+        decimoNonoInfo.addActionListener(new acaoInfoListener(times.get(18)));
         
         texto19.setFont(f);
         decimoNonoEscudo.setFont(f);
@@ -1193,7 +1223,8 @@ public class TelaClassificacao extends JFrame{
         vigesimoGolsPro = new JLabel(String.valueOf(times.get(19).getGolsPro()));
         vigesimoGolsContra = new JLabel(String.valueOf(times.get(19).getGolsContra()));
         vigesimoSaldoDeGols = new JLabel(String.valueOf(times.get(19).getSaldoGol()));
-        vigesimoInfo = new JLabel("Info Time");
+        vigesimoInfo = new JButton("Info Time");
+        vigesimoInfo.addActionListener(new acaoInfoListener(times.get(19)));
         
         texto20.setFont(f);
         vigesimoEscudo.setFont(f);
