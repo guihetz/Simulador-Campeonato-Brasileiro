@@ -36,7 +36,7 @@ public class TelaInicarCampeonato extends javax.swing.JFrame {
      */    
     List<Rodada> rodadas;
     List<Time> times;
-    public static final long TEMPO = (1000* 1);
+    public static final long TEMPO = (100);
     int i = 0;
     TimerTask tarefa;
     
@@ -52,7 +52,8 @@ public class TelaInicarCampeonato extends javax.swing.JFrame {
                 
         pgLoading.setOpaque(false);
         pgLoading.setBorderPainted(false);
-        
+        pgLoading.setStringPainted(true);
+        //pgLoading.setString("Simulando Rodadas...");
         pgLoading.setForeground(Color.GREEN); //Cor da barra de progresso        
         pgLoading.setMaximum(100);    
         pgLoading.setMinimum(0);
@@ -64,7 +65,7 @@ public class TelaInicarCampeonato extends javax.swing.JFrame {
     }
     
     public int soma(){
-        return this.i = i + 20;        
+        return this.i = i+2;        
     }
     
     private void novaRodada(){
@@ -178,7 +179,10 @@ public class TelaInicarCampeonato extends javax.swing.JFrame {
                 public void run() {  
                     try {                        
                         if(i <= 100){
-                            pgLoading.setValue(soma());    
+                            pgLoading.setValue(soma());  
+                            if(soma()<=100){
+                                pgLoading.setString("Simulando Rodadas...  " +i+"%");
+                            }
                             pgLoading.isIndeterminate();                            
                         }else{
                             fechar();
