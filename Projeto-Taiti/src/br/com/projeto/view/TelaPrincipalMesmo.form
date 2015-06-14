@@ -24,12 +24,16 @@
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" attributes="0">
-              <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
-              <Component id="pgLoading" min="-2" pref="620" max="-2" attributes="0"/>
+              <EmptySpace min="410" pref="410" max="-2" attributes="0"/>
+              <Component id="lbIcon" min="-2" pref="70" max="-2" attributes="0"/>
           </Group>
           <Group type="102" attributes="0">
-              <EmptySpace min="120" pref="120" max="-2" attributes="0"/>
-              <Component id="btnInciar" min="-2" pref="420" max="-2" attributes="0"/>
+              <EmptySpace min="250" pref="250" max="-2" attributes="0"/>
+              <Component id="btnRodadas" min="-2" pref="290" max="-2" attributes="0"/>
+          </Group>
+          <Group type="102" attributes="0">
+              <EmptySpace min="250" pref="250" max="-2" attributes="0"/>
+              <Component id="btnClassificacao" min="-2" pref="370" max="-2" attributes="0"/>
           </Group>
           <Component id="lbFundo" min="-2" max="-2" attributes="0"/>
       </Group>
@@ -37,12 +41,16 @@
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" attributes="0">
-              <EmptySpace min="230" pref="230" max="-2" attributes="0"/>
-              <Component id="btnInciar" min="-2" pref="50" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
-              <Component id="pgLoading" min="-2" pref="30" max="-2" attributes="0"/>
+              <EmptySpace min="100" pref="100" max="-2" attributes="0"/>
+              <Component id="lbIcon" min="-2" pref="70" max="-2" attributes="0"/>
+              <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
+              <Component id="btnRodadas" min="-2" pref="60" max="-2" attributes="0"/>
           </Group>
-          <Component id="lbFundo" alignment="0" min="-2" max="-2" attributes="0"/>
+          <Group type="102" attributes="0">
+              <EmptySpace min="250" pref="250" max="-2" attributes="0"/>
+              <Component id="btnClassificacao" min="-2" pref="60" max="-2" attributes="0"/>
+          </Group>
+          <Component id="lbFundo" min="-2" max="-2" attributes="0"/>
       </Group>
     </DimensionLayout>
   </Layout>
@@ -50,20 +58,26 @@
     <Component class="javax.swing.JLabel" name="lbFundo">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/br/com/projeto/image/arquibancada1.0.jpg"/>
+          <Image iconType="3" name="/br/com/projeto/image/estadio.jpg"/>
         </Property>
       </Properties>
     </Component>
-    <Component class="javax.swing.JProgressBar" name="pgLoading">
+    <Component class="javax.swing.JLabel" name="lbIcon">
     </Component>
-    <Component class="javax.swing.JButton" name="btnInciar">
+    <Component class="javax.swing.JButton" name="btnRodadas">
       <Properties>
-        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="ff" green="ff" red="ff" type="rgb"/>
-        </Property>
+        <Property name="text" type="java.lang.String" value="jButton1"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnInciarActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnRodadasActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="btnClassificacao">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="jButton2"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnClassificacaoActionPerformed"/>
       </Events>
     </Component>
   </SubComponents>

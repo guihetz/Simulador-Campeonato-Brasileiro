@@ -5,19 +5,38 @@
  */
 package br.com.projeto.view;
 
+import br.com.projeto.model.ComparadorDePontos;
+import br.com.projeto.model.Rodada;
+import br.com.projeto.model.Time;
 import static br.com.projeto.view.TelaLoading.TEMPO;
 import java.awt.Color;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+import java.util.Scanner;
 import java.util.TimerTask;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.DefaultListModel;
+import javax.swing.ImageIcon;
 
 /**
  *
  * @author Daylton
  */
-public class TelaInicarCampeonato extends javax.swing.JFrame {
-
+public class TelaInicarCampeonato extends javax.swing.JFrame {    
+    public TelaPrincipal tPrincipal;
     /**
      * Creates new form TelaInicarCampeonato
-     */
+     */    
+    List<Rodada> rodadas;
+    List<Time> times;
+    DefaultListModel lista = new DefaultListModel();
     
     public static final long TEMPO = (1000* 1);
     int i = 0;
@@ -25,6 +44,9 @@ public class TelaInicarCampeonato extends javax.swing.JFrame {
     
     public TelaInicarCampeonato() {
         initComponents();
+        
+        rodadas = new ArrayList<>();
+        times = new ArrayList<>();        
         
         btnInciar.setOpaque(false);
         btnInciar.setContentAreaFilled(false);
@@ -38,16 +60,68 @@ public class TelaInicarCampeonato extends javax.swing.JFrame {
         pgLoading.setMinimum(0);
     }
     
+    public TelaInicarCampeonato(javax.swing.JFrame form){
+        this();
+        tPrincipal = (TelaPrincipal) form;
+    }
+    
     public int soma(){
         return this.i = i + 20;        
     }
     
-    public void fechar(){
+    private void novaRodada(){
+        Rodada r = new Rodada(times);
+        ArrayList<Time> clubes = new ArrayList<>();
+        for(Time t: times){
+            clubes.add(t);
+        }
+        Collections.sort(clubes,new ComparadorDePontos());
+        for(int x = 0; x < clubes.size();x++){
+            clubes.get(x).addPosicao(x+1);
+        }
+        rodadas.add(r);
+        lista.addElement(r);
+        System.out.println(rodadas.toString());
+    }
+    
+    private void setTimes(){
+        Time t;
+        try {
+            File arquivo = new File("src/br/com/projeto/file/Times.txt");
+            try (InputStream is = new FileInputStream(arquivo); Scanner entrada = new Scanner(is)) {
+                
+                while (entrada.hasNext()) {
+                    Scanner linha = new Scanner(entrada.nextLine());
+                    linha.useDelimiter(";");
+                    if (linha.hasNext()) {
+                        t = new Time(linha.next(), new ImageIcon(linha.next()), Integer.parseInt(linha.next()), Integer.parseInt(linha.next()), Integer.parseInt(linha.next()));
+                        times.add(t);
+                        System.out.println(times.toString());
+                    }
+                }                
+                entrada.close();
+                is.close();                
+            }
+
+        } catch (FileNotFoundException ex) {
+            Logger.getLogger(TelaPrincipal.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (IOException ex) {
+            Logger.getLogger(TelaPrincipal.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+    
+    public void fechar(){ 
+        this.setTimes();       
+        for(int j = 0; j < 38; j++){
+            this.novaRodada();
+        }        
         this.dispose();
-        TelaPrincipal form1 = new TelaPrincipal();
+        
+        TelaPrincipalMesmo form1 = new TelaPrincipalMesmo();
         form1.setAlwaysOnTop(false);
         form1.setVisible(true);
         form1.setLocationRelativeTo(null);
+        
     }
 
     /**
@@ -59,13 +133,13 @@ public class TelaInicarCampeonato extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
+        lbFundo = new javax.swing.JLabel();
         pgLoading = new javax.swing.JProgressBar();
         btnInciar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/projeto/image/arquibancada1.jpg"))); // NOI18N
+        lbFundo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/projeto/image/arquibancada1.0.jpg"))); // NOI18N
 
         btnInciar.setBackground(new java.awt.Color(255, 255, 255));
         btnInciar.addActionListener(new java.awt.event.ActionListener() {
@@ -84,7 +158,7 @@ public class TelaInicarCampeonato extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(120, 120, 120)
                 .addComponent(btnInciar, javax.swing.GroupLayout.PREFERRED_SIZE, 420, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addComponent(jLabel1)
+            .addComponent(lbFundo)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -93,7 +167,7 @@ public class TelaInicarCampeonato extends javax.swing.JFrame {
                 .addComponent(btnInciar, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(40, 40, 40)
                 .addComponent(pgLoading, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 370, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(lbFundo)
         );
 
         pack();
@@ -106,9 +180,7 @@ public class TelaInicarCampeonato extends javax.swing.JFrame {
             tarefa = new TimerTask() {  
                 public void run() {  
                     try {                        
-                        if(i <= 100){   
-                            System.out.println(i);
-                            pgLoading.setString("Carrengando Campeonato..");
+                        if(i <= 100){
                             pgLoading.setValue(soma());    
                             pgLoading.isIndeterminate();                            
                         }else{
@@ -163,7 +235,7 @@ public class TelaInicarCampeonato extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnInciar;
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel lbFundo;
     private javax.swing.JProgressBar pgLoading;
     // End of variables declaration//GEN-END:variables
 }

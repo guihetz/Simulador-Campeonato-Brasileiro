@@ -60,7 +60,9 @@ public class TelaLoading extends javax.swing.JFrame {
         this.setLocationRelativeTo(null);
         this.setResizable(false);
         
+        pgLoading.setOpaque(false);
         pgLoading.setBorderPainted(false);
+        
         pgLoading.setForeground(Color.GREEN); //Cor da barra de progresso
         pgLoading.setMaximum(100);    
         pgLoading.setMinimum(0);
@@ -110,29 +112,32 @@ public class TelaLoading extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        pgLoading = new javax.swing.JProgressBar();
         jLabel1 = new javax.swing.JLabel();
+        pgLoading = new javax.swing.JProgressBar();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/projeto/image/loagin.jpg"))); // NOI18N
 
+        pgLoading.setBackground(null);
+        pgLoading.setForeground(null);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel1)
             .addGroup(layout.createSequentialGroup()
                 .addGap(10, 10, 10)
                 .addComponent(pgLoading, javax.swing.GroupLayout.PREFERRED_SIZE, 530, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addComponent(jLabel1)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel1)
             .addGroup(layout.createSequentialGroup()
-                .addGap(280, 280, 280)
+                .addGap(274, 274, 274)
                 .addComponent(pgLoading, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addComponent(jLabel1)
         );
 
         pack();

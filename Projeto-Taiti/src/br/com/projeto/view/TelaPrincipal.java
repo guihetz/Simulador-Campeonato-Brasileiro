@@ -24,19 +24,23 @@ import java.util.Scanner;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.ImageIcon;
+import javax.swing.JList;
+import javax.swing.ListModel;
 import javax.swing.ListSelectionModel;
+import javax.swing.event.ListSelectionListener;
 
 /**
  *
  * @author Guilherme Lourenço
  */
 public class TelaPrincipal extends javax.swing.JFrame {
-
+    public TelaInicarCampeonato telaInicialCampeonato;
     /**
      * Creates new form TelaPrincipal
      */
-    List<Rodada> rodadas;
-    List<Time> times;
+//    List<Rodada> rodadas;
+//    List<Time> times;
+    
     public TelaPrincipal() {
         initComponents();
         this.getContentPane().setBackground(Color.WHITE);
@@ -56,55 +60,57 @@ public class TelaPrincipal extends javax.swing.JFrame {
         btnNovaRodada.setFont(f);
         btnVisualizarRodada.setFont(f);
         
-        times = new ArrayList<>();
-        this.setTimes();
-        
-        rodadas = new ArrayList<>();
-        this.novaRodada();
-
         this.jlListaDeRodadas.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);        
+        //jlListaDeRodadas = new JList(telaInicialCampeonato.lista);
+        
+        
     }
     
-    private void setTimes(){
-        Time t;
-        try {
-            File arquivo = new File("src/br/com/projeto/file/Times.txt");
-            try (InputStream is = new FileInputStream(arquivo); Scanner entrada = new Scanner(is)) {
-                
-                while (entrada.hasNext()) {
-                    Scanner linha = new Scanner(entrada.nextLine());
-                    linha.useDelimiter(";");
-                    if (linha.hasNext()) {
-                        t = new Time(linha.next(), new ImageIcon(linha.next()), Integer.parseInt(linha.next()), Integer.parseInt(linha.next()), Integer.parseInt(linha.next()));
-                        times.add(t);
-                        
-                    }
-                }                
-                entrada.close();
-                is.close();                
-            }
-
-        } catch (FileNotFoundException ex) {
-            Logger.getLogger(TelaPrincipal.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (IOException ex) {
-            Logger.getLogger(TelaPrincipal.class.getName()).log(Level.SEVERE, null, ex);
-        }
+    public TelaPrincipal(javax.swing.JFrame form){
+        this();
+        telaInicialCampeonato = (TelaInicarCampeonato) form;
     }
     
-    private void novaRodada(){
-        Rodada r = new Rodada(times);
-        ArrayList<Time> clubes = new ArrayList<>();
-        for(Time t: times){
-            clubes.add(t);
-        }
-        Collections.sort(clubes,new ComparadorDePontos());
-        for(int i = 0; i < clubes.size();i++){
-            clubes.get(i).addPosicao(i+1);
-        }
-        rodadas.add(r);
-        jlListaDeRodadas.setListData(rodadas.toArray());
-        jlListaDeRodadas.setSelectedIndex(rodadas.size()-1);
-    }
+//    private void setTimes(){
+//        Time t;
+//        try {
+//            File arquivo = new File("src/br/com/projeto/file/Times.txt");
+//            try (InputStream is = new FileInputStream(arquivo); Scanner entrada = new Scanner(is)) {
+//                
+//                while (entrada.hasNext()) {
+//                    Scanner linha = new Scanner(entrada.nextLine());
+//                    linha.useDelimiter(";");
+//                    if (linha.hasNext()) {
+//                        t = new Time(linha.next(), new ImageIcon(linha.next()), Integer.parseInt(linha.next()), Integer.parseInt(linha.next()), Integer.parseInt(linha.next()));
+//                        times.add(t);
+//                        
+//                    }
+//                }                
+//                entrada.close();
+//                is.close();                
+//            }
+//
+//        } catch (FileNotFoundException ex) {
+//            Logger.getLogger(TelaPrincipal.class.getName()).log(Level.SEVERE, null, ex);
+//        } catch (IOException ex) {
+//            Logger.getLogger(TelaPrincipal.class.getName()).log(Level.SEVERE, null, ex);
+//        }
+//    }
+    
+//    private void novaRodada(){
+//        Rodada r = new Rodada(times);
+//        ArrayList<Time> clubes = new ArrayList<>();
+//        for(Time t: times){
+//            clubes.add(t);
+//        }
+//        Collections.sort(clubes,new ComparadorDePontos());
+//        for(int i = 0; i < clubes.size();i++){
+//            clubes.get(i).addPosicao(i+1);
+//        }
+//        rodadas.add(r);
+//        jlListaDeRodadas.setListData(rodadas.toArray());
+//        jlListaDeRodadas.setSelectedIndex(rodadas.size()-1);
+//    }
     
     /**
      * This method is called from within the constructor to initialize the form.
@@ -219,7 +225,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnNovaRodadaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNovaRodadaActionPerformed
-        this.novaRodada();
+        //this.novaRodada();
     }//GEN-LAST:event_btnNovaRodadaActionPerformed
 
     private void btnVisualizarRodadaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVisualizarRodadaActionPerformed
@@ -229,7 +235,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_btnVisualizarRodadaActionPerformed
 
     private void btnClassificacaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnClassificacaoActionPerformed
-        TelaClassificacao classificacao = new TelaClassificacao(times);
+        //TelaClassificacao classificacao = new TelaClassificacao(times);
     }//GEN-LAST:event_btnClassificacaoActionPerformed
 
     /**
