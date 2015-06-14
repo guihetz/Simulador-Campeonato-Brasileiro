@@ -7,6 +7,7 @@ package br.com.projeto.view;
 
 import br.com.projeto.model.ComparadorDePontos;
 import br.com.projeto.model.Time;
+import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.GridLayout;
@@ -21,6 +22,7 @@ import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JPanel;
 import javax.swing.SwingConstants;
 import org.jfree.chart.ChartFactory;
 import org.jfree.chart.ChartPanel;
@@ -94,7 +96,7 @@ public class TelaClassificacao extends JFrame{
         for(Time t: clubes){
             this.times.add(t);
         }
-        GridLayout layout = new GridLayout(21, 11, 0, 0);
+        GridLayout layout = new GridLayout(21, 11, 1, 1);
         this.setLayout(layout);
         ComparadorDePontos comparador = new ComparadorDePontos();
         Collections.sort(times,comparador);
@@ -152,7 +154,7 @@ public class TelaClassificacao extends JFrame{
         primeiroGolsContra = new JLabel(String.valueOf(times.get(0).getGolsContra()));
         primeiroSaldoDeGols = new JLabel(String.valueOf(times.get(0).getSaldoGol()));
         primeiroInfo = new JButton("Info Time");
-        primeiroInfo.addActionListener(new acaoInfoListener(times.get(0)));
+        primeiroInfo.addActionListener(new acaoInfoListener(times.get(0),1));
         
         texto1.setFont(f);
         primeiroEscudo.setFont(f); 
@@ -166,17 +168,41 @@ public class TelaClassificacao extends JFrame{
         primeiroSaldoDeGols.setFont(f); 
         primeiroInfo.setFont(f);
         
-        texto1.setForeground(Color.BLUE);
-        primeiroEscudo.setForeground(Color.BLUE);
-        primeiroNome.setForeground(Color.BLUE);
-        primeiroPontos.setForeground(Color.BLUE);
-        primeiroVitorias.setForeground(Color.BLUE);
-        primeiroEmpates.setForeground(Color.BLUE);
-        primeiroDerrotas.setForeground(Color.BLUE);
-        primeiroGolsPro.setForeground(Color.BLUE);
-        primeiroGolsContra.setForeground(Color.BLUE);
-        primeiroSaldoDeGols.setForeground(Color.BLUE);
-        primeiroInfo.setForeground(Color.BLUE);
+        texto1.setOpaque(true);
+        primeiroEscudo.setOpaque(true);
+        primeiroNome.setOpaque(true);
+        primeiroPontos.setOpaque(true);
+        primeiroVitorias.setOpaque(true);
+        primeiroEmpates.setOpaque(true);
+        primeiroDerrotas.setOpaque(true);
+        primeiroGolsPro.setOpaque(true);
+        primeiroGolsContra.setOpaque(true);
+        primeiroSaldoDeGols.setOpaque(true);
+        primeiroInfo.setOpaque(true);
+        
+        texto1.setBackground(Color.BLUE);
+        primeiroEscudo.setBackground(Color.BLUE);
+        primeiroNome.setBackground(Color.BLUE);
+        primeiroPontos.setBackground(Color.BLUE);
+        primeiroVitorias.setBackground(Color.BLUE);
+        primeiroEmpates.setBackground(Color.BLUE);
+        primeiroDerrotas.setBackground(Color.BLUE);
+        primeiroGolsPro.setBackground(Color.BLUE);
+        primeiroGolsContra.setBackground(Color.BLUE);
+        primeiroSaldoDeGols.setBackground(Color.BLUE);
+        primeiroInfo.setBackground(Color.BLUE);
+        
+        texto1.setForeground(Color.WHITE);
+        primeiroEscudo.setForeground(Color.WHITE);
+        primeiroNome.setForeground(Color.WHITE);
+        primeiroPontos.setForeground(Color.WHITE);
+        primeiroVitorias.setForeground(Color.WHITE);
+        primeiroEmpates.setForeground(Color.WHITE);
+        primeiroDerrotas.setForeground(Color.WHITE);
+        primeiroGolsPro.setForeground(Color.WHITE);
+        primeiroGolsContra.setForeground(Color.WHITE);
+        primeiroSaldoDeGols.setForeground(Color.WHITE);
+        primeiroInfo.setForeground(Color.WHITE);
         
         texto1.setHorizontalAlignment(SwingConstants.CENTER);
         primeiroEscudo.setHorizontalAlignment(SwingConstants.CENTER);
@@ -216,7 +242,7 @@ public class TelaClassificacao extends JFrame{
         segundoGolsContra = new JLabel(String.valueOf(times.get(1).getGolsContra()));
         segundoSaldoDeGols = new JLabel(String.valueOf(times.get(1).getSaldoGol()));
         segundoInfo = new JButton("Info Time");
-        segundoInfo.addActionListener(new acaoInfoListener(times.get(1)));
+        segundoInfo.addActionListener(new acaoInfoListener(times.get(1),2));
         
         texto2.setFont(f);
         segundoEscudo.setFont(f); 
@@ -230,17 +256,41 @@ public class TelaClassificacao extends JFrame{
         segundoSaldoDeGols.setFont(f);
         segundoInfo.setFont(f);
         
-        texto2.setForeground(Color.BLUE);
-        segundoEscudo.setForeground(Color.BLUE);
-        segundoNome.setForeground(Color.BLUE);
-        segundoPontos.setForeground(Color.BLUE);
-        segundoVitorias.setForeground(Color.BLUE);
-        segundoEmpates.setForeground(Color.BLUE);
-        segundoDerrotas.setForeground(Color.BLUE);
-        segundoGolsPro.setForeground(Color.BLUE);
-        segundoGolsContra.setForeground(Color.BLUE);
-        segundoSaldoDeGols.setForeground(Color.BLUE);
-        segundoInfo.setForeground(Color.BLUE);
+        texto2.setOpaque(true);
+        segundoEscudo.setOpaque(true); 
+        segundoNome.setOpaque(true);
+        segundoPontos.setOpaque(true);
+        segundoVitorias.setOpaque(true); 
+        segundoEmpates.setOpaque(true);
+        segundoDerrotas.setOpaque(true);
+        segundoGolsPro.setOpaque(true);
+        segundoGolsContra.setOpaque(true);
+        segundoSaldoDeGols.setOpaque(true);
+        segundoInfo.setOpaque(true);
+        
+        texto2.setBackground(Color.BLUE);
+        segundoEscudo.setBackground(Color.BLUE); 
+        segundoNome.setBackground(Color.BLUE);
+        segundoPontos.setBackground(Color.BLUE);
+        segundoVitorias.setBackground(Color.BLUE);
+        segundoEmpates.setBackground(Color.BLUE);
+        segundoDerrotas.setBackground(Color.BLUE);
+        segundoGolsPro.setBackground(Color.BLUE);
+        segundoGolsContra.setBackground(Color.BLUE);
+        segundoSaldoDeGols.setBackground(Color.BLUE);
+        segundoInfo.setBackground(Color.BLUE);
+        
+        texto2.setForeground(Color.WHITE);
+        segundoEscudo.setForeground(Color.WHITE);
+        segundoNome.setForeground(Color.WHITE);
+        segundoPontos.setForeground(Color.WHITE);
+        segundoVitorias.setForeground(Color.WHITE);
+        segundoEmpates.setForeground(Color.WHITE);
+        segundoDerrotas.setForeground(Color.WHITE);
+        segundoGolsPro.setForeground(Color.WHITE);
+        segundoGolsContra.setForeground(Color.WHITE);
+        segundoSaldoDeGols.setForeground(Color.WHITE);
+        segundoInfo.setForeground(Color.WHITE);
         
         texto2.setHorizontalAlignment(SwingConstants.CENTER);
         segundoEscudo.setHorizontalAlignment(SwingConstants.CENTER); 
@@ -280,7 +330,7 @@ public class TelaClassificacao extends JFrame{
         terceiroGolsContra = new JLabel(String.valueOf(times.get(2).getGolsContra()));
         terceiroSaldoDeGols = new JLabel(String.valueOf(times.get(2).getSaldoGol()));
         terceiroInfo = new JButton("Info Time");
-        terceiroInfo.addActionListener(new acaoInfoListener(times.get(2)));
+        terceiroInfo.addActionListener(new acaoInfoListener(times.get(2),3));
         
         texto3.setFont(f);
         terceiroEscudo.setFont(f);
@@ -294,17 +344,41 @@ public class TelaClassificacao extends JFrame{
         terceiroSaldoDeGols.setFont(f);
         terceiroInfo.setFont(f);
         
-        texto3.setForeground(Color.BLUE);
-        terceiroEscudo.setForeground(Color.BLUE);
-        terceiroNome.setForeground(Color.BLUE);
-        terceiroPontos.setForeground(Color.BLUE);
-        terceiroVitorias.setForeground(Color.BLUE);
-        terceiroEmpates.setForeground(Color.BLUE);
-        terceiroDerrotas.setForeground(Color.BLUE);
-        terceiroGolsPro.setForeground(Color.BLUE);
-        terceiroGolsContra.setForeground(Color.BLUE);
-        terceiroSaldoDeGols.setForeground(Color.BLUE);
-        terceiroInfo.setForeground(Color.BLUE);
+        texto3.setOpaque(true);
+        terceiroEscudo.setOpaque(true);
+        terceiroNome.setOpaque(true);
+        terceiroPontos.setOpaque(true);
+        terceiroVitorias.setOpaque(true);
+        terceiroEmpates.setOpaque(true);
+        terceiroDerrotas.setOpaque(true);
+        terceiroGolsPro.setOpaque(true);
+        terceiroGolsContra.setOpaque(true);
+        terceiroSaldoDeGols.setOpaque(true);
+        terceiroInfo.setOpaque(true);
+        
+        texto3.setBackground(Color.BLUE);
+        terceiroEscudo.setBackground(Color.BLUE);
+        terceiroNome.setBackground(Color.BLUE);
+        terceiroPontos.setBackground(Color.BLUE);
+        terceiroVitorias.setBackground(Color.BLUE);
+        terceiroEmpates.setBackground(Color.BLUE);
+        terceiroDerrotas.setBackground(Color.BLUE);
+        terceiroGolsPro.setBackground(Color.BLUE);
+        terceiroGolsContra.setBackground(Color.BLUE);
+        terceiroSaldoDeGols.setBackground(Color.BLUE);
+        terceiroInfo.setBackground(Color.BLUE);
+        
+        texto3.setForeground(Color.WHITE);
+        terceiroEscudo.setForeground(Color.WHITE);
+        terceiroNome.setForeground(Color.WHITE);
+        terceiroPontos.setForeground(Color.WHITE);
+        terceiroVitorias.setForeground(Color.WHITE);
+        terceiroEmpates.setForeground(Color.WHITE);
+        terceiroDerrotas.setForeground(Color.WHITE);
+        terceiroGolsPro.setForeground(Color.WHITE);
+        terceiroGolsContra.setForeground(Color.WHITE);
+        terceiroSaldoDeGols.setForeground(Color.WHITE);
+        terceiroInfo.setForeground(Color.WHITE);
         
         texto3.setHorizontalAlignment(SwingConstants.CENTER);
         terceiroEscudo.setHorizontalAlignment(SwingConstants.CENTER);
@@ -344,7 +418,7 @@ public class TelaClassificacao extends JFrame{
         quartoGolsContra = new JLabel(String.valueOf(times.get(3).getGolsContra()));
         quartoSaldoDeGols = new JLabel(String.valueOf(times.get(3).getSaldoGol()));
         quartoInfo = new JButton("Info Time");
-        quartoInfo.addActionListener(new acaoInfoListener(times.get(3)));
+        quartoInfo.addActionListener(new acaoInfoListener(times.get(3),4));
         
         texto4.setFont(f);
         quartoEscudo.setFont(f);
@@ -358,17 +432,41 @@ public class TelaClassificacao extends JFrame{
         quartoSaldoDeGols.setFont(f);
         quartoInfo.setFont(f);
         
-        texto4.setForeground(Color.BLUE);
-        quartoEscudo.setForeground(Color.BLUE);
-        quartoNome.setForeground(Color.BLUE);
-        quartoPontos.setForeground(Color.BLUE);
-        quartoVitorias.setForeground(Color.BLUE);
-        quartoEmpates.setForeground(Color.BLUE);
-        quartoDerrotas.setForeground(Color.BLUE);
-        quartoGolsPro.setForeground(Color.BLUE);
-        quartoGolsContra.setForeground(Color.BLUE);
-        quartoSaldoDeGols.setForeground(Color.BLUE);
-        quartoInfo.setForeground(Color.BLUE);
+        texto4.setOpaque(true);
+        quartoEscudo.setOpaque(true);
+        quartoNome.setOpaque(true);
+        quartoPontos.setOpaque(true);
+        quartoVitorias.setOpaque(true);
+        quartoEmpates.setOpaque(true);
+        quartoDerrotas.setOpaque(true);
+        quartoGolsPro.setOpaque(true);
+        quartoGolsContra.setOpaque(true);
+        quartoSaldoDeGols.setOpaque(true);
+        quartoInfo.setOpaque(true);
+        
+        texto4.setBackground(Color.BLUE);
+        quartoEscudo.setBackground(Color.BLUE);
+        quartoNome.setBackground(Color.BLUE);
+        quartoPontos.setBackground(Color.BLUE);
+        quartoVitorias.setBackground(Color.BLUE);
+        quartoEmpates.setBackground(Color.BLUE);
+        quartoDerrotas.setBackground(Color.BLUE);
+        quartoGolsPro.setBackground(Color.BLUE);
+        quartoGolsContra.setBackground(Color.BLUE);
+        quartoSaldoDeGols.setBackground(Color.BLUE);
+        quartoInfo.setBackground(Color.BLUE);
+        
+        texto4.setForeground(Color.WHITE);
+        quartoEscudo.setForeground(Color.WHITE);
+        quartoNome.setForeground(Color.WHITE);
+        quartoPontos.setForeground(Color.WHITE);
+        quartoVitorias.setForeground(Color.WHITE);
+        quartoEmpates.setForeground(Color.WHITE);
+        quartoDerrotas.setForeground(Color.WHITE);
+        quartoGolsPro.setForeground(Color.WHITE);
+        quartoGolsContra.setForeground(Color.WHITE);
+        quartoSaldoDeGols.setForeground(Color.WHITE);
+        quartoInfo.setForeground(Color.WHITE);
         
         texto4.setHorizontalAlignment(SwingConstants.CENTER);
         quartoEscudo.setHorizontalAlignment(SwingConstants.CENTER);
@@ -408,7 +506,7 @@ public class TelaClassificacao extends JFrame{
         quintoGolsContra = new JLabel(String.valueOf(times.get(4).getGolsContra()));
         quintoSaldoDeGols = new JLabel(String.valueOf(times.get(4).getSaldoGol()));
         quintoInfo = new JButton("Info Time");
-        quintoInfo.addActionListener(new acaoInfoListener(times.get(4)));
+        quintoInfo.addActionListener(new acaoInfoListener(times.get(4),5));
         
         texto5.setFont(f);
         quintoEscudo.setFont(f);
@@ -460,7 +558,7 @@ public class TelaClassificacao extends JFrame{
         sextoGolsContra = new JLabel(String.valueOf(times.get(5).getGolsContra()));
         sextoSaldoDeGols = new JLabel(String.valueOf(times.get(5).getSaldoGol()));
         sextoInfo = new JButton("Info Time");
-        sextoInfo.addActionListener(new acaoInfoListener(times.get(5)));
+        sextoInfo.addActionListener(new acaoInfoListener(times.get(5),6));
         
         texto6.setFont(f);
         sextoEscudo.setFont(f);
@@ -512,7 +610,7 @@ public class TelaClassificacao extends JFrame{
         setimoGolsContra = new JLabel(String.valueOf(times.get(6).getGolsContra()));
         setimoSaldoDeGols = new JLabel(String.valueOf(times.get(6).getSaldoGol()));
         setimoInfo = new JButton("Info Time");
-        setimoInfo.addActionListener(new acaoInfoListener(times.get(6)));
+        setimoInfo.addActionListener(new acaoInfoListener(times.get(6),7));
         
         texto7.setFont(f);
         setimoEscudo.setFont(f);
@@ -564,7 +662,7 @@ public class TelaClassificacao extends JFrame{
         oitavoGolsContra = new JLabel(String.valueOf(times.get(7).getGolsContra()));
         oitavoSaldoDeGols = new JLabel(String.valueOf(times.get(7).getSaldoGol()));
         oitavoInfo = new JButton("Info Time");
-        oitavoInfo.addActionListener(new acaoInfoListener(times.get(7)));
+        oitavoInfo.addActionListener(new acaoInfoListener(times.get(7),8));
         
         texto8.setFont(f);
         oitavoEscudo.setFont(f);
@@ -616,7 +714,7 @@ public class TelaClassificacao extends JFrame{
         nonoGolsContra = new JLabel(String.valueOf(times.get(8).getGolsContra()));
         nonoSaldoDeGols = new JLabel(String.valueOf(times.get(8).getSaldoGol()));
         nonoInfo = new JButton("Info Time");
-        nonoInfo.addActionListener(new acaoInfoListener(times.get(8)));
+        nonoInfo.addActionListener(new acaoInfoListener(times.get(8),9));
         
         texto9.setFont(f);
         nonoEscudo.setFont(f);
@@ -668,7 +766,7 @@ public class TelaClassificacao extends JFrame{
         decimoGolsContra = new JLabel(String.valueOf(times.get(9).getGolsContra()));
         decimoSaldoDeGols = new JLabel(String.valueOf(times.get(9).getSaldoGol()));
         decimoInfo = new JButton("Info Time");
-        decimoInfo.addActionListener(new acaoInfoListener(times.get(9)));
+        decimoInfo.addActionListener(new acaoInfoListener(times.get(9),10));
         
         texto10.setFont(f);
         decimoEscudo.setFont(f);
@@ -720,7 +818,7 @@ public class TelaClassificacao extends JFrame{
         decimoPrimeiroGolsContra = new JLabel(String.valueOf(times.get(10).getGolsContra()));
         decimoPrimeiroSaldoDeGols = new JLabel(String.valueOf(times.get(10).getSaldoGol()));
         decimoPrimeiroInfo = new JButton("Info Time");
-        decimoPrimeiroInfo.addActionListener(new acaoInfoListener(times.get(10)));
+        decimoPrimeiroInfo.addActionListener(new acaoInfoListener(times.get(10),11));
         
         texto11.setFont(f);
         decimoPrimeiroEscudo.setFont(f);
@@ -772,7 +870,7 @@ public class TelaClassificacao extends JFrame{
         decimoSegundoGolsContra = new JLabel(String.valueOf(times.get(11).getGolsContra()));
         decimoSegundoSaldoDeGols = new JLabel(String.valueOf(times.get(11).getSaldoGol()));
         decimoSegundoInfo = new JButton("Info Time");
-        decimoSegundoInfo.addActionListener(new acaoInfoListener(times.get(11)));
+        decimoSegundoInfo.addActionListener(new acaoInfoListener(times.get(11),12));
         
         texto12.setFont(f);
         decimoSegundoEscudo.setFont(f);
@@ -824,7 +922,7 @@ public class TelaClassificacao extends JFrame{
         decimoTerceiroGolsContra = new JLabel(String.valueOf(times.get(12).getGolsContra()));
         decimoTerceiroSaldoDeGols = new JLabel(String.valueOf(times.get(12).getSaldoGol()));
         decimoTerceiroInfo = new JButton("Info Time");
-        decimoTerceiroInfo.addActionListener(new acaoInfoListener(times.get(12)));
+        decimoTerceiroInfo.addActionListener(new acaoInfoListener(times.get(12),13));
         
         texto13.setFont(f);
         decimoTerceiroEscudo.setFont(f);
@@ -876,7 +974,7 @@ public class TelaClassificacao extends JFrame{
         decimoQuartoGolsContra = new JLabel(String.valueOf(times.get(13).getGolsContra()));
         decimoQuartoSaldoDeGols = new JLabel(String.valueOf(times.get(13).getSaldoGol()));
         decimoQuartoInfo = new JButton("Info Time");
-        decimoQuartoInfo.addActionListener(new acaoInfoListener(times.get(13)));
+        decimoQuartoInfo.addActionListener(new acaoInfoListener(times.get(13),14));
         
         texto14.setFont(f);
         decimoQuartoEscudo.setFont(f);
@@ -928,7 +1026,7 @@ public class TelaClassificacao extends JFrame{
         decimoQuintoGolsContra = new JLabel(String.valueOf(times.get(14).getGolsContra()));
         decimoQuintoSaldoDeGols = new JLabel(String.valueOf(times.get(14).getSaldoGol()));
         decimoQuintoInfo = new JButton("Info Time");
-        decimoQuintoInfo.addActionListener(new acaoInfoListener(times.get(14)));
+        decimoQuintoInfo.addActionListener(new acaoInfoListener(times.get(14),15));
         
         texto15.setFont(f);
         decimoQuintoEscudo.setFont(f);
@@ -980,7 +1078,7 @@ public class TelaClassificacao extends JFrame{
         decimoSextoGolsContra = new JLabel(String.valueOf(times.get(15).getGolsContra()));
         decimoSextoSaldoDeGols = new JLabel(String.valueOf(times.get(15).getSaldoGol()));
         decimoSextoInfo = new JButton("Info Time");
-        decimoSextoInfo.addActionListener(new acaoInfoListener(times.get(15)));
+        decimoSextoInfo.addActionListener(new acaoInfoListener(times.get(15),16));
         
         texto16.setFont(f);
         decimoSextoEscudo.setFont(f);
@@ -1032,7 +1130,7 @@ public class TelaClassificacao extends JFrame{
         decimoSetimoGolsContra = new JLabel(String.valueOf(times.get(16).getGolsContra()));
         decimoSetimoSaldoDeGols = new JLabel(String.valueOf(times.get(16).getSaldoGol()));
         decimoSetimoInfo = new JButton("Info Time");
-        decimoSetimoInfo.addActionListener(new acaoInfoListener(times.get(16)));
+        decimoSetimoInfo.addActionListener(new acaoInfoListener(times.get(16),17));
         
         texto17.setFont(f);
         decimoSetimoEscudo.setFont(f);
@@ -1046,17 +1144,41 @@ public class TelaClassificacao extends JFrame{
         decimoSetimoSaldoDeGols.setFont(f);
         decimoSetimoInfo.setFont(f);
         
-        texto17.setForeground(Color.red);
-        decimoSetimoEscudo.setForeground(Color.red);
-        decimoSetimoNome.setForeground(Color.red);
-        decimoSetimoPontos.setForeground(Color.red);
-        decimoSetimoVitorias.setForeground(Color.red);
-        decimoSetimoEmpates.setForeground(Color.red);
-        decimoSetimoDerrotas.setForeground(Color.red);
-        decimoSetimoGolsPro.setForeground(Color.red);
-        decimoSetimoGolsContra.setForeground(Color.red);
-        decimoSetimoSaldoDeGols.setForeground(Color.red);
-        decimoSetimoInfo.setForeground(Color.red);
+        texto17.setOpaque(true);
+        decimoSetimoEscudo.setOpaque(true);
+        decimoSetimoNome.setOpaque(true);
+        decimoSetimoPontos.setOpaque(true);
+        decimoSetimoVitorias.setOpaque(true);
+        decimoSetimoEmpates.setOpaque(true);
+        decimoSetimoDerrotas.setOpaque(true);
+        decimoSetimoGolsPro.setOpaque(true);
+        decimoSetimoGolsContra.setOpaque(true);
+        decimoSetimoSaldoDeGols.setOpaque(true);
+        decimoSetimoInfo.setOpaque(true);
+        
+        texto17.setBackground(Color.RED);
+        decimoSetimoEscudo.setBackground(Color.RED);
+        decimoSetimoNome.setBackground(Color.RED);
+        decimoSetimoPontos.setBackground(Color.RED);
+        decimoSetimoVitorias.setBackground(Color.RED);
+        decimoSetimoEmpates.setBackground(Color.RED);
+        decimoSetimoDerrotas.setBackground(Color.RED);
+        decimoSetimoGolsPro.setBackground(Color.RED);
+        decimoSetimoGolsContra.setBackground(Color.RED);
+        decimoSetimoSaldoDeGols.setBackground(Color.RED);
+        decimoSetimoInfo.setBackground(Color.RED);
+        
+        texto17.setForeground(Color.WHITE);
+        decimoSetimoEscudo.setForeground(Color.WHITE);
+        decimoSetimoNome.setForeground(Color.WHITE);
+        decimoSetimoPontos.setForeground(Color.WHITE);
+        decimoSetimoVitorias.setForeground(Color.WHITE);
+        decimoSetimoEmpates.setForeground(Color.WHITE);
+        decimoSetimoDerrotas.setForeground(Color.WHITE);
+        decimoSetimoGolsPro.setForeground(Color.WHITE);
+        decimoSetimoGolsContra.setForeground(Color.WHITE);
+        decimoSetimoSaldoDeGols.setForeground(Color.WHITE);
+        decimoSetimoInfo.setForeground(Color.WHITE);
         
         texto17.setHorizontalAlignment(SwingConstants.CENTER);
         decimoSetimoEscudo.setHorizontalAlignment(SwingConstants.CENTER);
@@ -1096,7 +1218,7 @@ public class TelaClassificacao extends JFrame{
         decimoOitavoGolsContra = new JLabel(String.valueOf(times.get(17).getGolsContra()));
         decimoOitavoSaldoDeGols = new JLabel(String.valueOf(times.get(17).getSaldoGol()));
         decimoOitavoInfo = new JButton("Info Time");
-        decimoOitavoInfo.addActionListener(new acaoInfoListener(times.get(17)));
+        decimoOitavoInfo.addActionListener(new acaoInfoListener(times.get(17),18));
         
         texto18.setFont(f);
         decimoOitavoEscudo.setFont(f);
@@ -1110,17 +1232,41 @@ public class TelaClassificacao extends JFrame{
         decimoOitavoSaldoDeGols.setFont(f);
         decimoOitavoInfo.setFont(f);
         
-        texto18.setForeground(Color.red);
-        decimoOitavoEscudo.setForeground(Color.red);
-        decimoOitavoNome.setForeground(Color.red);
-        decimoOitavoPontos.setForeground(Color.red);
-        decimoOitavoVitorias.setForeground(Color.red);
-        decimoOitavoEmpates.setForeground(Color.red);
-        decimoOitavoDerrotas.setForeground(Color.red);
-        decimoOitavoGolsPro.setForeground(Color.red);
-        decimoOitavoGolsContra.setForeground(Color.red);
-        decimoOitavoSaldoDeGols.setForeground(Color.red);
-        decimoOitavoInfo.setForeground(Color.red);
+        texto18.setOpaque(true);
+        decimoOitavoEscudo.setOpaque(true);
+        decimoOitavoNome.setOpaque(true);
+        decimoOitavoPontos.setOpaque(true);
+        decimoOitavoVitorias.setOpaque(true);
+        decimoOitavoEmpates.setOpaque(true);
+        decimoOitavoDerrotas.setOpaque(true);
+        decimoOitavoGolsPro.setOpaque(true);
+        decimoOitavoGolsContra.setOpaque(true);
+        decimoOitavoSaldoDeGols.setOpaque(true);
+        decimoOitavoInfo.setOpaque(true);
+        
+        texto18.setBackground(Color.RED);
+        decimoOitavoEscudo.setBackground(Color.RED);
+        decimoOitavoNome.setBackground(Color.RED);
+        decimoOitavoPontos.setBackground(Color.RED);
+        decimoOitavoVitorias.setBackground(Color.RED);
+        decimoOitavoEmpates.setBackground(Color.RED);
+        decimoOitavoDerrotas.setBackground(Color.RED);
+        decimoOitavoGolsPro.setBackground(Color.RED);
+        decimoOitavoGolsContra.setBackground(Color.RED);
+        decimoOitavoSaldoDeGols.setBackground(Color.RED);
+        decimoOitavoInfo.setBackground(Color.RED);
+        
+        texto18.setForeground(Color.WHITE);
+        decimoOitavoEscudo.setForeground(Color.WHITE);
+        decimoOitavoNome.setForeground(Color.WHITE);
+        decimoOitavoPontos.setForeground(Color.WHITE);
+        decimoOitavoVitorias.setForeground(Color.WHITE);
+        decimoOitavoEmpates.setForeground(Color.WHITE);
+        decimoOitavoDerrotas.setForeground(Color.WHITE);
+        decimoOitavoGolsPro.setForeground(Color.WHITE);
+        decimoOitavoGolsContra.setForeground(Color.WHITE);
+        decimoOitavoSaldoDeGols.setForeground(Color.WHITE);
+        decimoOitavoInfo.setForeground(Color.WHITE);
         
         texto18.setHorizontalAlignment(SwingConstants.CENTER);
         decimoOitavoEscudo.setHorizontalAlignment(SwingConstants.CENTER);
@@ -1160,7 +1306,7 @@ public class TelaClassificacao extends JFrame{
         decimoNonoGolsContra = new JLabel(String.valueOf(times.get(18).getGolsContra()));
         decimoNonoSaldoDeGols = new JLabel(String.valueOf(times.get(18).getSaldoGol()));
         decimoNonoInfo = new JButton("Info Time");
-        decimoNonoInfo.addActionListener(new acaoInfoListener(times.get(18)));
+        decimoNonoInfo.addActionListener(new acaoInfoListener(times.get(18),19));
         
         texto19.setFont(f);
         decimoNonoEscudo.setFont(f);
@@ -1174,17 +1320,41 @@ public class TelaClassificacao extends JFrame{
         decimoNonoSaldoDeGols.setFont(f);
         decimoNonoInfo.setFont(f);
         
-        texto19.setForeground(Color.red);
-        decimoNonoEscudo.setForeground(Color.red);
-        decimoNonoNome.setForeground(Color.red);
-        decimoNonoPontos.setForeground(Color.red);
-        decimoNonoVitorias.setForeground(Color.red);
-        decimoNonoEmpates.setForeground(Color.red);
-        decimoNonoDerrotas.setForeground(Color.red);
-        decimoNonoGolsPro.setForeground(Color.red);
-        decimoNonoGolsContra.setForeground(Color.red);
-        decimoNonoSaldoDeGols.setForeground(Color.red);
-        decimoNonoInfo.setForeground(Color.red);
+        texto19.setOpaque(true);
+        decimoNonoEscudo.setOpaque(true);
+        decimoNonoNome.setOpaque(true);
+        decimoNonoPontos.setOpaque(true);
+        decimoNonoVitorias.setOpaque(true);
+        decimoNonoEmpates.setOpaque(true);
+        decimoNonoDerrotas.setOpaque(true);
+        decimoNonoGolsPro.setOpaque(true);
+        decimoNonoGolsContra.setOpaque(true);
+        decimoNonoSaldoDeGols.setOpaque(true);
+        decimoNonoInfo.setOpaque(true);
+        
+        texto19.setBackground(Color.RED);
+        decimoNonoEscudo.setBackground(Color.RED);
+        decimoNonoNome.setBackground(Color.RED);
+        decimoNonoPontos.setBackground(Color.RED);
+        decimoNonoVitorias.setBackground(Color.RED);
+        decimoNonoEmpates.setBackground(Color.RED);
+        decimoNonoDerrotas.setBackground(Color.RED);
+        decimoNonoGolsPro.setBackground(Color.RED);
+        decimoNonoGolsContra.setBackground(Color.RED);
+        decimoNonoSaldoDeGols.setBackground(Color.RED);
+        decimoNonoInfo.setBackground(Color.RED);
+        
+        texto19.setForeground(Color.WHITE);
+        decimoNonoEscudo.setForeground(Color.WHITE);
+        decimoNonoNome.setForeground(Color.WHITE);
+        decimoNonoPontos.setForeground(Color.WHITE);
+        decimoNonoVitorias.setForeground(Color.WHITE);
+        decimoNonoEmpates.setForeground(Color.WHITE);
+        decimoNonoDerrotas.setForeground(Color.WHITE);
+        decimoNonoGolsPro.setForeground(Color.WHITE);
+        decimoNonoGolsContra.setForeground(Color.WHITE);
+        decimoNonoSaldoDeGols.setForeground(Color.WHITE);
+        decimoNonoInfo.setForeground(Color.WHITE);
         
         texto19.setHorizontalAlignment(SwingConstants.CENTER);
         decimoNonoEscudo.setHorizontalAlignment(SwingConstants.CENTER);
@@ -1224,7 +1394,7 @@ public class TelaClassificacao extends JFrame{
         vigesimoGolsContra = new JLabel(String.valueOf(times.get(19).getGolsContra()));
         vigesimoSaldoDeGols = new JLabel(String.valueOf(times.get(19).getSaldoGol()));
         vigesimoInfo = new JButton("Info Time");
-        vigesimoInfo.addActionListener(new acaoInfoListener(times.get(19)));
+        vigesimoInfo.addActionListener(new acaoInfoListener(times.get(19),20));
         
         texto20.setFont(f);
         vigesimoEscudo.setFont(f);
@@ -1238,17 +1408,41 @@ public class TelaClassificacao extends JFrame{
         vigesimoSaldoDeGols.setFont(f);
         vigesimoInfo.setFont(f);
         
-        texto20.setForeground(Color.red);
-        vigesimoEscudo.setForeground(Color.red);
-        vigesimoNome.setForeground(Color.red);
-        vigesimoPontos.setForeground(Color.red);
-        vigesimoVitorias.setForeground(Color.red);
-        vigesimoEmpates.setForeground(Color.red);
-        vigesimoDerrotas.setForeground(Color.red);
-        vigesimoGolsPro.setForeground(Color.red);
-        vigesimoGolsContra.setForeground(Color.red);
-        vigesimoSaldoDeGols.setForeground(Color.red);
-        vigesimoInfo.setForeground(Color.red);
+        texto20.setOpaque(true);
+        vigesimoEscudo.setOpaque(true);
+        vigesimoNome.setOpaque(true);
+        vigesimoPontos.setOpaque(true);
+        vigesimoVitorias.setOpaque(true);
+        vigesimoEmpates.setOpaque(true);
+        vigesimoDerrotas.setOpaque(true);
+        vigesimoGolsPro.setOpaque(true);
+        vigesimoGolsContra.setOpaque(true);
+        vigesimoSaldoDeGols.setOpaque(true);
+        vigesimoInfo.setOpaque(true);
+        
+        texto20.setBackground(Color.RED);
+        vigesimoEscudo.setBackground(Color.RED);
+        vigesimoNome.setBackground(Color.RED);
+        vigesimoPontos.setBackground(Color.RED);
+        vigesimoVitorias.setBackground(Color.RED);
+        vigesimoEmpates.setBackground(Color.RED);
+        vigesimoDerrotas.setBackground(Color.RED);
+        vigesimoGolsPro.setBackground(Color.RED);
+        vigesimoGolsContra.setBackground(Color.RED);
+        vigesimoSaldoDeGols.setBackground(Color.RED);
+        vigesimoInfo.setBackground(Color.RED);
+        
+        texto20.setForeground(Color.WHITE);
+        vigesimoEscudo.setForeground(Color.WHITE);
+        vigesimoNome.setForeground(Color.WHITE);
+        vigesimoPontos.setForeground(Color.WHITE);
+        vigesimoVitorias.setForeground(Color.WHITE);
+        vigesimoEmpates.setForeground(Color.WHITE);
+        vigesimoDerrotas.setForeground(Color.WHITE);
+        vigesimoGolsPro.setForeground(Color.WHITE);
+        vigesimoGolsContra.setForeground(Color.WHITE);
+        vigesimoSaldoDeGols.setForeground(Color.WHITE);
+        vigesimoInfo.setForeground(Color.WHITE);
         
         texto20.setHorizontalAlignment(SwingConstants.CENTER);
         vigesimoEscudo.setHorizontalAlignment(SwingConstants.CENTER);
@@ -1534,16 +1728,50 @@ public class TelaClassificacao extends JFrame{
     
     final class JanelaInfo extends JFrame{
         Time t;
-        //JPanel painel;
-        public JanelaInfo(Time t){
+        JPanel painel;
+        JLabel escudo;
+        JLabel classificacao;
+        JLabel pontuacao;
+        JLabel mediaGols;
+        int posicao;
+        public JanelaInfo(Time t, int posicao){
             super("Posições durante a temporada");
             this.t = t;
+            this.painel = new JPanel(new GridLayout(5, 1));
+            this.posicao = posicao;
             this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
             this.setSize(700, 500);
-            this.getContentPane().setLayout(new GridLayout(1, 1));
-            //this.painel = new JPanel();
+            ImageIcon img = new ImageIcon(t.getEscudo().getImage());
+            img.setImage(img.getImage().getScaledInstance(60, 60, 100));
+            this.escudo = new JLabel(img);
+            this.escudo.setHorizontalAlignment(SwingConstants.CENTER);
+            this.escudo.setVerticalAlignment(SwingConstants.CENTER);
+            this.classificacao = new JLabel(String.valueOf(this.posicao) + "º");
+            this.classificacao.setHorizontalAlignment(SwingConstants.CENTER);
+            this.classificacao.setVerticalAlignment(SwingConstants.CENTER);
+            this.classificacao.setFont(InicioProjeto.getFonte(70));
+            this.pontuacao = new JLabel(String.valueOf(t.getPontuacaoAtual()) + " pontos");
+            this.pontuacao.setFont(InicioProjeto.getFonte(50));
+            this.pontuacao.setHorizontalAlignment(SwingConstants.CENTER);
+            this.pontuacao.setVerticalAlignment(SwingConstants.CENTER);
+            this.mediaGols = new JLabel(String.format("%.2f",(double)t.getGolsPro()/(double)t.getTimesComQuemJogou().size()));
+            JLabel textoMedia = new JLabel("media gols/partida");
+            textoMedia.setFont(InicioProjeto.getFonte(24));
+            textoMedia.setHorizontalAlignment(SwingConstants.CENTER);
+            textoMedia.setVerticalAlignment(SwingConstants.CENTER);
+            this.mediaGols.setFont(InicioProjeto.getFonte(35));
+            this.mediaGols.setHorizontalAlignment(SwingConstants.CENTER);
+            this.mediaGols.setVerticalAlignment(SwingConstants.CENTER);
+            this.getContentPane().setLayout(new BorderLayout());
             this.criaGrafico(t.getNome(), t.getPosicoes());
-            //this.getContentPane().add(painel);
+            this.painel.setBackground(Color.WHITE);
+            this.painel.add(this.escudo);
+            this.painel.add(this.classificacao);
+            this.painel.add(this.pontuacao);
+            this.painel.add(this.mediaGols);
+            this.painel.add(textoMedia);
+            this.getContentPane().add(this.painel, BorderLayout.EAST);
+            
             
             
         }
@@ -1584,7 +1812,7 @@ public class TelaClassificacao extends JFrame{
 		myChartPanel.setSize(this.getWidth(), this.getHeight());
 		myChartPanel.setVisible(true);
 		this.getContentPane().removeAll();
-		this.getContentPane().add(myChartPanel);
+		this.getContentPane().add(myChartPanel, BorderLayout.CENTER);
 		this.getContentPane().revalidate();
 		this.getContentPane().repaint();
 	}
@@ -1593,14 +1821,16 @@ public class TelaClassificacao extends JFrame{
     class acaoInfoListener implements ActionListener{
 
         Time t;
-        public acaoInfoListener(Time t) {
+        int classificacao;
+        public acaoInfoListener(Time t, int posicao) {
             this.t = t;
+            this.classificacao = posicao;
         }
 
         
         @Override
         public void actionPerformed(ActionEvent e) {
-            JanelaInfo janela = new JanelaInfo(t);
+            JanelaInfo janela = new JanelaInfo(t, classificacao);
             janela.setLocationRelativeTo(null);
             janela.setVisible(true);
             
