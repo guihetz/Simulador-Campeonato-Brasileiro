@@ -5,16 +5,21 @@
  */
 package br.com.projeto.view;
 
+import br.com.projeto.model.Rodada;
+import br.com.projeto.model.Time;
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  *
  * @author Daylton
  */
 public class TelaPrincipalMesmo extends javax.swing.JFrame {
-    public TelaInicarCampeonato tInicalCampeonato;
     /**
      * Creates new form TelaPrincipalMesmo
      */
-    
+    private List<Rodada> rodadas;
+    private List<Time> times;
     public TelaPrincipalMesmo() {
         initComponents();
         
@@ -27,9 +32,10 @@ public class TelaPrincipalMesmo extends javax.swing.JFrame {
         btnClassificacao.setBorderPainted(false);
     }
     
-    public TelaPrincipalMesmo(javax.swing.JFrame form){
+    public TelaPrincipalMesmo(List<Rodada> rodadas, List<Time> times){
         this();
-        tInicalCampeonato = (TelaInicarCampeonato) form;
+        this.rodadas = rodadas;
+        this.times = times;
     }
 
 
@@ -97,14 +103,14 @@ public class TelaPrincipalMesmo extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnRodadasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRodadasActionPerformed
-        TelaPrincipal form1 = new TelaPrincipal();
+        TelaPrincipal form1 = new TelaPrincipal(this.rodadas);
         form1.setAlwaysOnTop(false);
         form1.setVisible(true);
         form1.setLocationRelativeTo(null);
     }//GEN-LAST:event_btnRodadasActionPerformed
 
     private void btnClassificacaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnClassificacaoActionPerformed
-        TelaClassificacao classificacao = new TelaClassificacao(tInicalCampeonato.times);
+        TelaClassificacao classificacao = new TelaClassificacao(times);
     }//GEN-LAST:event_btnClassificacaoActionPerformed
 
     /**

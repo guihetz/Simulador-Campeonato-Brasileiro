@@ -36,8 +36,6 @@ public class TelaInicarCampeonato extends javax.swing.JFrame {
      */    
     List<Rodada> rodadas;
     List<Time> times;
-    DefaultListModel lista = new DefaultListModel();
-    
     public static final long TEMPO = (1000* 1);
     int i = 0;
     TimerTask tarefa;
@@ -80,8 +78,7 @@ public class TelaInicarCampeonato extends javax.swing.JFrame {
             clubes.get(x).addPosicao(x+1);
         }
         rodadas.add(r);
-        lista.addElement(r);
-        System.out.println(rodadas.toString());
+        //System.out.println(rodadas.toString());
     }
     
     private void setTimes(){
@@ -115,12 +112,12 @@ public class TelaInicarCampeonato extends javax.swing.JFrame {
         for(int j = 0; j < 38; j++){
             this.novaRodada();
         }        
-        this.dispose();
         
-        TelaPrincipalMesmo form1 = new TelaPrincipalMesmo();
+        TelaPrincipalMesmo form1 = new TelaPrincipalMesmo(this.rodadas, this.times);
         form1.setAlwaysOnTop(false);
         form1.setVisible(true);
         form1.setLocationRelativeTo(null);
+        this.dispose();
         
     }
 

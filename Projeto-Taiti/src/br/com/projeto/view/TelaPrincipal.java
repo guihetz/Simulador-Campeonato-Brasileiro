@@ -34,14 +34,13 @@ import javax.swing.event.ListSelectionListener;
  * @author Guilherme Lourenço
  */
 public class TelaPrincipal extends javax.swing.JFrame {
-    public TelaInicarCampeonato telaInicialCampeonato;
     /**
      * Creates new form TelaPrincipal
      */
-//    List<Rodada> rodadas;
+    List<Rodada> rodadas;
 //    List<Time> times;
     
-    public TelaPrincipal() {
+    public TelaPrincipal(List<Rodada> rodadas) {
         initComponents();
         this.getContentPane().setBackground(Color.WHITE);
         this.painel1.setBackground(Color.WHITE);
@@ -59,18 +58,15 @@ public class TelaPrincipal extends javax.swing.JFrame {
         btnClassificacao.setFont(f);
         btnNovaRodada.setFont(f);
         btnVisualizarRodada.setFont(f);
-        
+        this.jlListaDeRodadas.setListData(rodadas.toArray());
+        jlListaDeRodadas.setSelectedIndex(rodadas.size()-1);
         this.jlListaDeRodadas.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);        
         //jlListaDeRodadas = new JList(telaInicialCampeonato.lista);
         
         
     }
     
-    public TelaPrincipal(javax.swing.JFrame form){
-        this();
-        telaInicialCampeonato = (TelaInicarCampeonato) form;
-    }
-    
+
 //    private void setTimes(){
 //        Time t;
 //        try {
