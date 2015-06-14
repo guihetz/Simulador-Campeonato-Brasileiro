@@ -39,9 +39,11 @@ public class TelaPrincipal extends javax.swing.JFrame {
      */
     List<Rodada> rodadas;
 //    List<Time> times;
-    
-    public TelaPrincipal(List<Rodada> rodadas) {
+    public TelaPrincipal(){
         initComponents();
+    }
+    public TelaPrincipal(List<Rodada> rodadas) {
+        this();
         this.getContentPane().setBackground(Color.WHITE);
         this.painel1.setBackground(Color.WHITE);
         this.painel2.setBackground(Color.WHITE);    
