@@ -8,7 +8,6 @@ package br.com.projeto.view;
 import br.com.projeto.model.ComparadorDePontos;
 import br.com.projeto.model.Rodada;
 import br.com.projeto.model.Time;
-import static br.com.projeto.view.TelaLoading.TEMPO;
 import java.awt.Color;
 import java.io.File;
 import java.io.FileInputStream;
@@ -22,7 +21,6 @@ import java.util.Scanner;
 import java.util.TimerTask;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import javax.swing.DefaultListModel;
 import javax.swing.ImageIcon;
 
 /**
@@ -39,9 +37,13 @@ public class TelaInicarCampeonato extends javax.swing.JFrame {
     public static final long TEMPO = (100);
     int i = 0;
     TimerTask tarefa;
+    private ImageIcon escudo;
     
     public TelaInicarCampeonato() {
         initComponents();
+        
+        ImageIcon img = new ImageIcon("src/br/com/projeto/image/cup.png");
+        this.setIconImage(img.getImage());
         
         rodadas = new ArrayList<>();
         times = new ArrayList<>();        
@@ -79,8 +81,7 @@ public class TelaInicarCampeonato extends javax.swing.JFrame {
             clubes.get(x).addPosicao(x+1);
         }
         rodadas.add(r);
-        //System.out.println(rodadas.toString());
-    }
+    }    
     
     private void setTimes(){
         Time t;
@@ -94,7 +95,6 @@ public class TelaInicarCampeonato extends javax.swing.JFrame {
                     if (linha.hasNext()) {
                         t = new Time(linha.next(), new ImageIcon(linha.next()), Integer.parseInt(linha.next()), Integer.parseInt(linha.next()), Integer.parseInt(linha.next()));
                         times.add(t);
-                        System.out.println(times.toString());
                     }
                 }                
                 entrada.close();
@@ -108,13 +108,14 @@ public class TelaInicarCampeonato extends javax.swing.JFrame {
         }
     }
     
+    
     public void fechar(){ 
         this.setTimes();       
         for(int j = 0; j < 38; j++){
             this.novaRodada();
         }        
         
-        TelaPrincipalMesmo form1 = new TelaPrincipalMesmo(this.rodadas, this.times);
+        TelaPrincipalMesmo form1 = new TelaPrincipalMesmo(this.rodadas, this.times, times.get(0).getEscudo());
         form1.setAlwaysOnTop(false);
         form1.setVisible(true);
         form1.setLocationRelativeTo(null);
@@ -137,7 +138,7 @@ public class TelaInicarCampeonato extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        lbFundo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/projeto/image/arquibancada1.0.jpg"))); // NOI18N
+        lbFundo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/projeto/image/arquibancada.jpg"))); // NOI18N
 
         btnInciar.setBackground(new java.awt.Color(255, 255, 255));
         btnInciar.addActionListener(new java.awt.event.ActionListener() {
@@ -153,16 +154,16 @@ public class TelaInicarCampeonato extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(10, 10, 10)
                 .addComponent(pgLoading, javax.swing.GroupLayout.PREFERRED_SIZE, 620, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(120, 120, 120)
-                .addComponent(btnInciar, javax.swing.GroupLayout.PREFERRED_SIZE, 420, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addComponent(lbFundo)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(53, 53, 53)
+                .addComponent(btnInciar, javax.swing.GroupLayout.PREFERRED_SIZE, 505, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(230, 230, 230)
-                .addComponent(btnInciar, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(225, 225, 225)
+                .addComponent(btnInciar, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(40, 40, 40)
                 .addComponent(pgLoading, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addComponent(lbFundo)

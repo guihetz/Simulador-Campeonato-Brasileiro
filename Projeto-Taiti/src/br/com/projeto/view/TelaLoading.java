@@ -31,8 +31,6 @@ e this license header, choose License Headers in Project Properties.
 package br.com.projeto.view;
 
 import java.awt.Color;
-import java.awt.Image;
-import java.awt.Toolkit;
 import java.util.TimerTask;
 import javax.swing.ImageIcon;
 
@@ -46,16 +44,15 @@ public class TelaLoading extends javax.swing.JFrame {
      * Creates new form TelaLoading
      */
     
-    public static final long TEMPO = (1000* 1);
+    public static final long TEMPO = (100);
     int i = 0;
     TimerTask tarefa;
     
     public TelaLoading() {
         initComponents();
         
-//        ImageIcon img = new ImageIcon("src/br/com/projeto/image/logo_campeonato1.png");
-//        img.setImage(img.getImage().getScaledInstance(40 , 40, Image.SCALE_SMOOTH)); //Assim dá para definir o tamanho da imagem
-//        this.setIconImage(img.getImage());
+        ImageIcon img = new ImageIcon("src/br/com/projeto/image/cup.png");
+        this.setIconImage(img.getImage());
         
         this.setLocationRelativeTo(null);
         this.setResizable(false);
@@ -74,7 +71,7 @@ public class TelaLoading extends javax.swing.JFrame {
                 public void run() {  
                     try {                        
                         if(i <= 100){   
-                            pgLoading.setValue(soma());    
+                            pgLoading.setValue(soma());  
                             pgLoading.isIndeterminate();                            
                         }else{
                             fechar();
@@ -92,7 +89,7 @@ public class TelaLoading extends javax.swing.JFrame {
     }
     
     public int soma(){
-        return this.i = i + 20;        
+        return this.i = i+2;        
     }
     
     public void fechar(){
@@ -112,16 +109,16 @@ public class TelaLoading extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
         pgLoading = new javax.swing.JProgressBar();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/projeto/image/loagin.jpg"))); // NOI18N
-
         pgLoading.setBackground(null);
         pgLoading.setForeground(null);
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/projeto/image/loagin.jpg"))); // NOI18N
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -129,13 +126,13 @@ public class TelaLoading extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(10, 10, 10)
-                .addComponent(pgLoading, javax.swing.GroupLayout.PREFERRED_SIZE, 530, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(pgLoading, javax.swing.GroupLayout.PREFERRED_SIZE, 620, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addComponent(jLabel1)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(274, 274, 274)
+                .addGap(370, 370, 370)
                 .addComponent(pgLoading, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addComponent(jLabel1)
         );

@@ -5,29 +5,12 @@
  */
 package br.com.projeto.view;
 
-import br.com.projeto.model.ComparadorDePontos;
 import br.com.projeto.model.Rodada;
-import br.com.projeto.model.Time;
 import java.awt.Color;
 import java.awt.Font;
-import java.awt.Image;
-import java.awt.Toolkit;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.io.InputStream;
-import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
-import java.util.Scanner;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.swing.ImageIcon;
-import javax.swing.JList;
-import javax.swing.ListModel;
 import javax.swing.ListSelectionModel;
-import javax.swing.event.ListSelectionListener;
 
 /**
  *
@@ -45,70 +28,19 @@ public class TelaPrincipal extends javax.swing.JFrame {
     public TelaPrincipal(List<Rodada> rodadas) {
         this();
         this.getContentPane().setBackground(Color.WHITE);
-        this.painel1.setBackground(Color.WHITE);
-        this.painel2.setBackground(Color.WHITE);    
+        this.painel1.setBackground(Color.WHITE); 
         
-        ImageIcon img = new ImageIcon("src/br/com/projeto/image/logo_campeonato1.png");
-        img.setImage(img.getImage().getScaledInstance(40 , 40, Image.SCALE_SMOOTH)); //Assim dá para definir o tamanho da imagem
-        
-        //Image icon = Toolkit.getDefaultToolkit().getImage(getClass().getResource("../image/logo_campeonato1.png") );
+        ImageIcon img = new ImageIcon("src/br/com/projeto/image/cup.png");
         this.setIconImage(img.getImage());
         
         Font f = InicioProjeto.getFonte(18);
         
         jlListaDeRodadas.setFont(f);
-        btnClassificacao.setFont(f);
-        btnNovaRodada.setFont(f);
         btnVisualizarRodada.setFont(f);
         this.jlListaDeRodadas.setListData(rodadas.toArray());
         jlListaDeRodadas.setSelectedIndex(rodadas.size()-1);
-        this.jlListaDeRodadas.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);        
-        //jlListaDeRodadas = new JList(telaInicialCampeonato.lista);
-        
-        
+        this.jlListaDeRodadas.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);   
     }
-    
-
-//    private void setTimes(){
-//        Time t;
-//        try {
-//            File arquivo = new File("src/br/com/projeto/file/Times.txt");
-//            try (InputStream is = new FileInputStream(arquivo); Scanner entrada = new Scanner(is)) {
-//                
-//                while (entrada.hasNext()) {
-//                    Scanner linha = new Scanner(entrada.nextLine());
-//                    linha.useDelimiter(";");
-//                    if (linha.hasNext()) {
-//                        t = new Time(linha.next(), new ImageIcon(linha.next()), Integer.parseInt(linha.next()), Integer.parseInt(linha.next()), Integer.parseInt(linha.next()));
-//                        times.add(t);
-//                        
-//                    }
-//                }                
-//                entrada.close();
-//                is.close();                
-//            }
-//
-//        } catch (FileNotFoundException ex) {
-//            Logger.getLogger(TelaPrincipal.class.getName()).log(Level.SEVERE, null, ex);
-//        } catch (IOException ex) {
-//            Logger.getLogger(TelaPrincipal.class.getName()).log(Level.SEVERE, null, ex);
-//        }
-//    }
-    
-//    private void novaRodada(){
-//        Rodada r = new Rodada(times);
-//        ArrayList<Time> clubes = new ArrayList<>();
-//        for(Time t: times){
-//            clubes.add(t);
-//        }
-//        Collections.sort(clubes,new ComparadorDePontos());
-//        for(int i = 0; i < clubes.size();i++){
-//            clubes.get(i).addPosicao(i+1);
-//        }
-//        rodadas.add(r);
-//        jlListaDeRodadas.setListData(rodadas.toArray());
-//        jlListaDeRodadas.setSelectedIndex(rodadas.size()-1);
-//    }
     
     /**
      * This method is called from within the constructor to initialize the form.
@@ -122,22 +54,19 @@ public class TelaPrincipal extends javax.swing.JFrame {
         painel1 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jlListaDeRodadas = new javax.swing.JList();
-        btnNovaRodada = new javax.swing.JButton();
-        painel2 = new javax.swing.JPanel();
         btnVisualizarRodada = new javax.swing.JButton();
-        btnClassificacao = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Simulador de Campeonato");
 
         painel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Rodadas", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("FIFA Welcome", 0, 24))); // NOI18N
 
         jScrollPane1.setViewportView(jlListaDeRodadas);
 
-        btnNovaRodada.setText("Nova Rodada");
-        btnNovaRodada.addActionListener(new java.awt.event.ActionListener() {
+        btnVisualizarRodada.setText("Visualizar Informacoes da Rodada");
+        btnVisualizarRodada.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnNovaRodadaActionPerformed(evt);
+                btnVisualizarRodadaActionPerformed(evt);
             }
         });
 
@@ -147,55 +76,18 @@ public class TelaPrincipal extends javax.swing.JFrame {
             painel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(painel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(painel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-                    .addComponent(btnNovaRodada, javax.swing.GroupLayout.DEFAULT_SIZE, 187, Short.MAX_VALUE))
-                .addContainerGap())
+                .addGroup(painel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addComponent(btnVisualizarRodada, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jScrollPane1))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         painel1Layout.setVerticalGroup(
             painel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(painel1Layout.createSequentialGroup()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 334, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 10, Short.MAX_VALUE)
-                .addComponent(btnNovaRodada)
-                .addContainerGap())
-        );
-
-        painel2.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Campeonato", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("FIFA Welcome", 0, 24))); // NOI18N
-
-        btnVisualizarRodada.setText("Visualizar Informacoes da Rodada");
-        btnVisualizarRodada.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnVisualizarRodadaActionPerformed(evt);
-            }
-        });
-
-        btnClassificacao.setText("Visualizar Classificacao");
-        btnClassificacao.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnClassificacaoActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout painel2Layout = new javax.swing.GroupLayout(painel2);
-        painel2.setLayout(painel2Layout);
-        painel2Layout.setHorizontalGroup(
-            painel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(painel2Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(painel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnVisualizarRodada, javax.swing.GroupLayout.DEFAULT_SIZE, 255, Short.MAX_VALUE)
-                    .addComponent(btnClassificacao, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap())
-        );
-        painel2Layout.setVerticalGroup(
-            painel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(painel2Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(btnVisualizarRodada)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 364, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(btnClassificacao)
-                .addContainerGap(150, Short.MAX_VALUE))
+                .addComponent(btnVisualizarRodada)
+                .addContainerGap())
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -205,36 +97,24 @@ public class TelaPrincipal extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(painel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(painel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(49, 49, 49)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(painel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(painel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap()
+                .addComponent(painel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void btnNovaRodadaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNovaRodadaActionPerformed
-        //this.novaRodada();
-    }//GEN-LAST:event_btnNovaRodadaActionPerformed
 
     private void btnVisualizarRodadaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVisualizarRodadaActionPerformed
         TelaRodada novaTelaRodada = new TelaRodada((Rodada) jlListaDeRodadas.getSelectedValue());
         novaTelaRodada.setLocationRelativeTo(null);
         novaTelaRodada.setVisible(true);
     }//GEN-LAST:event_btnVisualizarRodadaActionPerformed
-
-    private void btnClassificacaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnClassificacaoActionPerformed
-        //TelaClassificacao classificacao = new TelaClassificacao(times);
-    }//GEN-LAST:event_btnClassificacaoActionPerformed
 
     /**
      * @param args the command line arguments
@@ -272,12 +152,9 @@ public class TelaPrincipal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnClassificacao;
-    private javax.swing.JButton btnNovaRodada;
     private javax.swing.JButton btnVisualizarRodada;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JList jlListaDeRodadas;
     private javax.swing.JPanel painel1;
-    private javax.swing.JPanel painel2;
     // End of variables declaration//GEN-END:variables
 }

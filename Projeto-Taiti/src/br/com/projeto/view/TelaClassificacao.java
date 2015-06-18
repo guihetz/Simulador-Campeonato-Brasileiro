@@ -37,7 +37,7 @@ import org.jfree.data.category.DefaultCategoryDataset;
  * @author Guilherme Lourenço
  */
 public class TelaClassificacao extends JFrame{
-    List<Time> times;
+    List<Time> times;    
     JLabel lbEscudo, lbNome, lbPontos, lbVitorias, lbEmpates, lbDerrotas, lbGolsPro, lbGolsContra, lbSaldoDeGols, lbInfo;
     JLabel texto0, texto1, texto2, texto3, texto4, texto5, texto6, texto7, texto8, texto9, texto10, texto11, texto12, texto13, texto14, texto15, texto16, texto17, texto18, texto19, texto20;
     JLabel primeiroEscudo,primeiroNome, primeiroPontos, primeiroVitorias, primeiroEmpates, primeiroDerrotas, primeiroGolsPro, primeiroGolsContra, primeiroSaldoDeGols;
@@ -1721,6 +1721,7 @@ public class TelaClassificacao extends JFrame{
         this.setExtendedState(JFrame.MAXIMIZED_BOTH); //tela inicia maximizada
         this.setVisible(true);
     }
+   
     
     final class JanelaInfo extends JFrame{
         Time t;

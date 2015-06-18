@@ -7,35 +7,49 @@ package br.com.projeto.view;
 
 import br.com.projeto.model.Rodada;
 import br.com.projeto.model.Time;
-import java.util.ArrayList;
 import java.util.List;
+import javax.swing.ImageIcon;
 
 /**
  *
  * @author Daylton
  */
 public class TelaPrincipalMesmo extends javax.swing.JFrame {
+    public TelaInicarCampeonato tInicarCampeonato;
     /**
      * Creates new form TelaPrincipalMesmo
      */
     private List<Rodada> rodadas;
     private List<Time> times;
+    private ImageIcon escudoCampeao;
     public TelaPrincipalMesmo() {
         initComponents();
+        
+        ImageIcon img = new ImageIcon("src/br/com/projeto/image/cup.png");
+        this.setIconImage(img.getImage());
         
         btnRodadas.setOpaque(false);
         btnRodadas.setContentAreaFilled(false);
         btnRodadas.setBorderPainted(false);
+        btnRodadas.setText(null);
         
         btnClassificacao.setOpaque(false);
         btnClassificacao.setContentAreaFilled(false);
         btnClassificacao.setBorderPainted(false);
+        btnClassificacao.setText(null);
+        
     }
     
-    public TelaPrincipalMesmo(List<Rodada> rodadas, List<Time> times){
+    public TelaPrincipalMesmo(javax.swing.JFrame form){
+        this();
+        tInicarCampeonato = (TelaInicarCampeonato) form;
+    }
+    
+    public TelaPrincipalMesmo(List<Rodada> rodadas, List<Time> times, ImageIcon escudoCampeao){
         this();
         this.rodadas = rodadas;
         this.times = times;
+        this.escudoCampeao = escudoCampeao;
     }
 
 
@@ -48,23 +62,24 @@ public class TelaPrincipalMesmo extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        lbFundo = new javax.swing.JLabel();
         lbIcon = new javax.swing.JLabel();
+        lbFundo = new javax.swing.JLabel();
         btnRodadas = new javax.swing.JButton();
         btnClassificacao = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        lbIcon.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lbIcon.setIcon(escudoCampeao);
+
         lbFundo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/projeto/image/estadio.jpg"))); // NOI18N
 
-        btnRodadas.setText("jButton1");
         btnRodadas.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnRodadasActionPerformed(evt);
             }
         });
 
-        btnClassificacao.setText("jButton2");
         btnClassificacao.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnClassificacaoActionPerformed(evt);
