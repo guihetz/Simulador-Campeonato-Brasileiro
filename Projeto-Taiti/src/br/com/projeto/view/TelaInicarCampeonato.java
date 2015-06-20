@@ -212,11 +212,13 @@ public class TelaInicarCampeonato extends javax.swing.JFrame {
                     timer.scheduleAtFixedRate(tarefa, TEMPO, TEMPO);  
                 }
         }catch(IllegalArgumentException erro){
+            java.awt.Toolkit.getDefaultToolkit().beep();
             t.setText("Número de rodadas inválido!");
             t.setForeground(Color.red);
             JOptionPane.showMessageDialog(null, t);
             btnInciar.setEnabled(true);
         }catch(Exception erro){
+            java.awt.Toolkit.getDefaultToolkit().beep();
             t.setText("Número inválido, o campeonato deve ter pelo menos uma rodada!");
             t.setForeground(Color.red);
             JOptionPane.showMessageDialog(null, t);
