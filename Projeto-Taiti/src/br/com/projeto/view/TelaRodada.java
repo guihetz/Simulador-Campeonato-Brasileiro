@@ -245,6 +245,7 @@ public class TelaRodada extends javax.swing.JFrame {
         lbInfo1.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
         lbInfo1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lbInfo1.setText("X");
+        lbInfo1.setToolTipText("Clique para mais informações do jogo.");
         lbInfo1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 lbInfo1MouseClicked(evt);
@@ -262,6 +263,7 @@ public class TelaRodada extends javax.swing.JFrame {
         lbInfo2.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
         lbInfo2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lbInfo2.setText("X");
+        lbInfo2.setToolTipText("Clique para mais informações do jogo.");
         lbInfo2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 lbInfo2MouseClicked(evt);
@@ -279,6 +281,7 @@ public class TelaRodada extends javax.swing.JFrame {
         lbInfo3.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
         lbInfo3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lbInfo3.setText("X");
+        lbInfo3.setToolTipText("Clique para mais informações do jogo.");
         lbInfo3.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 lbInfo3MouseClicked(evt);
@@ -296,6 +299,7 @@ public class TelaRodada extends javax.swing.JFrame {
         lbInfo4.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
         lbInfo4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lbInfo4.setText("X");
+        lbInfo4.setToolTipText("Clique para mais informações do jogo.");
         lbInfo4.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 lbInfo4MouseClicked(evt);
@@ -313,6 +317,7 @@ public class TelaRodada extends javax.swing.JFrame {
         lbInfo5.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
         lbInfo5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lbInfo5.setText("X");
+        lbInfo5.setToolTipText("Clique para mais informações do jogo.");
         lbInfo5.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 lbInfo5MouseClicked(evt);
@@ -330,6 +335,7 @@ public class TelaRodada extends javax.swing.JFrame {
         lbInfo6.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
         lbInfo6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lbInfo6.setText("X");
+        lbInfo6.setToolTipText("Clique para mais informações do jogo.");
         lbInfo6.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 lbInfo6MouseClicked(evt);
@@ -351,6 +357,7 @@ public class TelaRodada extends javax.swing.JFrame {
         lbInfo7.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
         lbInfo7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lbInfo7.setText("X");
+        lbInfo7.setToolTipText("Clique para mais informações do jogo.");
         lbInfo7.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 lbInfo7MouseClicked(evt);
@@ -368,6 +375,7 @@ public class TelaRodada extends javax.swing.JFrame {
         lbInfo8.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
         lbInfo8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lbInfo8.setText("X");
+        lbInfo8.setToolTipText("Clique para mais informações do jogo.");
         lbInfo8.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 lbInfo8MouseClicked(evt);
@@ -385,6 +393,7 @@ public class TelaRodada extends javax.swing.JFrame {
         lbInfo9.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
         lbInfo9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lbInfo9.setText("X");
+        lbInfo9.setToolTipText("Clique para mais informações do jogo.");
         lbInfo9.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 lbInfo9MouseClicked(evt);
@@ -402,6 +411,7 @@ public class TelaRodada extends javax.swing.JFrame {
         lbInfo10.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
         lbInfo10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lbInfo10.setText("X");
+        lbInfo10.setToolTipText("Clique para mais informações do jogo.");
         lbInfo10.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 lbInfo10MouseClicked(evt);

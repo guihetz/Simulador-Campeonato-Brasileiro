@@ -22,6 +22,7 @@ import java.util.TimerTask;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.ImageIcon;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -38,16 +39,17 @@ public class TelaInicarCampeonato extends javax.swing.JFrame {
     int i = 0;
     TimerTask tarefa;
     private ImageIcon escudo;
+    private int numeroRodadas;
     
     public TelaInicarCampeonato() {
         initComponents();
         
         ImageIcon img = new ImageIcon("src/br/com/projeto/image/cup.png");
         this.setIconImage(img.getImage());
-        
+        this.setResizable(true);
         rodadas = new ArrayList<>();
         times = new ArrayList<>();        
-        
+        this.numeroRodadas = 0;
         btnInciar.setOpaque(false);
         btnInciar.setContentAreaFilled(false);
         btnInciar.setBorderPainted(false);
@@ -111,7 +113,7 @@ public class TelaInicarCampeonato extends javax.swing.JFrame {
     
     public void fechar(){ 
         this.setTimes();       
-        for(int j = 0; j < 38; j++){
+        for(int j = 0; j < this.numeroRodadas; j++){
             this.novaRodada();
         }        
         
@@ -173,29 +175,44 @@ public class TelaInicarCampeonato extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnInciarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInciarActionPerformed
-        java.util.Timer timer = null;  
-        if (timer == null) {  
-            timer = new java.util.Timer();  
-            tarefa = new TimerTask() {  
-                public void run() {  
-                    try {                        
-                        if(i <= 100){
-                            pgLoading.setValue(soma());  
-                            if(soma()<=100){
-                                pgLoading.setString("Simulando Rodadas...  " +i+"%");
-                            }
-                            pgLoading.isIndeterminate();                            
-                        }else{
-                            fechar();
-                            tarefa.cancel();
-                        }
-                        
-                    } catch (Exception e) {  
-                        e.printStackTrace();  
-                    }  
-                }  
-            };  
-            timer.scheduleAtFixedRate(tarefa, TEMPO, TEMPO);  
+        btnInciar.setEnabled(false);
+        try{
+            this.numeroRodadas = Integer.valueOf(JOptionPane.showInputDialog("Quantas rodadas você quer simular?"));
+            if(this.numeroRodadas<1){
+                throw new Exception();
+            }
+            
+                java.util.Timer timer = null;  
+                if (timer == null) {  
+                    timer = new java.util.Timer();  
+                    tarefa = new TimerTask() {  
+                        public void run() {  
+                            try {                        
+                                if(i <= 100){
+                                    pgLoading.setValue(soma());  
+                                    if(soma()<=100){
+
+                                        pgLoading.setString("Simulando Rodadas...  " +i+"%");
+                                    }
+                                    pgLoading.isIndeterminate();                            
+                                }else{
+                                    fechar();
+                                    tarefa.cancel();
+                                }
+
+                            } catch (Exception e) {  
+                                e.printStackTrace();  
+                            }  
+                        }  
+                    };  
+                    timer.scheduleAtFixedRate(tarefa, TEMPO, TEMPO);  
+                }
+        }catch(IllegalArgumentException erro){
+            JOptionPane.showMessageDialog(null, "Número de rodadas inválido!");
+            btnInciar.setEnabled(true);
+        }catch(Exception erro){
+            JOptionPane.showMessageDialog(null, "Número inválido, o campeonato deve ter pelo menos uma rodada!");
+            btnInciar.setEnabled(true);
         }
     }//GEN-LAST:event_btnInciarActionPerformed
 

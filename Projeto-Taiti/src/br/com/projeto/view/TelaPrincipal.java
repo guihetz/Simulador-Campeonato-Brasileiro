@@ -29,7 +29,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
         this();
         this.getContentPane().setBackground(Color.WHITE);
         this.painel1.setBackground(Color.WHITE); 
-        
+        this.setResizable(false);
         ImageIcon img = new ImageIcon("src/br/com/projeto/image/cup.png");
         this.setIconImage(img.getImage());
         
