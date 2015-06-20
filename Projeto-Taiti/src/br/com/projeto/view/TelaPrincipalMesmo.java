@@ -8,9 +8,7 @@ package br.com.projeto.view;
 import br.com.projeto.model.ComparadorDePontos;
 import br.com.projeto.model.Rodada;
 import br.com.projeto.model.Time;
-import java.awt.Font;
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
 import javax.swing.ImageIcon;
@@ -45,6 +43,15 @@ public class TelaPrincipalMesmo extends javax.swing.JFrame {
         btnClassificacao.setBorderPainted(false);
         btnClassificacao.setText(null);
         
+        btnReiniciar.setOpaque(false);
+        btnReiniciar.setContentAreaFilled(false);
+        btnReiniciar.setBorderPainted(false);
+        btnReiniciar.setText(null);
+        
+        btnDesligar.setOpaque(false);
+        btnDesligar.setContentAreaFilled(false);
+        btnDesligar.setBorderPainted(false);
+        btnDesligar.setText(null);
         
     }
     
@@ -60,12 +67,10 @@ public class TelaPrincipalMesmo extends javax.swing.JFrame {
         this.clubes = new ArrayList<>();
         for(Time t : times){
             clubes.add(t);
-        }
-        
+        }        
         comparador = new ComparadorDePontos();
-        Collections.sort(clubes, comparador); 
+        Collections.sort(clubes, comparador);  
         
-        System.out.println(clubes.get(0).getNome());
         lbIcon.setIcon(clubes.get(0).getEscudo());
     }
 
@@ -83,6 +88,8 @@ public class TelaPrincipalMesmo extends javax.swing.JFrame {
         lbFundo = new javax.swing.JLabel();
         btnRodadas = new javax.swing.JButton();
         btnClassificacao = new javax.swing.JButton();
+        btnReiniciar = new javax.swing.JButton();
+        btnDesligar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -103,32 +110,57 @@ public class TelaPrincipalMesmo extends javax.swing.JFrame {
             }
         });
 
+        btnReiniciar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnReiniciarActionPerformed(evt);
+            }
+        });
+
+        btnDesligar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnDesligarActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(250, 250, 250)
-                .addComponent(btnRodadas, javax.swing.GroupLayout.PREFERRED_SIZE, 290, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(btnClassificacao, javax.swing.GroupLayout.PREFERRED_SIZE, 370, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(13, 13, 13)
+                .addComponent(btnReiniciar, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(layout.createSequentialGroup()
                 .addGap(250, 250, 250)
-                .addComponent(btnClassificacao, javax.swing.GroupLayout.PREFERRED_SIZE, 370, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(btnRodadas, javax.swing.GroupLayout.PREFERRED_SIZE, 290, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(103, 103, 103)
+                .addComponent(btnDesligar, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addComponent(lbFundo)
             .addGroup(layout.createSequentialGroup()
                 .addGap(410, 410, 410)
                 .addComponent(lbIcon, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addComponent(lbFundo)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(180, 180, 180)
-                .addComponent(btnRodadas, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(10, 10, 10)
+                .addGap(250, 250, 250)
                 .addComponent(btnClassificacao, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(320, 320, 320)
+                .addComponent(btnReiniciar, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(180, 180, 180)
+                .addComponent(btnRodadas, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(320, 320, 320)
+                .addComponent(btnDesligar, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addComponent(lbFundo)
             .addGroup(layout.createSequentialGroup()
                 .addGap(70, 70, 70)
                 .addComponent(lbIcon, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addComponent(lbFundo)
         );
 
         pack();
@@ -144,6 +176,18 @@ public class TelaPrincipalMesmo extends javax.swing.JFrame {
     private void btnClassificacaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnClassificacaoActionPerformed
         TelaClassificacao classificacao = new TelaClassificacao(times);
     }//GEN-LAST:event_btnClassificacaoActionPerformed
+
+    private void btnReiniciarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReiniciarActionPerformed
+        TelaInicarCampeonato principal = new TelaInicarCampeonato();
+        principal.setAlwaysOnTop(false);
+        principal.setVisible(true);
+        principal.setLocationRelativeTo(null);
+        this.dispose();
+    }//GEN-LAST:event_btnReiniciarActionPerformed
+
+    private void btnDesligarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDesligarActionPerformed
+        this.dispose();
+    }//GEN-LAST:event_btnDesligarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -182,6 +226,8 @@ public class TelaPrincipalMesmo extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnClassificacao;
+    private javax.swing.JButton btnDesligar;
+    private javax.swing.JButton btnReiniciar;
     private javax.swing.JButton btnRodadas;
     private javax.swing.JLabel lbFundo;
     private javax.swing.JLabel lbIcon;

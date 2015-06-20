@@ -90,7 +90,6 @@ public class TelaClassificacao extends JFrame{
         for(Time t: clubes){
             this.times.add(t);
         }
-        System.out.println(times.get(0).getNome());
         GridLayout layout = new GridLayout(21, 11, 1, 1);
         this.setLayout(layout);
         ComparadorDePontos comparador = new ComparadorDePontos();

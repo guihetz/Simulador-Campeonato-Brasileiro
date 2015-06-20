@@ -9,6 +9,7 @@ import br.com.projeto.model.ComparadorDePontos;
 import br.com.projeto.model.Rodada;
 import br.com.projeto.model.Time;
 import java.awt.Color;
+import java.awt.Font;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -22,6 +23,7 @@ import java.util.TimerTask;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.ImageIcon;
+import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 
 /**
@@ -176,12 +178,15 @@ public class TelaInicarCampeonato extends javax.swing.JFrame {
 
     private void btnInciarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInciarActionPerformed
         btnInciar.setEnabled(false);
+        JLabel t = new JLabel();
+        Font f = InicioProjeto.getFonte(18);
+        t.setFont(f);
         try{
-            this.numeroRodadas = Integer.valueOf(JOptionPane.showInputDialog("Quantas rodadas você quer simular?"));
+            t.setText("Quantas rodadas voce quer simular?");            
+            this.numeroRodadas = Integer.valueOf(JOptionPane.showInputDialog(t));
             if(this.numeroRodadas<1){
                 throw new Exception();
-            }
-            
+            }  
                 java.util.Timer timer = null;  
                 if (timer == null) {  
                     timer = new java.util.Timer();  
@@ -190,8 +195,7 @@ public class TelaInicarCampeonato extends javax.swing.JFrame {
                             try {                        
                                 if(i <= 100){
                                     pgLoading.setValue(soma());  
-                                    if(soma()<=100){
-
+                                    if(soma()<=100){                                       
                                         pgLoading.setString("Simulando Rodadas...  " +i+"%");
                                     }
                                     pgLoading.isIndeterminate();                            
@@ -208,10 +212,14 @@ public class TelaInicarCampeonato extends javax.swing.JFrame {
                     timer.scheduleAtFixedRate(tarefa, TEMPO, TEMPO);  
                 }
         }catch(IllegalArgumentException erro){
-            JOptionPane.showMessageDialog(null, "Número de rodadas inválido!");
+            t.setText("Número de rodadas inválido!");
+            t.setForeground(Color.red);
+            JOptionPane.showMessageDialog(null, t);
             btnInciar.setEnabled(true);
         }catch(Exception erro){
-            JOptionPane.showMessageDialog(null, "Número inválido, o campeonato deve ter pelo menos uma rodada!");
+            t.setText("Número inválido, o campeonato deve ter pelo menos uma rodada!");
+            t.setForeground(Color.red);
+            JOptionPane.showMessageDialog(null, t);
             btnInciar.setEnabled(true);
         }
     }//GEN-LAST:event_btnInciarActionPerformed
