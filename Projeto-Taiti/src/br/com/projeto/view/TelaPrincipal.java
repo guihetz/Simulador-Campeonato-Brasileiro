@@ -39,6 +39,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
         btnVisualizarRodada.setFont(f);
         this.jlListaDeRodadas.setListData(rodadas.toArray());
         jlListaDeRodadas.setSelectedIndex(rodadas.size()-1);
+        jlListaDeRodadas.ensureIndexIsVisible(rodadas.size()-1);
         this.jlListaDeRodadas.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);   
     }
     

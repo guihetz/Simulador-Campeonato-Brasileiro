@@ -94,9 +94,10 @@ public class Rodada {
                 j.setDataJogo(this.getDataJogo(data));
             }else {
                 if(i==5){
-                    data = data.plusDays(4);
+                    data = this.getDataJogo(data).plusDays(1);
                 }
                 j.setDataJogo(this.getDataJogo(data));
+                
             }
             
            jogos.add(j);                          //Adiciona jogo na lista de jogos da rodada.
@@ -105,6 +106,7 @@ public class Rodada {
            t1.addJogo(j);                         //Times desse jogo guardam referência ao jogo que realizaram.
            t2.addJogo(j);
         }
+        data = data.plusDays(1);
         System.out.println("\n");
         return jogos;
     }
@@ -133,18 +135,18 @@ public class Rodada {
         }else if(dataAtual.getDayOfWeek().equals(DayOfWeek.WEDNESDAY)){
                 dataDoJogo = dataAtual;
         }else if(dataAtual.getDayOfWeek().equals(DayOfWeek.THURSDAY)){
-                dataDoJogo = dataAtual.plusDays(3);
+                dataDoJogo = dataAtual;
         }else if(dataAtual.getDayOfWeek().equals(DayOfWeek.FRIDAY)){
-                dataDoJogo = dataAtual.plusDays(2);
-        }else if(dataAtual.getDayOfWeek().equals(DayOfWeek.SATURDAY)){
                 dataDoJogo = dataAtual.plusDays(1);
+        }else if(dataAtual.getDayOfWeek().equals(DayOfWeek.SATURDAY)){
+                dataDoJogo = dataAtual;
         }else if(dataAtual.getDayOfWeek().equals(DayOfWeek.SUNDAY)){
                 dataDoJogo = dataAtual;
         }
         LocalTime horaJogo = dataDoJogo.toLocalTime();
         Random sortHoraMinuto = new Random();
         
-        horaJogo = horaJogo.withHour(horas[sortHoraMinuto.nextInt(3)]).withMinute(minutos[sortHoraMinuto.nextInt(2)]);
+        horaJogo = horaJogo.withHour(horas[sortHoraMinuto.nextInt(4)]).withMinute(minutos[sortHoraMinuto.nextInt(3)]);
         dataDoJogo = dataDoJogo.with(horaJogo);
         return dataDoJogo;
     }
