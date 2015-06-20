@@ -28,7 +28,7 @@ import javax.swing.ImageIcon;
  * @author Daylton
  */
 public class TelaInicarCampeonato extends javax.swing.JFrame {    
-    public TelaPrincipal tPrincipal;
+    
     /**
      * Creates new form TelaInicarCampeonato
      */    
@@ -61,10 +61,10 @@ public class TelaInicarCampeonato extends javax.swing.JFrame {
         pgLoading.setMinimum(0);
     }
     
-    public TelaInicarCampeonato(javax.swing.JFrame form){
-        this();
-        tPrincipal = (TelaPrincipal) form;
-    }
+//    public TelaInicarCampeonato(javax.swing.JFrame form){
+//        this();
+//        tClassificacao = (TelaClassificacao) form;
+//    }
     
     public int soma(){
         return this.i = i+2;        
@@ -115,7 +115,7 @@ public class TelaInicarCampeonato extends javax.swing.JFrame {
             this.novaRodada();
         }        
         
-        TelaPrincipalMesmo form1 = new TelaPrincipalMesmo(this.rodadas, this.times, times.get(0).getEscudo());
+        TelaPrincipalMesmo form1 = new TelaPrincipalMesmo(this.rodadas, this.times);
         form1.setAlwaysOnTop(false);
         form1.setVisible(true);
         form1.setLocationRelativeTo(null);

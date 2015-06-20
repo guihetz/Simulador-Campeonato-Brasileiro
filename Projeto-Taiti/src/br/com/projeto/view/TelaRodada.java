@@ -9,9 +9,8 @@ import br.com.projeto.model.Jogo;
 import br.com.projeto.model.Rodada;
 import java.awt.Color;
 import java.awt.Font;
-import java.awt.Image;
-import java.awt.Toolkit;
 import java.util.List;
+import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.SwingConstants;
 
@@ -36,8 +35,8 @@ public class TelaRodada extends javax.swing.JFrame {
     
     public TelaRodada(Rodada r){
         this();
-        Image icon = Toolkit.getDefaultToolkit().getImage(getClass().getResource("../image/logo_campeonato1.png") );
-        this.setIconImage(icon);
+        ImageIcon img = new ImageIcon("src/br/com/projeto/image/cup.png");
+        this.setIconImage(img.getImage());
         this.jogos = r.getJogosRodada();
         Font f = InicioProjeto.getFonte(36);
         lbTime1.setIcon(jogos.get(0).getTime1().getEscudo());

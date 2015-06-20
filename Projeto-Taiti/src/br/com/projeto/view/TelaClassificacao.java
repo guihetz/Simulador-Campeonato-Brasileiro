@@ -11,8 +11,6 @@ import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.GridLayout;
-import java.awt.Image;
-import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
@@ -85,13 +83,14 @@ public class TelaClassificacao extends JFrame{
         this.setSize(1024, 800);
         this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         this.setLocationRelativeTo(null);
-        Image icon = Toolkit.getDefaultToolkit().getImage(getClass().getResource("../image/logo_campeonato1.png") );
-        this.setIconImage(icon);
+        ImageIcon icon = new ImageIcon("src/br/com/projeto/image/cup.png");
+        this.setIconImage(icon.getImage());
         this.times = new ArrayList<>();
         Font f = InicioProjeto.getFonte(15);
         for(Time t: clubes){
             this.times.add(t);
         }
+        System.out.println(times.get(0).getNome());
         GridLayout layout = new GridLayout(21, 11, 1, 1);
         this.setLayout(layout);
         ComparadorDePontos comparador = new ComparadorDePontos();

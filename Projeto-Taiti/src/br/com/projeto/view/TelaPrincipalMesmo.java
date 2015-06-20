@@ -5,8 +5,13 @@
  */
 package br.com.projeto.view;
 
+import br.com.projeto.model.ComparadorDePontos;
 import br.com.projeto.model.Rodada;
 import br.com.projeto.model.Time;
+import java.awt.Font;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
 import java.util.List;
 import javax.swing.ImageIcon;
 
@@ -21,7 +26,9 @@ public class TelaPrincipalMesmo extends javax.swing.JFrame {
      */
     private List<Rodada> rodadas;
     private List<Time> times;
+    private List<Time> clubes;
     private ImageIcon escudoCampeao;
+    ComparadorDePontos comparador;
     public TelaPrincipalMesmo() {
         initComponents();
         
@@ -38,6 +45,14 @@ public class TelaPrincipalMesmo extends javax.swing.JFrame {
         btnClassificacao.setBorderPainted(false);
         btnClassificacao.setText(null);
         
+        this.clubes = new ArrayList<>();
+        clubes = times;
+        
+        comparador = new ComparadorDePontos();
+        Collections.sort(clubes, comparador); 
+        
+        System.out.println(clubes.get(0).getNome());
+        lbIcon.setIcon(clubes.get(0).getEscudo());
     }
     
     public TelaPrincipalMesmo(javax.swing.JFrame form){
@@ -45,11 +60,10 @@ public class TelaPrincipalMesmo extends javax.swing.JFrame {
         tInicarCampeonato = (TelaInicarCampeonato) form;
     }
     
-    public TelaPrincipalMesmo(List<Rodada> rodadas, List<Time> times, ImageIcon escudoCampeao){
+    public TelaPrincipalMesmo(List<Rodada> rodadas, List<Time> times){
         this();
         this.rodadas = rodadas;
         this.times = times;
-        this.escudoCampeao = escudoCampeao;
     }
 
 
