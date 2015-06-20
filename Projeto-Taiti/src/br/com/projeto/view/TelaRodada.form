@@ -23,17 +23,16 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="0" attributes="0">
-              <EmptySpace max="-2" attributes="0"/>
+          <Group type="102" attributes="0">
+              <EmptySpace min="-2" pref="0" max="-2" attributes="0"/>
               <Component id="painel1" max="32767" attributes="0"/>
-              <EmptySpace max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="1" attributes="0">
-              <EmptySpace min="0" pref="48" max="32767" attributes="0"/>
+              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
               <Component id="painel1" min="-2" max="-2" attributes="0"/>
           </Group>
       </Group>
@@ -58,32 +57,42 @@
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
-                          <Component id="lbTime9" min="-2" pref="70" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="lblDataJogo4" max="32767" attributes="0"/>
-                      </Group>
-                      <Group type="102" alignment="0" attributes="0">
                           <Component id="lbTime7" min="-2" pref="70" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="1" attributes="0">
-                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                  <Group type="102" attributes="0">
-                                      <Component id="lbResultadoTime9" min="-2" pref="44" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="lbInfo5" min="-2" pref="44" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="lbResultadoTime10" min="-2" pref="44" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Group type="102" attributes="0">
-                                      <Component id="lbResultadoTime7" min="-2" pref="44" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="lbInfo4" min="-2" pref="44" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="lbResultadoTime8" min="-2" pref="44" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Component id="lblDataJogo5" alignment="0" max="32767" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="lblDataJogo4" alignment="0" max="32767" attributes="0"/>
+                              <Group type="102" alignment="1" attributes="0">
+                                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                  <Component id="lbResultadoTime7" min="-2" pref="44" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="lbInfo4" min="-2" pref="44" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="lbResultadoTime8" min="-2" pref="44" max="-2" attributes="0"/>
                               </Group>
-                              <Group type="102" attributes="0">
+                          </Group>
+                      </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <Component id="lbTime3" min="-2" pref="70" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace min="-2" pref="0" max="-2" attributes="0"/>
+                                  <Component id="lblDataJogo2" max="32767" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Component id="lbResultadoTime3" min="-2" pref="44" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="lbInfo2" min="-2" pref="44" max="-2" attributes="0"/>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <Component id="lbResultadoTime4" min="-2" pref="44" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                      </Group>
+                      <Group type="102" attributes="0">
+                          <Component id="lbTime5" min="-2" pref="70" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="1" attributes="0">
+                              <Group type="102" alignment="1" attributes="0">
                                   <Component id="lbResultadoTime5" min="-2" pref="44" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Component id="lbInfo3" min="-2" pref="44" max="-2" attributes="0"/>
@@ -93,44 +102,41 @@
                               <Component id="lblDataJogo3" max="32767" attributes="0"/>
                           </Group>
                       </Group>
-                      <Group type="102" alignment="0" attributes="0">
-                          <Component id="lbTime3" min="-2" pref="70" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" attributes="0">
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="lbResultadoTime1" min="-2" pref="44" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="lbInfo1" min="-2" pref="44" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="lbResultadoTime2" min="-2" pref="44" max="-2" attributes="0"/>
-                              </Group>
-                              <Group type="102" attributes="0">
-                                  <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
-                                  <Component id="lblDataJogo2" max="32767" attributes="0"/>
-                              </Group>
-                          </Group>
-                      </Group>
                       <Group type="102" attributes="0">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" alignment="0" attributes="0">
-                                  <Component id="lbTime5" min="-2" pref="70" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="lbResultadoTime3" min="-2" pref="44" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="lbInfo2" min="-2" pref="44" max="-2" attributes="0"/>
-                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                  <Component id="lbResultadoTime4" min="-2" pref="44" max="-2" attributes="0"/>
-                              </Group>
-                              <Group type="102" alignment="0" attributes="0">
+                              <Group type="102" attributes="0">
                                   <Component id="lbTime1" min="-2" pref="70" max="-2" attributes="0"/>
-                                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Component id="lblDataJogo1" min="-2" pref="132" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                      <Group type="102" attributes="0">
+                                          <Component id="lbResultadoTime1" min="-2" pref="44" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="lbInfo1" min="-2" pref="44" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="lbResultadoTime2" min="-2" pref="44" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Component id="lblDataJogo1" max="32767" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <Group type="102" attributes="0">
+                                  <Component id="lbTime9" min="-2" pref="70" max="-2" attributes="0"/>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="lblDataJogo5" min="-2" pref="144" max="-2" attributes="0"/>
+                                      <Group type="102" attributes="0">
+                                          <Component id="lbResultadoTime9" min="-2" pref="44" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="lbInfo5" min="-2" pref="44" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="lbResultadoTime10" min="-2" pref="44" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
                               </Group>
                           </Group>
                           <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                       </Group>
                   </Group>
-                  <EmptySpace pref="136" max="32767" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
                       <Component id="lbTime10" alignment="0" min="-2" pref="70" max="-2" attributes="0"/>
                       <Component id="lbTime8" alignment="0" min="-2" pref="70" max="-2" attributes="0"/>
@@ -138,7 +144,7 @@
                       <Component id="lbTime4" alignment="0" min="-2" pref="70" max="-2" attributes="0"/>
                       <Component id="lbTime2" alignment="0" min="-2" pref="70" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace min="-2" pref="71" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
                       <Component id="lbTime17" alignment="0" min="-2" pref="70" max="-2" attributes="0"/>
                       <Component id="lbTime15" alignment="0" min="-2" pref="70" max="-2" attributes="0"/>
@@ -146,67 +152,58 @@
                       <Component id="lbTime11" alignment="0" min="-2" pref="70" max="-2" attributes="0"/>
                       <Component id="lbTime19" alignment="1" min="-2" pref="70" max="-2" attributes="0"/>
                   </Group>
+                  <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="lblDataJogo7" alignment="0" max="32767" attributes="0"/>
+                      <Component id="lblDataJogo8" alignment="0" max="32767" attributes="0"/>
                       <Group type="102" attributes="0">
                           <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Component id="lbResultadoTime17" min="-2" pref="44" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="lbInfo9" min="-2" pref="44" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="lbResultadoTime18" min="-2" pref="44" max="-2" attributes="0"/>
+                              </Group>
+                              <Component id="lblDataJogo9" alignment="0" min="-2" pref="144" max="-2" attributes="0"/>
                               <Group type="102" attributes="0">
-                                  <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Group type="102" alignment="1" attributes="0">
-                                          <Component id="lbResultadoTime19" min="-2" pref="44" max="-2" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="lbInfo10" min="-2" pref="44" max="-2" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="lbResultadoTime20" min="-2" pref="44" max="-2" attributes="0"/>
-                                      </Group>
-                                      <Group type="102" alignment="1" attributes="0">
-                                          <Component id="lbResultadoTime17" min="-2" pref="44" max="-2" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="lbInfo9" min="-2" pref="44" max="-2" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="lbResultadoTime18" min="-2" pref="44" max="-2" attributes="0"/>
-                                      </Group>
-                                      <Component id="lblDataJogo10" alignment="1" min="-2" pref="144" max="-2" attributes="0"/>
-                                  </Group>
+                                  <Component id="lbResultadoTime13" min="-2" pref="44" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="lbInfo7" min="-2" pref="44" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="lbResultadoTime14" min="-2" pref="44" max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
-                                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Group type="102" attributes="0">
-                                          <Component id="lbResultadoTime13" min="-2" pref="44" max="-2" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="lbInfo7" min="-2" pref="44" max="-2" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="lbResultadoTime14" min="-2" pref="44" max="-2" attributes="0"/>
-                                      </Group>
-                                      <Group type="102" attributes="0">
-                                          <Component id="lbResultadoTime15" min="-2" pref="44" max="-2" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="lbInfo8" min="-2" pref="44" max="-2" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="lbResultadoTime16" min="-2" pref="44" max="-2" attributes="0"/>
-                                      </Group>
-                                      <Group type="102" alignment="0" attributes="0">
-                                          <Component id="lbResultadoTime11" min="-2" pref="44" max="-2" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="lbInfo6" min="-2" pref="44" max="-2" attributes="0"/>
-                                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                          <Component id="lbResultadoTime12" min="-2" pref="44" max="-2" attributes="0"/>
-                                      </Group>
-                                      <Component id="lblDataJogo6" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="lblDataJogo7" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="lblDataJogo8" alignment="0" max="32767" attributes="0"/>
-                                  </Group>
+                                  <Component id="lbResultadoTime11" min="-2" pref="44" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="lbInfo6" min="-2" pref="44" max="-2" attributes="0"/>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <Component id="lbResultadoTime12" min="-2" pref="44" max="-2" attributes="0"/>
+                              </Group>
+                              <Component id="lblDataJogo6" alignment="0" min="-2" pref="148" max="-2" attributes="0"/>
+                              <Group type="102" attributes="0">
+                                  <Component id="lbResultadoTime15" min="-2" pref="44" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="lbInfo8" min="-2" pref="44" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="lbResultadoTime16" min="-2" pref="44" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Component id="lbResultadoTime19" min="-2" pref="44" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="lbInfo10" min="-2" pref="44" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="lbResultadoTime20" min="-2" pref="44" max="-2" attributes="0"/>
                               </Group>
                           </Group>
-                          <EmptySpace pref="124" max="32767" attributes="0"/>
+                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                       </Group>
-                      <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Component id="lblDataJogo9" min="-2" pref="144" max="-2" attributes="0"/>
-                          <EmptySpace max="32767" attributes="0"/>
+                      <Group type="102" alignment="1" attributes="0">
+                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                          <Component id="lblDataJogo10" min="-2" pref="144" max="-2" attributes="0"/>
                       </Group>
                   </Group>
+                  <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Component id="lbTime18" alignment="0" min="-2" pref="70" max="-2" attributes="0"/>
                       <Component id="lbTime16" alignment="0" min="-2" pref="70" max="-2" attributes="0"/>
@@ -224,171 +221,171 @@
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="1" attributes="0">
                       <Group type="102" alignment="1" attributes="0">
-                          <Group type="103" groupAlignment="1" attributes="0">
-                              <Component id="lbTime11" min="-2" pref="70" max="-2" attributes="0"/>
-                              <Component id="lblDataJogo6" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" attributes="0">
-                                  <Group type="103" groupAlignment="1" attributes="0">
-                                      <Group type="102" alignment="1" attributes="0">
-                                          <Component id="lbTime13" min="-2" pref="70" max="-2" attributes="0"/>
-                                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                                          <Component id="lbTime15" min="-2" pref="70" max="-2" attributes="0"/>
-                                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      </Group>
-                                      <Group type="102" alignment="1" attributes="0">
-                                          <Component id="lblDataJogo7" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Group type="103" groupAlignment="3" attributes="0">
-                                              <Component id="lbResultadoTime14" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
-                                              <Component id="lbInfo7" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
-                                              <Component id="lbResultadoTime13" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
-                                          </Group>
-                                          <EmptySpace min="-2" pref="41" max="-2" attributes="0"/>
-                                      </Group>
-                                  </Group>
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Group type="102" attributes="0">
-                                          <Component id="lbTime17" min="-2" pref="70" max="-2" attributes="0"/>
-                                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      </Group>
-                                      <Group type="102" alignment="1" attributes="0">
-                                          <Component id="lblDataJogo8" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                                          <Group type="103" groupAlignment="3" attributes="0">
-                                              <Component id="lbResultadoTime16" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
-                                              <Component id="lbInfo8" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
-                                              <Component id="lbResultadoTime15" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
-                                          </Group>
-                                          <EmptySpace min="-2" pref="3" max="-2" attributes="0"/>
-                                      </Group>
-                                  </Group>
-                                  <Component id="lbTime19" min="-2" pref="70" max="-2" attributes="0"/>
-                              </Group>
-                              <Group type="102" attributes="0">
+                              <Component id="lbTime11" min="-2" pref="70" max="-2" attributes="0"/>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace min="-2" pref="5" max="-2" attributes="0"/>
+                                  <Component id="lblDataJogo6" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
                                       <Component id="lbResultadoTime12" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
                                       <Component id="lbInfo6" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
                                       <Component id="lbResultadoTime11" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
                                   </Group>
-                                  <EmptySpace max="32767" attributes="0"/>
-                                  <Component id="lblDataJogo9" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Component id="lbTime13" min="-2" pref="70" max="-2" attributes="0"/>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Component id="lbTime15" min="-2" pref="70" max="-2" attributes="0"/>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Component id="lbTime17" min="-2" pref="70" max="-2" attributes="0"/>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Component id="lbTime19" min="-2" pref="70" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
                           <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="lbTime1" min="-2" pref="70" max="-2" attributes="0"/>
                               <Group type="102" attributes="0">
-                                  <Component id="lbTime1" min="-2" pref="70" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
-                              </Group>
-                              <Group type="102" alignment="1" attributes="0">
+                                  <EmptySpace min="-2" pref="8" max="-2" attributes="0"/>
                                   <Component id="lblDataJogo1" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
-                              </Group>
-                          </Group>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" alignment="0" attributes="0">
-                                  <Component id="lbTime3" min="-2" pref="70" max="-2" attributes="0"/>
-                                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Component id="lbTime5" min="-2" pref="70" max="-2" attributes="0"/>
-                                  <EmptySpace type="separate" max="32767" attributes="0"/>
-                              </Group>
-                              <Group type="102" alignment="0" attributes="0">
                                   <Group type="103" groupAlignment="3" attributes="0">
                                       <Component id="lbResultadoTime2" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
                                       <Component id="lbInfo1" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
                                       <Component id="lbResultadoTime1" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
                                   </Group>
-                                  <EmptySpace max="32767" attributes="0"/>
-                                  <Component id="lblDataJogo2" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" attributes="0">
+                                  <Component id="lbTime3" min="-2" pref="70" max="-2" attributes="0"/>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="1" attributes="0">
+                                  <Component id="lblDataJogo2" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
                                       <Component id="lbResultadoTime4" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
                                       <Component id="lbInfo2" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
                                       <Component id="lbResultadoTime3" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
                                   </Group>
-                                  <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
                               </Group>
                           </Group>
-                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="lbTime5" min="-2" pref="70" max="-2" attributes="0"/>
                               <Group type="102" attributes="0">
+                                  <EmptySpace min="-2" pref="7" max="-2" attributes="0"/>
                                   <Component id="lblDataJogo3" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace max="32767" attributes="0"/>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
                                       <Component id="lbResultadoTime6" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
                                       <Component id="lbInfo3" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
                                       <Component id="lbResultadoTime5" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
                                   </Group>
-                                  <EmptySpace min="-2" pref="49" max="-2" attributes="0"/>
-                                  <Component id="lblDataJogo4" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" pref="7" max="-2" attributes="0"/>
                               </Group>
+                          </Group>
+                          <EmptySpace type="separate" max="32767" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="lbTime7" min="-2" pref="70" max="-2" attributes="0"/>
                               <Group type="102" attributes="0">
-                                  <Component id="lbTime7" min="-2" pref="70" max="-2" attributes="0"/>
-                                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Component id="lbTime9" min="-2" pref="70" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="7" max="-2" attributes="0"/>
+                                  <Component id="lblDataJogo4" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="lbResultadoTime8" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
+                                      <Component id="lbInfo4" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
+                                      <Component id="lbResultadoTime7" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
+                                  </Group>
                               </Group>
                           </Group>
-                      </Group>
-                      <Group type="102" attributes="0">
-                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                          <Group type="103" groupAlignment="1" attributes="0">
-                              <Group type="102" alignment="1" attributes="0">
-                                  <Component id="lbTime12" min="-2" pref="70" max="-2" attributes="0"/>
-                                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Component id="lbTime14" min="-2" pref="70" max="-2" attributes="0"/>
-                                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Component id="lbTime16" min="-2" pref="70" max="-2" attributes="0"/>
-                                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Component id="lbTime18" min="-2" pref="70" max="-2" attributes="0"/>
-                                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Component id="lbTime20" min="-2" pref="70" max="-2" attributes="0"/>
-                              </Group>
-                              <Group type="102" alignment="1" attributes="0">
-                                  <Component id="lbTime2" min="-2" pref="70" max="-2" attributes="0"/>
-                                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Component id="lbTime4" min="-2" pref="70" max="-2" attributes="0"/>
-                                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Component id="lbTime6" min="-2" pref="70" max="-2" attributes="0"/>
-                                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Component id="lbTime8" min="-2" pref="70" max="-2" attributes="0"/>
-                                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Component id="lbTime10" min="-2" pref="70" max="-2" attributes="0"/>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="lbTime9" min="-2" pref="70" max="-2" attributes="0"/>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace min="-2" pref="7" max="-2" attributes="0"/>
+                                  <Component id="lblDataJogo5" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="lbResultadoTime10" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
+                                      <Component id="lbInfo5" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
+                                      <Component id="lbResultadoTime9" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
+                                  </Group>
                               </Group>
                           </Group>
-                      </Group>
-                  </Group>
-                  <EmptySpace pref="11" max="32767" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="lbResultadoTime8" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
-                      <Component id="lbInfo4" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
-                      <Component id="lbResultadoTime7" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
-                      <Component id="lbResultadoTime18" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
-                      <Component id="lbInfo9" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
-                      <Component id="lbResultadoTime17" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" attributes="0">
-                          <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
-                          <Component id="lblDataJogo5" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="1" attributes="0">
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="lblDataJogo10" min="-2" max="-2" attributes="0"/>
+                          <Component id="lbTime12" min="-2" pref="70" max="-2" attributes="0"/>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="lbTime14" min="-2" pref="70" max="-2" attributes="0"/>
+                              <Group type="102" attributes="0">
+                                  <EmptySpace min="-2" pref="5" max="-2" attributes="0"/>
+                                  <Component id="lblDataJogo7" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="lbResultadoTime14" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
+                                      <Component id="lbInfo7" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
+                                      <Component id="lbResultadoTime13" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                          </Group>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="lbTime16" min="-2" pref="70" max="-2" attributes="0"/>
+                              <Group type="102" attributes="0">
+                                  <EmptySpace min="-2" pref="7" max="-2" attributes="0"/>
+                                  <Component id="lblDataJogo8" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="lbResultadoTime16" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
+                                      <Component id="lbInfo8" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
+                                      <Component id="lbResultadoTime15" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                          </Group>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="lbTime18" alignment="0" min="-2" pref="70" max="-2" attributes="0"/>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace min="-2" pref="7" max="-2" attributes="0"/>
+                                  <Component id="lblDataJogo9" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="lbResultadoTime18" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
+                                      <Component id="lbInfo9" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
+                                      <Component id="lbResultadoTime17" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                          </Group>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" attributes="0">
+                                  <EmptySpace min="-2" pref="7" max="-2" attributes="0"/>
+                                  <Component id="lblDataJogo10" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="lbResultadoTime20" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
+                                      <Component id="lbInfo10" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
+                                      <Component id="lbResultadoTime19" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <Component id="lbTime20" min="-2" pref="70" max="-2" attributes="0"/>
+                          </Group>
                       </Group>
-                  </Group>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="lbResultadoTime10" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
-                      <Component id="lbInfo5" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
-                      <Component id="lbResultadoTime9" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
-                      <Component id="lbResultadoTime20" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
-                      <Component id="lbInfo10" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
-                      <Component id="lbResultadoTime19" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
+                      <Group type="102" alignment="1" attributes="0">
+                          <Component id="lbTime2" min="-2" pref="70" max="-2" attributes="0"/>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Component id="lbTime4" min="-2" pref="70" max="-2" attributes="0"/>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Component id="lbTime6" min="-2" pref="70" max="-2" attributes="0"/>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Component id="lbTime8" min="-2" pref="70" max="-2" attributes="0"/>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Component id="lbTime10" min="-2" pref="70" max="-2" attributes="0"/>
+                      </Group>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
               </Group>
@@ -397,8 +394,18 @@
       </Layout>
       <SubComponents>
         <Component class="javax.swing.JLabel" name="lbTime1">
+          <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="ff" green="ff" red="ff" type="rgb"/>
+            </Property>
+          </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="lbTime2">
+          <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="ff" green="ff" red="ff" type="rgb"/>
+            </Property>
+          </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="lbResultadoTime1">
           <Properties>
@@ -410,40 +417,130 @@
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="lbTime11">
+          <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="ff" green="ff" red="ff" type="rgb"/>
+            </Property>
+          </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="lbTime12">
+          <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="ff" green="ff" red="ff" type="rgb"/>
+            </Property>
+          </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="lbTime14">
+          <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="ff" green="ff" red="ff" type="rgb"/>
+            </Property>
+          </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="lbTime13">
+          <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="ff" green="ff" red="ff" type="rgb"/>
+            </Property>
+          </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="lbTime4">
+          <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="ff" green="ff" red="ff" type="rgb"/>
+            </Property>
+          </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="lbTime3">
+          <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="ff" green="ff" red="ff" type="rgb"/>
+            </Property>
+          </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="lbTime5">
+          <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="ff" green="ff" red="ff" type="rgb"/>
+            </Property>
+          </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="lbTime6">
+          <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="ff" green="ff" red="ff" type="rgb"/>
+            </Property>
+          </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="lbTime15">
+          <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="ff" green="ff" red="ff" type="rgb"/>
+            </Property>
+          </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="lbTime16">
+          <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="ff" green="ff" red="ff" type="rgb"/>
+            </Property>
+          </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="lbTime18">
+          <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="ff" green="ff" red="ff" type="rgb"/>
+            </Property>
+          </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="lbTime17">
+          <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="ff" green="ff" red="ff" type="rgb"/>
+            </Property>
+          </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="lbTime8">
+          <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="ff" green="ff" red="ff" type="rgb"/>
+            </Property>
+          </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="lbTime7">
+          <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="ff" green="ff" red="ff" type="rgb"/>
+            </Property>
+          </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="lbTime9">
+          <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="ff" green="ff" red="ff" type="rgb"/>
+            </Property>
+          </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="lbTime10">
+          <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="ff" green="ff" red="ff" type="rgb"/>
+            </Property>
+          </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="lbTime19">
+          <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="ff" green="ff" red="ff" type="rgb"/>
+            </Property>
+          </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="lbTime20">
+          <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="ff" green="ff" red="ff" type="rgb"/>
+            </Property>
+          </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="lbInfo1">
           <Properties>
