@@ -45,14 +45,7 @@ public class TelaPrincipalMesmo extends javax.swing.JFrame {
         btnClassificacao.setBorderPainted(false);
         btnClassificacao.setText(null);
         
-        this.clubes = new ArrayList<>();
-        clubes = times;
         
-        comparador = new ComparadorDePontos();
-        Collections.sort(clubes, comparador); 
-        
-        System.out.println(clubes.get(0).getNome());
-        lbIcon.setIcon(clubes.get(0).getEscudo());
     }
     
     public TelaPrincipalMesmo(javax.swing.JFrame form){
@@ -64,6 +57,16 @@ public class TelaPrincipalMesmo extends javax.swing.JFrame {
         this();
         this.rodadas = rodadas;
         this.times = times;
+        this.clubes = new ArrayList<>();
+        for(Time t : times){
+            clubes.add(t);
+        }
+        
+        comparador = new ComparadorDePontos();
+        Collections.sort(clubes, comparador); 
+        
+        System.out.println(clubes.get(0).getNome());
+        lbIcon.setIcon(clubes.get(0).getEscudo());
     }
 
 
