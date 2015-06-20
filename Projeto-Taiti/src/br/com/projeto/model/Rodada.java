@@ -96,4 +96,8 @@ public class Rodada {
     public String toString(){
         return "Rodada " + this.numeroDaRodada;
     }
+    
+    public static void jogoReiniciado(){
+        numero = 0;
+    }
 }

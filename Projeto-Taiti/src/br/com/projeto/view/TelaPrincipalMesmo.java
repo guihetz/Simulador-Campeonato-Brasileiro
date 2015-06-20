@@ -178,6 +178,7 @@ public class TelaPrincipalMesmo extends javax.swing.JFrame {
     }//GEN-LAST:event_btnClassificacaoActionPerformed
 
     private void btnReiniciarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReiniciarActionPerformed
+        Rodada.jogoReiniciado();
         TelaInicarCampeonato principal = new TelaInicarCampeonato();
         principal.setAlwaysOnTop(false);
         principal.setVisible(true);
@@ -186,6 +187,7 @@ public class TelaPrincipalMesmo extends javax.swing.JFrame {
     }//GEN-LAST:event_btnReiniciarActionPerformed
 
     private void btnDesligarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDesligarActionPerformed
+        this.setDefaultCloseOperation(EXIT_ON_CLOSE);
         this.dispose();
     }//GEN-LAST:event_btnDesligarActionPerformed
 
