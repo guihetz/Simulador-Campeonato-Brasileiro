@@ -5,10 +5,15 @@
  */
 package br.com.projeto.model;
 
+import java.time.DayOfWeek;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.Random;
 import java.util.Stack;
+import javafx.util.converter.LocalDateTimeStringConverter;
 
 /**
  *
@@ -20,11 +25,18 @@ public class Rodada {
     private Stack<Time> timesDisponiveisParaJogo;
     public static int numero;
     private int numeroDaRodada;
-    
+    public static LocalDateTime data;
+    private LocalDateTime dataAtual;
     public Rodada(List<Time> listaTime){
+        this.dataAtual = LocalDateTime.now();
         this.listaTime = listaTime;       
         timesDisponiveisParaJogo = new Stack();
         numero++;
+        if(numero==1){
+            data = dataAtual;
+        }else{
+            data = data.plusDays(1);
+        }
         this.numeroDaRodada = numero;
         for(Time t: this.listaTime){
             //Adiciona na pilha os times que participarão da rodada.
@@ -78,6 +90,15 @@ public class Rodada {
         List<Jogo> jogos = new ArrayList<>();
         for(int i = 0; i < 10; i++){
             Jogo j = getJogo();                   //Cria instância de um novo jogo.
+            if(i<5){
+                j.setDataJogo(this.getDataJogo(data));
+            }else {
+                if(i==5){
+                    data = data.plusDays(3);
+                }
+                j.setDataJogo(this.getDataJogo(data));
+            }
+            
            jogos.add(j);                          //Adiciona jogo na lista de jogos da rodada.
            Time t1 = j.getTime1();                //Referencia instância do time 1.
            Time t2 = j.getTime2();                //Referencia instância do time 2.
@@ -99,5 +120,32 @@ public class Rodada {
     
     public static void jogoReiniciado(){
         numero = 0;
+    }
+    
+    public LocalDateTime getDataJogo(LocalDateTime dataAtual){
+        LocalDateTime dataDoJogo = dataAtual;
+        int[] horas = {14, 16, 18, 22};
+        int[] minutos = {0,30,45};
+        if(dataAtual.getDayOfWeek().equals(DayOfWeek.MONDAY)){
+                dataDoJogo = dataAtual.plusDays(2);
+        }else if(dataAtual.getDayOfWeek().equals(DayOfWeek.TUESDAY)){
+                dataDoJogo = dataAtual.plusDays(1);
+        }else if(dataAtual.getDayOfWeek().equals(DayOfWeek.WEDNESDAY)){
+                dataDoJogo = dataAtual;
+        }else if(dataAtual.getDayOfWeek().equals(DayOfWeek.THURSDAY)){
+                dataDoJogo = dataAtual.plusDays(3);
+        }else if(dataAtual.getDayOfWeek().equals(DayOfWeek.FRIDAY)){
+                dataDoJogo = dataAtual.plusDays(2);
+        }else if(dataAtual.getDayOfWeek().equals(DayOfWeek.SATURDAY)){
+                dataDoJogo = dataAtual.plusDays(1);
+        }else if(dataAtual.getDayOfWeek().equals(DayOfWeek.SUNDAY)){
+                dataDoJogo = dataAtual;
+        }
+        LocalTime horaJogo = dataDoJogo.toLocalTime();
+        Random sortHoraMinuto = new Random();
+        
+        horaJogo = horaJogo.withHour(horas[sortHoraMinuto.nextInt(3)]).withMinute(minutos[sortHoraMinuto.nextInt(2)]);
+        dataDoJogo = dataDoJogo.with(horaJogo);
+        return dataDoJogo;
     }
 }

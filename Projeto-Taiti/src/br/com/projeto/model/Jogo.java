@@ -5,6 +5,9 @@
  */
 package br.com.projeto.model;
 
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+
 /**
  *
  * @author Daylton
@@ -15,7 +18,7 @@ public class Jogo {
     private final int[] gols;
     private final int[] finalizacoes;
     private final double[] posseDeBola;
-
+    private LocalDateTime dataJogo;
     @SuppressWarnings("LeakingThisInConstructor")
     public Jogo(Time time1, Time time2) {
         this.time1 = time1;
@@ -84,4 +87,12 @@ public class Jogo {
          return posseDeBola[1];
     }
     
+    public String getDataJogoString(){
+        DateTimeFormatter formatador = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm EEEE");
+        return this.dataJogo.format(formatador);
+    }
+    
+    public void setDataJogo(LocalDateTime dataJogo){
+        this.dataJogo = dataJogo;
+    }
 }
