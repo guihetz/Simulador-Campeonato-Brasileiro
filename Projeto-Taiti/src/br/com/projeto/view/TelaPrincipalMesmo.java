@@ -188,7 +188,7 @@ public class TelaPrincipalMesmo extends javax.swing.JFrame {
 
     private void btnDesligarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDesligarActionPerformed
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
-        this.dispose();
+        System.exit(0);
     }//GEN-LAST:event_btnDesligarActionPerformed
 
     /**
