@@ -5,44 +5,78 @@
  */
 package br.com.projeto.view;
 
+import br.com.projeto.model.ComparadorDePontos;
 import br.com.projeto.model.Rodada;
-import java.awt.Color;
-import java.awt.Font;
+import br.com.projeto.model.Time;
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import javax.swing.ImageIcon;
-import javax.swing.ListSelectionModel;
 
 /**
  *
- * @author Guilherme Lourenço
+ * @author Daylton
  */
 public class TelaPrincipal extends javax.swing.JFrame {
+    public TelaInicarCampeonato tInicarCampeonato;
     /**
-     * Creates new form TelaPrincipal
+     * Creates new form TelaPrincipalMesmo
      */
-    List<Rodada> rodadas;
-//    List<Time> times;
-    public TelaPrincipal(){
+    private List<Rodada> rodadas;
+    private List<Time> times;
+    private List<Time> clubes;
+    private ImageIcon escudoCampeao;
+    ComparadorDePontos comparador;
+    public TelaPrincipal() {
         initComponents();
-    }
-    public TelaPrincipal(List<Rodada> rodadas) {
-        this();
-        this.getContentPane().setBackground(Color.WHITE);
-        this.painel1.setBackground(Color.WHITE); 
-        this.setResizable(false);
+        
         ImageIcon img = new ImageIcon("src/br/com/projeto/image/cup.png");
         this.setIconImage(img.getImage());
         
-        Font f = InicioProjeto.getFonte(18);
+        btnRodadas.setOpaque(false);
+        btnRodadas.setContentAreaFilled(false);
+        btnRodadas.setBorderPainted(false);
+        btnRodadas.setText(null);
         
-        jlListaDeRodadas.setFont(f);
-        btnVisualizarRodada.setFont(f);
-        this.jlListaDeRodadas.setListData(rodadas.toArray());
-        jlListaDeRodadas.setSelectedIndex(rodadas.size()-1);
-        jlListaDeRodadas.ensureIndexIsVisible(rodadas.size()-1);
-        this.jlListaDeRodadas.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);   
+        btnClassificacao.setOpaque(false);
+        btnClassificacao.setContentAreaFilled(false);
+        btnClassificacao.setBorderPainted(false);
+        btnClassificacao.setText(null);
+        
+        btnReiniciar.setOpaque(false);
+        btnReiniciar.setContentAreaFilled(false);
+        btnReiniciar.setBorderPainted(false);
+        btnReiniciar.setText(null);
+        
+        btnDesligar.setOpaque(false);
+        btnDesligar.setContentAreaFilled(false);
+        btnDesligar.setBorderPainted(false);
+        btnDesligar.setText(null);
+        
     }
     
+    public TelaPrincipal(javax.swing.JFrame form){
+        this();
+        tInicarCampeonato = (TelaInicarCampeonato) form;
+    }
+    
+    public TelaPrincipal(List<Rodada> rodadas, List<Time> times){
+        this();
+        this.rodadas = rodadas;
+        this.times = times;
+        this.clubes = new ArrayList<>();
+        for(Time t : times){
+            clubes.add(t);
+        }        
+        
+        comparador = new ComparadorDePontos();
+        Collections.sort(clubes, comparador);  
+        System.out.println(clubes.get(0).getNome());
+        lbIcon.setIcon(clubes.get(0).getEscudo());
+        
+    }
+
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -52,70 +86,118 @@ public class TelaPrincipal extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        painel1 = new javax.swing.JPanel();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jlListaDeRodadas = new javax.swing.JList();
-        btnVisualizarRodada = new javax.swing.JButton();
+        lbIcon = new javax.swing.JLabel();
+        lbFundo = new javax.swing.JLabel();
+        btnRodadas = new javax.swing.JButton();
+        btnClassificacao = new javax.swing.JButton();
+        btnReiniciar = new javax.swing.JButton();
+        btnDesligar = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setTitle("Simulador de Campeonato");
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        painel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Rodadas", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("FIFA Welcome", 0, 24))); // NOI18N
+        lbIcon.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lbIcon.setIcon(escudoCampeao);
 
-        jScrollPane1.setViewportView(jlListaDeRodadas);
+        lbFundo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/projeto/image/estadio.jpg"))); // NOI18N
 
-        btnVisualizarRodada.setText("Visualizar Informacoes da Rodada");
-        btnVisualizarRodada.addActionListener(new java.awt.event.ActionListener() {
+        btnRodadas.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnVisualizarRodadaActionPerformed(evt);
+                btnRodadasActionPerformed(evt);
             }
         });
 
-        javax.swing.GroupLayout painel1Layout = new javax.swing.GroupLayout(painel1);
-        painel1.setLayout(painel1Layout);
-        painel1Layout.setHorizontalGroup(
-            painel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(painel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(painel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(btnVisualizarRodada, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jScrollPane1))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        painel1Layout.setVerticalGroup(
-            painel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(painel1Layout.createSequentialGroup()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 364, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(btnVisualizarRodada)
-                .addContainerGap())
-        );
+        btnClassificacao.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnClassificacaoActionPerformed(evt);
+            }
+        });
+
+        btnReiniciar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnReiniciarActionPerformed(evt);
+            }
+        });
+
+        btnDesligar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnDesligarActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(painel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(250, 250, 250)
+                        .addComponent(btnClassificacao, javax.swing.GroupLayout.PREFERRED_SIZE, 370, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(13, 13, 13)
+                        .addComponent(btnReiniciar, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(103, 103, 103)
+                        .addComponent(btnDesligar, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(410, 410, 410)
+                        .addComponent(lbIcon, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(250, 250, 250)
+                        .addComponent(btnRodadas, javax.swing.GroupLayout.PREFERRED_SIZE, 290, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(lbFundo))
+                .addGap(3, 3, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(painel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+                .addGap(279, 279, 279)
+                .addComponent(btnClassificacao, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(320, 320, 320)
+                .addComponent(btnReiniciar, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(180, 180, 180)
+                .addComponent(btnRodadas, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(320, 320, 320)
+                .addComponent(btnDesligar, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addComponent(lbFundo)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(70, 70, 70)
+                .addComponent(lbIcon, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnVisualizarRodadaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVisualizarRodadaActionPerformed
-        TelaRodada novaTelaRodada = new TelaRodada((Rodada) jlListaDeRodadas.getSelectedValue());
-        novaTelaRodada.setLocationRelativeTo(null);
-        novaTelaRodada.setVisible(true);
-    }//GEN-LAST:event_btnVisualizarRodadaActionPerformed
+    private void btnRodadasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRodadasActionPerformed
+        TelaMostraRodadas form1 = new TelaMostraRodadas(this.rodadas);
+        form1.setAlwaysOnTop(false);
+        form1.setVisible(true);
+        form1.setLocationRelativeTo(null);
+    }//GEN-LAST:event_btnRodadasActionPerformed
+
+    private void btnClassificacaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnClassificacaoActionPerformed
+        TelaClassificacao classificacao = new TelaClassificacao(times);
+    }//GEN-LAST:event_btnClassificacaoActionPerformed
+
+    private void btnReiniciarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReiniciarActionPerformed
+        Rodada.jogoReiniciado();
+        TelaInicarCampeonato principal = new TelaInicarCampeonato();
+        principal.setAlwaysOnTop(false);
+        principal.setVisible(true);
+        principal.setLocationRelativeTo(null);
+        this.dispose();
+    }//GEN-LAST:event_btnReiniciarActionPerformed
+
+    private void btnDesligarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDesligarActionPerformed
+        this.setDefaultCloseOperation(EXIT_ON_CLOSE);
+        System.exit(0);
+    }//GEN-LAST:event_btnDesligarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -143,6 +225,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(TelaPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
+        //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -153,9 +236,11 @@ public class TelaPrincipal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnVisualizarRodada;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JList jlListaDeRodadas;
-    private javax.swing.JPanel painel1;
+    private javax.swing.JButton btnClassificacao;
+    private javax.swing.JButton btnDesligar;
+    private javax.swing.JButton btnReiniciar;
+    private javax.swing.JButton btnRodadas;
+    private javax.swing.JLabel lbFundo;
+    private javax.swing.JLabel lbIcon;
     // End of variables declaration//GEN-END:variables
 }

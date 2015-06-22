@@ -106,9 +106,9 @@ public class TelaInicarCampeonato extends javax.swing.JFrame {
             }
 
         } catch (FileNotFoundException ex) {
-            Logger.getLogger(TelaPrincipal.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(TelaMostraRodadas.class.getName()).log(Level.SEVERE, null, ex);
         } catch (IOException ex) {
-            Logger.getLogger(TelaPrincipal.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(TelaMostraRodadas.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
     
@@ -119,7 +119,7 @@ public class TelaInicarCampeonato extends javax.swing.JFrame {
             this.novaRodada();
         }        
         
-        TelaPrincipalMesmo form1 = new TelaPrincipalMesmo(this.rodadas, this.times);
+        TelaPrincipal form1 = new TelaPrincipal(this.rodadas, this.times);
         form1.setAlwaysOnTop(false);
         form1.setVisible(true);
         form1.setLocationRelativeTo(null);

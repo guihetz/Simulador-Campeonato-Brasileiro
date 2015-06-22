@@ -38,7 +38,7 @@ import javax.swing.ImageIcon;
  *
  * @author Daylton
  */
-public class TelaLoading extends javax.swing.JFrame {
+public class TelaCarregarCampeonato extends javax.swing.JFrame {
 
     /**
      * Creates new form TelaLoading
@@ -48,7 +48,7 @@ public class TelaLoading extends javax.swing.JFrame {
     int i = 0;
     TimerTask tarefa;
     
-    public TelaLoading() {
+    public TelaCarregarCampeonato() {
         initComponents();
         
         ImageIcon img = new ImageIcon("src/br/com/projeto/image/cup.png");
@@ -157,14 +157,18 @@ public class TelaLoading extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(TelaLoading.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaCarregarCampeonato.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(TelaLoading.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaCarregarCampeonato.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(TelaLoading.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaCarregarCampeonato.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(TelaLoading.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaCarregarCampeonato.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
         //</editor-fold>
@@ -173,7 +177,7 @@ public class TelaLoading extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new TelaLoading().setVisible(true);
+                new TelaCarregarCampeonato().setVisible(true);
             }
         });
     }
