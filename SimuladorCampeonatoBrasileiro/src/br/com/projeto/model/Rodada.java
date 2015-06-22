@@ -13,7 +13,6 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Random;
 import java.util.Stack;
-import javafx.util.converter.LocalDateTimeStringConverter;
 
 /**
  *
@@ -75,9 +74,6 @@ public class Rodada {
                 
                 j = new Jogo(time1, time2);
                 //System.out.println(j.getTime1() + " x " + j.getTime2());
-                    
-                
-                
             }else{
                 System.out.println("Acabou!");
             }

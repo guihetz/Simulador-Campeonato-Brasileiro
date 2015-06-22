@@ -33,7 +33,7 @@ public class TelaMostraRodadas extends javax.swing.JFrame {
         ImageIcon img = new ImageIcon("src/br/com/projeto/image/cup.png");
         this.setIconImage(img.getImage());
         
-        Font f = InicioProjeto.getFonte(18);
+        Font f = Inicio.getFonte(18);
         
         jlListaDeRodadas.setFont(f);
         btnVisualizarRodada.setFont(f);

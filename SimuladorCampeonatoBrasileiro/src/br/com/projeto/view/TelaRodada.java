@@ -38,7 +38,7 @@ public class TelaRodada extends javax.swing.JFrame {
         ImageIcon img = new ImageIcon("src/br/com/projeto/image/cup.png");
         this.setIconImage(img.getImage());
         this.jogos = r.getJogosRodada();
-        Font f = InicioProjeto.getFonte(36);
+        Font f = Inicio.getFonte(36);
         lbTime1.setIcon(jogos.get(0).getTime1().getEscudo());
         //lbTime1.setText(jogos.get(0).getTime1().getNome());
         lbTime1.setHorizontalAlignment(SwingConstants.CENTER);
@@ -182,7 +182,7 @@ public class TelaRodada extends javax.swing.JFrame {
         lblDataJogo9.setText(jogos.get(8).getDataJogoString());
         lblDataJogo10.setText(jogos.get(9).getDataJogoString());
         
-        f = InicioProjeto.getFonte(10);
+        f = Inicio.getFonte(10);
         lblDataJogo1.setFont(f);
         lblDataJogo2.setFont(f);
         lblDataJogo3.setFont(f);

@@ -5,11 +5,8 @@
  */
 package br.com.projeto.model;
 
-import java.util.ArrayList;
-import java.util.Collections;
 import java.util.Date;
 import java.util.Random;
-import java.util.Stack;
 
 /**
  *

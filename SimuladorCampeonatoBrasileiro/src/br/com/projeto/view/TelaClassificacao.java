@@ -86,7 +86,7 @@ public class TelaClassificacao extends JFrame{
         ImageIcon icon = new ImageIcon("src/br/com/projeto/image/cup.png");
         this.setIconImage(icon.getImage());
         this.times = new ArrayList<>();
-        Font f = InicioProjeto.getFonte(15);
+        Font f = Inicio.getFonte(15);
         for(Time t: clubes){
             this.times.add(t);
         }
@@ -1744,17 +1744,17 @@ public class TelaClassificacao extends JFrame{
             this.classificacao = new JLabel(String.valueOf(this.posicao) + "º");
             this.classificacao.setHorizontalAlignment(SwingConstants.CENTER);
             this.classificacao.setVerticalAlignment(SwingConstants.CENTER);
-            this.classificacao.setFont(InicioProjeto.getFonte(70));
+            this.classificacao.setFont(Inicio.getFonte(70));
             this.pontuacao = new JLabel(String.valueOf(t.getPontuacaoAtual()) + " pontos");
-            this.pontuacao.setFont(InicioProjeto.getFonte(50));
+            this.pontuacao.setFont(Inicio.getFonte(50));
             this.pontuacao.setHorizontalAlignment(SwingConstants.CENTER);
             this.pontuacao.setVerticalAlignment(SwingConstants.CENTER);
             this.mediaGols = new JLabel(String.format("%.2f",(double)t.getGolsPro()/(double)t.getTimesComQuemJogou().size()));
             JLabel textoMedia = new JLabel("media gols/partida");
-            textoMedia.setFont(InicioProjeto.getFonte(24));
+            textoMedia.setFont(Inicio.getFonte(24));
             textoMedia.setHorizontalAlignment(SwingConstants.CENTER);
             textoMedia.setVerticalAlignment(SwingConstants.CENTER);
-            this.mediaGols.setFont(InicioProjeto.getFonte(35));
+            this.mediaGols.setFont(Inicio.getFonte(35));
             this.mediaGols.setHorizontalAlignment(SwingConstants.CENTER);
             this.mediaGols.setVerticalAlignment(SwingConstants.CENTER);
             this.getContentPane().setLayout(new BorderLayout());
@@ -1795,10 +1795,7 @@ public class TelaClassificacao extends JFrame{
                 CategoryPlot plot = graf.getCategoryPlot();
                 plot.getRenderer().setSeriesPaint(0, Color.BLACK);
                 plot.setBackgroundPaint(Color.WHITE);
-                //plot.setBackgroundImage(new ImageIcon("src/br/com/projeto/image/loagin.jpg").getImage());
                 ValueAxis eixo = plot.getRangeAxis();
-                //CategoryItemRenderer renderer = plot.getRenderer();
-                //renderer.setSeriesPaint(1, Color.BLACK);
                 eixo.setInverted(true);
                 eixo.setLowerBound(0);
                 eixo.setUpperBound(20);

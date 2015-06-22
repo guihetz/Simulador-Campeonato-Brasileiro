@@ -15,7 +15,7 @@ import java.io.IOException;
  *
  * @author Guilherme Lourenço
  */
-public class InicioProjeto {
+public class Inicio {
     
     public static Font getFonte( int tamanho ){  
         Font font = null;  

@@ -34,7 +34,7 @@ public class TelaInfoJogo extends javax.swing.JFrame {
         this.painel1.setBackground(Color.WHITE);
         ImageIcon img = new ImageIcon("src/br/com/projeto/image/cup.png");
         this.setIconImage(img.getImage());
-        Font f = InicioProjeto.getFonte(36);
+        Font f = Inicio.getFonte(36);
         painel1.setFont(f);
         lbTime1.setIcon(jogo.getTime1().getEscudo());
         lbTime1.setFont(f);

@@ -179,7 +179,7 @@ public class TelaInicarCampeonato extends javax.swing.JFrame {
     private void btnInciarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInciarActionPerformed
         btnInciar.setEnabled(false);
         JLabel t = new JLabel();
-        Font f = InicioProjeto.getFonte(18);
+        Font f = Inicio.getFonte(18);
         t.setFont(f);
         try{
             t.setText("Quantas rodadas voce quer simular?");            
