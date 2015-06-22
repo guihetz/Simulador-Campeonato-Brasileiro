@@ -11,7 +11,7 @@ Fluminense;src/br/com/projeto/image/fluminense_60x60.png;17;10;11;
 Goias;src/br/com/projeto/image/goias_60x60.png;13;8;17;
 Gremio;src/br/com/projeto/image/gremio_60x60.png;17;10;11;
 Internacional;src/br/com/projeto/image/internacional_60x60.png;21;6;11;
-Joinville;src/br/com/projeto/image/joinville_60x60.png;21;7;10;
+Joinville;src/br/com/projeto/image/joinville_60x60.png;2;2;10;
 Palmeiras;src/br/com/projeto/image/palmeiras_60x60.png;11;7;20;
 Ponte Preta;src/br/com/projeto/image/ponte_preta_60x60.png;19;12;7;
 Santos;src/br/com/projeto/image/santos_60x60.png;15;8;15;
