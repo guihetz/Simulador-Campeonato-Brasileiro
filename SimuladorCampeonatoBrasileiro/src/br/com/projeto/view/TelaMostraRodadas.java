@@ -8,8 +8,16 @@ package br.com.projeto.view;
 import br.com.projeto.model.Rodada;
 import java.awt.Color;
 import java.awt.Font;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.OutputStream;
+import java.io.OutputStreamWriter;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.List;
 import javax.swing.ImageIcon;
+import javax.swing.JOptionPane;
 import javax.swing.ListSelectionModel;
 
 /**
@@ -112,6 +120,20 @@ public class TelaMostraRodadas extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnVisualizarRodadaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVisualizarRodadaActionPerformed
+          try{
+            File log = new File("src/br/com/projeto/file/log.txt");
+            OutputStream os = new FileOutputStream(log, true);
+            OutputStreamWriter osw = new OutputStreamWriter(os);
+            try (BufferedWriter bw = new BufferedWriter(osw)) {
+                LocalDateTime data = LocalDateTime.now();
+                DateTimeFormatter formatador = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm EEEE");
+                bw.write(data.format(formatador) + " Visualizou rodada Individual -> ."  + (Rodada) jlListaDeRodadas.getSelectedValue());
+                bw.newLine();
+            }
+        }catch(Exception erro){
+            JOptionPane.showMessageDialog(null, "Ocorreu um erro, tente novamente mais tarde.");
+        }
+        
         TelaRodada novaTelaRodada = new TelaRodada((Rodada) jlListaDeRodadas.getSelectedValue());
         novaTelaRodada.setLocationRelativeTo(null);
         novaTelaRodada.setVisible(true);

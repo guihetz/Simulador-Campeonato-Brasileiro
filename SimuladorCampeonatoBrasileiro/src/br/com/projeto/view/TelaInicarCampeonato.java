@@ -10,11 +10,17 @@ import br.com.projeto.model.Rodada;
 import br.com.projeto.model.Time;
 import java.awt.Color;
 import java.awt.Font;
+import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.OutputStream;
+import java.io.OutputStreamWriter;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -113,12 +119,20 @@ public class TelaInicarCampeonato extends javax.swing.JFrame {
     }
     
     
-    public void fechar(){ 
+    public void fechar() throws FileNotFoundException, IOException{ 
         this.setTimes();       
         for(int j = 0; j < this.numeroRodadas; j++){
             this.novaRodada();
         }        
-        
+        File log = new File("src/br/com/projeto/file/log.txt");
+        OutputStream os = new FileOutputStream(log, true);
+        OutputStreamWriter osw = new OutputStreamWriter(os);
+        BufferedWriter bw = new BufferedWriter(osw);
+        LocalDateTime data = LocalDateTime.now();
+        DateTimeFormatter formatador = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm EEEE");
+        bw.write(data.format(formatador) + " Carregou campeonato.");
+        bw.newLine();
+        bw.close();
         TelaPrincipal form1 = new TelaPrincipal(this.rodadas, this.times);
         form1.setAlwaysOnTop(false);
         form1.setVisible(true);

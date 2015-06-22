@@ -95,4 +95,9 @@ public class Jogo {
     public void setDataJogo(LocalDateTime dataJogo){
         this.dataJogo = dataJogo;
     }
+    
+    @Override
+    public String toString(){
+        return this.time1.getNome() + " " + this.getGolTime1() + " X " + this.getGolTime2() + " " + this.time2.getNome();
+    }
 }

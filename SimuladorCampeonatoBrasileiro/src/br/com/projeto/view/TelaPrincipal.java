@@ -8,10 +8,21 @@ package br.com.projeto.view;
 import br.com.projeto.model.ComparadorDePontos;
 import br.com.projeto.model.Rodada;
 import br.com.projeto.model.Time;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.OutputStream;
+import java.io.OutputStreamWriter;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.ImageIcon;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -175,6 +186,20 @@ public class TelaPrincipal extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnRodadasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRodadasActionPerformed
+          try{
+            File log = new File("src/br/com/projeto/file/log.txt");
+            OutputStream os = new FileOutputStream(log, true);
+            OutputStreamWriter osw = new OutputStreamWriter(os);
+            try (BufferedWriter bw = new BufferedWriter(osw)) {
+                LocalDateTime data = LocalDateTime.now();
+                DateTimeFormatter formatador = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm EEEE");
+                bw.write(data.format(formatador) + " Visualizou tela de rodadas.");
+                bw.newLine();
+            }
+        }catch(Exception erro){
+            JOptionPane.showMessageDialog(null, "Ocorreu um erro, tente novamente mais tarde.");
+        }
+        
         TelaMostraRodadas form1 = new TelaMostraRodadas(this.rodadas);
         form1.setAlwaysOnTop(false);
         form1.setVisible(true);
@@ -182,10 +207,39 @@ public class TelaPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_btnRodadasActionPerformed
 
     private void btnClassificacaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnClassificacaoActionPerformed
+          try{
+            File log = new File("src/br/com/projeto/file/log.txt");
+            OutputStream os = new FileOutputStream(log, true);
+            OutputStreamWriter osw = new OutputStreamWriter(os);
+            try (BufferedWriter bw = new BufferedWriter(osw)) {
+                LocalDateTime data = LocalDateTime.now();
+                DateTimeFormatter formatador = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm EEEE");
+                bw.write(data.format(formatador) + " Visualizou tela de Classificação.");
+                bw.newLine();
+            }
+        }catch(Exception erro){
+            JOptionPane.showMessageDialog(null, "Ocorreu um erro, tente novamente mais tarde.");
+        }
+        
         TelaClassificacao classificacao = new TelaClassificacao(times);
     }//GEN-LAST:event_btnClassificacaoActionPerformed
 
     private void btnReiniciarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReiniciarActionPerformed
+        
+        try{
+            File log = new File("src/br/com/projeto/file/log.txt");
+            OutputStream os = new FileOutputStream(log, true);
+            OutputStreamWriter osw = new OutputStreamWriter(os);
+            try (BufferedWriter bw = new BufferedWriter(osw)) {
+                LocalDateTime data = LocalDateTime.now();
+                DateTimeFormatter formatador = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm EEEE");
+                bw.write(data.format(formatador) + " Reiniciou aplicação.");
+                bw.newLine();
+            }
+        }catch(Exception erro){
+            JOptionPane.showMessageDialog(null, "Ocorreu um erro, tente novamente mais tarde.");
+        }
+        
         Rodada.jogoReiniciado();
         TelaInicarCampeonato principal = new TelaInicarCampeonato();
         principal.setAlwaysOnTop(false);
@@ -195,6 +249,20 @@ public class TelaPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_btnReiniciarActionPerformed
 
     private void btnDesligarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDesligarActionPerformed
+          try{
+            File log = new File("src/br/com/projeto/file/log.txt");
+            OutputStream os = new FileOutputStream(log, true);
+            OutputStreamWriter osw = new OutputStreamWriter(os);
+            try (BufferedWriter bw = new BufferedWriter(osw)) {
+                LocalDateTime data = LocalDateTime.now();
+                DateTimeFormatter formatador = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm EEEE");
+                bw.write(data.format(formatador) + " Fechou aplicação.");
+                bw.newLine();
+            }
+        }catch(Exception erro){
+            JOptionPane.showMessageDialog(null, "Ocorreu um erro, tente novamente mais tarde.");
+        }
+        
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
         System.exit(0);
     }//GEN-LAST:event_btnDesligarActionPerformed

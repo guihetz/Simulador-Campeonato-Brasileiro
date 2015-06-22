@@ -9,9 +9,17 @@ import br.com.projeto.model.Jogo;
 import br.com.projeto.model.Rodada;
 import java.awt.Color;
 import java.awt.Font;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.OutputStream;
+import java.io.OutputStreamWriter;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.List;
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 import javax.swing.SwingConstants;
 
 /**
@@ -825,42 +833,172 @@ public class TelaRodada extends javax.swing.JFrame {
 
     private void lbInfo1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbInfo1MouseClicked
         TelaInfoJogo novaInfo = new TelaInfoJogo(jogos.get(0));
+         try{
+            File log = new File("src/br/com/projeto/file/log.txt");
+            OutputStream os = new FileOutputStream(log, true);
+            OutputStreamWriter osw = new OutputStreamWriter(os);
+            try (BufferedWriter bw = new BufferedWriter(osw)) {
+                LocalDateTime data = LocalDateTime.now();
+                DateTimeFormatter formatador = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm EEEE");
+                bw.write(data.format(formatador) + " Visualizou jogo -> : " + jogos.get(0));
+                bw.newLine();
+            }
+        }catch(Exception erro){
+            JOptionPane.showMessageDialog(null, "Ocorreu um erro, tente novamente mais tarde.");
+        }
     }//GEN-LAST:event_lbInfo1MouseClicked
 
     private void lbInfo2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbInfo2MouseClicked
         TelaInfoJogo novaInfo = new TelaInfoJogo(jogos.get(1));
+         try{
+            File log = new File("src/br/com/projeto/file/log.txt");
+            OutputStream os = new FileOutputStream(log, true);
+            OutputStreamWriter osw = new OutputStreamWriter(os);
+            try (BufferedWriter bw = new BufferedWriter(osw)) {
+                LocalDateTime data = LocalDateTime.now();
+                DateTimeFormatter formatador = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm EEEE");
+                bw.write(data.format(formatador) + " Visualizou jogo -> : " + jogos.get(1));
+                bw.newLine();
+            }
+        }catch(Exception erro){
+            JOptionPane.showMessageDialog(null, "Ocorreu um erro, tente novamente mais tarde.");
+        }
     }//GEN-LAST:event_lbInfo2MouseClicked
 
     private void lbInfo3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbInfo3MouseClicked
         TelaInfoJogo novaInfo = new TelaInfoJogo(jogos.get(2));
+         try{
+            File log = new File("src/br/com/projeto/file/log.txt");
+            OutputStream os = new FileOutputStream(log, true);
+            OutputStreamWriter osw = new OutputStreamWriter(os);
+            try (BufferedWriter bw = new BufferedWriter(osw)) {
+                LocalDateTime data = LocalDateTime.now();
+                DateTimeFormatter formatador = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm EEEE");
+                bw.write(data.format(formatador) + " Visualizou jogo -> : " + jogos.get(2));
+                bw.newLine();
+            }
+        }catch(Exception erro){
+            JOptionPane.showMessageDialog(null, "Ocorreu um erro, tente novamente mais tarde.");
+        }
     }//GEN-LAST:event_lbInfo3MouseClicked
 
     private void lbInfo4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbInfo4MouseClicked
         TelaInfoJogo novaInfo = new TelaInfoJogo(jogos.get(3));
+         try{
+            File log = new File("src/br/com/projeto/file/log.txt");
+            OutputStream os = new FileOutputStream(log, true);
+            OutputStreamWriter osw = new OutputStreamWriter(os);
+            try (BufferedWriter bw = new BufferedWriter(osw)) {
+                LocalDateTime data = LocalDateTime.now();
+                DateTimeFormatter formatador = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm EEEE");
+                bw.write(data.format(formatador) + " Visualizou jogo -> : " + jogos.get(3));
+                bw.newLine();
+            }
+        }catch(Exception erro){
+            JOptionPane.showMessageDialog(null, "Ocorreu um erro, tente novamente mais tarde.");
+        }
     }//GEN-LAST:event_lbInfo4MouseClicked
 
     private void lbInfo5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbInfo5MouseClicked
         TelaInfoJogo novaInfo = new TelaInfoJogo(jogos.get(4));
+         try{
+            File log = new File("src/br/com/projeto/file/log.txt");
+            OutputStream os = new FileOutputStream(log, true);
+            OutputStreamWriter osw = new OutputStreamWriter(os);
+            try (BufferedWriter bw = new BufferedWriter(osw)) {
+                LocalDateTime data = LocalDateTime.now();
+                DateTimeFormatter formatador = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm EEEE");
+                bw.write(data.format(formatador) + " Visualizou jogo -> : " + jogos.get(4));
+                bw.newLine();
+            }
+        }catch(Exception erro){
+            JOptionPane.showMessageDialog(null, "Ocorreu um erro, tente novamente mais tarde.");
+        }
     }//GEN-LAST:event_lbInfo5MouseClicked
 
     private void lbInfo6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbInfo6MouseClicked
         TelaInfoJogo novaInfo = new TelaInfoJogo(jogos.get(5));
+         try{
+            File log = new File("src/br/com/projeto/file/log.txt");
+            OutputStream os = new FileOutputStream(log, true);
+            OutputStreamWriter osw = new OutputStreamWriter(os);
+            try (BufferedWriter bw = new BufferedWriter(osw)) {
+                LocalDateTime data = LocalDateTime.now();
+                DateTimeFormatter formatador = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm EEEE");
+                bw.write(data.format(formatador) + " Visualizou jogo -> : " + jogos.get(5));
+                bw.newLine();
+            }
+        }catch(Exception erro){
+            JOptionPane.showMessageDialog(null, "Ocorreu um erro, tente novamente mais tarde.");
+        }
     }//GEN-LAST:event_lbInfo6MouseClicked
 
     private void lbInfo7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbInfo7MouseClicked
         TelaInfoJogo novaInfo = new TelaInfoJogo(jogos.get(6));
+         try{
+            File log = new File("src/br/com/projeto/file/log.txt");
+            OutputStream os = new FileOutputStream(log, true);
+            OutputStreamWriter osw = new OutputStreamWriter(os);
+            try (BufferedWriter bw = new BufferedWriter(osw)) {
+                LocalDateTime data = LocalDateTime.now();
+                DateTimeFormatter formatador = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm EEEE");
+                bw.write(data.format(formatador) + " Visualizou jogo -> : " + jogos.get(6));
+                bw.newLine();
+            }
+        }catch(Exception erro){
+            JOptionPane.showMessageDialog(null, "Ocorreu um erro, tente novamente mais tarde.");
+        }
     }//GEN-LAST:event_lbInfo7MouseClicked
 
     private void lbInfo8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbInfo8MouseClicked
         TelaInfoJogo novaInfo = new TelaInfoJogo(jogos.get(7));
+         try{
+            File log = new File("src/br/com/projeto/file/log.txt");
+            OutputStream os = new FileOutputStream(log, true);
+            OutputStreamWriter osw = new OutputStreamWriter(os);
+            try (BufferedWriter bw = new BufferedWriter(osw)) {
+                LocalDateTime data = LocalDateTime.now();
+                DateTimeFormatter formatador = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm EEEE");
+                bw.write(data.format(formatador) + " Visualizou jogo -> : " + jogos.get(7));
+                bw.newLine();
+            }
+        }catch(Exception erro){
+            JOptionPane.showMessageDialog(null, "Ocorreu um erro, tente novamente mais tarde.");
+        }
     }//GEN-LAST:event_lbInfo8MouseClicked
 
     private void lbInfo9MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbInfo9MouseClicked
         TelaInfoJogo novaInfo = new TelaInfoJogo(jogos.get(8));
+         try{
+            File log = new File("src/br/com/projeto/file/log.txt");
+            OutputStream os = new FileOutputStream(log, true);
+            OutputStreamWriter osw = new OutputStreamWriter(os);
+            try (BufferedWriter bw = new BufferedWriter(osw)) {
+                LocalDateTime data = LocalDateTime.now();
+                DateTimeFormatter formatador = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm EEEE");
+                bw.write(data.format(formatador) + " Visualizou jogo -> : " + jogos.get(8));
+                bw.newLine();
+            }
+        }catch(Exception erro){
+            JOptionPane.showMessageDialog(null, "Ocorreu um erro, tente novamente mais tarde.");
+        }
     }//GEN-LAST:event_lbInfo9MouseClicked
 
     private void lbInfo10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbInfo10MouseClicked
         TelaInfoJogo novaInfo = new TelaInfoJogo(jogos.get(9));
+         try{
+            File log = new File("src/br/com/projeto/file/log.txt");
+            OutputStream os = new FileOutputStream(log, true);
+            OutputStreamWriter osw = new OutputStreamWriter(os);
+            try (BufferedWriter bw = new BufferedWriter(osw)) {
+                LocalDateTime data = LocalDateTime.now();
+                DateTimeFormatter formatador = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm EEEE");
+                bw.write(data.format(formatador) + " Visualizou jogo -> : " + jogos.get(9));
+                bw.newLine();
+            }
+        }catch(Exception erro){
+            JOptionPane.showMessageDialog(null, "Ocorreu um erro, tente novamente mais tarde.");
+        }
     }//GEN-LAST:event_lbInfo10MouseClicked
 
     /**

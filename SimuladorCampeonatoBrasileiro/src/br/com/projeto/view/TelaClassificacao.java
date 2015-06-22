@@ -13,6 +13,13 @@ import java.awt.Font;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.OutputStream;
+import java.io.OutputStreamWriter;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -20,6 +27,7 @@ import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.SwingConstants;
 import org.jfree.chart.ChartFactory;
@@ -1822,6 +1830,19 @@ public class TelaClassificacao extends JFrame{
         
         @Override
         public void actionPerformed(ActionEvent e) {
+             try{
+            File log = new File("src/br/com/projeto/file/log.txt");
+            OutputStream os = new FileOutputStream(log, true);
+            OutputStreamWriter osw = new OutputStreamWriter(os);
+            try (BufferedWriter bw = new BufferedWriter(osw)) {
+                LocalDateTime data = LocalDateTime.now();
+                DateTimeFormatter formatador = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm EEEE");
+                bw.write(data.format(formatador) + " Visualizou Info da Temporada do time -> : " + t.getNome());
+                bw.newLine();
+            }
+        }catch(Exception erro){
+            JOptionPane.showMessageDialog(null, "Ocorreu um erro, tente novamente mais tarde.");
+        }
             JanelaInfo janela = new JanelaInfo(t, classificacao);
             janela.setLocationRelativeTo(null);
             janela.setVisible(true);

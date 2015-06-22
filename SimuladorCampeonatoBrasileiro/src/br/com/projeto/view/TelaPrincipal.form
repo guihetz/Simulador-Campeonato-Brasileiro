@@ -41,18 +41,13 @@
                       <EmptySpace min="410" pref="410" max="-2" attributes="0"/>
                       <Component id="lbIcon" min="-2" pref="70" max="-2" attributes="0"/>
                   </Group>
-              </Group>
-              <EmptySpace max="32767" attributes="0"/>
-          </Group>
-          <Group type="102" alignment="0" attributes="0">
-              <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="250" pref="250" max="-2" attributes="0"/>
                       <Component id="btnRodadas" min="-2" pref="290" max="-2" attributes="0"/>
                   </Group>
                   <Component id="lbFundo" alignment="0" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace min="27" pref="3" max="32767" attributes="0"/>
+              <EmptySpace max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
